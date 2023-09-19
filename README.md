@@ -26,3 +26,9 @@ Multi Cloud experience (Amazon AWS, Google GCP, Microsoft Azure & others private
   <img src="https://img.shields.io/badge/Google-GCP-4285F4?style=for-the-badge&logo=google-cloud&labelColor=black" />
   <img src="https://img.shields.io/badge/Microsoft-Azure-0089D6?style=for-the-badge&logo=microsoft-azure&labelColor=black" />
 </p>
+
+---
+
+💡 To an artificial mind all reality is [[ ***virtual*** ](https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1)] ☄️
+
+>>> <a href="https://stackexchange.com/users/7394006/%e2%84%9b%c9%91%c6%92%c3%a6%c4%bf"><img src="https://stackexchange.com/users/flair/7394006.png?theme=dark" alt="ℛɑƒæĿᴿᴹᴿ" title="ℛɑƒæĿᴿᴹᴿ" /></a> 
