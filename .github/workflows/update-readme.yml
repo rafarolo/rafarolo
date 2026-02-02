@@ -1,0 +1,32 @@
+name: Update README Last Updated
+
+on:
+  schedule:
+    # Runs daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Update last updated date
+        run: |
+          # Get current UTC date in YYYY-MM-DD format
+          CURRENT_DATE=$(date -u +"%Y-%m-%d")
+          
+          # Replace the date between the placeholder markers
+          sed -i "s/<!--LAST_UPDATED-->.*<!--\/LAST_UPDATED-->/<!--LAST_UPDATED-->${CURRENT_DATE}<!--\/LAST_UPDATED-->/g" README.md
+          
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'chore: update README last updated timestamp'
+          add: 'README.md'
+          default_author: github_actions
