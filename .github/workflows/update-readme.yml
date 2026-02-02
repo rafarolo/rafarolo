@@ -15,7 +15,7 @@ jobs:
       - name: Update README last-updated timestamp
         run: |
           DATE=$(date -u +"%Y-%m-%d")
-          sed -i "s//$DATE/" README.md
+          sed -i "s/<TIMESTAMP_PLACEHOLDER>/$DATE/" README.md
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
