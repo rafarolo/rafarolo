@@ -1,0 +1,26 @@
+name: Update README timestamp
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # daily at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update README last-updated timestamp
+        run: |
+          DATE=$(date -u +"%Y-%m-%d")
+          sed -i "s//$DATE/" README.md
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: "ci(readme): update last updated timestamp"
+          add: README.md
