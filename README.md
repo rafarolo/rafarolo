@@ -1,8 +1,10 @@
 # 👋 Welcome to Rafael Rôlo’s GitHub!
 
-I’m a backend engineer (16 years with Java, 3 years with Kotlin + Spring), tech lead for over 6 years, passionate about building resilient, high-performance systems and exploring AI to speed deliveries and improve code quality.
+Backend engineer with 20 years of experience — 16 in Java, 4 in Kotlin + Spring — and 6 years as Specialist and Tech Lead
+Building resilient, high-performance systems for financial and Capital Markets.
+Currently applying AI to accelerate delivery and raise code quality.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-rafarolo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rafarolo) [![Followers](https://img.shields.io/github/followers/rafarolo?label=Followers&style=for-the-badge)](https://github.com/rafarolo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rafarolo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rafarolo)
 
 ---
 
@@ -12,50 +14,39 @@ I’m a backend engineer (16 years with Java, 3 years with Kotlin + Spring), tec
 
 ---
 
-## About / Summary
-I'm a backend developer with 16 years of experience in Java and 3 years focused on Kotlin with Spring. I build scalable applications, robust APIs and systems with emphasis on performance, reliability and observability — combining engineering best practices, automated testing and CI/CD pipelines.
+## About
+Currently driving platform evolution in capital markets — improving observability, standardizing APIs and codebases, closing security gaps and migrating cloud infrastructure.
+Focused on enabling the business to move fast and differentiate through solid, scalable engineering.
 
-I'm currently diving into the world of AI to leverage it for accelerating deliveries, automating and reviewing legacy code, and assisting with problem triage and code reviews.
-
-16 years with Java; 3 years with Kotlin + Spring (Boot / Cloud / Data).
-
-- Architecture for backend systems, REST/GraphQL APIs, microservices, observability and CI/CD automation.
+**Specialist & Tech Lead** · Financial · Capital Markets · Insurance · Banking
 
 ---
 
-## Position & Industries
-Specialist and Tech Lead for over 6 years, with broad experience in financial and institutional sectors — including capital markets, insurance and banking. I work on mission-critical projects and have delivered many relevant outcomes in recent years, leading engineering teams and defining architecture strategies for high-availability, low-latency systems.
+### Languages & Build
+[![Kotlin](https://img.shields.io/badge/Kotlin-%20-7f52ff?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org) [![Java](https://img.shields.io/badge/Java-%20-BF2C2C?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com) [![Gradle](https://img.shields.io/badge/Gradle-%20-02303A?style=for-the-badge&logo=gradle&logoColor=white)](https://gradle.org) [![Maven](https://img.shields.io/badge/Maven-%20-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)](https://maven.apache.org) [![Git](https://img.shields.io/badge/Git-%20-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-%20-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![JavaScript](https://img.shields.io/badge/JavaScript-%20-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![HTML](https://img.shields.io/badge/HTML-%20-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS](https://img.shields.io/badge/CSS-%20-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+### Cloud
+[![Azure](https://img.shields.io/badge/Azure-%20-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com) [![AWS](https://img.shields.io/badge/AWS-%20-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com) [![GCP](https://img.shields.io/badge/GCP-%20-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com)
+
+### Stack
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot) [![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-cloud) [![Spring Data](https://img.shields.io/badge/Spring%20Data-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-data)
+
+[![REST](https://img.shields.io/badge/REST-%20-000888?style=for-the-badge&logoColor=white)]() [![GraphQL](https://img.shields.io/badge/GraphQL-%20-E10098?style=for-the-badge&logo=graphql&logoColor=white)](https://graphql.org)
+[![SQL Server](https://img.shields.io/badge/SQL_Server-%20-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/sql-server) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%20-6DB33F?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org) [![CosmosDB](https://img.shields.io/badge/CosmosDB-%20-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com/products/cosmos-db)
+
+### Infra & Observability
+[![Pulumi](https://img.shields.io/badge/Pulumi-%20-8A3391?style=for-the-badge&logo=pulumi&logoColor=white)](https://www.pulumi.com) [![Docker](https://img.shields.io/badge/Docker-%20-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com) [![Kubernetes](https://img.shields.io/badge/Kubernetes-%20-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io) [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-%20-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+
+[![Prometheus](https://img.shields.io/badge/Prometheus-%20-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)](https://prometheus.io) [![Grafana](https://img.shields.io/badge/Grafana-%20-F46800?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com)
 
 ---
 
-## Badges
-
-### Languages & Build tools  
-[![Java](https://img.shields.io/badge/Java-%20-BF2C2C?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com) [![Kotlin](https://img.shields.io/badge/Kotlin-%20-7f52ff?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org) [![Gradle](https://img.shields.io/badge/Gradle-%20-02303A?style=for-the-badge&logo=gradle&logoColor=white)](https://gradle.org) [![Maven](https://img.shields.io/badge/Maven-%20-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)](https://maven.apache.org) [![Git](https://img.shields.io/badge/Git-%20-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
-
-### Cloud Providers  
-[![AWS](https://img.shields.io/badge/AWS-%20-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com) [![GCP](https://img.shields.io/badge/GCP-%20-BF2C2C?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com) [![Azure](https://img.shields.io/badge/Azure-%20-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com)
-
-### Tools & Observability  
-[![Spring](https://img.shields.io/badge/Spring-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io) [![Docker](https://img.shields.io/badge/Docker-%20-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com) [![Kubernetes](https://img.shields.io/badge/Kubernetes-%20-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io) [![Postgres](https://img.shields.io/badge/Postgres-%20-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org) [![Redis](https://img.shields.io/badge/Redis-%20-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io) [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-%20-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions) [![Prometheus](https://img.shields.io/badge/Prometheus-%20-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)](https://prometheus.io) [![Grafana](https://img.shields.io/badge/Grafana-%20-F46800?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com) [![Elasticsearch](https://img.shields.io/badge/Elasticsearch-%20-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)](https://www.elastic.co/elasticsearch)
-
----
-
-## Multi‑Cloud (experience)
-I have experience operating and integrating applications across multiple cloud providers, including:  
-- AWS (EC2, EKS, RDS, IAM, S3)  
-- Google Cloud Platform (GKE, Cloud SQL, Storage)  
-- Microsoft Azure (AKS, Azure SQL, Blob Storage)
-
----
-
-## Key skills
-- Java — 16 years (architecture, performance tuning, multithreading, JVM internals)  
-- Kotlin & Spring — 3 years (Spring Boot, Spring Cloud, Spring Data)  
-- Microservices, REST & gRPC  
-- Observability: Prometheus, Grafana, ELK/EFK  
-- CI/CD: pipelines, automated testing  
-- Containers & Orchestration: Docker, Kubernetes  
-- Relational and NoSQL databases (Postgres, Redis)
+## Highlights
+- 16 years designing JVM systems — architecture, performance tuning, multithreading
+- 4 years with Kotlin + Spring in mission-critical, low-latency environments
+- Led engineering teams defining architecture for high-availability distributed systems
+- Full CI/CD ownership — pipelines, automated testing, container orchestration
 
 ---
