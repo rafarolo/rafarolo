@@ -36,7 +36,6 @@ def prs(t):
     alt = ("Pull requests per year, authored and reviewed for others. " +
            "; ".join("%d: %d authored, %d reviewed%s" % (y, a, r, "" if k else ", to 29 August")
                      for y, a, r, k in YEARS))
-    grow = []
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
     p.append('<defs>' + glass_defs(t, "pr") + '<clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
@@ -49,9 +48,8 @@ def prs(t):
              'animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}'
              '.t{opacity:0;animation:fi .45s ease forwards}'
              '@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}'
-             '__GROW__'
              '@media (prefers-reduced-motion: reduce){.b{transform:scaleY(1);animation:none}'
-             '.t{opacity:1;animation:none}__GROWOFF__}'
+             '.t{opacity:1;animation:none}}'
              + glass_style(12) + '</style>')
     p.append('<g clip-path="url(#pr%s)">' % t)
     p.append(glass_bg(t, "pr", 1000, h))
@@ -83,23 +81,28 @@ def prs(t):
             top = BASE - bh
             if not complete:
                 ph = projected(value) * SCALE
-                start = bh / ph
-                rise = ph - bh
-                grow.append('.pj%d{transform-box:fill-box;transform-origin:50%% 100%%;'
-                            'transform:scaleY(%.3f);opacity:0;'
-                            'animation:pj%d 1.1s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
-                            '@keyframes pj%d{to{transform:scaleY(1);opacity:.8}}'
-                            % (j, start, j, d + .5 + j * .06, j))
-                grow.append('.pv%d{transform:translateY(%.1fpx);opacity:0;'
-                            'animation:pv%d 1.1s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
-                            '@keyframes pv%d{to{transform:translateY(0);opacity:.9}}'
-                            % (j, rise, j, d + .55 + j * .06, j))
-                p.append('<rect class="pj%d" x="%.1f" y="%.1f" width="%d" height="%.1f" rx="3" '
-                         'fill="none" stroke="%s" stroke-width="1.6" stroke-dasharray="4 4"/>'
-                         % (j, x, BASE - ph, BW, ph, c["acc"]))
-                p.append('<text class="pv%d" x="%.1f" y="%.1f" font-size="14" font-weight="700" '
-                         'fill="%s" text-anchor="middle">%d</text>'
-                         % (j, x + BW / 2.0, BASE - ph - 9, c["acc"], projected(value)))
+                begin = d + .5 + j * .06
+                spline = 'calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"'
+                # height and y are animated directly: scaling a stroked rectangle thins its
+                # horizontal edges and stretches the dash pattern while it grows.
+                p.append('<rect x="%.1f" y="%.1f" width="%d" height="0" rx="3" fill="none" '
+                         'stroke="%s" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85">'
+                         '<animate attributeName="height" from="0" to="%.1f" begin="%.2fs" '
+                         'dur="1.1s" %s/>'
+                         '<animate attributeName="y" from="%d" to="%.1f" begin="%.2fs" '
+                         'dur="1.1s" %s/>'
+                         '<animate attributeName="stroke-dashoffset" from="0" to="16" '
+                         'begin="%.2fs" dur="1.6s" repeatCount="indefinite"/>'
+                         '</rect>'
+                         % (x, BASE, BW, c["acc"], ph, begin, spline,
+                            BASE, BASE - ph, begin, spline, begin + 1.1))
+                p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" '
+                         'font-size="14" font-weight="700" fill="%s" text-anchor="middle" '
+                         'opacity="0.9">%d'
+                         '<animate attributeName="y" from="%d" to="%.1f" begin="%.2fs" '
+                         'dur="1.1s" %s/></text>'
+                         % (begin + .05, x + BW / 2.0, BASE - 9, c["acc"], projected(value),
+                            BASE - 9, BASE - ph - 9, begin + .05, spline))
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
                      % (d + j * .06, x, top, BW, bh, c["acc"],
@@ -156,9 +159,7 @@ def prs(t):
     p.append('</g>')
 
     p.append('</g></g></svg>')
-    out = NL.join(p) + NL
-    off = "".join(".pj%d,.pv%d{transform:none;opacity:.85;animation:none}" % (j, j) for j in (0, 1))
-    return out.replace("__GROW__", "".join(grow)).replace("__GROWOFF__", off)
+    return NL.join(p) + NL
 
 
 for t in ("light", "dark"):
