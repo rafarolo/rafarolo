@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews, 8 sectors served." src="assets/banner-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews, 8 sectors served." src="assets/banner-light.svg?v=2">
 </picture>
 
 <br>
@@ -16,8 +16,8 @@ All of it in private corporate repositories, which is why the contribution graph
 green and unclickable.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
-  <img alt="Three proportions: 89% of pull requests opened were merged; 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else." src="assets/rings-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg?v=2">
+  <img alt="Three proportions: 89% of pull requests opened were merged; 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else." src="assets/rings-light.svg?v=2">
 </picture>
 
 <br>
@@ -28,8 +28,8 @@ green and unclickable.
 ### Pull requests per year
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg">
-  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 251 and 206 in 2026 to 29 August." src="assets/prs-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=2">
+  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 251 and 206 in 2026 to 29 August." src="assets/prs-light.svg?v=2">
 </picture>
 
 <br>
@@ -40,8 +40,8 @@ green and unclickable.
 ### Selected work
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg">
-  <img alt="Timeline of selected work, 2014 to 2026." src="assets/timeline-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg?v=2">
+  <img alt="Timeline of selected work, 2014 to 2026." src="assets/timeline-light.svg?v=2">
 </picture>
 
 <br>
@@ -67,8 +67,8 @@ green and unclickable.
 
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
-  <img alt="" src="assets/dot-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=2">
+  <img alt="" src="assets/dot-light.svg?v=2">
 </picture>
 
 <br>
@@ -76,15 +76,15 @@ green and unclickable.
 ### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
-  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=2">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=2">
 </picture>
 
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg">
-  <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg?v=2">
+  <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg?v=2">
 </picture>
 
 <details>
@@ -109,8 +109,8 @@ green and unclickable.
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
-  <img alt="" src="assets/dot-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=2">
+  <img alt="" src="assets/dot-light.svg?v=2">
 </picture>
 
 <br>
@@ -121,27 +121,27 @@ green and unclickable.
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
-  <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=2">
+  <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=2">
 </picture>
 
 <br>
 <br>
 
 <p align="center">
-  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=2" alt="LinkedIn: rafarolo" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg" alt="Stack Exchange profile" height="28"></a>
+  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=2" alt="Stack Exchange profile" height="28"></a>
 </p>
 
 <p align="center">
-  <img src="assets/location.svg" alt="São Paulo, Brasil" height="28">
+  <img src="assets/location.svg?v=2" alt="São Paulo, Brasil" height="28">
 </p>
 
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
-    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=2">
+    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg?v=2">
   </picture>
 </a>
