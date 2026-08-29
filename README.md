@@ -1,17 +1,18 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets" src="assets/banner-light.svg">
+  <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 20 years on the JVM, 798 pull requests, 906 code reviews, 14 services." src="assets/banner-light.svg">
 </picture>
 
 Twenty years on the JVM — sixteen in Java, four in Kotlin and Spring, six leading teams.
 I work where a wrong number has a settlement date: custody positions, asset and liability
 ledgers, regulatory reporting.
 
-The two middle numbers up there are the job. 798 pull requests of my own, and 906 reviews
-on other people's, across seventeen engineers. Reviewing isn't overhead stacked on top of
-building — on a platform of forty-odd services it's most of how the thing stays coherent.
-The rest of the work is choosing between two defensible answers and making that choice
-cheap to change later.
+The chart up there is the job. In every completed year I have reviewed more pull requests
+than I opened — 906 reviews against 798 of my own, for seventeen engineers. All of it in
+private corporate repositories, which is why the contribution graph below is green and
+unclickable. Reviewing isn't overhead stacked on top of building; on a platform of
+forty-odd services it's most of how the thing stays coherent. The rest of the work is
+choosing between two defensible answers and making that choice cheap to change later.
 
 ## Selected work
 
@@ -35,10 +36,15 @@ five systems, and deciding which of them a public API is allowed to answer with.
 **Coverage as a constraint, not a report** — core service from 74.7% to 88%, holding zero
 bugs and zero vulnerabilities along the way.
 
-## Stack
+## rolo.m.rafael
 
-Kotlin and Java on Spring Boot · Postgres, SQL Server, Cosmos DB · Azure with Pulumi, AKS
-and GitHub Actions · Airflow for ingestion · Prometheus, Grafana and SonarQube
+Twenty years drawn the way I'd draw a service — domain in the middle, stack as adapters,
+because the stack is the part that gets replaced.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
+  <img alt="Career as a package tree under rolo.m.rafael: a domain package that does not get replaced, an application package, and swappable adapter packages." src="assets/archetype-light.svg">
+</picture>
 
 ---
 
