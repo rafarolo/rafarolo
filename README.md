@@ -50,7 +50,15 @@ unclickable.
 
 ## Stack by area
 
-Years count from the first role in which each one appears.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg">
+</picture>
+
+<br>
+
+Depth counts from the first role in which each one appears<br>
+Focus is measured from the 337 pull requests I opened in the last twelve months.
 
 | Area | | |
 |---|---|---|
