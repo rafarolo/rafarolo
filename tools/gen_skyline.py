@@ -10,7 +10,8 @@ GROUND = 325
 TEXT_Y = 44          # closing line, roughly 26..52
 MOON = (888, 40, 17)  # far right, clear of the centred text
 COMET_BAND = (60, 88)  # under the phrase, over the aircraft
-PLANE_FROM, PLANE_TO = 128, 112  # centre line; wings reach 13 either side
+PLANE_FROM, PLANE_TO = 108, 148  # descending; fin reaches 16 up, wing 12 down
+PLANE_PITCH = 5  # degrees nose down: the path alone is too shallow to read as an approach
 ROOFLINE = GROUND - 158
 
 SKY = {
@@ -60,9 +61,14 @@ def plane(t, k, ident, delay, flip):
             '<circle cx="14" cy="12" r="1.4" fill="%s">'
             '<animate attributeName="opacity" values="0.1;1;0.1" dur="1.4s" repeatCount="indefinite"/>'
             '</circle>' % (blue, blue, blue))
-    inner = '<g transform="scale(-1 1)">%s</g>' % body if flip else body
+    # Pitched nose down. Inside the mirrored group a positive rotation renders as a
+    # negative one, which is nose down for an aircraft pointing the other way -- so the
+    # same value serves both legs.
+    pitched = '<g transform="rotate(%d)">%s</g>' % (PLANE_PITCH, body)
+    inner = '<g transform="scale(-1 1)">%s</g>' % pitched if flip else pitched
     x0, x1 = (1070, -70) if flip else (-70, 1070)
-    y0, y1 = (PLANE_TO, PLANE_FROM) if flip else (PLANE_FROM, PLANE_TO)
+    y0, y1 = PLANE_FROM, PLANE_TO  # both legs descend; one aircraft climbing away
+                                   # and one coming in reads as two unrelated events
     return ('<g opacity="0">'
             '<animate attributeName="opacity" values="0;1;1;0;0" '
             'keyTimes="0;0.005;0.155;0.16;1" begin="%.1fs" dur="120s" repeatCount="indefinite"/>'
