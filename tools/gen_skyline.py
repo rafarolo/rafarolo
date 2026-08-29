@@ -195,7 +195,10 @@ def skyline(t):
         lo, hi = COMET_BAND
         p.append(streak(t, "shooting", 52, 1.9, (0, 2, 4),
                         ((52, -20, 236, 40), (16, -14, 190, 34), (96, -24, 254, 26))))
-        p.append(streak(t, "comet", 104, 3.0, (1, 3, 5),
+        # Close to the meteor in size on purpose: alternating every twenty-five
+        # seconds, two streaks of the same family read as one thing recurring,
+        # where a long bright one against a short faint one reads as two.
+        p.append(streak(t, "comet", 68, 2.2, (1, 3, 5),
                         ((-130, lo, 470, hi), (250, hi, 900, lo), (-90, hi - 6, 640, lo + 4))))
 
     for name, count, wmin, wmax, hmin, hmax, lit in LAYERS:
