@@ -84,7 +84,9 @@ for t in ("light", "dark"):
             newline="\n").write(timeline(t))
     print("wrote timeline-%s.svg" % t)
 
-rows = NL.join("| `%s` | **%s** | %s |" % (i[0], i[1], i[2]) for i in ITEMS)
+# U+2011 non-breaking hyphen: an en dash is a line-break opportunity and splits the cell
+rows = NL.join("| `%s` | **%s** | %s |"
+               % (i[0].replace(u"–", u"‑"), i[1], i[2]) for i in ITEMS)
 io.open(os.path.join(os.path.dirname(OUT), "_timeline_table.md"), "w",
         encoding="utf-8", newline="\n").write(rows + NL)
 print("wrote table fallback")
