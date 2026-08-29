@@ -29,7 +29,7 @@ def centre(i):
 
 def prs(t):
     c = THEMES[t]
-    h = 348
+    h = 378
     totals = [a + r for _, a, r, _ in YEARS]
     projected_total = projected(YEARS[-1][1]) + projected(YEARS[-1][2])
 
