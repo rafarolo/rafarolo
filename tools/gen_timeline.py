@@ -5,21 +5,21 @@ from gen_all import THEMES, SANS, OUT, NL
 
 # year, headline, detail, major
 ITEMS = [
-    ("2025–26", "OpenSec, an API for partners",
+    ("2025–2026", "OpenSec, an API for partners",
      "22 endpoints across 8 service families · documentation kits built by an automated pipeline", True),
-    ("2025–26", "Passwordless, and routes that stay inside",
+    ("2025–2026", "Passwordless, and routes that stay inside",
      "Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS", False),
-    ("2024–26", "New cluster, new region, one pipeline",
+    ("2024–2026", "New cluster, new region, one pipeline",
      "every application rewritten into a single GitHub Actions pipeline · Azure subscription and AKS migration", True),
-    ("2023–26", "Kotlin as the platform language",
+    ("2023–2026", "Kotlin as the platform language",
      "off Python, JavaScript and TypeScript · hexagonal architecture · R$130B+ in issued assets", True),
-    ("2021–23", "Open Banking, certified",
+    ("2021–2023", "Open Banking, certified",
      "every BACEN and FEBRABAN phase through Raidiam conformance · insurance home in a 22M-customer bank app", False),
-    ("2020–21", "Claims analytics on GCP",
+    ("2020–2021", "Claims analytics on GCP",
      "predictive engine for suspicious claims at a 7M-client insurer, beside a COBOL/CICS core", False),
-    ("2019–20", "WebSphere to Kubernetes",
+    ("2019–2020", "WebSphere to Kubernetes",
      "retail insurance systems onto Liberty on IBM Cloud Private, OpenShift pipeline", False),
-    ("2014–15", "A study area, ten times faster",
+    ("2014–2015", "A study area, ten times faster",
      "found the data bottleneck in a geomarketing platform's core calculation", False),
 ]
 
@@ -62,7 +62,7 @@ def timeline(t):
         p.append('<circle class="nd" style="animation-delay:%.2fs" cx="%d" cy="%d" r="%.1f" '
                  'fill="%s" stroke="%s" stroke-width="%d"/>'
                  % (d, SPINE, y, r, c["acc"] if major else c["panel"], c["acc"], 3 if major else 2.5))
-        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="13" '
+        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="12.5" '
                  'font-weight="700" fill="%s" text-anchor="end" letter-spacing="0.3">%s</text>'
                  % (d + .05, SPINE - 24, y + 5, c["acc"], yr))
         p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="%d" '
@@ -84,7 +84,7 @@ for t in ("light", "dark"):
             newline="\n").write(timeline(t))
     print("wrote timeline-%s.svg" % t)
 
-rows = NL.join("| **%s** | **%s** | %s |" % (i[0], i[1], i[2]) for i in ITEMS)
+rows = NL.join("| `%s` | **%s** | %s |" % (i[0], i[1], i[2]) for i in ITEMS)
 io.open(os.path.join(os.path.dirname(OUT), "_timeline_table.md"), "w",
         encoding="utf-8", newline="\n").write(rows + NL)
 print("wrote table fallback")
