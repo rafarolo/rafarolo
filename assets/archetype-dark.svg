@@ -12,7 +12,7 @@
 <text class="ln" style="animation-delay:0.30s" x="360" y="90" font-size="11.5" fill="#6B7783">CRI · CRA · series · lastro</text>
 <text class="ln" style="animation-delay:0.32s" x="88" y="111" fill="#94A3AE">│&#160;&#160;├─ settlement</text>
 <text class="ln" style="animation-delay:0.35s" x="360" y="111" font-size="11.5" fill="#6B7783">B3 · custody · liquidation dates</text>
-<text class="ln" style="animation-delay:0.37s" x="88" y="132" fill="#94A3AE">│&#160;&#160;├─ accounting</text>
+<text class="ln" style="animation-delay:0.37s" x="88" y="132" fill="#94A3AE">│&#160;&#160;└─ accounting</text>
 <text class="ln" style="animation-delay:0.41s" x="360" y="132" font-size="11.5" fill="#6B7783">asset × liability · roll-forward</text>
 <text class="ln" style="animation-delay:0.43s" x="66" y="161" font-weight="700" fill="#56AEC2">├─ application/</text>
 <text class="ln" style="animation-delay:0.47s" x="360" y="161" font-size="11.5" font-style="italic" fill="#6B7783">what the days are actually spent on</text>
@@ -20,16 +20,16 @@
 <text class="ln" style="animation-delay:0.52s" x="360" y="182" font-size="11.5" fill="#6B7783">906 usages, 17 callers</text>
 <text class="ln" style="animation-delay:0.54s" x="88" y="203" fill="#94A3AE">│&#160;&#160;├─ architecture</text>
 <text class="ln" style="animation-delay:0.58s" x="360" y="203" font-size="11.5" fill="#6B7783">hexagonal · one contract per capability</text>
-<text class="ln" style="animation-delay:0.59s" x="88" y="224" fill="#94A3AE">│&#160;&#160;├─ reliability</text>
+<text class="ln" style="animation-delay:0.59s" x="88" y="224" fill="#94A3AE">│&#160;&#160;└─ reliability</text>
 <text class="ln" style="animation-delay:0.63s" x="360" y="224" font-size="11.5" fill="#6B7783">coverage 74.7% → 88%, 0 bugs</text>
-<text class="ln" style="animation-delay:0.65s" x="66" y="253" font-weight="700" fill="#56AEC2">├─ adapters/</text>
+<text class="ln" style="animation-delay:0.65s" x="66" y="253" font-weight="700" fill="#56AEC2">└─ adapters/</text>
 <text class="ln" style="animation-delay:0.69s" x="360" y="253" font-size="11.5" font-style="italic" fill="#6B7783">swappable on purpose — that is the point</text>
-<text class="ln" style="animation-delay:0.70s" x="88" y="274" fill="#94A3AE">│&#160;&#160;├─ jvm</text>
+<text class="ln" style="animation-delay:0.70s" x="88" y="274" fill="#94A3AE">&#160;&#160;&#160;├─ jvm</text>
 <text class="ln" style="animation-delay:0.74s" x="360" y="274" font-size="11.5" fill="#6B7783">kotlin · java · spring boot</text>
-<text class="ln" style="animation-delay:0.76s" x="88" y="295" fill="#94A3AE">│&#160;&#160;├─ storage</text>
+<text class="ln" style="animation-delay:0.76s" x="88" y="295" fill="#94A3AE">&#160;&#160;&#160;├─ storage</text>
 <text class="ln" style="animation-delay:0.80s" x="360" y="295" font-size="11.5" fill="#6B7783">postgres · sql server · cosmos</text>
-<text class="ln" style="animation-delay:0.81s" x="88" y="316" fill="#94A3AE">│&#160;&#160;├─ cloud</text>
+<text class="ln" style="animation-delay:0.81s" x="88" y="316" fill="#94A3AE">&#160;&#160;&#160;├─ cloud</text>
 <text class="ln" style="animation-delay:0.85s" x="360" y="316" font-size="11.5" fill="#6B7783">azure · aks · pulumi · actions</text>
-<text class="ln" style="animation-delay:0.86s" x="88" y="337" fill="#94A3AE">│&#160;&#160;├─ signals</text>
+<text class="ln" style="animation-delay:0.86s" x="88" y="337" fill="#94A3AE">&#160;&#160;&#160;└─ signals</text>
 <text class="ln" style="animation-delay:0.91s" x="360" y="337" font-size="11.5" fill="#6B7783">prometheus · grafana · sonarqube</text>
 </g></g></svg>
