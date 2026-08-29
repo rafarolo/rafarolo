@@ -115,11 +115,18 @@ def rings(t):
                    'animation:k%d 1.15s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
                    % (i, RC, RC, i, .25 + i * .16))
         css.append('@keyframes k%d{to{stroke-dashoffset:%.1f}}' % (i, RC * (1 - frac)))
+        cx = 190 + i * 310
+        css.append('.tp%d{transform-box:view-box;transform-origin:%dpx 86px;'
+                   'transform:rotate(0deg);'
+                   'animation:tp%d 1.15s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
+                   '@keyframes tp%d{to{transform:rotate(%.2fdeg)}}'
+                   % (i, cx, i, .25 + i * .16, i, 360.0 * frac))
     css.append('@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}')
     for i in range(len(RINGS)):
         css.append('.n%d{animation:none}' % i)
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.a%d{stroke-dashoffset:%.1f;animation:none}' % (i, RC * (1 - frac)))
+        css.append('.tp%d{transform:rotate(%.2fdeg);animation:none}' % (i, 360.0 * frac))
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.n%d{transform:translateY(%dpx);animation:c%d 1.15s steps(%d,end) %.2fs forwards}'
                    % (i, -(FRAMES - 1) * ROW, i, FRAMES - 1, .25 + i * .16))
@@ -139,6 +146,14 @@ def rings(t):
                  'stroke-width="11" stroke-linecap="round" filter="url(#dsrg%s)" '
                  'transform="rotate(-90 %d %d)"/>'
                  % (i, cx, cy, RR, c["acc"], t, cx, cy))
+        # The bright head that draws the arc, on the same curve and delay as the arc
+        # itself, coming to rest exactly where the value does.
+        p.append('<g class="tp%d">' % i)
+        p.append('<circle cx="%d" cy="%.1f" r="11" fill="%s" opacity="0.22"/>'
+                 % (cx, cy - RR, c["acc"]))
+        p.append('<circle cx="%d" cy="%.1f" r="5.5" fill="#FFFFFF" stroke="%s" '
+                 'stroke-width="1.5"/>' % (cx, cy - RR, c["acc"]))
+        p.append('</g>')
         p.append('<g clip-path="url(#win%d%s)"><g class="n%d">' % (i, t, i))
         for step, value in enumerate(ramp(int(big.rstrip("%")))):
             p.append('<text x="%d" y="%d" font-size="30" font-weight="700" fill="%s" '

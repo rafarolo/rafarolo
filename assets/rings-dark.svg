@@ -4,12 +4,16 @@
 <clipPath id="win1dark"><rect x="440" y="70" width="120" height="40"/></clipPath>
 <clipPath id="win2dark"><rect x="750" y="70" width="120" height="40"/></clipPath>
 </defs>
-<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}.a0{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k0 1.15s cubic-bezier(.25,.9,.3,1) 0.25s forwards}@keyframes k0{to{stroke-dashoffset:34.7}}.a1{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k1 1.15s cubic-bezier(.25,.9,.3,1) 0.41s forwards}@keyframes k1{to{stroke-dashoffset:135.8}}.a2{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k2 1.15s cubic-bezier(.25,.9,.3,1) 0.57s forwards}@keyframes k2{to{stroke-dashoffset:31.8}}@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}.n0{animation:none}.n1{animation:none}.n2{animation:none}.a0{stroke-dashoffset:34.7;animation:none}.a1{stroke-dashoffset:135.8;animation:none}.a2{stroke-dashoffset:31.8;animation:none}.n0{transform:translateY(-520px);animation:c0 1.15s steps(13,end) 0.25s forwards}@keyframes c0{from{transform:translateY(0)}to{transform:translateY(-520px)}}.n1{transform:translateY(-520px);animation:c1 1.15s steps(13,end) 0.41s forwards}@keyframes c1{from{transform:translateY(0)}to{transform:translateY(-520px)}}.n2{transform:translateY(-520px);animation:c2 1.15s steps(13,end) 0.57s forwards}@keyframes c2{from{transform:translateY(0)}to{transform:translateY(-520px)}}.sheen{animation:sweep 13s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(-115%)}55%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}}</style>
+<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}.a0{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k0 1.15s cubic-bezier(.25,.9,.3,1) 0.25s forwards}@keyframes k0{to{stroke-dashoffset:34.7}}.tp0{transform-box:view-box;transform-origin:190px 86px;transform:rotate(0deg);animation:tp0 1.15s cubic-bezier(.25,.9,.3,1) 0.25s forwards}@keyframes tp0{to{transform:rotate(316.80deg)}}.a1{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k1 1.15s cubic-bezier(.25,.9,.3,1) 0.41s forwards}@keyframes k1{to{stroke-dashoffset:135.8}}.tp1{transform-box:view-box;transform-origin:500px 86px;transform:rotate(0deg);animation:tp1 1.15s cubic-bezier(.25,.9,.3,1) 0.41s forwards}@keyframes tp1{to{transform:rotate(190.80deg)}}.a2{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k2 1.15s cubic-bezier(.25,.9,.3,1) 0.57s forwards}@keyframes k2{to{stroke-dashoffset:31.8}}.tp2{transform-box:view-box;transform-origin:810px 86px;transform:rotate(0deg);animation:tp2 1.15s cubic-bezier(.25,.9,.3,1) 0.57s forwards}@keyframes tp2{to{transform:rotate(320.40deg)}}@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}.n0{animation:none}.n1{animation:none}.n2{animation:none}.a0{stroke-dashoffset:34.7;animation:none}.tp0{transform:rotate(316.80deg);animation:none}.a1{stroke-dashoffset:135.8;animation:none}.tp1{transform:rotate(190.80deg);animation:none}.a2{stroke-dashoffset:31.8;animation:none}.tp2{transform:rotate(320.40deg);animation:none}.n0{transform:translateY(-520px);animation:c0 1.15s steps(13,end) 0.25s forwards}@keyframes c0{from{transform:translateY(0)}to{transform:translateY(-520px)}}.n1{transform:translateY(-520px);animation:c1 1.15s steps(13,end) 0.41s forwards}@keyframes c1{from{transform:translateY(0)}to{transform:translateY(-520px)}}.n2{transform:translateY(-520px);animation:c2 1.15s steps(13,end) 0.57s forwards}@keyframes c2{from{transform:translateY(0)}to{transform:translateY(-520px)}}.sheen{animation:sweep 13s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(-115%)}55%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}}</style>
 <g clip-path="url(#rgdark)">
 <rect x="0" y="0" width="1000" height="212" fill="url(#pgrgdark)"/><rect class="sheen" x="-450" y="0" width="450" height="212" fill="url(#snrgdark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.10"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <circle cx="190" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
 <circle class="a0" cx="190" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" filter="url(#dsrgdark)" transform="rotate(-90 190 86)"/>
+<g class="tp0">
+<circle cx="190" cy="40.0" r="11" fill="#56AEC2" opacity="0.22"/>
+<circle cx="190" cy="40.0" r="5.5" fill="#FFFFFF" stroke="#56AEC2" stroke-width="1.5"/>
+</g>
 <g clip-path="url(#win0dark)"><g class="n0">
 <text x="190" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">0%</text>
 <text x="190" y="136" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">19%</text>
@@ -30,6 +34,10 @@
 <text class="lb" style="animation-delay:0.78s" x="190" y="189" font-size="12" fill="#6B7783" text-anchor="middle">core service, up from 74.7%</text>
 <circle cx="500" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
 <circle class="a1" cx="500" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" filter="url(#dsrgdark)" transform="rotate(-90 500 86)"/>
+<g class="tp1">
+<circle cx="500" cy="40.0" r="11" fill="#56AEC2" opacity="0.22"/>
+<circle cx="500" cy="40.0" r="5.5" fill="#FFFFFF" stroke="#56AEC2" stroke-width="1.5"/>
+</g>
 <g clip-path="url(#win1dark)"><g class="n1">
 <text x="500" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">0%</text>
 <text x="500" y="136" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">11%</text>
@@ -50,6 +58,10 @@
 <text class="lb" style="animation-delay:0.90s" x="500" y="189" font-size="12" fill="#6B7783" text-anchor="middle">906 reviews against 798 of my own</text>
 <circle cx="810" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
 <circle class="a2" cx="810" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" filter="url(#dsrgdark)" transform="rotate(-90 810 86)"/>
+<g class="tp2">
+<circle cx="810" cy="40.0" r="11" fill="#56AEC2" opacity="0.22"/>
+<circle cx="810" cy="40.0" r="5.5" fill="#FFFFFF" stroke="#56AEC2" stroke-width="1.5"/>
+</g>
 <g clip-path="url(#win2dark)"><g class="n2">
 <text x="810" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">0%</text>
 <text x="810" y="136" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">19%</text>
