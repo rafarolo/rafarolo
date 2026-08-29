@@ -1,5 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 498" width="1000" height="498" role="img" aria-label="Years with each technology, longest first. 17 years: Java; 14 years: PostgreSQL; 12 years: MongoDB; 11 years: Spring Boot, SQL Server; 7 years: Spring Security, OpenAPI, Kubernetes, Docker, SonarQube; 5 years: AWS, Prometheus, Grafana; 3 years: Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL, OpenTelemetry; 2 years: Airflow, Spring AI; 1 years: GCP. Standards without a tenure: OAuth2, OpenID Connect, JWT, Keycloak, Entra ID, FAPI, Workload Identity.">
-<defs><linearGradient id="pgtnlight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3F7F9"/><stop offset="1" stop-color="#E7EBED"/></linearGradient><linearGradient id="sntnlight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient><filter id="dstnlight" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/></filter><clipPath id="tnlight"><rect x="0" y="0" width="1000" height="498" rx="10"/></clipPath><linearGradient id="bglight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E5468"/><stop offset="1" stop-color="#2C7F8C"/></linearGradient></defs>
+<defs><linearGradient id="pgtnlight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3F7F9"/><stop offset="1" stop-color="#E7EBED"/></linearGradient><linearGradient id="sntnlight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient><filter id="dstnlight" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/></filter><clipPath id="tnlight"><rect x="0" y="0" width="1000" height="498" rx="10"/></clipPath><linearGradient id="bglight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E5468"/><stop offset="1" stop-color="#2C7F8C"/></linearGradient><linearGradient id="gllight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.62"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<clipPath id="cb0light"><rect x="96" y="91.0" width="232.0" height="10" rx="5"/></clipPath>
+<clipPath id="cb1light"><rect x="96" y="125.0" width="191.1" height="10" rx="5"/></clipPath>
+<clipPath id="cb2light"><rect x="96" y="159.0" width="163.8" height="10" rx="5"/></clipPath>
+<clipPath id="cb3light"><rect x="96" y="193.0" width="150.1" height="10" rx="5"/></clipPath>
+<clipPath id="cb4light"><rect x="96" y="227.0" width="95.5" height="10" rx="5"/></clipPath>
+<clipPath id="cb5light"><rect x="96" y="261.0" width="68.2" height="10" rx="5"/></clipPath>
+<clipPath id="cb6light"><rect x="96" y="295.0" width="40.9" height="10" rx="5"/></clipPath>
+<clipPath id="cb7light"><rect x="96" y="329.0" width="27.3" height="10" rx="5"/></clipPath>
+<clipPath id="cb8light"><rect x="96" y="363.0" width="13.6" height="10" rx="5"/></clipPath>
+</defs>
 <style>.t{opacity:0;animation:fi .45s ease forwards}@keyframes fi{to{opacity:1}}@media (prefers-reduced-motion: reduce){.t{opacity:1;animation:none}}.sheen{animation:sweep 14s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(-115%)}55%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}</style>
 <g clip-path="url(#tnlight)">
 <rect x="0" y="0" width="1000" height="498" fill="url(#pgtnlight)"/><rect class="sheen" x="-450" y="0" width="450" height="498" fill="url(#sntnlight)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.9"/>
@@ -9,6 +19,7 @@
 <text class="t" style="animation-delay:0.20s" x="82" y="101" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">17y</text>
 <rect x="96" y="91.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="91.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="232.0" begin="0.20s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb0light)"><rect x="24.0" y="91.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="328.0" begin="1.30s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.45s">
 <rect x="356.0" y="84.5" width="44.0" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="100" font-size="12" fill="#0E151C">Java</text>
@@ -16,6 +27,7 @@
 <text class="t" style="animation-delay:0.27s" x="82" y="135" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">14y</text>
 <rect x="96" y="125.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="125.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="191.1" begin="0.27s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb1light)"><rect x="24.0" y="125.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="287.1" begin="1.65s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.52s">
 <rect x="356.0" y="118.5" width="83.0" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="134" font-size="12" fill="#0E151C">PostgreSQL</text>
@@ -23,6 +35,7 @@
 <text class="t" style="animation-delay:0.34s" x="82" y="169" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">12y</text>
 <rect x="96" y="159.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="159.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="163.8" begin="0.34s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb2light)"><rect x="24.0" y="159.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="259.8" begin="2.00s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.59s">
 <rect x="356.0" y="152.5" width="63.5" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="168" font-size="12" fill="#0E151C">MongoDB</text>
@@ -30,6 +43,7 @@
 <text class="t" style="animation-delay:0.41s" x="82" y="203" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">11y</text>
 <rect x="96" y="193.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="193.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="150.1" begin="0.41s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb3light)"><rect x="24.0" y="193.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="246.1" begin="2.35s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.66s">
 <rect x="356.0" y="186.5" width="89.5" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="202" font-size="12" fill="#0E151C">Spring Boot</text>
@@ -41,6 +55,7 @@
 <text class="t" style="animation-delay:0.48s" x="82" y="237" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">7y</text>
 <rect x="96" y="227.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="227.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="95.5" begin="0.48s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb4light)"><rect x="24.0" y="227.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="191.5" begin="2.70s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.73s">
 <rect x="356.0" y="220.5" width="115.5" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="236" font-size="12" fill="#0E151C">Spring Security</text>
@@ -64,6 +79,7 @@
 <text class="t" style="animation-delay:0.55s" x="82" y="271" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">5y</text>
 <rect x="96" y="261.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="261.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="68.2" begin="0.55s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb5light)"><rect x="24.0" y="261.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="164.2" begin="3.05s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.80s">
 <rect x="356.0" y="254.5" width="37.5" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="270" font-size="12" fill="#0E151C">AWS</text>
@@ -79,6 +95,7 @@
 <text class="t" style="animation-delay:0.62s" x="82" y="305" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">3y</text>
 <rect x="96" y="295.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="295.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="40.9" begin="0.62s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb6light)"><rect x="24.0" y="295.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="136.9" begin="3.40s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.87s">
 <rect x="356.0" y="288.5" width="57.0" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="304" font-size="12" fill="#0E151C">Kotlin</text>
@@ -110,6 +127,7 @@
 <text class="t" style="animation-delay:0.69s" x="82" y="339" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">2y</text>
 <rect x="96" y="329.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="329.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="27.3" begin="0.69s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb7light)"><rect x="24.0" y="329.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="123.3" begin="3.75s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:0.94s">
 <rect x="356.0" y="322.5" width="63.5" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="338" font-size="12" fill="#0E151C">Airflow</text>
@@ -121,6 +139,7 @@
 <text class="t" style="animation-delay:0.76s" x="82" y="373" font-size="15" font-weight="700" fill="#0E151C" text-anchor="end">1y</text>
 <rect x="96" y="363.0" width="232" height="10" rx="5" fill="#DDE3E8" opacity="0.30"/>
 <rect x="96" y="363.0" width="0" height="10" rx="5" fill="url(#bglight)"><animate attributeName="width" from="0" to="13.6" begin="0.76s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb8light)"><rect x="24.0" y="363.0" width="72" height="10" fill="url(#gllight)"><animate attributeName="x" from="24.0" to="109.6" begin="4.10s" dur="2.4s" repeatCount="indefinite"/></rect></g>
 <g class="t" style="animation-delay:1.01s">
 <rect x="356.0" y="356.5" width="37.5" height="21" rx="5" fill="#F7F9FA" opacity="0.55"/>
 <text x="365.0" y="372" font-size="12" fill="#0E151C">GCP</text>

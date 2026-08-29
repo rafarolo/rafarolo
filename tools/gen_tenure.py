@@ -48,7 +48,17 @@ def tenure(t):
              '<clipPath id="tn%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>'
              '<linearGradient id="bg%s" x1="0" y1="0" x2="1" y2="0">'
              '<stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>'
-             '</defs>' % (t, h, t, c["acc"], c["g1"]))
+             '<linearGradient id="gl%s" x1="0" y1="0" x2="1" y2="0">'
+             '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+             '<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="%s"/>'
+             '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>'
+             % (t, h, t, c["acc"], c["g1"], t, "0.62" if t == "light" else "0.42"))
+    for i, (years, _) in enumerate(ROWS):
+        p_y = TOP + i * STEP - 5
+        p_w = BAR_W * years / float(MAX_YEARS)
+        p.append('<clipPath id="cb%d%s"><rect x="%d" y="%.1f" width="%.1f" height="10" rx="5"/>'
+                 '</clipPath>' % (i, t, BAR_X, p_y, p_w))
+    p.append('</defs>')
     p.append('<style>.t{opacity:0;animation:fi .45s ease forwards}'
              '@keyframes fi{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){.t{opacity:1;animation:none}}'
@@ -76,6 +86,13 @@ def tenure(t):
                  '<animate attributeName="width" from="0" to="%.1f" begin="%.2fs" dur="0.9s" '
                  'calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>'
                  % (BAR_X, y - 5, t, w, d))
+        # A highlight running the length of the bar, once the bar has finished growing.
+        # Staggered per row so the panel reads as alive rather than as one blinking block.
+        p.append('<g clip-path="url(#cb%d%s)">'
+                 '<rect x="%.1f" y="%.1f" width="72" height="10" fill="url(#gl%s)">'
+                 '<animate attributeName="x" from="%.1f" to="%.1f" begin="%.2fs" dur="2.4s" '
+                 'repeatCount="indefinite"/></rect></g>'
+                 % (i, t, BAR_X - 72, y - 5, t, BAR_X - 72, BAR_X + w, d + 1.1 + i * 0.28))
 
         x = CHIP_X
         for name in names:
