@@ -198,8 +198,10 @@ def skyline(t):
                          'r="2.2" fill="%s"/>' % (rnd.uniform(0, 2), ax + 1, btop - 20, k["win"]))
             if lit:
                 unlit = darken(col, .58 if t == "light" else .55)
-                for wx in range(x + 7, x + bw - 6, 12):
-                    for wy in range(btop + 11, GROUND - 8, 14):
+                # Inset from every edge. Flush against a silhouette that blends into the
+                # sky, a window stops reading as part of the building it is on.
+                for wx in range(x + 10, x + bw - 12, 12):
+                    for wy in range(btop + 16, GROUND - 12, 14):
                         r = rnd.random()
                         if r > .52:
                             p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s"/>'
