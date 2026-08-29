@@ -138,90 +138,6 @@ def rings(t):
     return "\n".join(p) + "\n"
 
 
-GROUPS = [
-    ("domain/", "the part that does not get replaced", [
-        ("securitization", "CRI · CRA · series · lastro"),
-        ("settlement", "B3 · custody · liquidation dates"),
-        ("accounting", "asset × liability · roll-forward")]),
-    ("application/", "what the days are actually spent on", [
-        ("review", "906 usages, 17 callers"),
-        ("architecture", "hexagonal · one contract per capability"),
-        ("reliability", "0 bugs · 0 vulnerabilities · rating A")]),
-    ("adapters/", "swappable on purpose — that is the point", [
-        ("jvm", "kotlin · java · spring boot"),
-        ("storage", "postgres · sql server · cosmos"),
-        ("cloud", "azure · aks · pulumi · actions"),
-        ("signals", "prometheus · grafana · sonarqube")]),
-]
-CMD = "$ tree rolo.m.rafael"
-CH = 7.82
-TYPE_S = 1.0
-
-
-def archetype(t):
-    c = THEMES[t]
-    n_rows = sum(1 + len(v) for _, _, v in GROUPS)
-    h = 44 + 30 + n_rows * 21 + (len(GROUPS) - 1) * 8 + 26
-    w = CH * len(CMD)
-    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
-         'role="img" aria-label="A terminal typing the command tree rolo.m.rafael, whose output '
-         'is a package tree: a domain package that does not get replaced, an application package, '
-         'and adapter packages that are swappable on purpose.">' % (h, h)]
-    p.append('<defs>')
-    p.append('<clipPath id="ra%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>' % (t, h))
-    p.append('<clipPath id="tp%s"><rect class="type" x="44" y="24" width="%.1f" height="22"/></clipPath>'
-             % (t, w))
-    p.append('</defs>')
-    p.append('<style>'
-             '.type{transform-box:fill-box;transform-origin:0 50%%;transform:scaleX(0);'
-             'animation:tw %.2fs steps(%d,end) .25s forwards}'
-             '.caret{opacity:0;animation:show 0s linear %.2fs forwards,blink 1.06s step-end %.2fs infinite}'
-             '.ln{opacity:0;animation:fa .34s ease forwards}'
-             '.dot{transform-box:fill-box;transform-origin:50%% 50%%;transform:scale(0);'
-             'animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}'
-             '@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}'
-             '@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}'
-             '@keyframes blink{50%%{opacity:0}}'
-             '@media (prefers-reduced-motion: reduce){'
-             '.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}'
-             '.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}'
-             '</style>' % (TYPE_S, len(CMD), TYPE_S + .25, TYPE_S + .25))
-    p.append('<g clip-path="url(#ra%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
-    p.append('<rect x="0" y="0" width="3" height="%d" fill="%s"/>' % (h, c["acc"]))
-    for i, col in enumerate((c["g2"], c["g1"], c["g0"])):
-        p.append('<circle cx="%d" cy="22" r="4.5" fill="%s" opacity="0.85"/>' % (26 + i * 15, col))
-    p.append('<g font-family="%s" font-size="13">' % MONO)
-    p.append('<g clip-path="url(#tp%s)"><text x="44" y="40" fill="%s" font-weight="600">%s</text></g>'
-             % (t, c["ink"], CMD))
-    p.append('<rect class="caret" x="%.1f" y="28" width="7.5" height="14" fill="%s"/>' % (44 + w + 1, c["acc"]))
-    y, n = 74, 0
-    for gi, (gname, gnote, leaves) in enumerate(GROUPS):
-        last_group = gi == len(GROUPS) - 1
-        d = TYPE_S + .35 + n * .05
-        p.append('<circle class="dot" style="animation-delay:%.2fs" cx="50" cy="%d" r="4" fill="%s"/>'
-                 % (d, y - 4, c["acc"]))
-        p.append('<text class="ln" style="animation-delay:%.2fs" x="62" y="%d" font-weight="700" '
-                 'fill="%s">%s %s</text>' % (d, y, c["acc"], "└─" if last_group else "├─", gname))
-        p.append('<text class="ln" style="animation-delay:%.2fs" x="360" y="%d" font-size="11.5" '
-                 'font-style="italic" fill="%s">%s</text>' % (d + .04, y, c["dim"], gnote))
-        y += 21
-        n += 1
-        for li, (lname, lnote) in enumerate(leaves):
-            d = TYPE_S + .35 + n * .05
-            trunk = "&#160;" if last_group else "│"
-            glyph = "└─" if li == len(leaves) - 1 else "├─"
-            p.append('<text class="ln" style="animation-delay:%.2fs" x="84" y="%d" fill="%s">'
-                     '%s&#160;&#160;%s %s</text>' % (d, y, c["mut"], trunk, glyph, lname))
-            p.append('<text class="ln" style="animation-delay:%.2fs" x="360" y="%d" font-size="11.5" '
-                     'fill="%s">%s</text>' % (d + .04, y, c["dim"], lnote))
-            y += 21
-            n += 1
-        y += 8
-    p.append('</g></g></svg>')
-    return "\n".join(p) + "\n"
-
-
 SKY = {
     "light": dict(top="#F7F9FA", horizon="#DCE9ED", far="#BACDD5", mid="#93AEB9",
                   near="#5F7C88", win="#B08243", win2="#0E5468", winop=".55"),
@@ -290,7 +206,7 @@ def skyline(t):
 
 
 for t in ("light", "dark"):
-    for name, fn in (("banner", banner), ("rings", rings), ("archetype", archetype), ("skyline", skyline)):
+    for name, fn in (("banner", banner), ("rings", rings), ("skyline", skyline)):
         io.open(os.path.join(OUT, "%s-%s.svg" % (name, t)), "w", encoding="utf-8",
                 newline="\n").write(fn(t))
     print("wrote banner/rings/archetype/skyline for", t)

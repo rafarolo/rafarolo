@@ -50,14 +50,14 @@ and GitHub Actions · Airflow for ingestion · Prometheus, Grafana and SonarQube
   <img alt="" src="assets/dot-light.svg">
 </picture>
 
-## rolo.m.rafael
+## Artifact of my life
 
-The same seventeen years drawn the way I'd draw a service — domain in the middle, stack as
+`rolo.rafael.life`, laid out the way I'd lay out a service — domain at the core, stack as
 adapters, because the stack is the part that gets replaced.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
-  <img alt="Career as a package tree under rolo.m.rafael: a domain package that does not get replaced, an application package, and swappable adapter packages." src="assets/archetype-light.svg">
+  <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg">
 </picture>
 
 <p align="center">
