@@ -232,58 +232,80 @@ def skyline(t):
     p.append('<style>.w{animation:tw 4s ease-in-out infinite}'
              '.bk{animation-name:bk;animation-timing-function:step-end;animation-iteration-count:infinite}'
              '.bo{animation-name:bo;animation-timing-function:step-end;animation-iteration-count:infinite}'
+             '.st{animation-name:st;animation-timing-function:ease-in-out;animation-iteration-count:infinite}'
              '.bl{animation:bl 2.6s step-end infinite}'
              '@keyframes tw{0%%,100%%{opacity:%s}45%%{opacity:.16}}'
              '@keyframes bk{0%%,58%%{opacity:1}59%%,100%%{opacity:.06}}'
              '@keyframes bo{0%%,44%%{opacity:.06}45%%,100%%{opacity:1}}'
+             '@keyframes st{0%%,100%%{opacity:.78}50%%{opacity:.30}}'
              '@keyframes bl{50%%{opacity:.15}}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}@keyframes ftin{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){.w,.bk,.bl,.plane{animation:none}.ft{opacity:1;animation:none}}</style>' % k["winop"])
     p.append('<g clip-path="url(#sc%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="260" fill="url(#sky%s)"/>' % t)
     if t == "dark":
-        for i in range(58):
-            period = round(rnd.uniform(1.8, 7.5), 1)
-            p.append('<circle class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
-                     'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6" opacity=".6"/>'
-                     % (rnd.choice(("w", "bk", "bo")), period, rnd.uniform(0, period),
-                        rnd.randint(10, 990), rnd.randint(8, 104), rnd.uniform(.6, 1.4)))
+        # The sky is laid out so nothing crosses anything else. The aircraft flies a shallow
+        # line from y=62 down to y=40; every other object is placed clear of it, and the
+        # moon anchors the right where the meteor never reaches.
+        moon = (884, 60, 21)
+        sparkle = (744, 28)
+        keep_clear = ((moon[0], moon[1], 46), (sparkle[0], sparkle[1], 26))
 
-        sx, sy = 908, 42
+        placed = 0
+        while placed < 34:
+            x, y = rnd.randint(14, 986), rnd.randint(8, 104)
+            if any((x - cx) ** 2 + (y - cy) ** 2 < r * r for cx, cy, r in keep_clear):
+                continue
+            period = round(rnd.uniform(4.5, 14.0), 1)
+            p.append('<circle class="st" style="animation-duration:%ss;animation-delay:-%.1fs" '
+                     'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6"/>'
+                     % (period, rnd.uniform(0, period), x, y, rnd.uniform(.6, 1.5)))
+            placed += 1
+
+        mx, my, mr = moon
+        p.append('<circle cx="%d" cy="%d" r="%d" fill="#E8F2F7" opacity="0.10"/>' % (mx, my, mr + 13))
+        p.append('<circle cx="%d" cy="%d" r="%d" fill="#EDF5F9"/>' % (mx, my, mr))
+        # The shadow is a second disc in the sky colour, which gives the crescent its edge
+        # without needing a mask.
+        p.append('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (mx - 9, my - 5, mr, k["top"]))
+        for dx, dy, r in ((7, 6, 3.4), (2, -8, 2.2), (12, -2, 1.8)):
+            p.append('<circle cx="%d" cy="%d" r="%.1f" fill="#CBDDE6" opacity="0.45"/>'
+                     % (mx + dx, my + dy, r))
+
         p.append('<g opacity="0.9">'
-                 '<animateTransform attributeName="transform" type="scale" '
-                 'values="1;1.35;1" keyTimes="0;0.5;1" additive="sum" dur="4.4s" '
+                 '<animate attributeName="opacity" values="0.5;1;0.5" dur="6.5s" '
                  'repeatCount="indefinite"/>'
-                 '<animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" '
-                 'repeatCount="indefinite"/>'
-                 '<path d="M%d %d l3.5 9 l9 3.5 l-9 3.5 l-3.5 9 l-3.5 -9 l-9 -3.5 l9 -3.5 z" '
+                 '<path d="M0 -11 l3.2 8 l8 3.2 l-8 3.2 l-3.2 8 l-3.2 -8 l-8 -3.2 l8 -3.2 z" '
                  'fill="#FFFFFF" transform="translate(%d %d)"/>'
-                 '</g>' % (0, -12, sx, sy))
+                 '</g>' % sparkle)
 
-        # A streak every half minute and something slower and brighter every three, both
-        # off screen for almost all of their cycle so they stay events rather than motion.
-        for name, length, width, cycle, cross, y0, drop in (
-            ("shooting", 74, 1.8, 31.0, 0.030, 26, 96),
-            ("comet", 132, 3.0, 97.0, 0.055, 14, 132),
+        # A meteor is a short, steep scratch that arrives and is gone. Run across the full
+        # width on a shallow line it reads as another aircraft trail -- which is what the
+        # previous one did, on the aircraft's own flight path. Both of these now stay above
+        # the plane for their whole travel.
+        for name, length, width, cycle, x0, y0, x1, y1, visible in (
+            ("shooting", 52, 1.9, 25.0, 58, -18, 248, 46, 0.032),
+            ("comet", 104, 3.0, 91.0, 296, -28, 700, 24, 0.070),
         ):
-            p.append('<linearGradient id="%s%s" x1="0" y1="0" x2="1" y2="0">'
+            p.append('<linearGradient id="%s%s" x1="0" y1="0" x2="1" y2="1">'
                      '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+                     '<stop offset="0.6" stop-color="#DCEEF6" stop-opacity="0.45"/>'
                      '<stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/></linearGradient>'
                      % (name, t))
+            dy = int(length * 0.55)
             p.append('<g opacity="0">'
                      '<line x1="0" y1="0" x2="%d" y2="%d" stroke="url(#%s%s)" stroke-width="%.1f" '
                      'stroke-linecap="round"/>'
                      '<circle cx="%d" cy="%d" r="%.1f" fill="#FFFFFF"/>'
                      '<animate attributeName="opacity" values="0;1;1;0;0" '
-                     'keyTimes="0;0.004;%.3f;%.3f;1" dur="%.1fs" repeatCount="indefinite"/>'
+                     'keyTimes="0;0.10;0.72;1;1" dur="%.2fs" repeatCount="indefinite"/>'
                      '<animateTransform attributeName="transform" type="translate" '
-                     'values="-%d %d;1060 %d;1060 %d" keyTimes="0;%.3f;1" '
-                     'dur="%.1fs" repeatCount="indefinite"/>'
+                     'values="%d %d;%d %d;%d %d" keyTimes="0;%.3f;1" dur="%.1fs" '
+                     'repeatCount="indefinite"/>'
                      '</g>'
-                     % (length, int(length * 0.36), name, t, width,
-                        length, int(length * 0.36), width * 0.9,
-                        cross * 0.92, cross, cycle,
-                        length, y0, y0 + drop, y0 + drop, cross, cycle))
+                     % (length, dy, name, t, width, length, dy, width * 0.85,
+                        cycle * visible, x0, y0, x1, y1, x1, y1, visible, cycle))
+
     def bridge():
         col = k["mid"]
         deck_y = GROUND - 34
