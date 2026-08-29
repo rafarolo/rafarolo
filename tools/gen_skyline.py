@@ -78,22 +78,31 @@ def plane(t, k, ident, delay, flip):
             % (delay, x0, y0, x1, y1, x1, y1, delay, inner))
 
 
-def streak(t, name, length, width, cycle, runs):
-    """SMIL cannot roll a die, so the variety is written in: several crossings at different
-    heights and angles inside one long cycle, parked off screen between them."""
+SKY_CYCLE = 150.0
+SLOTS = 6          # the meteor takes the even ones, the comet the odd
+TRAVEL = 0.019     # fraction of the cycle a crossing is on screen
+
+
+def streak(t, name, length, width, slots, runs):
+    """One shared cycle with the two objects on alternating slots, so they can never be on
+    screen together. Independent cycles drift into each other eventually -- 74 and 173
+    seconds coincide sooner than it sounds.
+
+    SMIL cannot roll a die either, so the variety is written in: each crossing has its own
+    height and angle, and the object is parked off screen between them."""
     dy = int(length * 0.55)
-    n = len(runs)
-    slot, travel = 1.0 / n, 0.035
     pos, times, fade, ftimes = [], [], [], []
-    for j, (x0, y0, x1, y1) in enumerate(runs):
-        base = j * slot
+    for slot, (x0, y0, x1, y1) in zip(slots, runs):
+        base = slot / float(SLOTS)
         pos += ["%d %d" % (x0, y0), "%d %d" % (x1, y1), "%d %d" % (x1, y1)]
-        times += ["%.4f" % base, "%.4f" % (base + travel), "%.4f" % (base + slot - 0.001)]
+        times += ["%.4f" % base, "%.4f" % (base + TRAVEL),
+                  "%.4f" % (base + 1.0 / SLOTS - 0.0005)]
         fade += ["0", "1", "1", "0"]
-        ftimes += ["%.4f" % base, "%.4f" % (base + travel * 0.16),
-                   "%.4f" % (base + travel * 0.82), "%.4f" % (base + travel)]
-    pos.append(pos[-1]); times.append("1")
-    fade.append("0"); ftimes.append("1")
+        ftimes += ["%.4f" % base, "%.4f" % (base + TRAVEL * 0.16),
+                   "%.4f" % (base + TRAVEL * 0.82), "%.4f" % (base + TRAVEL)]
+    if float(times[-1]) < 1:
+        pos.append(pos[-1]); times.append("1")
+        fade.append("0"); ftimes.append("1")
     return ('<g opacity="0">'
             '<line x1="0" y1="0" x2="%d" y2="%d" stroke="url(#%s%s)" stroke-width="%.1f" '
             'stroke-linecap="round"/>'
@@ -103,8 +112,8 @@ def streak(t, name, length, width, cycle, runs):
             '<animateTransform attributeName="transform" type="translate" values="%s" '
             'keyTimes="%s" dur="%.1fs" repeatCount="indefinite"/>'
             '</g>' % (length, dy, name, t, width, length, dy, width * 0.85,
-                      ";".join(fade), ";".join(ftimes), cycle,
-                      ";".join(pos), ";".join(times), cycle))
+                      ";".join(fade), ";".join(ftimes), SKY_CYCLE,
+                      ";".join(pos), ";".join(times), SKY_CYCLE))
 
 
 def skyline(t):
@@ -184,9 +193,9 @@ def skyline(t):
                      % (mx + dx, my + dy, r))
 
         lo, hi = COMET_BAND
-        p.append(streak(t, "shooting", 52, 1.9, 74.0,
+        p.append(streak(t, "shooting", 52, 1.9, (0, 2, 4),
                         ((52, -20, 236, 40), (16, -14, 190, 34), (96, -24, 254, 26))))
-        p.append(streak(t, "comet", 104, 3.0, 173.0,
+        p.append(streak(t, "comet", 104, 3.0, (1, 3, 5),
                         ((-130, lo, 470, hi), (250, hi, 900, lo), (-90, hi - 6, 640, lo + 4))))
 
     for name, count, wmin, wmax, hmin, hmax, lit in LAYERS:
