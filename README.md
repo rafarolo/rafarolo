@@ -22,7 +22,7 @@ private corporate repositories, which is why the graph below is green and unclic
 </picture>
 
 <details>
-<summary>Same timeline as text</summary>
+<summary>Timeline as text</summary>
 
 | Years | | |
 |---|---|---|
