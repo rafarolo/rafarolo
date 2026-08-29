@@ -42,14 +42,17 @@ private corporate repositories, which is why the graph below is green and unclic
 
 ## Stack
 
+Years are counted from the first role where the technology appears.
+
 | | |
 |---|---|
-| **Language** | `Kotlin` `Java 21` |
-| **Framework** | `Spring Boot` `Spring Data` `Spring Security` `GraphQL` `OpenAPI` |
-| **Data** | `PostgreSQL` `SQL Server` `Cosmos DB` `MongoDB` |
-| **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
-| **Signals** | `Prometheus` `Grafana` `OpenTelemetry` `SonarQube` |
-| **Ingestion** | `Airflow` |
+| **Language** | `Java · 17y` `Kotlin · 3y` |
+| **Framework** | `Spring Boot · 11y` `Spring Security · 7y` `OpenAPI · 7y` `GraphQL · 3y` |
+| **Data** | `PostgreSQL · 14y` `MongoDB · 12y` `SQL Server · 11y` `Cosmos DB · 3y` |
+| **Cloud** | `Kubernetes · 7y` `Docker · 7y` `AWS · 5y` `Azure · 3y` `GCP · 1y` |
+| **Delivery** | `SonarQube · 7y` `Pulumi · 3y` `GitHub Actions · 3y` |
+| **Signals** | `Prometheus · 5y` `Grafana · 5y` `OpenTelemetry · 3y` |
+| **Ingestion** | `Airflow · 2y` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
