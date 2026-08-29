@@ -155,16 +155,20 @@ def skyline(t):
     p.append('</defs>')
 
     p.append('<style>'
-             '.st{animation-name:tw;animation-timing-function:ease-in-out;'
-             'animation-iteration-count:infinite;animation-direction:alternate}'
-             '.st2{animation-name:tw2;animation-timing-function:ease-in-out;'
-             'animation-iteration-count:infinite;animation-direction:alternate}'
+             + "".join('.st%d{animation-name:tw%d;animation-timing-function:ease-in-out;'
+                       'animation-iteration-count:infinite}' % (i, i) for i in range(1, 5))
              + "".join('.%s{animation-name:%s;animation-timing-function:ease-in-out;'
                        'animation-iteration-count:infinite}' % (b, b) for b in BLINKS) +
              '.bl{animation:bl 2.6s step-end infinite}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
-             '@keyframes tw{0%,100%{opacity:1}50%{opacity:.06}}'
-             '@keyframes tw2{0%,100%{opacity:.08}38%{opacity:1}}'
+             # Four rhythms, none of them symmetrical. A star that dims and brightens on a
+             # even beat reads as a signal; a real one holds, flickers, holds again.
+             '@keyframes tw1{0%,100%{opacity:1}31%{opacity:.62}46%{opacity:.9}68%{opacity:.44}}'
+             '@keyframes tw2{0%,58%{opacity:1}70%{opacity:.1}79%{opacity:.85}86%{opacity:.2}'
+             '94%,100%{opacity:1}}'
+             '@keyframes tw3{0%,100%{opacity:.86}18%{opacity:.3}37%{opacity:1}}'
+             '@keyframes tw4{0%,42%{opacity:.95}52%{opacity:.18}61%{opacity:.7}'
+             '73%,100%{opacity:.95}}'
              # Every transition is a ramp, and the flats between them are long enough that
              # the window is off or on rather than permanently crossfading.
              '@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:0}100%{opacity:1}}'
@@ -196,13 +200,18 @@ def skyline(t):
                 continue
             if 250 < x < 750 and TEXT_Y - 22 < y < TEXT_Y + 12:
                 continue
-            period = round(rnd.uniform(7.0, 20.0), 1)
+            period = round(rnd.uniform(6.0, 26.0), 1)
             # A four-pointed star loses more area to its notches than a disc of the same
             # radius, so it has to be drawn larger to read at all.
-            p.append('<path class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
-                     'd="%s" fill="%s"/>'
-                     % (rnd.choice(("st", "st2")), period, rnd.uniform(0, period),
-                        star(x, y, rnd.uniform(2.4, 5.0)), k["star"]))
+            shape = star(x, y, rnd.uniform(2.4, 5.0))
+            if rnd.random() < 0.28:
+                # A sky where every point moves is a sky nobody believes. Some just sit.
+                p.append('<path d="%s" fill="%s" opacity="%.2f"/>'
+                         % (shape, k["star"], rnd.uniform(.55, .95)))
+            else:
+                p.append('<path class="st%d" style="animation-duration:%ss;'
+                         'animation-delay:-%.1fs" d="%s" fill="%s"/>'
+                         % (rnd.randint(1, 4), period, rnd.uniform(0, period), shape, k["star"]))
             placed += 1
 
         # A warm disc and its craters. Nothing behind it and nothing cutting it.
