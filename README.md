@@ -29,7 +29,7 @@ green and unclickable.
 <details>
 <summary>Timeline as text</summary>
 
-| Period&nbsp;&nbsp;&nbsp;&nbsp; | Delivery | |
+| Period&nbsp;&nbsp;&nbsp;&nbsp; | Delivery | What it involved |
 |---|---|---|
 | `2025‑2026` | **OpenSec, an API for partners** | 22 endpoints across 8 service families · documentation kits built by an automated pipeline |
 | `2025‑2026` | **Passwordless, and routes that stay inside** | Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS |
