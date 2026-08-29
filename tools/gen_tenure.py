@@ -23,14 +23,34 @@ BAR_X = 96
 BAR_W = 232
 CHIP_X = 356
 MAX_YEARS = max(y for y, _ in ROWS)
-CH = 6.5
 CHIP_PAD = 9
 CHIP_GAP = 7
 CHIP_H = 21
 
 
+# A fixed width per character overshoots on narrow letters and clips on wide capitals:
+# "Spring Security" came out 10px too wide and "MongoDB" ran past its own chip.
+NARROW = "ijlI|.,:;'"
+SLIM = "ftr()[]- "
+WIDE = "mwMW"
+
+
+def glyph_width(ch):
+    if ch in NARROW:
+        return 3.1
+    if ch in SLIM:
+        return 4.2
+    if ch in WIDE:
+        return 10.0
+    if ch.isupper():
+        return 7.9
+    if ch.isdigit():
+        return 6.8
+    return 6.7
+
+
 def chip_width(label):
-    return len(label) * CH + CHIP_PAD * 2
+    return sum(glyph_width(ch) for ch in label) + CHIP_PAD * 2
 
 
 def tenure(t):
