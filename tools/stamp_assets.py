@@ -18,13 +18,24 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 README = os.path.join(ROOT, "README.md")
-PATTERN = re.compile(r'(assets/([a-z0-9-]+\.svg))(\?v=[0-9a-f]+)?')
+# Bump when a URL has to change even though its file has not -- the proxy caches by URL,
+# so a version that was fetched while the wrong drawing was in the repository keeps serving
+# that drawing for as long as the URL stays the same.
+SALT = "b"
+
+PATTERN = re.compile(r'(assets/([a-z0-9-]+\.svg))(\?v=[0-9a-z]+)?')
 
 
 def digest(name):
+    """Hash the bytes the repository holds, not the bytes on this disk.
+
+    Git rewrites line endings in the working tree on Windows, so hashing the file as it
+    sits here produces a value that never matches what is served, and the stamp stops
+    meaning anything. Normalising first makes it stable on any machine."""
     path = os.path.join(ROOT, "assets", name)
     with open(path, "rb") as handle:
-        return hashlib.sha256(handle.read()).hexdigest()[:8]
+        content = handle.read().replace(b"\r\n", b"\n")
+    return hashlib.sha256(content).hexdigest()[:8] + SALT
 
 
 def main():
