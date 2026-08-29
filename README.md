@@ -3,13 +3,12 @@
   <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
 </picture>
 
-Seventeen years on the JVM<br>
-I work where a wrong number has a settlement date — custody positions, asset and liability
-ledgers, regulatory reporting.
+- I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
+- I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
+- I review more than I write: **906 reviews against 798 pull requests of my own**, for 17 engineers
 
-In every completed year I have reviewed more pull requests than I opened<br>
-All of it in private corporate repositories, which is why the graph below is green and
-unclickable.
+All of it in private corporate repositories, which is why the contribution graph below is
+green and unclickable.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
