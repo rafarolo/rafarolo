@@ -60,7 +60,7 @@ def banner(t):
         x, d = 48 + i * 195, 0.26 + i * 0.09
         p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="166" font-size="42" '
                  'font-weight="700" fill="%s" letter-spacing="-1">%s</text>' % (d, x, c["ink"], val))
-        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="188" font-size="10.5" '
+        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="189" font-size="12" '
                  'font-weight="600" fill="%s" letter-spacing="1.5">%s</text>' % (d + .06, x + 1, c["mut"], lab))
     p.append('<text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" '
              'font-weight="600" fill="%s" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>' % c["mut"])
@@ -127,12 +127,12 @@ def rings(t):
         p.append('<circle class="a%d" cx="%d" cy="%d" r="%.1f" fill="none" stroke="%s" '
                  'stroke-width="11" stroke-linecap="round" transform="rotate(-90 %d %d)"/>'
                  % (i, cx, cy, RR, c["acc"], cx, cy))
-        p.append('<text x="%d" y="%d" font-size="28" font-weight="700" fill="%s" '
+        p.append('<text x="%d" y="%d" font-size="30" font-weight="700" fill="%s" '
                  'text-anchor="middle" letter-spacing="-1">%s</text>' % (cx, cy + 10, c["ink"], big))
-        p.append('<text class="lb" style="animation-delay:%.2fs" x="%d" y="170" font-size="10.5" '
+        p.append('<text class="lb" style="animation-delay:%.2fs" x="%d" y="170" font-size="12" '
                  'font-weight="700" fill="%s" text-anchor="middle" letter-spacing="1.5">%s</text>'
                  % (.7 + i * .12, cx, c["mut"], lab))
-        p.append('<text class="lb" style="animation-delay:%.2fs" x="%d" y="188" font-size="10.5" '
+        p.append('<text class="lb" style="animation-delay:%.2fs" x="%d" y="189" font-size="12" '
                  'fill="%s" text-anchor="middle">%s</text>' % (.78 + i * .12, cx, c["dim"], sub))
     p.append('</g></g></svg>')
     return "\n".join(p) + "\n"

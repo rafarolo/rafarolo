@@ -12,11 +12,11 @@
 <text class="fade" style="animation-delay:.1s" x="48" y="86" font-size="12" font-weight="600" fill="#7FC6D6" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · CAPITAL MARKETS</text>
 <line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" stroke="#23303A" stroke-width="1"/>
 <text class="fade" style="animation-delay:0.26s" x="48" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">17</text>
-<text class="fade" style="animation-delay:0.32s" x="49" y="188" font-size="10.5" font-weight="600" fill="#94A3AE" letter-spacing="1.5">YEARS ON THE JVM</text>
+<text class="fade" style="animation-delay:0.32s" x="49" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">YEARS ON THE JVM</text>
 <text class="fade" style="animation-delay:0.35s" x="243" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">798</text>
-<text class="fade" style="animation-delay:0.41s" x="244" y="188" font-size="10.5" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS</text>
+<text class="fade" style="animation-delay:0.41s" x="244" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS</text>
 <text class="fade" style="animation-delay:0.44s" x="438" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">906</text>
-<text class="fade" style="animation-delay:0.50s" x="439" y="188" font-size="10.5" font-weight="600" fill="#94A3AE" letter-spacing="1.5">CODE REVIEWS</text>
+<text class="fade" style="animation-delay:0.50s" x="439" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">CODE REVIEWS</text>
 <text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>
 <rect class="bar" style="animation-delay:0.62s" x="700" y="163.0" width="24" height="33.0" rx="1.5" fill="#56AEC2" opacity="0.38"/>
 <rect class="bar" style="animation-delay:0.67s" x="727" y="154.1" width="24" height="41.9" rx="1.5" fill="#56AEC2"/>

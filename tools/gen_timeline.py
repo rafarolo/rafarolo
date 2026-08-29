@@ -62,14 +62,14 @@ def timeline(t):
         p.append('<circle class="nd" style="animation-delay:%.2fs" cx="%d" cy="%d" r="%.1f" '
                  'fill="%s" stroke="%s" stroke-width="%d"/>'
                  % (d, SPINE, y, r, c["acc"] if major else c["panel"], c["acc"], 3 if major else 2.5))
-        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="12.5" '
+        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="14" '
                  'font-weight="700" fill="%s" text-anchor="end" letter-spacing="0.3">%s</text>'
                  % (d + .05, SPINE - 24, y + 5, c["acc"], yr))
         p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="%d" '
                  'font-weight="700" fill="%s" letter-spacing="-0.2">%s</text>'
-                 % (d + .08, SPINE + 26, y + 1, 17 if major else 15, c["ink"], head))
-        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="12.5" '
-                 'fill="%s">%s</text>' % (d + .12, SPINE + 26, y + 23, c["dim"], det))
+                 % (d + .08, SPINE + 26, y + 1, 19 if major else 17, c["ink"], head))
+        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="14" '
+                 'fill="%s">%s</text>' % (d + .12, SPINE + 26, y + 24, c["dim"], det))
 
     p.append('</g></g></svg>')
     return NL.join(p) + NL

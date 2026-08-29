@@ -6,35 +6,35 @@
 <rect class="sp" x="127" y="24" width="2" height="562" fill="#0E5468" opacity="0.45"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <circle class="nd" style="animation-delay:0.30s" cx="128" cy="46" r="9.0" fill="#0E5468" stroke="#0E5468" stroke-width="3"/>
-<text class="tx" style="animation-delay:0.35s" x="104" y="51" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2025–2026</text>
-<text class="tx" style="animation-delay:0.38s" x="154" y="47" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">OpenSec, an API for partners</text>
-<text class="tx" style="animation-delay:0.42s" x="154" y="69" font-size="12.5" fill="#808C99">22 endpoints across 8 service families · documentation kits built by an automated pipeline</text>
+<text class="tx" style="animation-delay:0.35s" x="104" y="51" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2025–2026</text>
+<text class="tx" style="animation-delay:0.38s" x="154" y="47" font-size="19" font-weight="700" fill="#0E151C" letter-spacing="-0.2">OpenSec, an API for partners</text>
+<text class="tx" style="animation-delay:0.42s" x="154" y="70" font-size="14" fill="#808C99">22 endpoints across 8 service families · documentation kits built by an automated pipeline</text>
 <circle class="nd" style="animation-delay:0.43s" cx="128" cy="120" r="5.5" fill="#EEF2F4" stroke="#0E5468" stroke-width="2"/>
-<text class="tx" style="animation-delay:0.48s" x="104" y="125" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2025–2026</text>
-<text class="tx" style="animation-delay:0.51s" x="154" y="121" font-size="15" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Passwordless, and routes that stay inside</text>
-<text class="tx" style="animation-delay:0.55s" x="154" y="143" font-size="12.5" fill="#808C99">Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS</text>
+<text class="tx" style="animation-delay:0.48s" x="104" y="125" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2025–2026</text>
+<text class="tx" style="animation-delay:0.51s" x="154" y="121" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Passwordless, and routes that stay inside</text>
+<text class="tx" style="animation-delay:0.55s" x="154" y="144" font-size="14" fill="#808C99">Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS</text>
 <circle class="nd" style="animation-delay:0.56s" cx="128" cy="194" r="9.0" fill="#0E5468" stroke="#0E5468" stroke-width="3"/>
-<text class="tx" style="animation-delay:0.61s" x="104" y="199" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2024–2026</text>
-<text class="tx" style="animation-delay:0.64s" x="154" y="195" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">New cluster, new region, one pipeline</text>
-<text class="tx" style="animation-delay:0.68s" x="154" y="217" font-size="12.5" fill="#808C99">every application rewritten into a single GitHub Actions pipeline · Azure subscription and AKS migration</text>
+<text class="tx" style="animation-delay:0.61s" x="104" y="199" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2024–2026</text>
+<text class="tx" style="animation-delay:0.64s" x="154" y="195" font-size="19" font-weight="700" fill="#0E151C" letter-spacing="-0.2">New cluster, new region, one pipeline</text>
+<text class="tx" style="animation-delay:0.68s" x="154" y="218" font-size="14" fill="#808C99">every application rewritten into a single GitHub Actions pipeline · Azure subscription and AKS migration</text>
 <circle class="nd" style="animation-delay:0.69s" cx="128" cy="268" r="9.0" fill="#0E5468" stroke="#0E5468" stroke-width="3"/>
-<text class="tx" style="animation-delay:0.74s" x="104" y="273" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2023–2026</text>
-<text class="tx" style="animation-delay:0.77s" x="154" y="269" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Kotlin as the platform language</text>
-<text class="tx" style="animation-delay:0.81s" x="154" y="291" font-size="12.5" fill="#808C99">off Python, JavaScript and TypeScript · hexagonal architecture · R$130B+ in issued assets</text>
+<text class="tx" style="animation-delay:0.74s" x="104" y="273" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2023–2026</text>
+<text class="tx" style="animation-delay:0.77s" x="154" y="269" font-size="19" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Kotlin as the platform language</text>
+<text class="tx" style="animation-delay:0.81s" x="154" y="292" font-size="14" fill="#808C99">off Python, JavaScript and TypeScript · hexagonal architecture · R$130B+ in issued assets</text>
 <circle class="nd" style="animation-delay:0.82s" cx="128" cy="342" r="5.5" fill="#EEF2F4" stroke="#0E5468" stroke-width="2"/>
-<text class="tx" style="animation-delay:0.87s" x="104" y="347" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2021–2023</text>
-<text class="tx" style="animation-delay:0.90s" x="154" y="343" font-size="15" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Open Banking, certified</text>
-<text class="tx" style="animation-delay:0.94s" x="154" y="365" font-size="12.5" fill="#808C99">every BACEN and FEBRABAN phase through Raidiam conformance · insurance home in a 22M-customer bank app</text>
+<text class="tx" style="animation-delay:0.87s" x="104" y="347" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2021–2023</text>
+<text class="tx" style="animation-delay:0.90s" x="154" y="343" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Open Banking, certified</text>
+<text class="tx" style="animation-delay:0.94s" x="154" y="366" font-size="14" fill="#808C99">every BACEN and FEBRABAN phase through Raidiam conformance · insurance home in a 22M-customer bank app</text>
 <circle class="nd" style="animation-delay:0.95s" cx="128" cy="416" r="5.5" fill="#EEF2F4" stroke="#0E5468" stroke-width="2"/>
-<text class="tx" style="animation-delay:1.00s" x="104" y="421" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2020–2021</text>
-<text class="tx" style="animation-delay:1.03s" x="154" y="417" font-size="15" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Claims analytics on GCP</text>
-<text class="tx" style="animation-delay:1.07s" x="154" y="439" font-size="12.5" fill="#808C99">predictive engine for suspicious claims at a 7M-client insurer, beside a COBOL/CICS core</text>
+<text class="tx" style="animation-delay:1.00s" x="104" y="421" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2020–2021</text>
+<text class="tx" style="animation-delay:1.03s" x="154" y="417" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">Claims analytics on GCP</text>
+<text class="tx" style="animation-delay:1.07s" x="154" y="440" font-size="14" fill="#808C99">predictive engine for suspicious claims at a 7M-client insurer, beside a COBOL/CICS core</text>
 <circle class="nd" style="animation-delay:1.08s" cx="128" cy="490" r="5.5" fill="#EEF2F4" stroke="#0E5468" stroke-width="2"/>
-<text class="tx" style="animation-delay:1.13s" x="104" y="495" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2019–2020</text>
-<text class="tx" style="animation-delay:1.16s" x="154" y="491" font-size="15" font-weight="700" fill="#0E151C" letter-spacing="-0.2">WebSphere to Kubernetes</text>
-<text class="tx" style="animation-delay:1.20s" x="154" y="513" font-size="12.5" fill="#808C99">retail insurance systems onto Liberty on IBM Cloud Private, OpenShift pipeline</text>
+<text class="tx" style="animation-delay:1.13s" x="104" y="495" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2019–2020</text>
+<text class="tx" style="animation-delay:1.16s" x="154" y="491" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">WebSphere to Kubernetes</text>
+<text class="tx" style="animation-delay:1.20s" x="154" y="514" font-size="14" fill="#808C99">retail insurance systems onto Liberty on IBM Cloud Private, OpenShift pipeline</text>
 <circle class="nd" style="animation-delay:1.21s" cx="128" cy="564" r="5.5" fill="#EEF2F4" stroke="#0E5468" stroke-width="2"/>
-<text class="tx" style="animation-delay:1.26s" x="104" y="569" font-size="12.5" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2014–2015</text>
-<text class="tx" style="animation-delay:1.29s" x="154" y="565" font-size="15" font-weight="700" fill="#0E151C" letter-spacing="-0.2">A study area, ten times faster</text>
-<text class="tx" style="animation-delay:1.33s" x="154" y="587" font-size="12.5" fill="#808C99">found the data bottleneck in a geomarketing platform's core calculation</text>
+<text class="tx" style="animation-delay:1.26s" x="104" y="569" font-size="14" font-weight="700" fill="#0E5468" text-anchor="end" letter-spacing="0.3">2014–2015</text>
+<text class="tx" style="animation-delay:1.29s" x="154" y="565" font-size="17" font-weight="700" fill="#0E151C" letter-spacing="-0.2">A study area, ten times faster</text>
+<text class="tx" style="animation-delay:1.33s" x="154" y="588" font-size="14" fill="#808C99">found the data bottleneck in a geomarketing platform's core calculation</text>
 </g></g></svg>

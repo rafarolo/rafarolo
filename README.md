@@ -17,7 +17,7 @@ green and unclickable.
 
 <br>
 
-## Selected work
+### Selected work
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg">
@@ -49,7 +49,7 @@ green and unclickable.
   <img alt="" src="assets/dot-light.svg">
 </picture>
 
-## Stack by area
+### Stack by area
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
@@ -75,7 +75,7 @@ Focus is measured from the 337 pull requests I opened in the last twelve months.
   <img alt="" src="assets/dot-light.svg">
 </picture>
 
-## Artifact of my life
+### Artifact of my life
 
 `rolo.rafael.life`, laid out the way I'd lay out a service<br>
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.

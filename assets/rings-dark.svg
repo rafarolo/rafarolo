@@ -6,17 +6,17 @@
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <circle cx="190" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
 <circle class="a0" cx="190" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" transform="rotate(-90 190 86)"/>
-<text x="190" y="96" font-size="28" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">88%</text>
-<text class="lb" style="animation-delay:0.70s" x="190" y="170" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">TEST COVERAGE</text>
-<text class="lb" style="animation-delay:0.78s" x="190" y="188" font-size="10.5" fill="#6B7783" text-anchor="middle">core service, up from 74.7%</text>
+<text x="190" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">88%</text>
+<text class="lb" style="animation-delay:0.70s" x="190" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">TEST COVERAGE</text>
+<text class="lb" style="animation-delay:0.78s" x="190" y="189" font-size="12" fill="#6B7783" text-anchor="middle">core service, up from 74.7%</text>
 <circle cx="500" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
 <circle class="a1" cx="500" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" transform="rotate(-90 500 86)"/>
-<text x="500" y="96" font-size="28" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">53%</text>
-<text class="lb" style="animation-delay:0.82s" x="500" y="170" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">OF EVERY PR I TOUCHED</text>
-<text class="lb" style="animation-delay:0.90s" x="500" y="188" font-size="10.5" fill="#6B7783" text-anchor="middle">906 reviews against 798 of my own</text>
+<text x="500" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">53%</text>
+<text class="lb" style="animation-delay:0.82s" x="500" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">OF EVERY PR I TOUCHED</text>
+<text class="lb" style="animation-delay:0.90s" x="500" y="189" font-size="12" fill="#6B7783" text-anchor="middle">906 reviews against 798 of my own</text>
 <circle cx="810" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
 <circle class="a2" cx="810" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" transform="rotate(-90 810 86)"/>
-<text x="810" y="96" font-size="28" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">89%</text>
-<text class="lb" style="animation-delay:0.94s" x="810" y="170" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">PULL REQUESTS MERGED</text>
-<text class="lb" style="animation-delay:1.02s" x="810" y="188" font-size="10.5" fill="#6B7783" text-anchor="middle">707 merged of 798 opened</text>
+<text x="810" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">89%</text>
+<text class="lb" style="animation-delay:0.94s" x="810" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">PULL REQUESTS MERGED</text>
+<text class="lb" style="animation-delay:1.02s" x="810" y="189" font-size="12" fill="#6B7783" text-anchor="middle">707 merged of 798 opened</text>
 </g></g></svg>

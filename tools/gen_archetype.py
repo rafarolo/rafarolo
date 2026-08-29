@@ -5,7 +5,7 @@ from gen_all import THEMES, MONO, OUT, NL
 
 ROOT = "rolo.rafael.life"
 CMD = "$ tree " + ROOT
-CH = 7.82
+CH = 8.42
 TYPE_S = 1.05
 
 
@@ -90,7 +90,7 @@ def archetype(t):
     for i, col in enumerate((c["g2"], c["g1"], c["g0"])):
         p.append('<circle cx="%d" cy="22" r="4.5" fill="%s" opacity="0.85"/>' % (26 + i * 15, col))
 
-    p.append('<g font-family="%s" font-size="13">' % MONO)
+    p.append('<g font-family="%s" font-size="14">' % MONO)
     p.append('<g clip-path="url(#tp%s)"><text x="44" y="40" fill="%s" font-weight="600">%s</text></g>'
              % (t, c["ink"], CMD))
     p.append('<rect class="caret" x="%.1f" y="28" width="7.5" height="14" fill="%s"/>' % (44 + w + 1, c["acc"]))
@@ -111,7 +111,7 @@ def archetype(t):
         p.append('<text class="ln" style="animation-delay:%.2fs" x="44" y="%d" fill="%s" '
                  'font-weight="%s">%s%s</text>' % (dl, y, fill, weight, prefix, name))
         if note:
-            p.append('<text class="ln" style="animation-delay:%.2fs" x="380" y="%d" font-size="11.5" '
+            p.append('<text class="ln" style="animation-delay:%.2fs" x="380" y="%d" font-size="12.5" '
                      '%sfill="%s">%s</text>'
                      % (dl + .04, y, 'font-style="italic" ' if is_dir else "", c["dim"], note))
         y += 21
