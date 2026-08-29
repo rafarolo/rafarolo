@@ -26,16 +26,16 @@ BASE = 196
 
 def banner(t):
     c = THEMES[t]
-    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" '
+    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" '
          'role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. '
          '17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight '
          'sectors served. Reviews '
-         'given exceed pull requests authored in every completed year.">']
+         '">']
     p.append('<defs>')
     p.append('<linearGradient id="s%s" x1="0" y1="0" x2="1" y2="0">'
              '<stop offset="0" stop-color="%s"/><stop offset="0.55" stop-color="%s"/>'
              '<stop offset="1" stop-color="%s"/></linearGradient>' % (t, c["g0"], c["g1"], c["g2"]))
-    p.append('<clipPath id="r%s"><rect x="0" y="0" width="1000" height="250" rx="10"/></clipPath>' % t)
+    p.append('<clipPath id="r%s"><rect x="0" y="0" width="1000" height="196" rx="10"/></clipPath>' % t)
     p.append('</defs>')
     p.append('<style>'
              '.fade{opacity:0;animation:f .55s ease forwards}'
@@ -48,8 +48,8 @@ def banner(t):
              '.fade{opacity:1;animation:none}.bar,.live{transform:scaleY(1);animation:none}}'
              '</style>')
     p.append('<g clip-path="url(#r%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="250" fill="%s"/>' % c["bg"])
-    p.append('<rect x="0" y="0" width="4" height="250" fill="url(#s%s)"/>' % t)
+    p.append('<rect x="0" y="0" width="1000" height="196" fill="%s"/>' % c["bg"])
+    p.append('<rect x="0" y="0" width="4" height="196" fill="url(#s%s)"/>' % t)
     p.append('<g font-family="%s">' % SANS)
     p.append('<text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="%s" '
              'letter-spacing="-0.4">Rafael Rôlo</text>' % c["ink"])
@@ -59,36 +59,16 @@ def banner(t):
     p.append('<line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" '
              'stroke="%s" stroke-width="1"/>' % c["line"])
     for i, (val, lab) in enumerate(BIG):
-        x, d = 48 + i * 167, 0.26 + i * 0.08
+        x, d = 60 + i * 228, 0.26 + i * 0.08
         p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="166" font-size="42" '
                  'font-weight="700" fill="%s" letter-spacing="-1">%s</text>' % (d, x, c["ink"], val))
         p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="189" font-size="12" '
                  'font-weight="600" fill="%s" letter-spacing="1.5">%s</text>' % (d + .06, x + 1, c["mut"], lab))
-    p.append('<text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" '
-             'font-weight="600" fill="%s" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>' % c["mut"])
-    for i, (yr, a, r) in enumerate(YEARS):
-        gx, ha, hr = 700 + i * 63, a * SCALE, r * SCALE
-        d, last = 0.62 + i * 0.11, i == len(YEARS) - 1
-        p.append('<rect class="bar" style="animation-delay:%.2fs" x="%d" y="%.1f" width="24" '
-                 'height="%.1f" rx="1.5" fill="%s" opacity="0.38"/>' % (d, gx, BASE - ha, ha, c["acc"]))
-        p.append('<rect class="%s" style="animation-delay:%.2fs" x="%d" y="%.1f" width="24" '
-                 'height="%.1f" rx="1.5" fill="%s"/>'
-                 % ("live" if last else "bar", d + .05, gx + 27, BASE - hr, hr, c["acc"]))
-        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="210" font-size="9" '
-                 'font-weight="600" fill="%s" text-anchor="middle">%s</text>' % (d + .1, gx + 25, c["dim"], yr))
-    p.append('<g class="fade" style="animation-delay:1.15s">')
-    p.append('<circle cx="704" cy="226" r="4" fill="%s" opacity="0.38"/>' % c["acc"])
-    p.append('<text x="713" y="229" font-size="8.5" font-weight="600" fill="%s" '
-             'letter-spacing="1">AUTHORED</text>' % c["dim"])
-    p.append('<circle cx="794" cy="226" r="4" fill="%s"/>' % c["acc"])
-    p.append('<text x="803" y="229" font-size="8.5" font-weight="600" fill="%s" '
-             'letter-spacing="1">REVIEWED FOR OTHERS</text>' % c["dim"])
-    p.append('</g>')
-    p.append('<text class="fade" style="animation-delay:1.15s" x="48" y="229" font-size="8.5" '
+    p.append('<text class="fade" style="animation-delay:1.15s" x="60" y="175" font-size="8.5" '
              'font-weight="600" fill="%s" letter-spacing="1.1">PRIVATE CORPORATE REPOSITORIES · '
-             'MEASURED AUGUST 2026 · 2026 PARTIAL</text>' % c["dim"])
+             'MEASURED AUGUST 2026</text>' % c["dim"])
     p.append('</g>')
-    p.append('<rect x="0" y="245" width="1000" height="5" fill="url(#s%s)"/>' % t)
+    p.append('<rect x="0" y="191" width="1000" height="5" fill="url(#s%s)"/>' % t)
     p.append('</g></svg>')
     return "\n".join(p) + "\n"
 

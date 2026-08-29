@@ -1,44 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight sectors served. Reviews given exceed pull requests authored in every completed year.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight sectors served. Reviews ">
 <defs>
 <linearGradient id="sdark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#56AEC2"/><stop offset="0.55" stop-color="#3E93A8"/><stop offset="1" stop-color="#C9A468"/></linearGradient>
-<clipPath id="rdark"><rect x="0" y="0" width="1000" height="250" rx="10"/></clipPath>
+<clipPath id="rdark"><rect x="0" y="0" width="1000" height="196" rx="10"/></clipPath>
 </defs>
 <style>.fade{opacity:0;animation:f .55s ease forwards}.bar{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:g .75s cubic-bezier(.2,.85,.25,1) forwards}.live{animation:g .75s cubic-bezier(.2,.85,.25,1) forwards,pulse 3.4s ease-in-out 1.6s infinite}@keyframes f{to{opacity:1}}@keyframes g{to{transform:scaleY(1)}}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.62}}@media (prefers-reduced-motion: reduce){.fade{opacity:1;animation:none}.bar,.live{transform:scaleY(1);animation:none}}</style>
 <g clip-path="url(#rdark)">
-<rect x="0" y="0" width="1000" height="250" fill="#0D1319"/>
-<rect x="0" y="0" width="4" height="250" fill="url(#sdark)"/>
+<rect x="0" y="0" width="1000" height="196" fill="#0D1319"/>
+<rect x="0" y="0" width="4" height="196" fill="url(#sdark)"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="#E8EEF2" letter-spacing="-0.4">Rafael Rôlo</text>
 <text class="fade" style="animation-delay:.1s" x="48" y="86" font-size="12" font-weight="600" fill="#7FC6D6" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · CAPITAL MARKETS</text>
 <line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" stroke="#23303A" stroke-width="1"/>
-<text class="fade" style="animation-delay:0.26s" x="48" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">17</text>
-<text class="fade" style="animation-delay:0.32s" x="49" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">YEARS ON THE JVM</text>
-<text class="fade" style="animation-delay:0.34s" x="215" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">798</text>
-<text class="fade" style="animation-delay:0.40s" x="216" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS</text>
-<text class="fade" style="animation-delay:0.42s" x="382" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">906</text>
-<text class="fade" style="animation-delay:0.48s" x="383" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">CODE REVIEWS</text>
-<text class="fade" style="animation-delay:0.50s" x="549" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">8</text>
-<text class="fade" style="animation-delay:0.56s" x="550" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">SECTORS SERVED</text>
-<text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>
-<rect class="bar" style="animation-delay:0.62s" x="700" y="163.0" width="24" height="33.0" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="bar" style="animation-delay:0.67s" x="727" y="154.1" width="24" height="41.9" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:0.72s" x="725" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'23</text>
-<rect class="bar" style="animation-delay:0.73s" x="763" y="159.9" width="24" height="36.1" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="bar" style="animation-delay:0.78s" x="790" y="149.9" width="24" height="46.1" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:0.83s" x="788" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'24</text>
-<rect class="bar" style="animation-delay:0.84s" x="826" y="150.7" width="24" height="45.3" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="bar" style="animation-delay:0.89s" x="853" y="138.0" width="24" height="58.0" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:0.94s" x="851" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'25</text>
-<rect class="bar" style="animation-delay:0.95s" x="889" y="143.6" width="24" height="52.4" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="live" style="animation-delay:1.00s" x="916" y="153.0" width="24" height="43.0" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:1.05s" x="914" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'26</text>
-<g class="fade" style="animation-delay:1.15s">
-<circle cx="704" cy="226" r="4" fill="#56AEC2" opacity="0.38"/>
-<text x="713" y="229" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1">AUTHORED</text>
-<circle cx="794" cy="226" r="4" fill="#56AEC2"/>
-<text x="803" y="229" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1">REVIEWED FOR OTHERS</text>
+<text class="fade" style="animation-delay:0.26s" x="60" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">17</text>
+<text class="fade" style="animation-delay:0.32s" x="61" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">YEARS ON THE JVM</text>
+<text class="fade" style="animation-delay:0.34s" x="288" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">798</text>
+<text class="fade" style="animation-delay:0.40s" x="289" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS</text>
+<text class="fade" style="animation-delay:0.42s" x="516" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">906</text>
+<text class="fade" style="animation-delay:0.48s" x="517" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">CODE REVIEWS</text>
+<text class="fade" style="animation-delay:0.50s" x="744" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">8</text>
+<text class="fade" style="animation-delay:0.56s" x="745" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">SECTORS SERVED</text>
+<text class="fade" style="animation-delay:1.15s" x="60" y="175" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1.1">PRIVATE CORPORATE REPOSITORIES · MEASURED AUGUST 2026</text>
 </g>
-<text class="fade" style="animation-delay:1.15s" x="48" y="229" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1.1">PRIVATE CORPORATE REPOSITORIES · MEASURED AUGUST 2026 · 2026 PARTIAL</text>
-</g>
-<rect x="0" y="245" width="1000" height="5" fill="url(#sdark)"/>
+<rect x="0" y="191" width="1000" height="5" fill="url(#sdark)"/>
 </g></svg>

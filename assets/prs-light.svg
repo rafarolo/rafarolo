@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 348" width="1000" height="348" role="img" aria-label="Pull requests per year, authored and reviewed for others. 2023: 158 authored, 201 reviewed; 2024: 173 authored, 221 reviewed; 2025: 217 authored, 278 reviewed; 2026: 251 authored, 206 reviewed, to 29 August">
+<defs><clipPath id="prlight"><rect x="0" y="0" width="1000" height="348" rx="10"/></clipPath></defs>
+<style>.b{transform-box:fill-box;transform-origin:50%% 100%%;transform:scaleY(0);animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}.t{opacity:0;animation:fi .45s ease forwards}@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}@media (prefers-reduced-motion: reduce){.b{transform:scaleY(1);animation:none}.t{opacity:1;animation:none}}</style>
+<g clip-path="url(#prlight)">
+<rect x="0" y="0" width="1000" height="348" fill="#EEF2F4"/>
+<g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+<text class="t" x="48" y="46" font-size="12" font-weight="700" fill="#5A6675" letter-spacing="1.8">PULL REQUESTS PER YEAR</text>
+<g class="t" style="animation-delay:.1s">
+<circle cx="632" cy="42" r="5" fill="#0E5468" opacity="0.38"/>
+<text x="644" y="46" font-size="12" fill="#808C99">authored</text>
+<circle cx="732" cy="42" r="5" fill="#0E5468"/>
+<text x="744" y="46" font-size="12" fill="#808C99">reviewed for others</text>
+</g>
+<line class="t" style="animation-delay:.15s" x1="48" y1="253" x2="944" y2="253" stroke="#DDE3E8" stroke-width="1"/>
+<rect class="b" style="animation-delay:0.30s" x="143.0" y="166.7" width="46" height="85.3" rx="3" fill="#0E5468" opacity="0.38"/>
+<text class="t" style="animation-delay:0.60s" x="166.0" y="155.7" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">158</text>
+<rect class="b" style="animation-delay:0.36s" x="197.0" y="143.5" width="46" height="108.5" rx="3" fill="#0E5468"/>
+<text class="t" style="animation-delay:0.66s" x="220.0" y="132.5" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">201</text>
+<text class="t" style="animation-delay:0.65s" x="193.0" y="284" font-size="17" font-weight="700" fill="#5A6675" text-anchor="middle">2023</text>
+<rect class="b" style="animation-delay:0.42s" x="345.0" y="158.7" width="46" height="93.3" rx="3" fill="#0E5468" opacity="0.38"/>
+<text class="t" style="animation-delay:0.72s" x="368.0" y="147.7" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">173</text>
+<rect class="b" style="animation-delay:0.48s" x="399.0" y="132.8" width="46" height="119.2" rx="3" fill="#0E5468"/>
+<text class="t" style="animation-delay:0.78s" x="422.0" y="121.8" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">221</text>
+<text class="t" style="animation-delay:0.77s" x="395.0" y="284" font-size="17" font-weight="700" fill="#5A6675" text-anchor="middle">2024</text>
+<rect class="b" style="animation-delay:0.54s" x="547.0" y="134.9" width="46" height="117.1" rx="3" fill="#0E5468" opacity="0.38"/>
+<text class="t" style="animation-delay:0.84s" x="570.0" y="123.9" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">217</text>
+<rect class="b" style="animation-delay:0.60s" x="601.0" y="102.0" width="46" height="150.0" rx="3" fill="#0E5468"/>
+<text class="t" style="animation-delay:0.90s" x="624.0" y="91.0" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">278</text>
+<text class="t" style="animation-delay:0.89s" x="597.0" y="284" font-size="17" font-weight="700" fill="#5A6675" text-anchor="middle">2025</text>
+<rect class="b" style="animation-delay:0.66s" x="749.0" y="116.6" width="46" height="135.4" rx="3" fill="#0E5468" opacity="0.38"/>
+<text class="t" style="animation-delay:0.96s" x="772.0" y="105.6" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">251</text>
+<rect class="b" style="animation-delay:0.72s" x="803.0" y="140.8" width="46" height="111.2" rx="3" fill="#0E5468"/>
+<text class="t" style="animation-delay:1.02s" x="826.0" y="129.8" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">206</text>
+<text class="t" style="animation-delay:1.01s" x="799.0" y="284" font-size="17" font-weight="700" fill="#5A6675" text-anchor="middle">2026 *</text>
+<text class="t" style="animation-delay:1.00s" x="294.0" y="312" font-size="13" font-weight="700" fill="#0E5468" text-anchor="middle">+10%</text>
+<text class="t" style="animation-delay:1.10s" x="496.0" y="312" font-size="13" font-weight="700" fill="#0E5468" text-anchor="middle">+26%</text>
+<text class="t" style="animation-delay:1.20s" x="698.0" y="312" font-size="13" font-weight="600" fill="#808C99" text-anchor="middle">8 of 12 months</text>
+<text class="t" style="animation-delay:1.4s" x="48" y="344" font-size="12" fill="#808C99">* 2026 counts to 29 August. At the same pace the year closes near 690 pull requests touched, against 495 in 2025.</text>
+</g></g></svg>

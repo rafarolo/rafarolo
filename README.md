@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews, 8 sectors served." src="assets/banner-light.svg">
 </picture>
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
@@ -13,6 +13,15 @@ green and unclickable.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
   <img alt="Three proportions: 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else; 89% of pull requests opened were merged." src="assets/rings-light.svg">
+</picture>
+
+<br>
+
+### Pull requests per year
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg">
+  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 251 and 206 in 2026 to 29 August." src="assets/prs-light.svg">
 </picture>
 
 <br>
