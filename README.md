@@ -3,6 +3,8 @@
   <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews, 8 sectors served." src="assets/banner-light.svg">
 </picture>
 
+<br>
+
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
 - I review more than I write: **906 reviews against 798 pull requests of my own**, for 17 engineers
@@ -17,12 +19,18 @@ green and unclickable.
 
 <br>
 
+
+<br>
+
 ### Pull requests per year
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg">
   <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 251 and 206 in 2026 to 29 August." src="assets/prs-light.svg">
 </picture>
+
+<br>
+
 
 <br>
 
@@ -34,6 +42,7 @@ green and unclickable.
 </picture>
 
 <br>
+
 
 <details>
 <summary>Timeline as text</summary>
@@ -53,10 +62,13 @@ green and unclickable.
 
 <br>
 
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
   <img alt="" src="assets/dot-light.svg">
 </picture>
+
+<br>
 
 ### Stack by area
 
@@ -66,6 +78,7 @@ green and unclickable.
 </picture>
 
 <br>
+
 
 Depth counts from the first role in which each one appears<br>
 Focus is measured from the 337 pull requests I opened in the last twelve months.
@@ -84,6 +97,8 @@ Focus is measured from the 337 pull requests I opened in the last twelve months.
   <img alt="" src="assets/dot-light.svg">
 </picture>
 
+<br>
+
 ### Artifact of my life
 
 `rolo.rafael.life`, laid out the way I'd lay out a service<br>
@@ -95,8 +110,7 @@ Domain at the core, stack as adapters, because the stack is the part that gets r
 </picture>
 
 <br>
-<br>
-<br>
+
 
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
@@ -106,7 +120,6 @@ Domain at the core, stack as adapters, because the stack is the part that gets r
   <img src="assets/location.svg" alt="São Paulo, Brasil" height="28">
 </p>
 
-<br>
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>

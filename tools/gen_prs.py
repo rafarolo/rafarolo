@@ -11,7 +11,15 @@ DAYS_ELAPSED, DAYS_IN_YEAR = 241, 365
 
 LEFT, RIGHT, BASE, MAXH = 92, 900, 252, 150
 BW, GAP = 46, 8
-SCALE = MAXH / float(max(max(a, r) for _, a, r, _ in YEARS))
+RATE = DAYS_IN_YEAR / float(DAYS_ELAPSED)
+
+
+def projected(value):
+    return int(round(value * RATE))
+
+
+_peak = max(max(projected(a), projected(r)) if not k else max(a, r) for _, a, r, k in YEARS)
+SCALE = MAXH / float(_peak)
 SLOT = (RIGHT - LEFT) / float(len(YEARS))
 
 
@@ -23,7 +31,7 @@ def prs(t):
     c = THEMES[t]
     h = 348
     totals = [a + r for _, a, r, _ in YEARS]
-    projected = int(round(totals[-1] * DAYS_IN_YEAR / float(DAYS_ELAPSED) / 10.0) * 10)
+    projected_total = projected(YEARS[-1][1]) + projected(YEARS[-1][2])
 
     alt = ("Pull requests per year, authored and reviewed for others. " +
            "; ".join("%d: %d authored, %d reviewed%s" % (y, a, r, "" if k else ", to 29 August")
@@ -63,13 +71,24 @@ def prs(t):
         for j, (value, solid) in enumerate(((authored, False), (reviewed, True))):
             bh = value * SCALE
             x = cx - BW - GAP / 2 + j * (BW + GAP)
+            top = BASE - bh
+            if not complete:
+                ph = projected(value) * SCALE
+                p.append('<rect class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
+                         'height="%.1f" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
+                         'stroke-dasharray="4 4" opacity="0.75"/>'
+                         % (d + .5 + j * .06, x, BASE - ph, BW, ph, c["acc"]))
+                p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" '
+                         'font-size="13" font-weight="700" fill="%s" text-anchor="middle" '
+                         'opacity="0.85">%d</text>'
+                         % (d + .55 + j * .06, x + BW / 2.0, BASE - ph - 9, c["acc"], projected(value)))
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
-                     % (d + j * .06, x, BASE - bh, BW, bh, c["acc"],
+                     % (d + j * .06, x, top, BW, bh, c["acc"],
                         "" if solid else ' opacity="0.38"'))
             p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" font-size="17" '
                      'font-weight="700" fill="%s" text-anchor="middle">%d</text>'
-                     % (d + .3 + j * .06, x + BW / 2.0, BASE - bh - 11, c["ink"], value))
+                     % (d + .3 + j * .06, x + BW / 2.0, top - 11, c["ink"], value))
 
         label = str(year) if complete else "%d *" % year
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="17" '
@@ -90,10 +109,14 @@ def prs(t):
                  'font-weight="%s" fill="%s" text-anchor="middle">%s</text>'
                  % (1.0 + i * .1, x, BASE + 60, weight, fill, text))
 
-    p.append('<text class="t" style="animation-delay:1.4s" x="%d" y="%d" font-size="12" fill="%s">'
-             '* 2026 counts to 29 August. At the same pace the year closes near %d pull requests '
-             'touched, against %d in 2025.</text>'
-             % (LEFT - 44, BASE + 92, c["dim"], projected, totals[2]))
+    p.append('<g class="t" style="animation-delay:1.4s">')
+    p.append('<rect x="%d" y="%d" width="20" height="11" rx="2" fill="none" stroke="%s" '
+             'stroke-width="1.6" stroke-dasharray="4 4"/>' % (LEFT - 44, BASE + 82, c["acc"]))
+    p.append('<text x="%d" y="%d" font-size="12" fill="%s">* 2026 counts to 29 August. The dashed '
+             'outline is where each bar lands if the pace holds — %d pull requests touched against '
+             '%d in 2025.</text>'
+             % (LEFT - 16, BASE + 92, c["dim"], projected_total, totals[2]))
+    p.append('</g>')
 
     p.append('</g></g></svg>')
     return NL.join(p) + NL

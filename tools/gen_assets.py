@@ -196,7 +196,7 @@ def skyline(t):
 
 
 for t in ("light", "dark"):
-    for name, fn in (("banner", banner), ("rings", rings), ("skyline", skyline)):
+    for name, fn in (("rings", rings), ("skyline", skyline)):
         io.open(os.path.join(OUT, "%s-%s.svg" % (name, t)), "w", encoding="utf-8",
                 newline="\n").write(fn(t))
     print("wrote banner/rings/archetype/skyline for", t)
