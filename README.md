@@ -40,19 +40,18 @@ private corporate repositories, which is why the graph below is green and unclic
   <img alt="" src="assets/dot-light.svg">
 </picture>
 
-## Stack
+## Stack by area
 
-Years are counted from the first role where the technology appears.
+Years count from the first role in which each one appears.
 
-| | |
-|---|---|
-| **Language** | `Java · 17y` `Kotlin · 3y` |
-| **Framework** | `Spring Boot · 11y` `Spring Security · 7y` `OpenAPI · 7y` `GraphQL · 3y` |
-| **Data** | `PostgreSQL · 14y` `MongoDB · 12y` `SQL Server · 11y` `Cosmos DB · 3y` |
-| **Cloud** | `Kubernetes · 7y` `Docker · 7y` `AWS · 5y` `Azure · 3y` `GCP · 1y` |
-| **Delivery** | `SonarQube · 7y` `Pulumi · 3y` `GitHub Actions · 3y` |
-| **Signals** | `Prometheus · 5y` `Grafana · 5y` `OpenTelemetry · 3y` |
-| **Ingestion** | `Airflow · 2y` |
+| Area | | |
+|---|---|---|
+| **Backend on the JVM** | `17y` | `Java · 17y` `Spring Boot · 11y` `Spring Security · 7y` `OpenAPI · 7y` `Kotlin · 3y` `GraphQL · 3y` |
+| **Data** | `14y` | `PostgreSQL · 14y` `MongoDB · 12y` `SQL Server · 11y` `Cosmos DB · 3y` `Airflow · 2y` |
+| **Cloud & platform** | `7y` | `Kubernetes · 7y` `Docker · 7y` `AWS · 5y` `Azure · 3y` `Pulumi · 3y` `GitHub Actions · 3y` `GCP · 1y` |
+| **Security & identity** | `7y` | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity` |
+| **Observability & quality** | `7y` | `SonarQube · 7y` `Prometheus · 5y` `Grafana · 5y` `OpenTelemetry · 3y` |
+| **AI** | `2y` | `Spring AI` `Azure OpenAI` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
