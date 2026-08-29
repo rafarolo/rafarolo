@@ -3,7 +3,7 @@
 <linearGradient id="slight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E5468"/><stop offset="0.55" stop-color="#2C7F8C"/><stop offset="1" stop-color="#B08243"/></linearGradient>
 <linearGradient id="wlight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE9ED"/><stop offset="1" stop-color="#F7F9FA"/></linearGradient>
 <linearGradient id="flight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0.85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
-<mask id="mlight"><rect x="0" y="0" width="1000" height="372" fill="url(#flight)"/></mask>
+<mask id="mlight" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="372"><rect x="0" y="0" width="1000" height="372" fill="url(#flight)"/></mask>
 <clipPath id="rlight"><rect x="0" y="0" width="1000" height="372" rx="10"/></clipPath>
 </defs>
 <style>.fade{opacity:0;animation:f .6s ease forwards}.rain{animation:fall linear infinite}@keyframes f{to{opacity:1}}@keyframes fall{to{transform:translateY(702px)}}@media (prefers-reduced-motion: reduce){.fade{opacity:1;animation:none}.rain{animation:none}}</style>

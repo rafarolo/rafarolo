@@ -45,8 +45,11 @@ def banner(t):
              '<stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>'
              '<stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0.85"/>'
              '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>' % t)
-    p.append('<mask id="m%s"><rect x="0" y="0" width="1000" height="%d" fill="url(#f%s)"/></mask>'
-             % (t, H, t))
+    # userSpaceOnUse, or the mask region is derived from the bounding box of the digits --
+    # which sit above the canvas before they fall -- and almost nothing survives it.
+    p.append('<mask id="m%s" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="%d">'
+             '<rect x="0" y="0" width="1000" height="%d" fill="url(#f%s)"/></mask>'
+             % (t, H, H, t))
     p.append('<clipPath id="r%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>' % (t, H))
     p.append('</defs>')
 

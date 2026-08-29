@@ -9,7 +9,7 @@ YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
 
 DAYS_ELAPSED, DAYS_IN_YEAR = 241, 365
 
-LEFT, RIGHT, BASE, MAXH = 92, 900, 252, 150
+LEFT, RIGHT, BASE, MAXH = 92, 830, 252, 150
 BW, GAP = 46, 8
 RATE = DAYS_IN_YEAR / float(DAYS_ELAPSED)
 
@@ -63,6 +63,10 @@ def prs(t):
     p.append('<circle cx="%d" cy="42" r="5" fill="%s"/>' % (RIGHT - 168, c["acc"]))
     p.append('<text x="%d" y="46" font-size="12" fill="%s">reviewed for others</text>'
              % (RIGHT - 156, c["dim"]))
+    p.append('<rect x="%d" y="36" width="16" height="11" rx="2" fill="none" stroke="%s" '
+             'stroke-width="1.6" stroke-dasharray="4 3"/>' % (RIGHT + 8, c["acc"]))
+    p.append('<text x="%d" y="46" font-size="12" fill="%s">projection</text>'
+             % (RIGHT + 30, c["dim"]))
     p.append('</g>')
 
     p.append('<line class="t" style="animation-delay:.15s" x1="%d" y1="%d" x2="%d" y2="%d" '
@@ -100,11 +104,6 @@ def prs(t):
                      'font-weight="700" fill="%s" text-anchor="middle">%d</text>'
                      % (d + .3 + j * .06, x + BW / 2.0, top - 11, c["ink"], value))
 
-        if not complete:
-            p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" '
-                     'font-size="10.5" font-weight="700" fill="%s" text-anchor="middle" '
-                     'letter-spacing="1.6">PROJECTION</text>'
-                     % (d + .7, cx, BASE - projected(reviewed) * SCALE - 30, c["acc"]))
         label = str(year) if complete else "%d *" % year
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="17" '
                  'font-weight="700" fill="%s" text-anchor="middle">%s</text>'

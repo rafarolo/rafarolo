@@ -111,7 +111,9 @@ Domain at the core, stack as adapters, because the stack is the part that gets r
 </picture>
 
 <br>
-
+<br>
+<br>
+<br>
 
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
