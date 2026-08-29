@@ -14,12 +14,16 @@ private corporate repositories, which is why the graph below is green and unclic
   <img alt="Three proportions: 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else; 89% of pull requests opened were merged." src="assets/rings-light.svg">
 </picture>
 
+<br>
+
 ## Selected work
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg">
   <img alt="Timeline of selected work, 2014 to 2026." src="assets/timeline-light.svg">
 </picture>
+
+<br>
 
 <details>
 <summary>Timeline as text</summary>
@@ -34,6 +38,8 @@ private corporate repositories, which is why the graph below is green and unclic
 | **2014–15** | **A study area, ten times faster** | found the data bottleneck in a geomarketing platform's core calculation |
 
 </details>
+
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
@@ -70,6 +76,7 @@ adapters, because the stack is the part that gets replaced.
 
 <br>
 <br>
+<br>
 
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
@@ -78,6 +85,8 @@ adapters, because the stack is the part that gets replaced.
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/location.svg" alt="São Paulo, Brasil" height="28">
 </p>
+
+<br>
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>
