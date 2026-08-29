@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 545" width="1000" height="545" role="img" aria-label="A terminal typing tree rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work.">
 <defs>
-<clipPath id="ralight"><rect x="0" y="0" width="1000" height="545" rx="10"/></clipPath>
+<pattern id="cfralight" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#EEF2F4"/><rect x="0" y="0" width="8" height="8" fill="#E5E9EB"/><path d="M0 -2l8 8" stroke="#DEE2E3" stroke-width="0.7" opacity="0.5"/><path d="M0 1l8 8" stroke="#DEE2E3" stroke-width="0.7" opacity="0.5"/><rect x="8" y="8" width="8" height="8" fill="#E5E9EB"/><path d="M8 6l8 8" stroke="#DEE2E3" stroke-width="0.7" opacity="0.5"/><path d="M8 9l8 8" stroke="#DEE2E3" stroke-width="0.7" opacity="0.5"/><rect x="8" y="0" width="8" height="8" fill="#F0F4F6"/><path d="M8 6l8 -8" stroke="#E8ECEE" stroke-width="0.7" opacity="0.5"/><path d="M8 9l8 -8" stroke="#E8ECEE" stroke-width="0.7" opacity="0.5"/><rect x="0" y="8" width="8" height="8" fill="#F0F4F6"/><path d="M0 14l8 -8" stroke="#E8ECEE" stroke-width="0.7" opacity="0.5"/><path d="M0 17l8 -8" stroke="#E8ECEE" stroke-width="0.7" opacity="0.5"/></pattern><clipPath id="ralight"><rect x="0" y="0" width="1000" height="545" rx="10"/></clipPath>
 <clipPath id="tplight"><rect class="type" x="44" y="24" width="193.7" height="22"/></clipPath>
 </defs>
 <style>.type{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:tw 1.05s steps(23,end) .25s forwards}.caret{opacity:0;animation:show 0s linear 1.30s forwards,blink 1.06s step-end 1.30s infinite}.ln{opacity:0;animation:fa .34s ease forwards}.dot{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}@keyframes blink{50%{opacity:0}}@media (prefers-reduced-motion: reduce){.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}</style>
 <g clip-path="url(#ralight)">
-<rect x="0" y="0" width="1000" height="545" fill="#EEF2F4"/>
+<rect x="0" y="0" width="1000" height="545" fill="url(#cfralight)"/>
 <rect x="0" y="0" width="3" height="545" fill="#0E5468"/>
 <circle cx="26" cy="22" r="4.5" fill="#B08243" opacity="0.85"/>
 <circle cx="41" cy="22" r="4.5" fill="#2C7F8C" opacity="0.85"/>

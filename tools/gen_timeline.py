@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, OUT, NL
+from gen_all import carbon, THEMES, SANS, OUT, NL
 
 # year, headline, detail, major
 ITEMS = [
@@ -36,7 +36,7 @@ def timeline(t):
     alt = "; ".join("%s %s: %s" % (i[0], i[1], i[2]) for i in ITEMS)
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="Timeline of selected work. %s">' % (h, h, alt)]
-    p.append('<defs><clipPath id="tl%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+    p.append(carbon(t, "tl") + '<defs><clipPath id="tl%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
              '.sp{transform-box:fill-box;transform-origin:50%% 0;transform:scaleY(0);'
@@ -50,7 +50,7 @@ def timeline(t):
              '.nd{transform:scale(1);animation:none}.tx{opacity:1;animation:none}}'
              '</style>')
     p.append('<g clip-path="url(#tl%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#cftl%s)"/>' % (h, t))
     p.append('<rect class="sp" x="%d" y="%d" width="2" height="%d" fill="%s" opacity="0.45"/>'
              % (SPINE - 1, TOP - 22, y_last - TOP + 44, c["acc"]))
     p.append('<g font-family="%s">' % SANS)

@@ -1,7 +1,7 @@
 import io, os, sys, math
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, OUT, NL
+from gen_all import carbon, THEMES, SANS, OUT, NL
 
 
 def esc(v):
@@ -45,7 +45,7 @@ def radar(t):
           "; ".join("%s: %d years, %.0f percent" % (esc(a[0].title()), a[1], a[2]) for a in AXES)
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
-    p.append('<defs><clipPath id="rd%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+    p.append(carbon(t, "rd") + '<defs><clipPath id="rd%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
              '.gr{opacity:0;animation:gi .5s ease .1s forwards}'
@@ -57,7 +57,7 @@ def radar(t):
              '.pg{transform:scale(1);opacity:1;animation:none}}'
              '</style>')
     p.append('<g clip-path="url(#rd%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#cfrd%s)"/>' % (h, t))
     p.append('<g font-family="%s">' % SANS)
 
     for ring in (.25, .5, .75, 1.0):

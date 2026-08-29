@@ -24,6 +24,38 @@ SCALE = 58.0 / 278.0
 BASE = 196
 
 
+def shade(hexcol, f):
+    r, g, b = int(hexcol[1:3], 16), int(hexcol[3:5], 16), int(hexcol[5:7], 16)
+    clamp = lambda v: max(0, min(255, int(v * f)))
+    return "#%02X%02X%02X" % (clamp(r), clamp(g), clamp(b))
+
+
+def carbon(t, ident):
+    """A woven twill tile, so the panels read as a surface rather than a fill.
+
+    Two cells run the weave one way and two the other, which is what separates carbon
+    from a checkerboard. Kept within a few percent of the panel colour: at higher
+    contrast the pattern starts competing with the data drawn on top of it."""
+    c = THEMES[t]
+    base = c["panel"]
+    lo = shade(base, 0.965 if t == "light" else 1.16)
+    hi = shade(base, 1.012 if t == "light" else 1.34)
+    cells = ((0, 0, lo, 1), (8, 8, lo, 1), (8, 0, hi, -1), (0, 8, hi, -1))
+    out = ['<pattern id="cf%s%s" width="16" height="16" patternUnits="userSpaceOnUse">' % (ident, t)]
+    out.append('<rect width="16" height="16" fill="%s"/>' % base)
+    for x, y, col, slope in cells:
+        out.append('<rect x="%d" y="%d" width="8" height="8" fill="%s"/>' % (x, y, col))
+        for k in (2, 5):
+            if slope > 0:
+                out.append('<path d="M%d %dl8 8" stroke="%s" stroke-width="0.7" opacity="0.5"/>'
+                           % (x, y + k - 4, shade(col, 0.97 if t == "light" else 1.12)))
+            else:
+                out.append('<path d="M%d %dl8 -8" stroke="%s" stroke-width="0.7" opacity="0.5"/>'
+                           % (x, y + k + 4, shade(col, 0.97 if t == "light" else 1.12)))
+    out.append('</pattern>')
+    return "".join(out)
+
+
 def banner(t):
     c = THEMES[t]
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" '
@@ -86,7 +118,7 @@ def rings(t):
          'role="img" aria-label="Three proportions. Test coverage 88 percent, up from 74.7. '
          '53 percent of every pull request touched belonged to someone else: 906 reviews against '
          '798 of my own. 89 percent of pull requests opened were merged: 707 of 798.">']
-    p.append('<defs><clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/>'
+    p.append('<defs>' + carbon(t, "rg") + '<clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/>'
              '</clipPath></defs>' % t)
     css = ['<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}']
     for i, (frac, _, _, _) in enumerate(RINGS):
@@ -100,7 +132,7 @@ def rings(t):
     css.append('}</style>')
     p.append("".join(css))
     p.append('<g clip-path="url(#rg%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="212" fill="%s"/>' % c["panel"])
+    p.append('<rect x="0" y="0" width="1000" height="212" fill="url(#cfrg%s)"/>' % t)
     p.append('<g font-family="%s">' % SANS)
     for i, (frac, big, lab, sub) in enumerate(RINGS):
         cx, cy = 190 + i * 310, 86

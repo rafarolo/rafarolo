@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, MONO, OUT, NL
+from gen_all import carbon, THEMES, MONO, OUT, NL
 
 ROOT = "rolo.rafael.life"
 CMD = "$ tree " + ROOT
@@ -67,7 +67,7 @@ def archetype(t):
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
     p.append('<defs>')
-    p.append('<clipPath id="ra%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>' % (t, h))
+    p.append(carbon(t, "ra") + '<clipPath id="ra%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>' % (t, h))
     p.append('<clipPath id="tp%s"><rect class="type" x="44" y="24" width="%.1f" height="22"/></clipPath>'
              % (t, w))
     p.append('</defs>')
@@ -86,7 +86,7 @@ def archetype(t):
              '.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}'
              '</style>' % (TYPE_S, len(CMD), TYPE_S + .25, TYPE_S + .25))
     p.append('<g clip-path="url(#ra%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#cfra%s)"/>' % (h, t))
     p.append('<rect x="0" y="0" width="3" height="%d" fill="%s"/>' % (h, c["acc"]))
     for i, col in enumerate((c["g2"], c["g1"], c["g0"])):
         p.append('<circle cx="%d" cy="22" r="4.5" fill="%s" opacity="0.85"/>' % (26 + i * 15, col))

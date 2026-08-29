@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, OUT, NL
+from gen_all import carbon, THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
@@ -38,7 +38,7 @@ def prs(t):
                      for y, a, r, k in YEARS))
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
-    p.append('<defs><clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+    p.append(carbon(t, "pr") + '<defs><clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
              '.b{transform-box:fill-box;transform-origin:50%% 100%%;transform:scaleY(0);'
@@ -49,7 +49,7 @@ def prs(t):
              '.t{opacity:1;animation:none}}'
              '</style>')
     p.append('<g clip-path="url(#pr%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#cfpr%s)"/>' % (h, t))
     p.append('<g font-family="%s">' % SANS)
 
     p.append('<text class="t" x="%d" y="46" font-size="12" font-weight="700" fill="%s" '
