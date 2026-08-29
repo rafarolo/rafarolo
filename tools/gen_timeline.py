@@ -7,10 +7,10 @@ from gen_all import THEMES, SANS, OUT, NL
 ITEMS = [
     ("2025–2026", "OpenSec, an API for partners",
      "22 endpoints across 8 service families · documentation kits built by an automated pipeline", True),
-    ("2025–2026", "Passwordless, and routes that stay inside",
-     "Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS", False),
-    ("2024–2026", "New cluster, new region, one pipeline",
+    ("2023–2026", "New cluster, new region, one pipeline",
      "every application rewritten into a single GitHub Actions pipeline · Azure subscription and AKS migration", True),
+    ("2023–2026", "Passwordless, and routes that stay inside",
+     "Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS", False),
     ("2023–2026", "Kotlin as the platform language",
      "off Python, JavaScript and TypeScript · hexagonal architecture · R$130B+ in issued assets", True),
     ("2021–2023", "Open Banking, certified",
