@@ -110,9 +110,10 @@ def tenure(t):
         # Staggered per row so the panel reads as alive rather than as one blinking block.
         p.append('<g clip-path="url(#cb%d%s)">'
                  '<rect x="%.1f" y="%.1f" width="72" height="10" fill="url(#gl%s)">'
-                 '<animate attributeName="x" from="%.1f" to="%.1f" begin="%.2fs" dur="2.4s" '
-                 'repeatCount="indefinite"/></rect></g>'
-                 % (i, t, BAR_X - 72, y - 5, t, BAR_X - 72, BAR_X + w, d + 1.1 + i * 0.28))
+                 '<animate attributeName="x" values="%.1f;%.1f;%.1f" keyTimes="0;0.04;1" '
+                 'begin="%.2fs" dur="60s" repeatCount="indefinite"/></rect></g>'
+                 % (i, t, BAR_X - 72, y - 5, t, BAR_X - 72, BAR_X + w, BAR_X + w,
+                    d + 1.1 + i * 0.28))
 
         x = CHIP_X
         for name in names:

@@ -63,11 +63,13 @@ def glass_defs(t, ident, w=1000):
     )
 
 
-def glass_style(dur=11):
-    return ('.sheen{animation:sweep %ds ease-in-out infinite}'
+def glass_style(offset=0):
+    """One pass a minute. The sweep itself stays quick; the panel simply waits between them
+    instead of never stopping, which is what a continuous sheen costs on a long page."""
+    return ('.sheen{animation:sweep 60s ease-in-out %ds infinite}'
             '@keyframes sweep{0%%{transform:translateX(-115%%)}'
-            '55%%,100%%{transform:translateX(115%%)}}'
-            '@media (prefers-reduced-motion: reduce){.sheen{display:none}}' % dur)
+            '9%%,100%%{transform:translateX(115%%)}}'
+            '@media (prefers-reduced-motion: reduce){.sheen{display:none}}' % offset)
 
 
 def glass_bg(t, ident, w, h):
@@ -91,10 +93,12 @@ ROW = 40
 FRAMES = 22
 # One slow fill, a long hold, then a fade to nothing and round again. The reset happens
 # while the arc is invisible, so the loop has no visible snap.
-CYCLE = 11.0
-FILL_END = 0.26
-HOLD_END = 0.93
-GONE = 0.985
+# A minute between replays. The fill still takes about four seconds; what grows is the
+# stretch where nothing moves, which is where the saving is.
+CYCLE = 60.0
+FILL_END = 0.068
+HOLD_END = 0.955
+GONE = 0.99
 
 
 def ramp(final, n=FRAMES):
@@ -121,7 +125,7 @@ def rings(t):
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.a%d{stroke-dasharray:%.1f;stroke-dashoffset:%.1f;'
                    'animation:k%d %.1fs linear %.2fs infinite}'
-                   % (i, RC, RC, i, CYCLE, .25 + i * .3))
+                   % (i, RC, RC, i, CYCLE, .25 + i * 1.4))
         css.append('@keyframes k%d{'
                    '0%%{stroke-dashoffset:%.1f;opacity:1;animation-timing-function:linear}'
                    '%.0f%%{stroke-dashoffset:%.1f;opacity:1}'
@@ -137,7 +141,7 @@ def rings(t):
         css.append('.a%d{stroke-dashoffset:%.1f;animation:none}' % (i, RC * (1 - frac)))
     for i, (frac, _, _, _) in enumerate(RINGS):
         end = -(FRAMES - 1) * ROW
-        css.append('.n%d{animation:c%d %.1fs linear %.2fs infinite}' % (i, i, CYCLE, .25 + i * .3))
+        css.append('.n%d{animation:c%d %.1fs linear %.2fs infinite}' % (i, i, CYCLE, .25 + i * 1.4))
         css.append('@keyframes c%d{'
                    '0%%{transform:translateY(0);opacity:1;animation-timing-function:steps(%d,end)}'
                    '%.0f%%{transform:translateY(%dpx);opacity:1}'

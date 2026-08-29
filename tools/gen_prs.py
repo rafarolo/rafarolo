@@ -12,7 +12,7 @@ DAYS_ELAPSED, DAYS_IN_YEAR = 241, 365
 LEFT, RIGHT, BASE, MAXH = 92, 830, 252, 150
 BW, GAP = 46, 8
 RATE = DAYS_IN_YEAR / float(DAYS_ELAPSED)
-LOOP = 22.0
+LOOP = 60.0
 
 
 def projected(value):
@@ -96,8 +96,7 @@ def prs(t):
                          'stroke="%s" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85">'
                          '<animate attributeName="height" values="0;%.1f;%.1f;0;0" begin="%.2fs" %s/>'
                          '<animate attributeName="y" values="%d;%.1f;%.1f;%d;%d" begin="%.2fs" %s/>'
-                         '<animate attributeName="stroke-dashoffset" from="0" to="16" '
-                         'begin="%.2fs" dur="1.6s" repeatCount="indefinite"/>'
+                         '<animate attributeName="stroke-dashoffset" values="0;16;16" keyTimes="0;0.03;1" begin="%.2fs" dur="60s" repeatCount="indefinite"/>'
                          '</rect>'
                          % (x, BASE, BW, c["acc"], ph, ph, begin, times,
                             BASE, BASE - ph, BASE - ph, BASE, BASE, begin, times, begin))
