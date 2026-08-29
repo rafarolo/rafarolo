@@ -175,8 +175,13 @@ def skyline(t):
              '86%,96%{opacity:1}100%{opacity:0}}'
              '@keyframes bl{50%{opacity:.15}}'
              '@keyframes ftin{to{opacity:1}}'
-             '@media (prefers-reduced-motion: reduce){'
-             '.st,.st2,.bk,.bo,.b3,.b4,.bl{animation:none}.ft{opacity:1;animation:none}}'
+             # Nothing in this panel's CSS moves anything: the windows and the stars only
+             # change opacity, and a gentle cross-fade is the sort of thing the reduced
+             # motion setting is meant to leave alone. What it should stop is travel, and
+             # everything that travels here -- the aircraft, the meteor, the comet -- is
+             # SMIL, which the setting does not reach anyway. Disabling these was blanket
+             # caution that switched off the whole city for anyone who has it on.
+             '@media (prefers-reduced-motion: reduce){.ft{opacity:1;animation:none}}'
              '</style>')
 
     p.append('<g clip-path="url(#sc%s)">' % t)
