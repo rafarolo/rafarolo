@@ -12,6 +12,7 @@ DAYS_ELAPSED, DAYS_IN_YEAR = 241, 365
 LEFT, RIGHT, BASE, MAXH = 92, 830, 252, 150
 BW, GAP = 46, 8
 RATE = DAYS_IN_YEAR / float(DAYS_ELAPSED)
+LOOP = 22.0
 
 
 def projected(value):
@@ -82,27 +83,29 @@ def prs(t):
             if not complete:
                 ph = projected(value) * SCALE
                 begin = d + .5 + j * .06
-                spline = 'calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"'
-                # height and y are animated directly: scaling a stroked rectangle thins its
-                # horizontal edges and stretches the dash pattern while it grows.
+                # The forecast is rebuilt every cycle: grows in the first 5%, holds, then
+                # fades out and resets its geometry while nothing is on screen.
+                times = 'keyTimes="0;0.05;0.93;0.955" calcMode="spline" '                         'keySplines="0 0 1 1;0 0 1 1;0 0 1 1" '                         'dur="%.1fs" repeatCount="indefinite"' % LOOP
+                fade = ('<animate attributeName="opacity" values="1;1;0;0;1" '
+                        'keyTimes="0;0.90;0.95;0.99;1" begin="%.2fs" dur="%.1fs" '
+                        'repeatCount="indefinite"/>' % (begin, LOOP))
+                p.append('<g opacity="1">%s' % fade)
                 p.append('<rect x="%.1f" y="%.1f" width="%d" height="0" rx="3" fill="none" '
                          'stroke="%s" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85">'
-                         '<animate attributeName="height" from="0" to="%.1f" begin="%.2fs" '
-                         'dur="1.1s" %s/>'
-                         '<animate attributeName="y" from="%d" to="%.1f" begin="%.2fs" '
-                         'dur="1.1s" %s/>'
+                         '<animate attributeName="height" values="0;%.1f;%.1f;0" begin="%.2fs" %s/>'
+                         '<animate attributeName="y" values="%d;%.1f;%.1f;%d" begin="%.2fs" %s/>'
                          '<animate attributeName="stroke-dashoffset" from="0" to="16" '
                          'begin="%.2fs" dur="1.6s" repeatCount="indefinite"/>'
                          '</rect>'
-                         % (x, BASE, BW, c["acc"], ph, begin, spline,
-                            BASE, BASE - ph, begin, spline, begin + 1.1))
-                p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" '
-                         'font-size="14" font-weight="700" fill="%s" text-anchor="middle" '
-                         'opacity="0.9">%d'
-                         '<animate attributeName="y" from="%d" to="%.1f" begin="%.2fs" '
-                         'dur="1.1s" %s/></text>'
-                         % (begin + .05, x + BW / 2.0, BASE - 9, c["acc"], projected(value),
-                            BASE - 9, BASE - ph - 9, begin + .05, spline))
+                         % (x, BASE, BW, c["acc"], ph, ph, begin, times,
+                            BASE, BASE - ph, BASE - ph, BASE, begin, times, begin))
+                p.append('<text x="%.1f" y="%d" font-size="14" font-weight="700" fill="%s" '
+                         'text-anchor="middle" opacity="0.9">%d'
+                         '<animate attributeName="y" values="%d;%.1f;%.1f;%d" begin="%.2fs" %s/>'
+                         '</text>'
+                         % (x + BW / 2.0, BASE - 9, c["acc"], projected(value),
+                            BASE - 9, BASE - ph - 9, BASE - ph - 9, BASE - 9, begin, times))
+                p.append('</g>')
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
                      % (d + j * .06, x, top, BW, bh, c["acc"],

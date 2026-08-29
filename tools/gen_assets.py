@@ -88,13 +88,20 @@ RINGS = [(0.89, "89%", "PULL REQUESTS MERGED", "707 merged of 798 opened"),
 RR = 46.0
 RC = 2 * math.pi * RR
 ROW = 40
-FRAMES = 14
+FRAMES = 22
+# One slow fill, a long hold, then a fade to nothing and round again. The reset happens
+# while the arc is invisible, so the loop has no visible snap.
+CYCLE = 11.0
+FILL_END = 0.26
+HOLD_END = 0.93
+GONE = 0.985
 
 
 def ramp(final, n=FRAMES):
-    """Values on an ease-out curve, so the counter slows into its answer instead of
-    ticking at a constant rate — matching the arc drawn beside it."""
-    return [int(round(final * (1 - (1 - i / float(n - 1)) ** 3))) for i in range(n)]
+    """A steady climb from zero. Linear on purpose: the arc and the head that draws it move
+    at a constant rate too, and three things easing differently read as three things that
+    are not quite together."""
+    return [int(round(final * i / float(n - 1))) for i in range(n)]
 
 
 def rings(t):
@@ -113,19 +120,32 @@ def rings(t):
     css = ['<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}']
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.a%d{stroke-dasharray:%.1f;stroke-dashoffset:%.1f;'
-                   'animation:k%d 1.15s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
-                   % (i, RC, RC, i, .25 + i * .16))
-        css.append('@keyframes k%d{to{stroke-dashoffset:%.1f}}' % (i, RC * (1 - frac)))
+                   'animation:k%d %.1fs linear %.2fs infinite}'
+                   % (i, RC, RC, i, CYCLE, .25 + i * .3))
+        css.append('@keyframes k%d{'
+                   '0%%{stroke-dashoffset:%.1f;opacity:1;animation-timing-function:linear}'
+                   '%.0f%%{stroke-dashoffset:%.1f;opacity:1}'
+                   '%.0f%%{stroke-dashoffset:%.1f;opacity:1}'
+                   '%.0f%%{stroke-dashoffset:%.1f;opacity:0}'
+                   '100%%{stroke-dashoffset:%.1f;opacity:0}}'
+                   % (i, RC, FILL_END * 100, RC * (1 - frac), HOLD_END * 100, RC * (1 - frac),
+                      GONE * 100, RC * (1 - frac), RC))
     css.append('@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}')
     for i in range(len(RINGS)):
-        css.append('.n%d{animation:none}' % i)
+        css.append('.n%d{animation:none;transform:translateY(%dpx)}' % (i, -(FRAMES - 1) * ROW))
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.a%d{stroke-dashoffset:%.1f;animation:none}' % (i, RC * (1 - frac)))
     for i, (frac, _, _, _) in enumerate(RINGS):
-        css.append('.n%d{transform:translateY(%dpx);animation:c%d 1.15s steps(%d,end) %.2fs forwards}'
-                   % (i, -(FRAMES - 1) * ROW, i, FRAMES - 1, .25 + i * .16))
-        css.append('@keyframes c%d{from{transform:translateY(0)}to{transform:translateY(%dpx)}}'
-                   % (i, -(FRAMES - 1) * ROW))
+        end = -(FRAMES - 1) * ROW
+        css.append('.n%d{animation:c%d %.1fs linear %.2fs infinite}' % (i, i, CYCLE, .25 + i * .3))
+        css.append('@keyframes c%d{'
+                   '0%%{transform:translateY(0);opacity:1;animation-timing-function:steps(%d,end)}'
+                   '%.0f%%{transform:translateY(%dpx);opacity:1}'
+                   '%.0f%%{transform:translateY(%dpx);opacity:1}'
+                   '%.0f%%{transform:translateY(%dpx);opacity:0}'
+                   '100%%{transform:translateY(0);opacity:0}}'
+                   % (i, FRAMES - 1, FILL_END * 100, end, HOLD_END * 100, end,
+                      GONE * 100, end))
     css.append(glass_style(13))
     css.append('}</style>')
     p.append("".join(css))
@@ -145,10 +165,17 @@ def rings(t):
         # animateTransform takes the centre of rotation as arguments, so there is no
         # transform-origin to resolve and no transform-box to depend on.
         p.append('<g>')
+        angle = 360.0 * frac
         p.append('<animateTransform attributeName="transform" type="rotate" '
-                 'from="0 %d %d" to="%.2f %d %d" begin="%.2fs" dur="1.15s" '
-                 'calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/>'
-                 % (cx, cy, 360.0 * frac, cx, cy, .25 + i * .16))
+                 'values="0 %d %d;%.2f %d %d;%.2f %d %d;0 %d %d" '
+                 'keyTimes="0;%.3f;%.3f;1" calcMode="spline" '
+                 'keySplines="0 0 1 1;0 0 1 1;0 0 1 1" '
+                 'begin="%.2fs" dur="%.1fs" repeatCount="indefinite"/>'
+                 % (cx, cy, angle, cx, cy, angle, cx, cy, cx, cy,
+                    FILL_END, GONE, .25 + i * .3, CYCLE))
+        p.append('<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;%.3f;%.3f;1" '
+                 'begin="%.2fs" dur="%.1fs" repeatCount="indefinite"/>'
+                 % (HOLD_END, GONE, .25 + i * .3, CYCLE))
         p.append('<circle cx="%d" cy="%.1f" r="11" fill="%s" opacity="0.22"/>'
                  % (cx, cy - RR, c["acc"]))
         p.append('<circle cx="%d" cy="%.1f" r="5.5" fill="#FFFFFF" stroke="%s" '
@@ -198,17 +225,48 @@ def skyline(t):
              % (t, c["g0"], c["g1"], c["g2"]))
     p.append('<clipPath id="sc%s"><rect x="0" y="0" width="1000" height="260" rx="10"/></clipPath>' % t)
     p.append('</defs>')
-    p.append('<style>.w{animation:tw 4s ease-in-out infinite}.bl{animation:bl 2.6s step-end infinite}'
-             '@keyframes tw{0%%,100%%{opacity:%s}45%%{opacity:.16}}@keyframes bl{50%%{opacity:.15}}'
+    p.append('<style>.w{animation:tw 4s ease-in-out infinite}'
+             '.bk{animation:bk 3.1s step-end infinite}'
+             '.bl{animation:bl 2.6s step-end infinite}'
+             '@keyframes tw{0%%,100%%{opacity:%s}45%%{opacity:.16}}'
+             '@keyframes bk{0%%,62%%{opacity:1}63%%,100%%{opacity:.08}}'
+             '@keyframes bl{50%%{opacity:.15}}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}@keyframes ftin{to{opacity:1}}'
-             '@media (prefers-reduced-motion: reduce){.w,.bl{animation:none}.ft{opacity:1;animation:none}}</style>' % k["winop"])
+             '@media (prefers-reduced-motion: reduce){.w,.bk,.bl,.plane{animation:none}.ft{opacity:1;animation:none}}</style>' % k["winop"])
     p.append('<g clip-path="url(#sc%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="260" fill="url(#sky%s)"/>' % t)
     if t == "dark":
-        for _ in range(34):
-            p.append('<circle class="w" style="animation-delay:%.1fs" cx="%d" cy="%d" r="%.1f" '
-                     'fill="#8FA6B2" opacity=".5"/>'
-                     % (rnd.uniform(0, 4), rnd.randint(10, 990), rnd.randint(8, 104), rnd.uniform(.6, 1.3)))
+        for i in range(52):
+            cls = "bk" if i % 3 == 0 else "w"
+            p.append('<circle class="%s" style="animation-delay:%.1fs" cx="%d" cy="%d" r="%.1f" '
+                     'fill="#C8DCE6" opacity=".55"/>'
+                     % (cls, rnd.uniform(0, 4), rnd.randint(10, 990), rnd.randint(8, 104),
+                        rnd.uniform(.6, 1.4)))
+
+        # A streak every half minute and something slower and brighter every three, both
+        # off screen for almost all of their cycle so they stay events rather than motion.
+        for name, length, width, cycle, cross, y0, drop in (
+            ("shooting", 74, 1.8, 31.0, 0.030, 26, 96),
+            ("comet", 132, 3.0, 97.0, 0.055, 14, 132),
+        ):
+            p.append('<linearGradient id="%s%s" x1="0" y1="0" x2="1" y2="0">'
+                     '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+                     '<stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/></linearGradient>'
+                     % (name, t))
+            p.append('<g opacity="0">'
+                     '<line x1="0" y1="0" x2="%d" y2="%d" stroke="url(#%s%s)" stroke-width="%.1f" '
+                     'stroke-linecap="round"/>'
+                     '<circle cx="%d" cy="%d" r="%.1f" fill="#FFFFFF"/>'
+                     '<animate attributeName="opacity" values="0;1;1;0;0" '
+                     'keyTimes="0;0.004;%.3f;%.3f;1" dur="%.1fs" repeatCount="indefinite"/>'
+                     '<animateTransform attributeName="transform" type="translate" '
+                     'values="-%d %d;1060 %d;1060 %d" keyTimes="0;%.3f;1" '
+                     'dur="%.1fs" repeatCount="indefinite"/>'
+                     '</g>'
+                     % (length, int(length * 0.36), name, t, width,
+                        length, int(length * 0.36), width * 0.9,
+                        cross * 0.92, cross, cycle,
+                        length, y0, y0 + drop, y0 + drop, cross, cycle))
     for name, count, wmin, wmax, hmin, hmax, lit in LAYERS:
         col, x = k[name], -20
         while x < 1010 and count > 0:
@@ -230,14 +288,41 @@ def skyline(t):
                                      % (wx, wy, unlit))
                             continue
                         fill = k["win2"] if r < .11 else k["win"]
-                        if r < .13:
+                        if r < .09:
                             p.append('<rect class="w" style="animation-delay:%.1fs" x="%d" y="%d" '
                                      'width="4" height="5" fill="%s"/>' % (rnd.uniform(0, 4), wx, wy, fill))
+                        elif r < .18:
+                            p.append('<rect class="bk" style="animation-delay:%.1fs" x="%d" y="%d" '
+                                     'width="4" height="5" fill="%s"/>' % (rnd.uniform(0, 3.1), wx, wy, fill))
                         else:
                             p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s" opacity="%s"/>'
                                      % (wx, wy, fill, k["winop"]))
             x += bw + rnd.randint(3, 14)
             count -= 1
+    # Two silhouettes that make the skyline São Paulo rather than any city: the stepped
+    # setbacks and spire of the Altino Arantes, and the long curved slab of the Copan.
+    n = k["near"]
+    bx = 196
+    for w_, dh in ((58, 0), (46, 26), (34, 48), (22, 66)):
+        p.append('<rect x="%d" y="%d" width="%d" height="%d" fill="%s"/>'
+                 % (bx + (58 - w_) // 2, GROUND - 176 + dh, w_, 176 - dh, n))
+    p.append('<rect x="%d" y="%d" width="3" height="26" fill="%s"/>' % (bx + 27, GROUND - 202, n))
+    p.append('<circle class="bl" cx="%.1f" cy="%d" r="2.4" fill="%s"/>'
+             % (bx + 28.5, GROUND - 204, k["win"]))
+
+    cx0 = 470
+    p.append('<path d="M%d %d q60 -22 120 0 q60 22 120 0 l0 128 l-240 0 z" fill="%s"/>'
+             % (cx0, GROUND - 128, n))
+
+    p.append('<g class="plane">'
+             '<path d="M0 0 l16 0 l6 -4 l4 4 l-4 4 l-6 0 z" fill="%s" opacity="0.9"/>'
+             '<circle cx="1" cy="0" r="1.8" fill="%s"><animate attributeName="opacity" '
+             'values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>'
+             '<animateTransform attributeName="transform" type="translate" '
+             'values="-60 62;1060 40;1060 40" keyTimes="0;0.16;1" '
+             'dur="60s" repeatCount="indefinite"/>'
+             '</g>' % (k["win"], k["win"]))
+
     p.append('<text class="ft" x="500" y="44" font-family="%s" font-size="24" font-style="italic" fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual.</text>' % (SERIF, c["ink"]))
     p.append('<rect x="0" y="255" width="1000" height="5" fill="url(#st%s)"/>' % t)
     p.append('</g></svg>')
