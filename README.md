@@ -82,23 +82,29 @@ green and unclickable.
 
 <br>
 
-The radar above groups by area, so the list below sorts by tenure instead — counted from the
-first role in which each one appears.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg">
+  <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg">
+</picture>
 
-| | |
+<details>
+<summary>Years as text</summary>
+
+| Years | |
 |---|---|
-| **17y** | `Java` |
-| **14y** | `PostgreSQL` |
-| **12y** | `MongoDB` |
-| **11y** | `Spring Boot` `SQL Server` |
-| **7y** | `Spring Security` `OpenAPI` `Kubernetes` `Docker` `SonarQube` |
-| **5y** | `AWS` `Prometheus` `Grafana` |
-| **3y** | `Kotlin` `Azure` `Pulumi` `GitHub Actions` `Cosmos DB` `GraphQL` `OpenTelemetry` |
-| **2y** | `Airflow` `Spring AI` |
-| **1y** | `GCP` |
+| `17` | `Java` |
+| `14` | `PostgreSQL` |
+| `12` | `MongoDB` |
+| `11` | `Spring Boot` `SQL Server` |
+| `7` | `Spring Security` `OpenAPI` `Kubernetes` `Docker` `SonarQube` |
+| `5` | `AWS` `Prometheus` `Grafana` |
+| `3` | `Kotlin` `Azure` `Pulumi` `GitHub Actions` `Cosmos DB` `GraphQL` `OpenTelemetry` |
+| `2` | `Airflow` `Spring AI` |
+| `1` | `GCP` |
 
-Standards and protocols, which have no tenure worth quoting:
 `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity`
+
+</details>
 
 <br>
 
