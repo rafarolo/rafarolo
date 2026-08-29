@@ -283,8 +283,7 @@ def skyline(t):
                                      % (wx, wy, fill, k["winop"]))
             x += bw + rnd.randint(3, 14)
             count -= 1
-    p.append('<text class="ft" x="500" y="56" font-family="%s" font-size="22" font-style="italic" fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual.</text>' % (SERIF, c["ink"]))
-    p.append('<text class="ft" style="animation-delay:.35s" x="500" y="84" font-family="%s" font-size="10" font-weight="700" letter-spacing="4" fill="%s" text-anchor="middle" opacity="0.8">SÃO PAULO · BRAZIL</text>' % (SANS, c["dim"]))
+    p.append('<text class="ft" x="500" y="44" font-family="%s" font-size="24" font-style="italic" fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual.</text>' % (SERIF, c["ink"]))
     p.append('<rect x="0" y="255" width="1000" height="5" fill="url(#st%s)"/>' % t)
     p.append('</g></svg>')
     return "\n".join(p) + "\n"
@@ -295,35 +294,3 @@ for t in ("light", "dark"):
         io.open(os.path.join(OUT, "%s-%s.svg" % (name, t)), "w", encoding="utf-8",
                 newline="\n").write(fn(t))
     print("wrote banner/rings/archetype/skyline for", t)
-
-
-# ---------------------------------------------------------------- linkedin badge
-
-def badge():
-    lab, msg = "LINKEDIN", "RAFAROLO"
-    fs, ls = 11.0, 1.15
-    cw = fs * .70 + ls
-    x_lab = 9 + 16 + 8
-    x_div = x_lab + len(lab) * cw + 10
-    x_msg = x_div + 11
-    w, h = x_msg + len(msg) * cw + 12, 28
-    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %.0f %d" width="%.0f" height="%d" '
-         'role="img" aria-label="LinkedIn: rafarolo">' % (w, h, w, h)]
-    p.append('<rect x="0" y="0" width="%.0f" height="%d" fill="#0A66C2"/>' % (w, h))
-    p.append('<g transform="translate(9 6)" fill="#FFFFFF">')
-    p.append('<rect x="0" y="5" width="3.4" height="11" rx="0.4"/>')
-    p.append('<circle cx="1.7" cy="1.9" r="2.05"/>')
-    p.append('<path d="M6 16V5h3.3v1.5C9.9 5.4 11.1 4.7 12.5 4.7c2.4 0 3.9 1.6 3.9 4.3V16h-3.5V9.7'
-             'c0-1.4-.6-2.2-1.8-2.2-1.1 0-1.8.8-1.8 2.2V16H6z"/>')
-    p.append('</g>')
-    p.append('<rect x="%.1f" y="8" width="1" height="12" fill="#FFFFFF" opacity="0.38"/>' % x_div)
-    p.append('<g font-family="%s" font-size="%.1f" font-weight="700" letter-spacing="%.2f" '
-             'fill="#FFFFFF">' % (SANS, fs, ls))
-    p.append('<text x="%.1f" y="18.5">%s</text>' % (x_lab, lab))
-    p.append('<text x="%.1f" y="18.5" opacity="0.92">%s</text>' % (x_msg, msg))
-    p.append('</g></svg>')
-    return NL.join(p) + NL
-
-
-io.open(os.path.join(OUT, "linkedin.svg"), "w", encoding="utf-8", newline="\n").write(badge())
-print("wrote linkedin.svg")

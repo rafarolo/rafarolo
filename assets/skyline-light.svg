@@ -597,6 +597,6 @@
 <rect x="914" y="185" width="4" height="5" fill="#B08243" opacity=".55"/>
 <rect x="914" y="211" width="4" height="5" fill="#B08243" opacity=".55"/>
 <rect x="914" y="224" width="4" height="5" fill="#B08243" opacity=".55"/>
-<text class="ft" x="500" y="56" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif" font-size="22" font-style="italic" fill="#0E151C" text-anchor="middle">To an artificial mind, all reality is virtual.</text>
+<text class="ft" x="500" y="44" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif" font-size="24" font-style="italic" fill="#0E151C" text-anchor="middle">To an artificial mind, all reality is virtual.</text>
 <rect x="0" y="255" width="1000" height="5" fill="url(#stlight)"/>
 </g></svg>
