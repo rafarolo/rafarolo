@@ -26,7 +26,8 @@ TREE = [
         d("practice/", "what the days are actually spent on", [
             f("review", "906 usages, 17 callers"),
             f("architecture", "hexagonal · one contract per capability"),
-            f("reliability", "0 bugs · 0 vulnerabilities · rating A")]),
+            f("reliability", "0 bugs · 0 vulnerabilities · rating A"),
+            f("advocacy", "AI and backend culture for the engineering team")]),
         d("adapters/", "swappable on purpose — that is the point", [
             f("jvm", "kotlin · java · spring boot"),
             f("storage", "postgres · sql server · cosmos"),

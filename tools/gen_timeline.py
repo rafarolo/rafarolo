@@ -5,12 +5,16 @@ from gen_all import THEMES, SANS, OUT, NL
 
 # year, headline, detail, major
 ITEMS = [
+    ("2025–26", "OpenSec, an API for partners",
+     "22 endpoints across 8 service families · documentation kits built by an automated pipeline", True),
+    ("2025–26", "Passwordless, and routes that stay inside",
+     "Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS", False),
+    ("2024–26", "New cluster, new region, one pipeline",
+     "every application rewritten into a single GitHub Actions pipeline · Azure subscription and AKS migration", True),
     ("2023–26", "Kotlin as the platform language",
      "off Python, JavaScript and TypeScript · hexagonal architecture · R$130B+ in issued assets", True),
-    ("2025–26", "Passwordless database access",
-     "Entra ID workload identities across production SQL Server and Postgres", False),
     ("2021–23", "Open Banking, certified",
-     "every BACEN and FEBRABAN phase through Raidiam conformance · insurance home in a 22M-customer bank app", True),
+     "every BACEN and FEBRABAN phase through Raidiam conformance · insurance home in a 22M-customer bank app", False),
     ("2020–21", "Claims analytics on GCP",
      "predictive engine for suspicious claims at a 7M-client insurer, beside a COBOL/CICS core", False),
     ("2019–20", "WebSphere to Kubernetes",
