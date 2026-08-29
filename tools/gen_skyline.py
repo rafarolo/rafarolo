@@ -159,16 +159,16 @@ def skyline(t):
                        'animation-iteration-count:infinite}' % (b, b) for b in BLINKS) +
              '.bl{animation:bl 2.6s step-end infinite}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
-             '@keyframes tw{0%,100%{opacity:.85}50%{opacity:.32}}'
-             '@keyframes tw2{0%,100%{opacity:.42}38%{opacity:.88}}'
+             '@keyframes tw{0%,100%{opacity:.95}50%{opacity:.18}}'
+             '@keyframes tw2{0%,100%{opacity:.22}38%{opacity:1}}'
              # Every transition is a ramp, and the flats between them are long enough that
              # the window is off or on rather than permanently crossfading.
-             '@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:.05}100%{opacity:1}}'
-             '@keyframes bo{0%,34%{opacity:.05}44%,88%{opacity:1}100%{opacity:.05}}'
-             '@keyframes b3{0%,17%{opacity:1}26%,44%{opacity:.05}53%,71%{opacity:1}'
-             '80%,96%{opacity:.05}100%{opacity:1}}'
-             '@keyframes b4{0%,9%{opacity:.05}19%,29%{opacity:1}38%,77%{opacity:.05}'
-             '86%,96%{opacity:1}100%{opacity:.05}}'
+             '@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:0}100%{opacity:1}}'
+             '@keyframes bo{0%,34%{opacity:0}44%,88%{opacity:1}100%{opacity:0}}'
+             '@keyframes b3{0%,17%{opacity:1}26%,44%{opacity:0}53%,71%{opacity:1}'
+             '80%,96%{opacity:0}100%{opacity:1}}'
+             '@keyframes b4{0%,9%{opacity:0}19%,29%{opacity:1}38%,77%{opacity:0}'
+             '86%,96%{opacity:1}100%{opacity:0}}'
              '@keyframes bl{50%{opacity:.15}}'
              '@keyframes ftin{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){'
@@ -191,7 +191,7 @@ def skyline(t):
             p.append('<circle class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
                      'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6"/>'
                      % (rnd.choice(("st", "st2")), period, rnd.uniform(0, period),
-                        x, y, rnd.uniform(.6, 1.5)))
+                        x, y, rnd.uniform(1.2, 2.6)))
             placed += 1
 
         # A warm disc and its craters. Nothing behind it and nothing cutting it.
@@ -244,11 +244,11 @@ def skyline(t):
                 unlit = darken(col, .58 if t == "light" else .55)
                 # Inset from every edge. Flush against a silhouette that blends into the
                 # sky, a window stops reading as part of the building it is on.
-                for wx in range(x + 10, x + bw - 12, 12):
-                    for wy in range(btop + 16, GROUND - 12, 14):
+                for wx in range(x + 10, x + bw - 13, 13):
+                    for wy in range(btop + 16, GROUND - 13, 16):
                         r = rnd.random()
                         if r > .52:
-                            p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s"/>'
+                            p.append('<rect x="%d" y="%d" width="5" height="7" fill="%s"/>'
                                      % (wx, wy, unlit))
                             continue
                         fill = k["win2"] if r < .11 else k["win"]
@@ -267,12 +267,12 @@ def skyline(t):
                                           'repeatCount="indefinite"/>'
                                           % (";".join(order), keys, period * 2.7))
                             p.append('<rect class="%s" style="animation-duration:%ss;'
-                                     'animation-delay:-%.1fs" x="%d" y="%d" width="4" height="5" '
+                                     'animation-delay:-%.1fs" x="%d" y="%d" width="5" height="7" '
                                      'fill="%s">%s</rect>'
                                      % (rnd.choice(BLINKS), period, rnd.uniform(0, period),
                                         wx, wy, fill, shifts))
                         else:
-                            p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s" '
+                            p.append('<rect x="%d" y="%d" width="5" height="7" fill="%s" '
                                      'opacity="%s"/>' % (wx, wy, fill, k["winop"]))
             x += bw + rnd.randint(3, 14)
             count -= 1
