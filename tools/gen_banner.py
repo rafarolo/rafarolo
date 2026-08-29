@@ -7,11 +7,17 @@ BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"),
        ("906", "CODE REVIEWS"), ("8", "SECTORS SERVED")]
 
 H = 300
-RAIN_ROWS = 14
-RAIN_STEP = 15
-COLS = 34
+STEP = 15
+COLS = 42
+TRAIL_MIN, TRAIL_MAX = 5, 16
+FALL = H + TRAIL_MAX * STEP
 
-RAIN_OPACITY = {"light": "0.07", "dark": "0.11"}
+# The head is the bright drop, the trail fades behind it. On a light ground a white head
+# is invisible, so light runs the same structure with the accent as its brightest tone.
+RAIN = {
+    "light": dict(head="#0B4152", mid="#2C7F8C", tail="#0E5468", group="0.20"),
+    "dark":  dict(head="#EAF7FB", mid="#8FCEDC", tail="#56AEC2", group="0.34"),
+}
 
 
 def banner(t):
@@ -37,7 +43,7 @@ def banner(t):
     # Fades the digits out before they reach the figures, so texture never competes with data.
     p.append('<linearGradient id="f%s" x1="0" y1="0" x2="0" y2="1">'
              '<stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>'
-             '<stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0.55"/>'
+             '<stop offset="0.70" stop-color="#FFFFFF" stop-opacity="0.65"/>'
              '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>' % t)
     p.append('<mask id="m%s"><rect x="0" y="0" width="1000" height="%d" fill="url(#f%s)"/></mask>'
              % (t, H, t))
@@ -51,21 +57,32 @@ def banner(t):
              '@keyframes fall{to{transform:translateY(%dpx)}}'
              '@media (prefers-reduced-motion: reduce){'
              '.fade{opacity:1;animation:none}.rain{animation:none}}'
-             '</style>' % (RAIN_ROWS * RAIN_STEP))
+             '</style>' % FALL)
 
     p.append('<g clip-path="url(#r%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#w%s)"/>' % (H, t))
 
-    p.append('<g mask="url(#m%s)" fill="%s" font-family="%s" font-size="12" opacity="%s">'
-             % (t, c["acc"], MONO, RAIN_OPACITY[t]))
+    r = RAIN[t]
+    p.append('<g mask="url(#m%s)" font-family="%s" font-size="12" opacity="%s">'
+             % (t, MONO, r["group"]))
     for col in range(COLS):
-        x = 14 + col * 29
-        dur = round(rnd.uniform(5.5, 13.0), 1)
-        delay = round(rnd.uniform(-13.0, 0.0), 1)
-        digits = "".join(rnd.choice("01") for _ in range(RAIN_ROWS * 2))
+        x = 10 + col * 24
+        length = rnd.randint(TRAIL_MIN, TRAIL_MAX)
+        dur = round(rnd.uniform(3.6, 11.5), 1)
+        delay = round(rnd.uniform(-11.5, 0.0), 1)
+        top = -length * STEP
         p.append('<g class="rain" style="animation-duration:%ss;animation-delay:%ss">' % (dur, delay))
-        for row, ch in enumerate(digits):
-            p.append('<text x="%d" y="%d">%s</text>' % (x, -RAIN_ROWS * RAIN_STEP + row * RAIN_STEP, ch))
+        for i in range(length):
+            # i counts up towards the head, so the trail thins out behind the drop
+            ratio = i / float(length - 1) if length > 1 else 1.0
+            if i == length - 1:
+                fill, op = r["head"], 1.0
+            elif i >= length - 3:
+                fill, op = r["mid"], 0.72
+            else:
+                fill, op = r["tail"], round(ratio ** 1.7, 3)
+            p.append('<text x="%d" y="%d" fill="%s" opacity="%s">%s</text>'
+                     % (x, top + i * STEP, fill, op, rnd.choice("01")))
         p.append('</g>')
     p.append('</g>')
 
