@@ -3,9 +3,9 @@
   <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 20 years on the JVM, 798 pull requests, 906 code reviews, 14 services." src="assets/banner-light.svg">
 </picture>
 
-Twenty years on the JVM — sixteen in Java, four in Kotlin and Spring, six leading teams.
-I work where a wrong number has a settlement date: custody positions, asset and liability
-ledgers, regulatory reporting.
+Seventeen years on the JVM — fourteen in Java, the last three in Kotlin and Spring — and
+six as Specialist and Tech Lead. I work where a wrong number has a settlement date: custody
+positions, asset and liability ledgers, regulatory reporting.
 
 The chart up there is the job. In every completed year I have reviewed more pull requests
 than I opened — 906 reviews against 798 of my own, for seventeen engineers. All of it in
@@ -16,25 +16,32 @@ choosing between two defensible answers and making that choice cheap to change l
 
 ## Selected work
 
-**Passwordless database access** — Entra ID workload identities across production services,
-on both SQL Server and Postgres. The identity belongs to the workload rather than a person,
-which is what makes it revocable, and `CREATE USER` has to go by object ID, not by name.
+**2023–2026 · Kotlin as the platform language.** Led the move off a mixed Python,
+JavaScript and TypeScript backend onto Kotlin and hexagonal architecture, on the platform
+behind R$130B+ in issued assets. Alongside it, a migration to a new Azure subscription and
+Kubernetes, and a DevSecOps pipeline standardised on GitHub Actions, SonarQube and Pulumi.
 
-**Asset and liability through one contract** — both sides answer from a single endpoint, so
-the shape of the answer stops depending on who asked for it.
+**2025–2026 · Passwordless database access.** Entra ID workload identities across production
+services, on both SQL Server and Postgres. The identity belongs to the workload rather than
+a person, which is what makes it revocable, and `CREATE USER` has to go by object ID, not
+by name.
 
-**A staging database worth trusting** — production-to-staging copy with deterministic PII
-masking applied at the source, plus an automated schema-drift gate across 170+ tables.
+**2021–2023 · Open Banking, certified.** Built to the Brazilian central bank and FEBRABAN
+specifications, carrying every regulatory phase through conformance in the Raidiam engine.
+In the same years, a new insurance home inside a digital bank's app — 22M+ customers,
+Android and iOS.
 
-**Deploy provenance** — in a pipeline where the deploy leaves the pull request before the
-merge does, a workflow run's `headSha` is not what reached production. Most of the value is
-knowing where to read what did.
+**2020–2021 · Claims analytics at an insurer with 7M clients.** A predictive engine on GCP
+for suspicious claims, returning disapproved payments automatically, next to a COBOL/CICS
+core that wasn't going anywhere. Plus the traceability layer that made medical board
+decisions hold up legally under the health regulator's rules.
 
-**Settlement dates that agree** — one B3 date field carrying five different names across
-five systems, and deciding which of them a public API is allowed to answer with.
+**2019–2020 · WebSphere to Kubernetes.** Retail insurance systems at a bank, moved from
+traditional WebSphere onto Liberty on IBM Cloud Private, with OpenShift and Jenkins
+carrying the pipeline.
 
-**Coverage as a constraint, not a report** — core service from 74.7% to 88%, holding zero
-bugs and zero vulnerabilities along the way.
+**2014–2015 · A study area, ten times faster.** Found the data bottleneck in the core
+function of a geomarketing platform and took its main calculation past a 10× improvement.
 
 ## Stack
 

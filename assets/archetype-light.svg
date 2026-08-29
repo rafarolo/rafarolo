@@ -1,35 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 421" width="1000" height="421" role="img" aria-label="Career as a package tree: domain does not get replaced, adapters are swappable on purpose.">
-<defs><clipPath id="ralight"><rect x="0" y="0" width="1000" height="421" rx="10"/></clipPath></defs>
-<style>.ln{opacity:0;animation:fa .4s ease forwards}@keyframes fa{to{opacity:1}}@media (prefers-reduced-motion: reduce){.ln{opacity:1;animation:none}}</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 389" width="1000" height="389" role="img" aria-label="Terminal typing the command tree rolo.m.rafael, whose output is a package tree: a domain package that does not get replaced, an application package, and adapter packages that are swappable on purpose.">
+<defs>
+<clipPath id="ralight"><rect x="0" y="0" width="1000" height="389" rx="10"/></clipPath>
+<clipPath id="tplight"><rect class="type" x="44" y="24" width="156.4" height="22"/></clipPath>
+</defs>
+<style>.type{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:tw 1.00s steps(20,end) .25s forwards}.caret{opacity:0;animation:show 0s linear 1.25s forwards,blink 1.06s step-end 1.25s infinite}.ln{opacity:0;animation:fa .34s ease forwards}.dot{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}@keyframes blink{50%{opacity:0}}@media (prefers-reduced-motion: reduce){.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}</style>
 <g clip-path="url(#ralight)">
-<rect x="0" y="0" width="1000" height="421" fill="#EEF2F4"/>
-<rect x="0" y="0" width="3" height="421" fill="#0E5468"/>
+<rect x="0" y="0" width="1000" height="389" fill="#EEF2F4"/>
+<rect x="0" y="0" width="3" height="389" fill="#0E5468"/>
+<circle cx="26" cy="22" r="4.5" fill="#B08243" opacity="0.85"/>
+<circle cx="41" cy="22" r="4.5" fill="#2C7F8C" opacity="0.85"/>
+<circle cx="56" cy="22" r="4.5" fill="#0E5468" opacity="0.85"/>
 <g font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', monospace" font-size="13">
-<text class="ln" style="animation-delay:0.15s" x="44" y="40" font-size="15" font-weight="700" fill="#0E151C">rolo.m.rafael</text>
-<text class="ln" style="animation-delay:0.20s" x="66" y="69" font-weight="700" fill="#0E5468">├─ domain/</text>
-<text class="ln" style="animation-delay:0.24s" x="360" y="69" font-size="11.5" font-style="italic" fill="#808C99">the part that does not get replaced</text>
-<text class="ln" style="animation-delay:0.26s" x="88" y="90" fill="#5A6675">│&#160;&#160;├─ securitization</text>
-<text class="ln" style="animation-delay:0.30s" x="360" y="90" font-size="11.5" fill="#808C99">CRI · CRA · series · lastro</text>
-<text class="ln" style="animation-delay:0.32s" x="88" y="111" fill="#5A6675">│&#160;&#160;├─ settlement</text>
-<text class="ln" style="animation-delay:0.35s" x="360" y="111" font-size="11.5" fill="#808C99">B3 · custody · liquidation dates</text>
-<text class="ln" style="animation-delay:0.37s" x="88" y="132" fill="#5A6675">│&#160;&#160;└─ accounting</text>
-<text class="ln" style="animation-delay:0.41s" x="360" y="132" font-size="11.5" fill="#808C99">asset × liability · roll-forward</text>
-<text class="ln" style="animation-delay:0.43s" x="66" y="161" font-weight="700" fill="#0E5468">├─ application/</text>
-<text class="ln" style="animation-delay:0.47s" x="360" y="161" font-size="11.5" font-style="italic" fill="#808C99">what the days are actually spent on</text>
-<text class="ln" style="animation-delay:0.48s" x="88" y="182" fill="#5A6675">│&#160;&#160;├─ review</text>
-<text class="ln" style="animation-delay:0.52s" x="360" y="182" font-size="11.5" fill="#808C99">906 usages, 17 callers</text>
-<text class="ln" style="animation-delay:0.54s" x="88" y="203" fill="#5A6675">│&#160;&#160;├─ architecture</text>
-<text class="ln" style="animation-delay:0.58s" x="360" y="203" font-size="11.5" fill="#808C99">hexagonal · one contract per capability</text>
-<text class="ln" style="animation-delay:0.59s" x="88" y="224" fill="#5A6675">│&#160;&#160;└─ reliability</text>
-<text class="ln" style="animation-delay:0.63s" x="360" y="224" font-size="11.5" fill="#808C99">coverage 74.7% → 88%, 0 bugs</text>
-<text class="ln" style="animation-delay:0.65s" x="66" y="253" font-weight="700" fill="#0E5468">└─ adapters/</text>
-<text class="ln" style="animation-delay:0.69s" x="360" y="253" font-size="11.5" font-style="italic" fill="#808C99">swappable on purpose — that is the point</text>
-<text class="ln" style="animation-delay:0.70s" x="88" y="274" fill="#5A6675">&#160;&#160;&#160;├─ jvm</text>
-<text class="ln" style="animation-delay:0.74s" x="360" y="274" font-size="11.5" fill="#808C99">kotlin · java · spring boot</text>
-<text class="ln" style="animation-delay:0.76s" x="88" y="295" fill="#5A6675">&#160;&#160;&#160;├─ storage</text>
-<text class="ln" style="animation-delay:0.80s" x="360" y="295" font-size="11.5" fill="#808C99">postgres · sql server · cosmos</text>
-<text class="ln" style="animation-delay:0.81s" x="88" y="316" fill="#5A6675">&#160;&#160;&#160;├─ cloud</text>
-<text class="ln" style="animation-delay:0.85s" x="360" y="316" font-size="11.5" fill="#808C99">azure · aks · pulumi · actions</text>
-<text class="ln" style="animation-delay:0.86s" x="88" y="337" fill="#5A6675">&#160;&#160;&#160;└─ signals</text>
-<text class="ln" style="animation-delay:0.91s" x="360" y="337" font-size="11.5" fill="#808C99">prometheus · grafana · sonarqube</text>
+<g clip-path="url(#tplight)"><text x="44" y="40" fill="#0E151C" font-weight="600">$ tree rolo.m.rafael</text></g>
+<rect class="caret" x="201.4" y="28" width="7.5" height="14" fill="#0E5468"/>
+<circle class="dot" style="animation-delay:1.35s" cx="50" cy="70" r="4" fill="#0E5468"/>
+<text class="ln" style="animation-delay:1.35s" x="62" y="74" font-weight="700" fill="#0E5468">├─ domain/</text>
+<text class="ln" style="animation-delay:1.39s" x="360" y="74" font-size="11.5" font-style="italic" fill="#808C99">the part that does not get replaced</text>
+<text class="ln" style="animation-delay:1.40s" x="84" y="95" fill="#5A6675">│&#160;&#160;├─ securitization</text>
+<text class="ln" style="animation-delay:1.44s" x="360" y="95" font-size="11.5" fill="#808C99">CRI · CRA · series · lastro</text>
+<text class="ln" style="animation-delay:1.45s" x="84" y="116" fill="#5A6675">│&#160;&#160;├─ settlement</text>
+<text class="ln" style="animation-delay:1.49s" x="360" y="116" font-size="11.5" fill="#808C99">B3 · custody · liquidation dates</text>
+<text class="ln" style="animation-delay:1.50s" x="84" y="137" fill="#5A6675">│&#160;&#160;└─ accounting</text>
+<text class="ln" style="animation-delay:1.54s" x="360" y="137" font-size="11.5" fill="#808C99">asset × liability · roll-forward</text>
+<circle class="dot" style="animation-delay:1.55s" cx="50" cy="162" r="4" fill="#0E5468"/>
+<text class="ln" style="animation-delay:1.55s" x="62" y="166" font-weight="700" fill="#0E5468">├─ application/</text>
+<text class="ln" style="animation-delay:1.59s" x="360" y="166" font-size="11.5" font-style="italic" fill="#808C99">what the days are actually spent on</text>
+<text class="ln" style="animation-delay:1.60s" x="84" y="187" fill="#5A6675">│&#160;&#160;├─ review</text>
+<text class="ln" style="animation-delay:1.64s" x="360" y="187" font-size="11.5" fill="#808C99">906 usages, 17 callers</text>
+<text class="ln" style="animation-delay:1.65s" x="84" y="208" fill="#5A6675">│&#160;&#160;├─ architecture</text>
+<text class="ln" style="animation-delay:1.69s" x="360" y="208" font-size="11.5" fill="#808C99">hexagonal · one contract per capability</text>
+<text class="ln" style="animation-delay:1.70s" x="84" y="229" fill="#5A6675">│&#160;&#160;└─ reliability</text>
+<text class="ln" style="animation-delay:1.74s" x="360" y="229" font-size="11.5" fill="#808C99">coverage 74.7% → 88%, 0 bugs</text>
+<circle class="dot" style="animation-delay:1.75s" cx="50" cy="254" r="4" fill="#0E5468"/>
+<text class="ln" style="animation-delay:1.75s" x="62" y="258" font-weight="700" fill="#0E5468">└─ adapters/</text>
+<text class="ln" style="animation-delay:1.79s" x="360" y="258" font-size="11.5" font-style="italic" fill="#808C99">swappable on purpose — that is the point</text>
+<text class="ln" style="animation-delay:1.80s" x="84" y="279" fill="#5A6675">&#160;&#160;&#160;├─ jvm</text>
+<text class="ln" style="animation-delay:1.84s" x="360" y="279" font-size="11.5" fill="#808C99">kotlin · java · spring boot</text>
+<text class="ln" style="animation-delay:1.85s" x="84" y="300" fill="#5A6675">&#160;&#160;&#160;├─ storage</text>
+<text class="ln" style="animation-delay:1.89s" x="360" y="300" font-size="11.5" fill="#808C99">postgres · sql server · cosmos</text>
+<text class="ln" style="animation-delay:1.90s" x="84" y="321" fill="#5A6675">&#160;&#160;&#160;├─ cloud</text>
+<text class="ln" style="animation-delay:1.94s" x="360" y="321" font-size="11.5" fill="#808C99">azure · aks · pulumi · actions</text>
+<text class="ln" style="animation-delay:1.95s" x="84" y="342" fill="#5A6675">&#160;&#160;&#160;└─ signals</text>
+<text class="ln" style="animation-delay:1.99s" x="360" y="342" font-size="11.5" fill="#808C99">prometheus · grafana · sonarqube</text>
 </g></g></svg>
