@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 20 years on the JVM, 798 pull requests, 906 code reviews, 14 services." src="assets/banner-light.svg">
+  <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
 </picture>
 
 Seventeen years on the JVM — fourteen in Java, the last three in Kotlin and Spring — and
@@ -13,6 +13,11 @@ private corporate repositories, which is why the contribution graph below is gre
 unclickable. Reviewing isn't overhead stacked on top of building; on a platform of
 forty-odd services it's most of how the thing stays coherent. The rest of the work is
 choosing between two defensible answers and making that choice cheap to change later.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
+  <img alt="Three proportions: 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else; 89% of pull requests opened were merged." src="assets/rings-light.svg">
+</picture>
 
 ## Selected work
 
@@ -50,7 +55,7 @@ and GitHub Actions · Airflow for ingestion · Prometheus, Grafana and SonarQube
 
 ## rolo.m.rafael
 
-The same twenty years drawn the way I'd draw a service — domain in the middle, stack as
+The same seventeen years drawn the way I'd draw a service — domain in the middle, stack as
 adapters, because the stack is the part that gets replaced.
 
 <picture>
@@ -58,8 +63,11 @@ adapters, because the stack is the part that gets replaced.
   <img alt="Career as a package tree under rolo.m.rafael: a domain package that does not get replaced, an application package, and swappable adapter packages." src="assets/archetype-light.svg">
 </picture>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
+  <img alt="A city skyline at dusk, closing the page." src="assets/skyline-light.svg">
+</picture>
 
-[LinkedIn](https://linkedin.com/in/rafarolo) · [Stack Exchange](https://stackexchange.com/users/7394006/)
+[LinkedIn](https://linkedin.com/in/rafarolo) · [Stack Exchange](https://stackexchange.com/users/7394006/) · São Paulo, Brazil
 
 *To an artificial mind, all reality is [virtual](https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1).* ☄️

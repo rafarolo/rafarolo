@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Rafael M. Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others, test coverage raised from 74.7 to 88 percent. Reviews given exceed pull requests authored in every completed year.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Rafael M. Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others. Reviews given exceed pull requests authored in every completed year.">
 <defs>
 <linearGradient id="slight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E5468"/><stop offset="0.55" stop-color="#2C7F8C"/><stop offset="1" stop-color="#B08243"/></linearGradient>
 <clipPath id="rlight"><rect x="0" y="0" width="1000" height="250" rx="10"/></clipPath>
 </defs>
-<style>.fade{opacity:0;animation:f .55s ease forwards}.bar{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:g .75s cubic-bezier(.2,.85,.25,1) forwards}.live{animation:g .75s cubic-bezier(.2,.85,.25,1) forwards,pulse 3.4s ease-in-out 1.6s infinite}.ring{stroke-dasharray:163.4;stroke-dashoffset:163.4;animation:d 1.1s cubic-bezier(.3,.9,.3,1) .5s forwards}@keyframes f{to{opacity:1}}@keyframes g{to{transform:scaleY(1)}}@keyframes d{to{stroke-dashoffset:19.6}}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.62}}@media (prefers-reduced-motion: reduce){.fade{opacity:1;animation:none}.bar,.live{transform:scaleY(1);animation:none}.ring{stroke-dashoffset:19.6;animation:none}}</style>
+<style>.fade{opacity:0;animation:f .55s ease forwards}.bar{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:g .75s cubic-bezier(.2,.85,.25,1) forwards}.live{animation:g .75s cubic-bezier(.2,.85,.25,1) forwards,pulse 3.4s ease-in-out 1.6s infinite}@keyframes f{to{opacity:1}}@keyframes g{to{transform:scaleY(1)}}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.62}}@media (prefers-reduced-motion: reduce){.fade{opacity:1;animation:none}.bar,.live{transform:scaleY(1);animation:none}}</style>
 <g clip-path="url(#rlight)">
 <rect x="0" y="0" width="1000" height="250" fill="#F7F9FA"/>
 <rect x="0" y="0" width="4" height="250" fill="url(#slight)"/>
@@ -13,17 +13,10 @@
 <line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" stroke="#DDE3E8" stroke-width="1"/>
 <text class="fade" style="animation-delay:0.26s" x="48" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">17</text>
 <text class="fade" style="animation-delay:0.32s" x="49" y="188" font-size="10.5" font-weight="600" fill="#5A6675" letter-spacing="1.5">YEARS ON THE JVM</text>
-<text class="fade" style="animation-delay:0.35s" x="228" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">798</text>
-<text class="fade" style="animation-delay:0.41s" x="229" y="188" font-size="10.5" font-weight="600" fill="#5A6675" letter-spacing="1.5">PULL REQUESTS</text>
-<text class="fade" style="animation-delay:0.44s" x="408" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">906</text>
-<text class="fade" style="animation-delay:0.50s" x="409" y="188" font-size="10.5" font-weight="600" fill="#5A6675" letter-spacing="1.5">CODE REVIEWS</text>
-<g class="fade" style="animation-delay:.53s">
-<circle cx="616" cy="152" r="26.0" fill="none" stroke="#DFE6EA" stroke-width="7"/>
-<line x1="584.5" y1="152.6" x2="595.5" y2="152.4" stroke="#808C99" stroke-width="1.5" opacity="0.75"/>
-<circle class="ring" cx="616" cy="152" r="26.0" fill="none" stroke="#0E5468" stroke-width="7" stroke-linecap="round" transform="rotate(-90 616 152)"/>
-<text x="616" y="158" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-0.5">88%</text>
-<text x="616" y="188" font-size="10.5" font-weight="600" fill="#5A6675" text-anchor="middle" letter-spacing="1.5">COVERAGE, FROM 74.7</text>
-</g>
+<text class="fade" style="animation-delay:0.35s" x="243" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">798</text>
+<text class="fade" style="animation-delay:0.41s" x="244" y="188" font-size="10.5" font-weight="600" fill="#5A6675" letter-spacing="1.5">PULL REQUESTS</text>
+<text class="fade" style="animation-delay:0.44s" x="438" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">906</text>
+<text class="fade" style="animation-delay:0.50s" x="439" y="188" font-size="10.5" font-weight="600" fill="#5A6675" letter-spacing="1.5">CODE REVIEWS</text>
 <text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" font-weight="600" fill="#5A6675" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>
 <rect class="bar" style="animation-delay:0.62s" x="700" y="163.0" width="24" height="33.0" rx="1.5" fill="#0E5468" opacity="0.38"/>
 <rect class="bar" style="animation-delay:0.67s" x="727" y="154.1" width="24" height="41.9" rx="1.5" fill="#0E5468"/>
