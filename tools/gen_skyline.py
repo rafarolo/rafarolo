@@ -14,16 +14,19 @@ PLANE_FROM, PLANE_TO = 128, 112  # centre line; wings reach 13 either side
 ROOFLINE = GROUND - 158
 
 SKY = {
-    "light": dict(top="#F7F9FA", horizon="#DCE9ED", far="#BACDD5", mid="#93AEB9",
-                  near="#5F7C88", win="#B08243", win2="#0E5468", winop=".55",
+    "light": dict(top="#F7F9FA", horizon="#DCE9ED", far="#AFC4CD", mid="#7F98A3",
+                  near="#48626D", win="#B08243", win2="#0E5468", winop=".55",
                   warm=("#B08243", "#C2954E", "#8A6A34"), cool=("#0E5468", "#2C7F8C")),
-    "dark":  dict(top="#0A1015", horizon="#16303B", far="#1C3540", mid="#142731",
-                  near="#0B161C", win="#C9A468", win2="#56AEC2", winop=".95",
+    "dark":  dict(top="#0A1015", horizon="#16303B", far="#101F27", mid="#0A151B",
+                  near="#050C10", win="#C9A468", win2="#56AEC2", winop=".95",
                   warm=("#C9A468", "#F0D79A", "#A8823F"), cool=("#56AEC2", "#8FCEDC")),
 }
 
-LAYERS = [("far", 27, 20, 46, 38, 92, False), ("mid", 19, 30, 62, 58, 126, True),
-          ("near", 12, 46, 92, 78, 158, True)]
+# Only the front layer is lit. Behind it the buildings are silhouettes, which is what they
+# look like at this distance anyway -- and a window on a shape that blends into the sky
+# reads as a light with nothing under it.
+LAYERS = [("far", 27, 20, 46, 38, 92, False), ("mid", 19, 30, 62, 58, 126, False),
+          ("near", 17, 46, 92, 78, 158, True)]
 
 BLINKS = ("bk", "bo", "b3", "b4")
 
