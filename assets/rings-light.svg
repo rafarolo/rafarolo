@@ -1,22 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 212" width="1000" height="212" role="img" aria-label="Three proportions. Test coverage 88 percent, up from 74.7. 53 percent of every pull request touched belonged to someone else: 906 reviews against 798 of my own. 89 percent of pull requests opened were merged: 707 of 798.">
-<defs><clipPath id="rglight"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath></defs>
-<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}.a0{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k0 1.15s cubic-bezier(.25,.9,.3,1) 0.25s forwards}@keyframes k0{to{stroke-dashoffset:34.7}}.a1{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k1 1.15s cubic-bezier(.25,.9,.3,1) 0.41s forwards}@keyframes k1{to{stroke-dashoffset:135.8}}.a2{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k2 1.15s cubic-bezier(.25,.9,.3,1) 0.57s forwards}@keyframes k2{to{stroke-dashoffset:31.8}}@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}.a0{stroke-dashoffset:34.7;animation:none}.a1{stroke-dashoffset:135.8;animation:none}.a2{stroke-dashoffset:31.8;animation:none}}</style>
+<defs><linearGradient id="pgrglight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3F7F9"/><stop offset="1" stop-color="#E7EBED"/></linearGradient><linearGradient id="snrglight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient><filter id="dsrglight" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/></filter><clipPath id="rglight"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath>
+<clipPath id="win0light"><rect x="130" y="70" width="120" height="40"/></clipPath>
+<clipPath id="win1light"><rect x="440" y="70" width="120" height="40"/></clipPath>
+<clipPath id="win2light"><rect x="750" y="70" width="120" height="40"/></clipPath>
+</defs>
+<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}.a0{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k0 1.15s cubic-bezier(.25,.9,.3,1) 0.25s forwards}@keyframes k0{to{stroke-dashoffset:34.7}}.a1{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k1 1.15s cubic-bezier(.25,.9,.3,1) 0.41s forwards}@keyframes k1{to{stroke-dashoffset:135.8}}.a2{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k2 1.15s cubic-bezier(.25,.9,.3,1) 0.57s forwards}@keyframes k2{to{stroke-dashoffset:31.8}}@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}.n0{animation:none}.n1{animation:none}.n2{animation:none}.a0{stroke-dashoffset:34.7;animation:none}.a1{stroke-dashoffset:135.8;animation:none}.a2{stroke-dashoffset:31.8;animation:none}.n0{transform:translateY(-520px);animation:c0 1.15s steps(13,end) 0.25s forwards}@keyframes c0{from{transform:translateY(0)}to{transform:translateY(-520px)}}.n1{transform:translateY(-520px);animation:c1 1.15s steps(13,end) 0.41s forwards}@keyframes c1{from{transform:translateY(0)}to{transform:translateY(-520px)}}.n2{transform:translateY(-520px);animation:c2 1.15s steps(13,end) 0.57s forwards}@keyframes c2{from{transform:translateY(0)}to{transform:translateY(-520px)}}.sheen{animation:sweep 13s ease-in-out infinite}@keyframes sweep{0%{transform:translateX(-115%)}55%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}}</style>
 <g clip-path="url(#rglight)">
-<rect x="0" y="0" width="1000" height="212" fill="#EEF2F4"/>
+<rect x="0" y="0" width="1000" height="212" fill="url(#pgrglight)"/><rect class="sheen" x="-450" y="0" width="450" height="212" fill="url(#snrglight)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.9"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <circle cx="190" cy="86" r="46.0" fill="none" stroke="#DFE6EA" stroke-width="11"/>
-<circle class="a0" cx="190" cy="86" r="46.0" fill="none" stroke="#0E5468" stroke-width="11" stroke-linecap="round" transform="rotate(-90 190 86)"/>
-<text x="190" y="96" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">88%</text>
+<circle class="a0" cx="190" cy="86" r="46.0" fill="none" stroke="#0E5468" stroke-width="11" stroke-linecap="round" filter="url(#dsrglight)" transform="rotate(-90 190 86)"/>
+<g clip-path="url(#win0light)"><g class="n0">
+<text x="190" y="96" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">0%</text>
+<text x="190" y="136" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">19%</text>
+<text x="190" y="176" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">35%</text>
+<text x="190" y="216" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">48%</text>
+<text x="190" y="256" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">59%</text>
+<text x="190" y="296" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">67%</text>
+<text x="190" y="336" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">74%</text>
+<text x="190" y="376" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">79%</text>
+<text x="190" y="416" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">83%</text>
+<text x="190" y="456" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">85%</text>
+<text x="190" y="496" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">87%</text>
+<text x="190" y="536" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">88%</text>
+<text x="190" y="576" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">88%</text>
+<text x="190" y="616" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">88%</text>
+</g></g>
 <text class="lb" style="animation-delay:0.70s" x="190" y="170" font-size="12" font-weight="700" fill="#5A6675" text-anchor="middle" letter-spacing="1.5">TEST COVERAGE</text>
 <text class="lb" style="animation-delay:0.78s" x="190" y="189" font-size="12" fill="#808C99" text-anchor="middle">core service, up from 74.7%</text>
 <circle cx="500" cy="86" r="46.0" fill="none" stroke="#DFE6EA" stroke-width="11"/>
-<circle class="a1" cx="500" cy="86" r="46.0" fill="none" stroke="#0E5468" stroke-width="11" stroke-linecap="round" transform="rotate(-90 500 86)"/>
-<text x="500" y="96" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">53%</text>
+<circle class="a1" cx="500" cy="86" r="46.0" fill="none" stroke="#0E5468" stroke-width="11" stroke-linecap="round" filter="url(#dsrglight)" transform="rotate(-90 500 86)"/>
+<g clip-path="url(#win1light)"><g class="n1">
+<text x="500" y="96" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">0%</text>
+<text x="500" y="136" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">11%</text>
+<text x="500" y="176" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">21%</text>
+<text x="500" y="216" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">29%</text>
+<text x="500" y="256" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">35%</text>
+<text x="500" y="296" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">41%</text>
+<text x="500" y="336" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">45%</text>
+<text x="500" y="376" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">48%</text>
+<text x="500" y="416" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">50%</text>
+<text x="500" y="456" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">51%</text>
+<text x="500" y="496" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">52%</text>
+<text x="500" y="536" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">53%</text>
+<text x="500" y="576" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">53%</text>
+<text x="500" y="616" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">53%</text>
+</g></g>
 <text class="lb" style="animation-delay:0.82s" x="500" y="170" font-size="12" font-weight="700" fill="#5A6675" text-anchor="middle" letter-spacing="1.5">OF EVERY PR I TOUCHED</text>
 <text class="lb" style="animation-delay:0.90s" x="500" y="189" font-size="12" fill="#808C99" text-anchor="middle">906 reviews against 798 of my own</text>
 <circle cx="810" cy="86" r="46.0" fill="none" stroke="#DFE6EA" stroke-width="11"/>
-<circle class="a2" cx="810" cy="86" r="46.0" fill="none" stroke="#0E5468" stroke-width="11" stroke-linecap="round" transform="rotate(-90 810 86)"/>
-<text x="810" y="96" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">89%</text>
+<circle class="a2" cx="810" cy="86" r="46.0" fill="none" stroke="#0E5468" stroke-width="11" stroke-linecap="round" filter="url(#dsrglight)" transform="rotate(-90 810 86)"/>
+<g clip-path="url(#win2light)"><g class="n2">
+<text x="810" y="96" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">0%</text>
+<text x="810" y="136" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">19%</text>
+<text x="810" y="176" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">35%</text>
+<text x="810" y="216" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">48%</text>
+<text x="810" y="256" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">59%</text>
+<text x="810" y="296" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">68%</text>
+<text x="810" y="336" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">75%</text>
+<text x="810" y="376" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">80%</text>
+<text x="810" y="416" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">84%</text>
+<text x="810" y="456" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">86%</text>
+<text x="810" y="496" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">88%</text>
+<text x="810" y="536" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">89%</text>
+<text x="810" y="576" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">89%</text>
+<text x="810" y="616" font-size="30" font-weight="700" fill="#0E151C" text-anchor="middle" letter-spacing="-1">89%</text>
+</g></g>
 <text class="lb" style="animation-delay:0.94s" x="810" y="170" font-size="12" font-weight="700" fill="#5A6675" text-anchor="middle" letter-spacing="1.5">PULL REQUESTS MERGED</text>
 <text class="lb" style="animation-delay:1.02s" x="810" y="189" font-size="12" fill="#808C99" text-anchor="middle">707 merged of 798 opened</text>
 </g></g></svg>

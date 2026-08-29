@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 545" width="1000" height="545" role="img" aria-label="A terminal typing tree rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work.">
-<defs>
+<defs><linearGradient id="pgralight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3F7F9"/><stop offset="1" stop-color="#E7EBED"/></linearGradient><linearGradient id="snralight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient><filter id="dsralight" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.16"/></filter>
 <clipPath id="ralight"><rect x="0" y="0" width="1000" height="545" rx="10"/></clipPath>
 <clipPath id="tplight"><rect class="type" x="44" y="24" width="193.7" height="22"/></clipPath>
 </defs>
 <style>.type{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:tw 1.05s steps(23,end) .25s forwards}.caret{opacity:0;animation:show 0s linear 1.30s forwards,blink 1.06s step-end 1.30s infinite}.ln{opacity:0;animation:fa .34s ease forwards}.dot{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}@keyframes blink{50%{opacity:0}}@media (prefers-reduced-motion: reduce){.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}</style>
 <g clip-path="url(#ralight)">
-<rect x="0" y="0" width="1000" height="545" fill="#EEF2F4"/>
+<rect x="0" y="0" width="1000" height="545" fill="url(#pgralight)"/><rect class="sheen" x="-450" y="0" width="450" height="545" fill="url(#snralight)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.9"/>
 <rect x="0" y="0" width="3" height="545" fill="#0E5468"/>
 <circle cx="26" cy="22" r="4.5" fill="#B08243" opacity="0.85"/>
 <circle cx="41" cy="22" r="4.5" fill="#2C7F8C" opacity="0.85"/>

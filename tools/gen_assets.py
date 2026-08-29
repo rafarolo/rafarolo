@@ -24,85 +24,61 @@ SCALE = 58.0 / 278.0
 BASE = 196
 
 
+
 def shade(hexcol, f):
     r, g, b = int(hexcol[1:3], 16), int(hexcol[3:5], 16), int(hexcol[5:7], 16)
-    clamp = lambda v: max(0, min(255, int(v * f)))
-    return "#%02X%02X%02X" % (clamp(r), clamp(g), clamp(b))
+    c = lambda v: max(0, min(255, int(v * f)))
+    return "#%02X%02X%02X" % (c(r), c(g), c(b))
 
 
-def carbon(t, ident):
-    """A woven twill tile, so the panels read as a surface rather than a fill.
+GLASS = {
+    "light": dict(top=1.022, bottom=0.972, edge="#FFFFFF", edge_op="0.9",
+                  sheen="#FFFFFF", sheen_op="0.55", shadow="0.16"),
+    "dark":  dict(top=1.30, bottom=0.86, edge="#FFFFFF", edge_op="0.10",
+                  sheen="#BFE6F0", sheen_op="0.07", shadow="0.55"),
+}
 
-    Two cells run the weave one way and two the other, which is what separates carbon
-    from a checkerboard. Kept within a few percent of the panel colour: at higher
-    contrast the pattern starts competing with the data drawn on top of it."""
-    c = THEMES[t]
+
+def glass_defs(t, ident, w=1000):
+    """One surface treatment shared by every panel, so the page reads as a set.
+
+    A real frosted pane would sample what is behind it, which an SVG in a README cannot
+    see. What it can do is behave like glass: a vertical gradient, a lit top edge where
+    the light lands, and a slow reflection crossing the surface."""
+    g, c = GLASS[t], THEMES[t]
     base = c["panel"]
-    lo = shade(base, 0.965 if t == "light" else 1.16)
-    hi = shade(base, 1.012 if t == "light" else 1.34)
-    cells = ((0, 0, lo, 1), (8, 8, lo, 1), (8, 0, hi, -1), (0, 8, hi, -1))
-    out = ['<pattern id="cf%s%s" width="16" height="16" patternUnits="userSpaceOnUse">' % (ident, t)]
-    out.append('<rect width="16" height="16" fill="%s"/>' % base)
-    for x, y, col, slope in cells:
-        out.append('<rect x="%d" y="%d" width="8" height="8" fill="%s"/>' % (x, y, col))
-        for k in (2, 5):
-            if slope > 0:
-                out.append('<path d="M%d %dl8 8" stroke="%s" stroke-width="0.7" opacity="0.5"/>'
-                           % (x, y + k - 4, shade(col, 0.97 if t == "light" else 1.12)))
-            else:
-                out.append('<path d="M%d %dl8 -8" stroke="%s" stroke-width="0.7" opacity="0.5"/>'
-                           % (x, y + k + 4, shade(col, 0.97 if t == "light" else 1.12)))
-    out.append('</pattern>')
-    return "".join(out)
+    return (
+        '<linearGradient id="pg%s%s" x1="0" y1="0" x2="0" y2="1">'
+        '<stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>'
+        '<linearGradient id="sn%s%s" x1="0" y1="0" x2="1" y2="0">'
+        '<stop offset="0" stop-color="%s" stop-opacity="0"/>'
+        '<stop offset="0.5" stop-color="%s" stop-opacity="%s"/>'
+        '<stop offset="1" stop-color="%s" stop-opacity="0"/></linearGradient>'
+        '<filter id="ds%s%s" x="-30%%" y="-30%%" width="160%%" height="160%%">'
+        '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="%s" flood-opacity="%s"/>'
+        '</filter>'
+        % (ident, t, shade(base, g["top"]), shade(base, g["bottom"]),
+           ident, t, g["sheen"], g["sheen"], g["sheen_op"], g["sheen"],
+           ident, t, "#000000" if t == "light" else "#000000", g["shadow"])
+    )
 
 
-def banner(t):
-    c = THEMES[t]
-    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" '
-         'role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. '
-         '17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight '
-         'sectors served. Reviews '
-         '">']
-    p.append('<defs>')
-    p.append('<linearGradient id="s%s" x1="0" y1="0" x2="1" y2="0">'
-             '<stop offset="0" stop-color="%s"/><stop offset="0.55" stop-color="%s"/>'
-             '<stop offset="1" stop-color="%s"/></linearGradient>' % (t, c["g0"], c["g1"], c["g2"]))
-    p.append('<clipPath id="r%s"><rect x="0" y="0" width="1000" height="196" rx="10"/></clipPath>' % t)
-    p.append('</defs>')
-    p.append('<style>'
-             '.fade{opacity:0;animation:f .55s ease forwards}'
-             '.bar{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);'
-             'animation:g .75s cubic-bezier(.2,.85,.25,1) forwards}'
-             '.live{animation:g .75s cubic-bezier(.2,.85,.25,1) forwards,pulse 3.4s ease-in-out 1.6s infinite}'
-             '@keyframes f{to{opacity:1}}@keyframes g{to{transform:scaleY(1)}}'
-             '@keyframes pulse{0%,100%{opacity:1}50%{opacity:.62}}'
-             '@media (prefers-reduced-motion: reduce){'
-             '.fade{opacity:1;animation:none}.bar,.live{transform:scaleY(1);animation:none}}'
-             '</style>')
-    p.append('<g clip-path="url(#r%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="196" fill="%s"/>' % c["bg"])
-    p.append('<rect x="0" y="0" width="4" height="196" fill="url(#s%s)"/>' % t)
-    p.append('<g font-family="%s">' % SANS)
-    p.append('<text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="%s" '
-             'letter-spacing="-0.4">Rafael Rôlo</text>' % c["ink"])
-    p.append('<text class="fade" style="animation-delay:.1s" x="48" y="86" font-size="12" '
-             'font-weight="600" fill="%s" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · '
-             'CAPITAL MARKETS</text>' % c["role"])
-    p.append('<line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" '
-             'stroke="%s" stroke-width="1"/>' % c["line"])
-    for i, (val, lab) in enumerate(BIG):
-        x, d = 60 + i * 228, 0.26 + i * 0.08
-        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="166" font-size="42" '
-                 'font-weight="700" fill="%s" letter-spacing="-1">%s</text>' % (d, x, c["ink"], val))
-        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="189" font-size="12" '
-                 'font-weight="600" fill="%s" letter-spacing="1.5">%s</text>' % (d + .06, x + 1, c["mut"], lab))
-    p.append('<text class="fade" style="animation-delay:1.15s" x="60" y="175" font-size="8.5" '
-             'font-weight="600" fill="%s" letter-spacing="1.1">PRIVATE CORPORATE REPOSITORIES · '
-             'MEASURED AUGUST 2026</text>' % c["dim"])
-    p.append('</g>')
-    p.append('<rect x="0" y="191" width="1000" height="5" fill="url(#s%s)"/>' % t)
-    p.append('</g></svg>')
-    return "\n".join(p) + "\n"
+def glass_style(dur=11):
+    return ('.sheen{animation:sweep %ds ease-in-out infinite}'
+            '@keyframes sweep{0%%{transform:translateX(-115%%)}'
+            '55%%,100%%{transform:translateX(115%%)}}'
+            '@media (prefers-reduced-motion: reduce){.sheen{display:none}}' % dur)
+
+
+def glass_bg(t, ident, w, h):
+    g = GLASS[t]
+    return (
+        '<rect x="0" y="0" width="%d" height="%d" fill="url(#pg%s%s)"/>'
+        '<rect class="sheen" x="%d" y="0" width="%d" height="%d" fill="url(#sn%s%s)"/>'
+        '<rect x="0" y="0" width="%d" height="1.2" fill="%s" opacity="%s"/>'
+        % (w, h, ident, t, -int(w * 0.45), int(w * 0.45), h, ident, t,
+           w, g["edge"], g["edge_op"])
+    )
 
 
 RINGS = [(0.88, "88%", "TEST COVERAGE", "core service, up from 74.7%"),
@@ -110,6 +86,14 @@ RINGS = [(0.88, "88%", "TEST COVERAGE", "core service, up from 74.7%"),
          (0.89, "89%", "PULL REQUESTS MERGED", "707 merged of 798 opened")]
 RR = 46.0
 RC = 2 * math.pi * RR
+ROW = 40
+FRAMES = 14
+
+
+def ramp(final, n=FRAMES):
+    """Values on an ease-out curve, so the counter slows into its answer instead of
+    ticking at a constant rate — matching the arc drawn beside it."""
+    return [int(round(final * (1 - (1 - i / float(n - 1)) ** 3))) for i in range(n)]
 
 
 def rings(t):
@@ -118,8 +102,13 @@ def rings(t):
          'role="img" aria-label="Three proportions. Test coverage 88 percent, up from 74.7. '
          '53 percent of every pull request touched belonged to someone else: 906 reviews against '
          '798 of my own. 89 percent of pull requests opened were merged: 707 of 798.">']
-    p.append('<defs>' + carbon(t, "rg") + '<clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/>'
-             '</clipPath></defs>' % t)
+    p.append('<defs>' + glass_defs(t, "rg") +
+             '<clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath>' % t)
+    for i in range(len(RINGS)):
+        cx = 190 + i * 310
+        p.append('<clipPath id="win%d%s"><rect x="%d" y="%d" width="120" height="%d"/></clipPath>'
+                 % (i, t, cx - 60, 86 - ROW // 2 + 4, ROW))
+    p.append('</defs>')
     css = ['<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}']
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.a%d{stroke-dasharray:%.1f;stroke-dashoffset:%.1f;'
@@ -127,22 +116,35 @@ def rings(t):
                    % (i, RC, RC, i, .25 + i * .16))
         css.append('@keyframes k%d{to{stroke-dashoffset:%.1f}}' % (i, RC * (1 - frac)))
     css.append('@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}')
+    for i in range(len(RINGS)):
+        css.append('.n%d{animation:none}' % i)
     for i, (frac, _, _, _) in enumerate(RINGS):
         css.append('.a%d{stroke-dashoffset:%.1f;animation:none}' % (i, RC * (1 - frac)))
+    for i, (frac, _, _, _) in enumerate(RINGS):
+        css.append('.n%d{transform:translateY(%dpx);animation:c%d 1.15s steps(%d,end) %.2fs forwards}'
+                   % (i, -(FRAMES - 1) * ROW, i, FRAMES - 1, .25 + i * .16))
+        css.append('@keyframes c%d{from{transform:translateY(0)}to{transform:translateY(%dpx)}}'
+                   % (i, -(FRAMES - 1) * ROW))
+    css.append(glass_style(13))
     css.append('}</style>')
     p.append("".join(css))
     p.append('<g clip-path="url(#rg%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="212" fill="url(#cfrg%s)"/>' % t)
+    p.append(glass_bg(t, "rg", 1000, 212))
     p.append('<g font-family="%s">' % SANS)
     for i, (frac, big, lab, sub) in enumerate(RINGS):
         cx, cy = 190 + i * 310, 86
         p.append('<circle cx="%d" cy="%d" r="%.1f" fill="none" stroke="%s" stroke-width="11"/>'
                  % (cx, cy, RR, c["track"]))
         p.append('<circle class="a%d" cx="%d" cy="%d" r="%.1f" fill="none" stroke="%s" '
-                 'stroke-width="11" stroke-linecap="round" transform="rotate(-90 %d %d)"/>'
-                 % (i, cx, cy, RR, c["acc"], cx, cy))
-        p.append('<text x="%d" y="%d" font-size="30" font-weight="700" fill="%s" '
-                 'text-anchor="middle" letter-spacing="-1">%s</text>' % (cx, cy + 10, c["ink"], big))
+                 'stroke-width="11" stroke-linecap="round" filter="url(#dsrg%s)" '
+                 'transform="rotate(-90 %d %d)"/>'
+                 % (i, cx, cy, RR, c["acc"], t, cx, cy))
+        p.append('<g clip-path="url(#win%d%s)"><g class="n%d">' % (i, t, i))
+        for step, value in enumerate(ramp(int(big.rstrip("%")))):
+            p.append('<text x="%d" y="%d" font-size="30" font-weight="700" fill="%s" '
+                     'text-anchor="middle" letter-spacing="-1">%d%%</text>'
+                     % (cx, cy + 10 + step * ROW, c["ink"], value))
+        p.append('</g></g>')
         p.append('<text class="lb" style="animation-delay:%.2fs" x="%d" y="170" font-size="12" '
                  'font-weight="700" fill="%s" text-anchor="middle" letter-spacing="1.5">%s</text>'
                  % (.7 + i * .12, cx, c["mut"], lab))

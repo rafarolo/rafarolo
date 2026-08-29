@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, OUT, NL
+from gen_all import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
@@ -36,9 +36,10 @@ def prs(t):
     alt = ("Pull requests per year, authored and reviewed for others. " +
            "; ".join("%d: %d authored, %d reviewed%s" % (y, a, r, "" if k else ", to 29 August")
                      for y, a, r, k in YEARS))
+    grow = []
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
-    p.append('<defs><clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+    p.append('<defs>' + glass_defs(t, "pr") + '<clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath>'
              '<marker id="ah%s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" '
              'markerHeight="6" orient="auto-start-reverse">'
@@ -48,11 +49,12 @@ def prs(t):
              'animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}'
              '.t{opacity:0;animation:fi .45s ease forwards}'
              '@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}'
+             '__GROW__'
              '@media (prefers-reduced-motion: reduce){.b{transform:scaleY(1);animation:none}'
-             '.t{opacity:1;animation:none}}'
-             '</style>')
+             '.t{opacity:1;animation:none}__GROWOFF__}'
+             + glass_style(12) + '</style>')
     p.append('<g clip-path="url(#pr%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append(glass_bg(t, "pr", 1000, h))
     p.append('<g font-family="%s">' % SANS)
 
     p.append('<text class="t" x="%d" y="46" font-size="12" font-weight="700" fill="%s" '
@@ -81,15 +83,23 @@ def prs(t):
             top = BASE - bh
             if not complete:
                 ph = projected(value) * SCALE
-                p.append('<rect class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" '
-                         'width="%d" height="%.1f" rx="3" fill="none" stroke="%s" '
-                         'stroke-width="1.6" stroke-dasharray="4 4" opacity="0.8"/>'
-                         % (d + .5 + j * .06, x, BASE - ph, BW, ph, c["acc"]))
-                p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" '
-                         'font-size="14" font-weight="700" fill="%s" text-anchor="middle" '
-                         'opacity="0.9">%d</text>'
-                         % (d + .55 + j * .06, x + BW / 2.0, BASE - ph - 9, c["acc"],
-                            projected(value)))
+                start = bh / ph
+                rise = ph - bh
+                grow.append('.pj%d{transform-box:fill-box;transform-origin:50%% 100%%;'
+                            'transform:scaleY(%.3f);opacity:0;'
+                            'animation:pj%d 1.1s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
+                            '@keyframes pj%d{to{transform:scaleY(1);opacity:.8}}'
+                            % (j, start, j, d + .5 + j * .06, j))
+                grow.append('.pv%d{transform:translateY(%.1fpx);opacity:0;'
+                            'animation:pv%d 1.1s cubic-bezier(.25,.9,.3,1) %.2fs forwards}'
+                            '@keyframes pv%d{to{transform:translateY(0);opacity:.9}}'
+                            % (j, rise, j, d + .55 + j * .06, j))
+                p.append('<rect class="pj%d" x="%.1f" y="%.1f" width="%d" height="%.1f" rx="3" '
+                         'fill="none" stroke="%s" stroke-width="1.6" stroke-dasharray="4 4"/>'
+                         % (j, x, BASE - ph, BW, ph, c["acc"]))
+                p.append('<text class="pv%d" x="%.1f" y="%.1f" font-size="14" font-weight="700" '
+                         'fill="%s" text-anchor="middle">%d</text>'
+                         % (j, x + BW / 2.0, BASE - ph - 9, c["acc"], projected(value)))
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
                      % (d + j * .06, x, top, BW, bh, c["acc"],
@@ -146,7 +156,9 @@ def prs(t):
     p.append('</g>')
 
     p.append('</g></g></svg>')
-    return NL.join(p) + NL
+    out = NL.join(p) + NL
+    off = "".join(".pj%d,.pv%d{transform:none;opacity:.85;animation:none}" % (j, j) for j in (0, 1))
+    return out.replace("__GROW__", "".join(grow)).replace("__GROWOFF__", off)
 
 
 for t in ("light", "dark"):
