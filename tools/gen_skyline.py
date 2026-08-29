@@ -262,7 +262,11 @@ def skyline(t):
                             continue
                         fill = k["win2"] if r < .11 else k["win"]
                         if r < .32:
-                            period = round(rnd.uniform(2.2, 10.0), 1)
+                            # Nine to thirty-eight seconds. A window is not a pilot light: at a couple of
+                            # seconds it reads as a fault indicator rather than as somebody
+                            # in a room. Two of the four patterns change twice per period, so
+                            # the fastest state change here is still four seconds apart.
+                            period = round(rnd.uniform(9.0, 38.0), 1)
                             palette = k["cool"] if r < .11 else k["warm"]
                             shifts = ""
                             if r < .17:
