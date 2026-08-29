@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 232" width="1000" height="232" role="img" aria-label="Rafael M. Rolo, Specialist and Tech Lead in Capital Markets. 20 years on the JVM, 798 pull requests, 906 code reviews, 14 services.">
+  <defs>
+    <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0E5468"/>
+      <stop offset="0.55" stop-color="#2C7F8C"/>
+      <stop offset="1" stop-color="#B08243"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect x="0" y="0" width="1000" height="232" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect x="0" y="0" width="1000" height="232" fill="#F7F9FA"/>
+    <rect x="0" y="0" width="4" height="232" fill="url(#strip)"/>
+
+    <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+
+      <text x="48" y="60" font-size="36" font-weight="700" fill="#0E151C" letter-spacing="-0.4">Rafael M. Rôlo</text>
+      <text x="48" y="88" font-size="12" font-weight="600" fill="#0E5468" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · CAPITAL MARKETS</text>
+
+      <line x1="48" y1="112" x2="952" y2="112" stroke="#DDE3E8" stroke-width="1"/>
+
+      <g fill="#0E151C" font-size="42" font-weight="700" letter-spacing="-1">
+        <text x="48" y="166">20</text>
+        <text x="228" y="166">798</text>
+        <text x="408" y="166">906</text>
+        <text x="588" y="166">14</text>
+      </g>
+      <g fill="#5A6675" font-size="10.5" font-weight="600" letter-spacing="1.5">
+        <text x="49" y="188">YEARS ON THE JVM</text>
+        <text x="229" y="188">PULL REQUESTS</text>
+        <text x="409" y="188">CODE REVIEWS</text>
+        <text x="589" y="188">SERVICES</text>
+      </g>
+
+      <text x="760" y="128" font-size="10" font-weight="600" fill="#5A6675" letter-spacing="1.5">CONTRIBUTIONS / YEAR</text>
+      <g fill="#0E5468">
+        <rect x="760" y="181" width="30" height="7"  rx="1.5" opacity="0.30"/>
+        <rect x="808" y="154" width="30" height="34" rx="1.5" opacity="0.50"/>
+        <rect x="856" y="161" width="30" height="27" rx="1.5" opacity="0.45"/>
+        <rect x="904" y="132" width="30" height="56" rx="1.5" opacity="1"/>
+      </g>
+      <g fill="#808C99" font-size="9" font-weight="600" letter-spacing="0.6">
+        <text x="766" y="202">'23</text>
+        <text x="814" y="202">'24</text>
+        <text x="862" y="202">'25</text>
+        <text x="910" y="202">'26</text>
+      </g>
+
+    </g>
+
+    <rect x="0" y="227" width="1000" height="5" fill="url(#strip)"/>
+  </g>
+</svg>
