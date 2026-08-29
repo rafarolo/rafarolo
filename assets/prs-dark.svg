@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 348" width="1000" height="348" role="img" aria-label="Pull requests per year, authored and reviewed for others. 2023: 158 authored, 201 reviewed; 2024: 173 authored, 221 reviewed; 2025: 217 authored, 278 reviewed; 2026: 251 authored, 206 reviewed, to 29 August">
-<pattern id="cfprdark" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#141C23"/><rect x="0" y="0" width="8" height="8" fill="#172028"/><path d="M0 -2l8 8" stroke="#19232C" stroke-width="0.7" opacity="0.5"/><path d="M0 1l8 8" stroke="#19232C" stroke-width="0.7" opacity="0.5"/><rect x="8" y="8" width="8" height="8" fill="#172028"/><path d="M8 6l8 8" stroke="#19232C" stroke-width="0.7" opacity="0.5"/><path d="M8 9l8 8" stroke="#19232C" stroke-width="0.7" opacity="0.5"/><rect x="8" y="0" width="8" height="8" fill="#1A252E"/><path d="M8 6l8 -8" stroke="#1D2933" stroke-width="0.7" opacity="0.5"/><path d="M8 9l8 -8" stroke="#1D2933" stroke-width="0.7" opacity="0.5"/><rect x="0" y="8" width="8" height="8" fill="#1A252E"/><path d="M0 14l8 -8" stroke="#1D2933" stroke-width="0.7" opacity="0.5"/><path d="M0 17l8 -8" stroke="#1D2933" stroke-width="0.7" opacity="0.5"/></pattern><defs><clipPath id="prdark"><rect x="0" y="0" width="1000" height="348" rx="10"/></clipPath></defs>
+<defs><clipPath id="prdark"><rect x="0" y="0" width="1000" height="348" rx="10"/></clipPath><marker id="ahdark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#56AEC2"/></marker></defs>
 <style>.b{transform-box:fill-box;transform-origin:50%% 100%%;transform:scaleY(0);animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}.t{opacity:0;animation:fi .45s ease forwards}@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}@media (prefers-reduced-motion: reduce){.b{transform:scaleY(1);animation:none}.t{opacity:1;animation:none}}</style>
 <g clip-path="url(#prdark)">
-<rect x="0" y="0" width="1000" height="348" fill="url(#cfprdark)"/>
+<rect x="0" y="0" width="1000" height="348" fill="#141C23"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <text class="t" x="48" y="46" font-size="12" font-weight="700" fill="#94A3AE" letter-spacing="1.8">PULL REQUESTS PER YEAR</text>
 <g class="t" style="animation-delay:.1s">
@@ -27,14 +27,17 @@
 <rect class="b" style="animation-delay:0.60s" x="601.0" y="142.3" width="46" height="109.7" rx="3" fill="#56AEC2"/>
 <text class="t" style="animation-delay:0.90s" x="624.0" y="131.3" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">278</text>
 <text class="t" style="animation-delay:0.89s" x="597.0" y="284" font-size="17" font-weight="700" fill="#94A3AE" text-anchor="middle">2025</text>
+<line class="t" style="animation-delay:1.28s" x1="772.0" y1="126.9" x2="772.0" y2="116.0" stroke="#56AEC2" stroke-width="1.6" marker-end="url(#ahdark)" opacity="0.9"/>
 <rect class="t" style="animation-delay:1.16s" x="749.0" y="102.0" width="46" height="150.0" rx="3" fill="none" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.75"/>
 <text class="t" style="animation-delay:1.21s" x="772.0" y="93.0" font-size="13" font-weight="700" fill="#56AEC2" text-anchor="middle" opacity="0.85">380</text>
 <rect class="b" style="animation-delay:0.66s" x="749.0" y="152.9" width="46" height="99.1" rx="3" fill="#56AEC2" opacity="0.38"/>
 <text class="t" style="animation-delay:0.96s" x="772.0" y="141.9" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">251</text>
+<line class="t" style="animation-delay:1.34s" x1="826.0" y1="144.7" x2="826.0" y2="142.8" stroke="#56AEC2" stroke-width="1.6" marker-end="url(#ahdark)" opacity="0.9"/>
 <rect class="t" style="animation-delay:1.22s" x="803.0" y="128.8" width="46" height="123.2" rx="3" fill="none" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.75"/>
 <text class="t" style="animation-delay:1.27s" x="826.0" y="119.8" font-size="13" font-weight="700" fill="#56AEC2" text-anchor="middle" opacity="0.85">312</text>
 <rect class="b" style="animation-delay:0.72s" x="803.0" y="170.7" width="46" height="81.3" rx="3" fill="#56AEC2"/>
 <text class="t" style="animation-delay:1.02s" x="826.0" y="159.7" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">206</text>
+<text class="t" style="animation-delay:1.36s" x="799.0" y="98" font-size="10.5" font-weight="700" fill="#56AEC2" text-anchor="middle" letter-spacing="1.6">PROJECTION</text>
 <text class="t" style="animation-delay:1.01s" x="799.0" y="284" font-size="17" font-weight="700" fill="#94A3AE" text-anchor="middle">2026 *</text>
 <text class="t" style="animation-delay:1.00s" x="294.0" y="312" font-size="13" font-weight="700" fill="#56AEC2" text-anchor="middle">+10%</text>
 <text class="t" style="animation-delay:1.10s" x="496.0" y="312" font-size="13" font-weight="700" fill="#56AEC2" text-anchor="middle">+26%</text>

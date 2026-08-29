@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import carbon, THEMES, SANS, OUT, NL
+from gen_all import THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
@@ -38,8 +38,11 @@ def prs(t):
                      for y, a, r, k in YEARS))
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
-    p.append(carbon(t, "pr") + '<defs><clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
-             '</clipPath></defs>' % (t, h))
+    p.append('<defs><clipPath id="pr%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+             '</clipPath>'
+             '<marker id="ah%s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" '
+             'markerHeight="6" orient="auto-start-reverse">'
+             '<path d="M0 0L10 5L0 10z" fill="%s"/></marker></defs>' % (t, h, t, c["acc"]))
     p.append('<style>'
              '.b{transform-box:fill-box;transform-origin:50%% 100%%;transform:scaleY(0);'
              'animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}'
@@ -49,7 +52,7 @@ def prs(t):
              '.t{opacity:1;animation:none}}'
              '</style>')
     p.append('<g clip-path="url(#pr%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#cfpr%s)"/>' % (h, t))
+    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
     p.append('<g font-family="%s">' % SANS)
 
     p.append('<text class="t" x="%d" y="46" font-size="12" font-weight="700" fill="%s" '
@@ -74,6 +77,13 @@ def prs(t):
             top = BASE - bh
             if not complete:
                 ph = projected(value) * SCALE
+                # An arrow from where the year stands to where it lands, so the dashed
+                # outline reads as a forecast rather than a second measurement.
+                p.append('<line class="t" style="animation-delay:%.2fs" x1="%.1f" y1="%.1f" '
+                         'x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6" '
+                         'marker-end="url(#ah%s)" opacity="0.9"/>'
+                         % (d + .62 + j * .06, x + BW / 2.0, BASE - bh - 26,
+                            x + BW / 2.0, BASE - ph + 14, c["acc"], t))
                 p.append('<rect class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                          'height="%.1f" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
                          'stroke-dasharray="4 4" opacity="0.75"/>'
@@ -90,6 +100,11 @@ def prs(t):
                      'font-weight="700" fill="%s" text-anchor="middle">%d</text>'
                      % (d + .3 + j * .06, x + BW / 2.0, top - 11, c["ink"], value))
 
+        if not complete:
+            p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" '
+                     'font-size="10.5" font-weight="700" fill="%s" text-anchor="middle" '
+                     'letter-spacing="1.6">PROJECTION</text>'
+                     % (d + .7, cx, BASE - projected(reviewed) * SCALE - 30, c["acc"]))
         label = str(year) if complete else "%d *" % year
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="17" '
                  'font-weight="700" fill="%s" text-anchor="middle">%s</text>'

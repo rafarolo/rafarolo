@@ -6,17 +6,17 @@ from gen_all import THEMES, SKY, SANS, MONO, OUT, NL
 BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"),
        ("906", "CODE REVIEWS"), ("8", "SECTORS SERVED")]
 
-H = 300
+H = 372
 STEP = 15
-COLS = 42
-TRAIL_MIN, TRAIL_MAX = 5, 16
+COLS = 48
+TRAIL_MIN, TRAIL_MAX = 7, 22
 FALL = H + TRAIL_MAX * STEP
 
 # The head is the bright drop, the trail fades behind it. On a light ground a white head
 # is invisible, so light runs the same structure with the accent as its brightest tone.
 RAIN = {
-    "light": dict(head="#0B4152", mid="#2C7F8C", tail="#0E5468", group="0.20"),
-    "dark":  dict(head="#EAF7FB", mid="#8FCEDC", tail="#56AEC2", group="0.34"),
+    "light": dict(head="#0B4152", mid="#2C7F8C", tail="#0E5468", group="0.26"),
+    "dark":  dict(head="#EAF7FB", mid="#8FCEDC", tail="#56AEC2", group="0.44"),
 }
 
 
@@ -43,7 +43,7 @@ def banner(t):
     # Fades the digits out before they reach the figures, so texture never competes with data.
     p.append('<linearGradient id="f%s" x1="0" y1="0" x2="0" y2="1">'
              '<stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>'
-             '<stop offset="0.70" stop-color="#FFFFFF" stop-opacity="0.65"/>'
+             '<stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0.85"/>'
              '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>' % t)
     p.append('<mask id="m%s"><rect x="0" y="0" width="1000" height="%d" fill="url(#f%s)"/></mask>'
              % (t, H, t))
@@ -66,10 +66,10 @@ def banner(t):
     p.append('<g mask="url(#m%s)" font-family="%s" font-size="12" opacity="%s">'
              % (t, MONO, r["group"]))
     for col in range(COLS):
-        x = 10 + col * 24
+        x = 8 + col * 21
         length = rnd.randint(TRAIL_MIN, TRAIL_MAX)
-        dur = round(rnd.uniform(3.6, 11.5), 1)
-        delay = round(rnd.uniform(-11.5, 0.0), 1)
+        dur = round(rnd.uniform(3.2, 12.5), 1)
+        delay = round(rnd.uniform(-12.5, 0.0), 1)
         top = -length * STEP
         p.append('<g class="rain" style="animation-duration:%ss;animation-delay:%ss">' % (dur, delay))
         for i in range(length):
@@ -87,23 +87,23 @@ def banner(t):
     p.append('</g>')
 
     p.append('<g font-family="%s">' % SANS)
-    p.append('<text class="fade" x="60" y="104" font-size="42" font-weight="700" fill="%s" '
+    p.append('<text class="fade" x="60" y="176" font-size="42" font-weight="700" fill="%s" '
              'letter-spacing="-0.6">Rafael Rôlo</text>' % c["ink"])
-    p.append('<text class="fade" style="animation-delay:.12s" x="60" y="136" font-size="13" '
+    p.append('<text class="fade" style="animation-delay:.12s" x="60" y="208" font-size="13" '
              'font-weight="600" fill="%s" letter-spacing="2.6">SPECIALIST &amp; TECH LEAD · '
              'CAPITAL MARKETS</text>' % c["role"])
-    p.append('<line class="fade" style="animation-delay:.2s" x1="60" y1="166" x2="940" y2="166" '
+    p.append('<line class="fade" style="animation-delay:.2s" x1="60" y1="238" x2="940" y2="238" '
              'stroke="%s" stroke-width="1"/>' % c["line"])
 
     for i, (val, lab) in enumerate(BIG):
         x, d = 60 + i * 228, 0.3 + i * 0.09
-        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="232" font-size="46" '
+        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="304" font-size="46" '
                  'font-weight="700" fill="%s" letter-spacing="-1.2">%s</text>' % (d, x, c["ink"], val))
-        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="256" font-size="12" '
+        p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="328" font-size="12" '
                  'font-weight="600" fill="%s" letter-spacing="1.6">%s</text>'
                  % (d + .06, x + 1, c["mut"], lab))
 
-    p.append('<text class="fade" style="animation-delay:.75s" x="60" y="286" font-size="9.5" '
+    p.append('<text class="fade" style="animation-delay:.75s" x="60" y="358" font-size="9.5" '
              'font-weight="600" fill="%s" letter-spacing="1.2">PRIVATE CORPORATE REPOSITORIES · '
              'MEASURED AUGUST 2026</text>' % c["dim"])
     p.append('</g>')
