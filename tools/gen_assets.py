@@ -149,6 +149,11 @@ LAYERS = [("far", 27, 20, 46, 38, 92, False), ("mid", 19, 30, 62, 58, 126, True)
 GROUND = 255
 
 
+def dark(hexcol, f):
+    r, g, b = int(hexcol[1:3], 16), int(hexcol[3:5], 16), int(hexcol[5:7], 16)
+    return "#%02X%02X%02X" % (int(r * f), int(g * f), int(b * f))
+
+
 def skyline(t):
     rnd = random.Random(7)
     c, k = THEMES[t], SKY[t]
@@ -185,10 +190,13 @@ def skyline(t):
                 p.append('<circle class="bl" style="animation-delay:%.1fs" cx="%d" cy="%d" r="2.2" '
                          'fill="%s"/>' % (rnd.uniform(0, 2), ax + 1, top - 20, k["win"]))
             if lit:
-                for wx in range(x + 7, x + bw - 6, 11):
-                    for wy in range(top + 11, GROUND - 8, 13):
+                unlit = dark(col, .58 if t == "light" else .55)
+                for wx in range(x + 7, x + bw - 6, 12):
+                    for wy in range(top + 11, GROUND - 8, 14):
                         r = rnd.random()
                         if r > .52:
+                            p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s"/>'
+                                     % (wx, wy, unlit))
                             continue
                         fill = k["win2"] if r < .11 else k["win"]
                         if r < .13:
