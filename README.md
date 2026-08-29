@@ -1,52 +1,107 @@
-# 👋 Welcome to Rafael Rôlo’s GitHub!
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
+</picture>
 
-Backend engineer with 20 years of experience — 16 in Java, 4 in Kotlin + Spring — and 6 years as Specialist and Tech Lead
-Building resilient, high-performance systems for financial and Capital Markets.
-Currently applying AI to accelerate delivery and raise code quality.
+- I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
+- I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
+- I review more than I write: **906 reviews against 798 pull requests of my own**, for 17 engineers
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-rafarolo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rafarolo)
+All of it in private corporate repositories, which is why the contribution graph below is
+green and unclickable.
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
+  <img alt="Three proportions: 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else; 89% of pull requests opened were merged." src="assets/rings-light.svg">
+</picture>
 
-💡 To an artificial mind all reality is [[ ***virtual*** ](https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1)] ☄️
+<br>
 
->>> <a href="https://stackexchange.com/users/7394006/%e2%84%9b%c9%91%c6%92%c3%a6%c4%bf"><img src="https://stackexchange.com/users/flair/7394006.png?theme=dark" alt="ℛɑƒæĿᴿᴹᴿ" title="ℛɑƒæĿᴿᴹᴿ" /></a> 
+### Selected work
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg">
+  <img alt="Timeline of selected work, 2014 to 2026." src="assets/timeline-light.svg">
+</picture>
 
-## About
-Currently driving platform evolution in capital markets — improving observability, standardizing APIs and codebases, closing security gaps and migrating cloud infrastructure.
-Focused on enabling the business to move fast and differentiate through solid, scalable engineering.
+<br>
 
-**Specialist & Tech Lead** · Financial · Capital Markets · Insurance · Banking
+<details>
+<summary>Timeline as text</summary>
 
----
+| Period&nbsp;&nbsp;&nbsp;&nbsp; | Delivery | What it involved |
+|---|---|---|
+| `2025‑2026` | **OpenSec, an API for partners** | 22 endpoints across 8 service families · documentation kits built by an automated pipeline |
+| `2025‑2026` | **Passwordless, and routes that stay inside** | Entra ID workload identities on SQL Server and Postgres · service-to-service traffic on cluster-internal DNS |
+| `2024‑2026` | **New cluster, new region, one pipeline** | every application rewritten into a single GitHub Actions pipeline · Azure subscription and AKS migration |
+| `2023‑2026` | **Kotlin as the platform language** | off Python, JavaScript and TypeScript · hexagonal architecture · R$130B+ in issued assets |
+| `2021‑2023` | **Open Banking, certified** | every BACEN and FEBRABAN phase through Raidiam conformance · insurance home in a 22M-customer bank app |
+| `2020‑2021` | **Claims analytics on GCP** | predictive engine for suspicious claims at a 7M-client insurer, beside a COBOL/CICS core |
+| `2019‑2020` | **WebSphere to Kubernetes** | retail insurance systems onto Liberty on IBM Cloud Private, OpenShift pipeline |
+| `2014‑2015` | **A study area, ten times faster** | found the data bottleneck in a geomarketing platform's core calculation |
 
-### Languages & Build
-[![Kotlin](https://img.shields.io/badge/Kotlin-%20-7f52ff?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org) [![Java](https://img.shields.io/badge/Java-%20-BF2C2C?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com) [![Gradle](https://img.shields.io/badge/Gradle-%20-02303A?style=for-the-badge&logo=gradle&logoColor=white)](https://gradle.org) [![Maven](https://img.shields.io/badge/Maven-%20-000888?style=for-the-badge&logo=apache-maven&logoColor=white)](https://maven.apache.org) [![Git](https://img.shields.io/badge/Git-%20-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
+</details>
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-%20-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![JavaScript](https://img.shields.io/badge/JavaScript-%20-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![HTML](https://img.shields.io/badge/HTML-%20-FFFFFF?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS](https://img.shields.io/badge/CSS-%20-E10098?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+<br>
 
-### Cloud
-[![Azure](https://img.shields.io/badge/Azure-%20-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com) [![AWS](https://img.shields.io/badge/AWS-%20-F05032?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com) [![GCP](https://img.shields.io/badge/GCP-%20-BF2C2C?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
+  <img alt="" src="assets/dot-light.svg">
+</picture>
 
-### Stack
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot) [![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-cloud) [![Spring Data](https://img.shields.io/badge/Spring%20Data-%20-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-data)
+### Stack by area
 
-[![REST](https://img.shields.io/badge/REST-%20-7f52ff?style=for-the-badge&logoColor=white)]() [![GraphQL](https://img.shields.io/badge/GraphQL-%20-F7DF1E?style=for-the-badge&logo=graphql&logoColor=white)](https://graphql.org)
-[![SQL Server](https://img.shields.io/badge/SQL_Server-%20-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/sql-server) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%20-6DB33F?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org) [![CosmosDB](https://img.shields.io/badge/CosmosDB-%20-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com/products/cosmos-db)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg">
+</picture>
 
-### Infra & Observability
-[![Pulumi](https://img.shields.io/badge/Pulumi-%20-8A3391?style=for-the-badge&logo=pulumi&logoColor=white)](https://www.pulumi.com) [![Docker](https://img.shields.io/badge/Docker-%20-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com) [![Kubernetes](https://img.shields.io/badge/Kubernetes-%20-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io) [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-%20-02303A?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+<br>
 
-[![Prometheus](https://img.shields.io/badge/Prometheus-%20-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)](https://prometheus.io) [![Grafana](https://img.shields.io/badge/Grafana-%20-F46800?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com)
+Depth counts from the first role in which each one appears<br>
+Focus is measured from the 337 pull requests I opened in the last twelve months.
 
----
+| Area | | |
+|---|---|---|
+| **Backend on the JVM** | `17y` | `Java · 17y` `Spring Boot · 11y` `Spring Security · 7y` `OpenAPI · 7y` `Kotlin · 3y` `GraphQL · 3y` |
+| **Data** | `14y` | `PostgreSQL · 14y` `MongoDB · 12y` `SQL Server · 11y` `Cosmos DB · 3y` `Airflow · 2y` |
+| **Cloud & platform** | `7y` | `Kubernetes · 7y` `Docker · 7y` `AWS · 5y` `Azure · 3y` `Pulumi · 3y` `GitHub Actions · 3y` `GCP · 1y` |
+| **Security & identity** | `7y` | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity` |
+| **Observability & quality** | `7y` | `SonarQube · 7y` `Prometheus · 5y` `Grafana · 5y` `OpenTelemetry · 3y` |
+| **AI** | `2y` | `Spring AI` `Azure OpenAI` |
 
-## Highlights
-- 16 years designing JVM systems — architecture, performance tuning, multithreading
-- 4 years with Kotlin + Spring in mission-critical, low-latency environments
-- Led engineering teams defining architecture for high-availability distributed systems
-- Full CI/CD ownership — pipelines, automated testing, container orchestration
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
+  <img alt="" src="assets/dot-light.svg">
+</picture>
 
----
+### Artifact of my life
+
+`rolo.rafael.life`, laid out the way I'd lay out a service<br>
+Domain at the core, stack as adapters, because the stack is the part that gets replaced.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
+  <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg">
+</picture>
+
+<br>
+<br>
+<br>
+
+<p align="center">
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg" alt="Stack Exchange profile" height="28"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/location.svg" alt="São Paulo, Brasil" height="28">
+</p>
+
+<br>
+
+<a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
+    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg">
+  </picture>
+</a>

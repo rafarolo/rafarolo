@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 28" width="168" height="28" role="img" aria-label="Stack Exchange profile">
+<rect x="0" y="0" width="167.9" height="28" fill="#F48024"/>
+<g transform="translate(9 6)" fill="#FFFFFF"><path d="M13.2 15.4v-4h1.6V17H2.6v-5.6h1.6v4z"/><path d="M5.6 11.1l7.8 1.6.3-1.6-7.8-1.6zM6.6 7.4l7.2 3.4.7-1.5-7.2-3.4zM8.6 3.9l6.1 5.1 1-1.2-6.1-5.1zM12.6.4l-1.3 1 4.7 6.4 1.3-1zM5.4 15.4h8v-1.6h-8z"/></g>
+<g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="11.0" font-weight="700" letter-spacing="1.15" fill="#FFFFFF">
+<text x="33.0" y="18.5">STACK EXCHANGE</text>
+</g></svg>
