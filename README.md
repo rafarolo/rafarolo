@@ -36,10 +36,15 @@ five systems, and deciding which of them a public API is allowed to answer with.
 **Coverage as a constraint, not a report** — core service from 74.7% to 88%, holding zero
 bugs and zero vulnerabilities along the way.
 
+## Stack
+
+Kotlin and Java on Spring Boot · Postgres, SQL Server, Cosmos DB · Azure with Pulumi, AKS
+and GitHub Actions · Airflow for ingestion · Prometheus, Grafana and SonarQube
+
 ## rolo.m.rafael
 
-Twenty years drawn the way I'd draw a service — domain in the middle, stack as adapters,
-because the stack is the part that gets replaced.
+The same twenty years drawn the way I'd draw a service — domain in the middle, stack as
+adapters, because the stack is the part that gets replaced.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
