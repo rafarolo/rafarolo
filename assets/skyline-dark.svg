@@ -6,43 +6,43 @@
 <linearGradient id="cometdark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DCEEF6" stop-opacity="0"/><stop offset="0.6" stop-color="#DCEEF6" stop-opacity="0.45"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/></linearGradient>
 <clipPath id="scdark"><rect x="0" y="0" width="1000" height="330" rx="10"/></clipPath>
 </defs>
-<style>.st{animation-name:tw;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}.st2{animation-name:tw2;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}.bk{animation-name:bk;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.bo{animation-name:bo;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.b3{animation-name:b3;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.b4{animation-name:b4;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.bl{animation:bl 2.6s step-end infinite}.ft{opacity:0;animation:ftin .9s ease .2s forwards}@keyframes tw{0%,100%{opacity:.95}50%{opacity:.18}}@keyframes tw2{0%,100%{opacity:.22}38%{opacity:1}}@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:0}100%{opacity:1}}@keyframes bo{0%,34%{opacity:0}44%,88%{opacity:1}100%{opacity:0}}@keyframes b3{0%,17%{opacity:1}26%,44%{opacity:0}53%,71%{opacity:1}80%,96%{opacity:0}100%{opacity:1}}@keyframes b4{0%,9%{opacity:0}19%,29%{opacity:1}38%,77%{opacity:0}86%,96%{opacity:1}100%{opacity:0}}@keyframes bl{50%{opacity:.15}}@keyframes ftin{to{opacity:1}}@media (prefers-reduced-motion: reduce){.ft{opacity:1;animation:none}}</style>
+<style>.st{animation-name:tw;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}.st2{animation-name:tw2;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}.bk{animation-name:bk;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.bo{animation-name:bo;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.b3{animation-name:b3;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.b4{animation-name:b4;animation-timing-function:ease-in-out;animation-iteration-count:infinite}.bl{animation:bl 2.6s step-end infinite}.ft{opacity:0;animation:ftin .9s ease .2s forwards}@keyframes tw{0%,100%{opacity:1}50%{opacity:.06}}@keyframes tw2{0%,100%{opacity:.08}38%{opacity:1}}@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:0}100%{opacity:1}}@keyframes bo{0%,34%{opacity:0}44%,88%{opacity:1}100%{opacity:0}}@keyframes b3{0%,17%{opacity:1}26%,44%{opacity:0}53%,71%{opacity:1}80%,96%{opacity:0}100%{opacity:1}}@keyframes b4{0%,9%{opacity:0}19%,29%{opacity:1}38%,77%{opacity:0}86%,96%{opacity:1}100%{opacity:0}}@keyframes bl{50%{opacity:.15}}@keyframes ftin{to{opacity:1}}@media (prefers-reduced-motion: reduce){.ft{opacity:1;animation:none}}</style>
 <g clip-path="url(#scdark)">
 <rect x="0" y="0" width="1000" height="330" fill="url(#skydark)"/>
-<circle class="st" style="animation-duration:7.9s;animation-delay:-2.9s" cx="418" cy="18" r="1.3" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:7.5s;animation-delay:-3.1s" cx="533" cy="60" r="1.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:7.8s;animation-delay:-7.4s" cx="578" cy="114" r="2.1" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:14.5s;animation-delay:-0.7s" cx="610" cy="21" r="1.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:8.9s;animation-delay:-5.1s" cx="310" cy="113" r="2.0" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:11.8s;animation-delay:-6.7s" cx="119" cy="54" r="2.1" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:12.6s;animation-delay:-5.9s" cx="522" cy="142" r="2.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:10.2s;animation-delay:-7.1s" cx="384" cy="82" r="1.5" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:13.8s;animation-delay:-10.1s" cx="602" cy="82" r="1.6" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:13.7s;animation-delay:-10.4s" cx="88" cy="36" r="1.4" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:7.5s;animation-delay:-5.7s" cx="514" cy="113" r="2.0" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:11.4s;animation-delay:-6.8s" cx="910" cy="86" r="2.0" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:13.2s;animation-delay:-0.8s" cx="981" cy="75" r="2.2" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:10.7s;animation-delay:-9.5s" cx="676" cy="120" r="1.7" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:11.6s;animation-delay:-5.7s" cx="977" cy="124" r="1.5" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:12.2s;animation-delay:-1.0s" cx="770" cy="69" r="1.8" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:18.5s;animation-delay:-16.0s" cx="576" cy="77" r="1.6" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:15.9s;animation-delay:-15.2s" cx="439" cy="97" r="1.4" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:10.0s;animation-delay:-0.1s" cx="194" cy="44" r="2.4" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:10.7s;animation-delay:-4.5s" cx="200" cy="73" r="1.7" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:19.4s;animation-delay:-8.9s" cx="593" cy="87" r="2.4" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:12.1s;animation-delay:-4.8s" cx="909" cy="149" r="1.9" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:9.5s;animation-delay:-4.2s" cx="424" cy="21" r="1.4" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:8.3s;animation-delay:-4.5s" cx="629" cy="19" r="2.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:7.9s;animation-delay:-4.9s" cx="642" cy="12" r="1.4" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:14.8s;animation-delay:-1.8s" cx="272" cy="94" r="2.4" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:13.3s;animation-delay:-1.9s" cx="491" cy="128" r="2.2" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:13.2s;animation-delay:-6.8s" cx="772" cy="73" r="1.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:8.9s;animation-delay:-6.7s" cx="554" cy="98" r="1.6" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:13.7s;animation-delay:-4.9s" cx="726" cy="72" r="1.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:11.3s;animation-delay:-6.9s" cx="568" cy="134" r="2.3" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:17.5s;animation-delay:-12.9s" cx="790" cy="55" r="1.5" fill="#C8DCE6"/>
-<circle class="st" style="animation-duration:11.6s;animation-delay:-11.5s" cx="544" cy="132" r="2.3" fill="#C8DCE6"/>
-<circle class="st2" style="animation-duration:9.5s;animation-delay:-4.2s" cx="497" cy="72" r="2.5" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:7.9s;animation-delay:-2.9s" d="M418.0 15.4 l0.7 1.8 l1.8 0.7 l-1.8 0.7 l-0.7 1.8 l-0.7 -1.8 l-1.8 -0.7 l1.8 -0.7 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:7.5s;animation-delay:-3.1s" d="M533.0 57.0 l0.9 2.2 l2.2 0.9 l-2.2 0.9 l-0.9 2.2 l-0.9 -2.2 l-2.2 -0.9 l2.2 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:7.8s;animation-delay:-7.4s" d="M578.0 110.0 l1.2 2.9 l2.9 1.2 l-2.9 1.2 l-1.2 2.9 l-1.2 -2.9 l-2.9 -1.2 l2.9 -1.2 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:14.5s;animation-delay:-0.7s" d="M610.0 18.0 l0.9 2.1 l2.1 0.9 l-2.1 0.9 l-0.9 2.1 l-0.9 -2.1 l-2.1 -0.9 l2.1 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:8.9s;animation-delay:-5.1s" d="M310.0 109.1 l1.1 2.8 l2.8 1.1 l-2.8 1.1 l-1.1 2.8 l-1.1 -2.8 l-2.8 -1.1 l2.8 -1.1 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:11.8s;animation-delay:-6.7s" d="M119.0 50.0 l1.2 2.9 l2.9 1.2 l-2.9 1.2 l-1.2 2.9 l-1.2 -2.9 l-2.9 -1.2 l2.9 -1.2 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:12.6s;animation-delay:-5.9s" d="M522.0 137.2 l1.4 3.5 l3.5 1.4 l-3.5 1.4 l-1.4 3.5 l-1.4 -3.5 l-3.5 -1.4 l3.5 -1.4 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:10.2s;animation-delay:-7.1s" d="M384.0 79.0 l0.9 2.2 l2.2 0.9 l-2.2 0.9 l-0.9 2.2 l-0.9 -2.2 l-2.2 -0.9 l2.2 -0.9 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:13.8s;animation-delay:-10.1s" d="M602.0 78.9 l0.9 2.3 l2.3 0.9 l-2.3 0.9 l-0.9 2.3 l-0.9 -2.3 l-2.3 -0.9 l2.3 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:13.7s;animation-delay:-10.4s" d="M88.0 33.2 l0.8 2.0 l2.0 0.8 l-2.0 0.8 l-0.8 2.0 l-0.8 -2.0 l-2.0 -0.8 l2.0 -0.8 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:7.5s;animation-delay:-5.7s" d="M514.0 109.1 l1.1 2.8 l2.8 1.1 l-2.8 1.1 l-1.1 2.8 l-1.1 -2.8 l-2.8 -1.1 l2.8 -1.1 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:11.4s;animation-delay:-6.8s" d="M910.0 82.1 l1.1 2.8 l2.8 1.1 l-2.8 1.1 l-1.1 2.8 l-1.1 -2.8 l-2.8 -1.1 l2.8 -1.1 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:13.2s;animation-delay:-0.8s" d="M981.0 70.8 l1.2 3.0 l3.0 1.2 l-3.0 1.2 l-1.2 3.0 l-1.2 -3.0 l-3.0 -1.2 l3.0 -1.2 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:10.7s;animation-delay:-9.5s" d="M676.0 116.7 l1.0 2.4 l2.4 1.0 l-2.4 1.0 l-1.0 2.4 l-1.0 -2.4 l-2.4 -1.0 l2.4 -1.0 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:11.6s;animation-delay:-5.7s" d="M977.0 121.0 l0.9 2.1 l2.1 0.9 l-2.1 0.9 l-0.9 2.1 l-0.9 -2.1 l-2.1 -0.9 l2.1 -0.9 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:12.2s;animation-delay:-1.0s" d="M770.0 65.4 l1.0 2.6 l2.6 1.0 l-2.6 1.0 l-1.0 2.6 l-1.0 -2.6 l-2.6 -1.0 l2.6 -1.0 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:18.5s;animation-delay:-16.0s" d="M576.0 73.9 l0.9 2.2 l2.2 0.9 l-2.2 0.9 l-0.9 2.2 l-0.9 -2.2 l-2.2 -0.9 l2.2 -0.9 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:15.9s;animation-delay:-15.2s" d="M439.0 94.2 l0.8 2.0 l2.0 0.8 l-2.0 0.8 l-0.8 2.0 l-0.8 -2.0 l-2.0 -0.8 l2.0 -0.8 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:10.0s;animation-delay:-0.1s" d="M194.0 39.4 l1.3 3.3 l3.3 1.3 l-3.3 1.3 l-1.3 3.3 l-1.3 -3.3 l-3.3 -1.3 l3.3 -1.3 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:10.7s;animation-delay:-4.5s" d="M200.0 69.6 l1.0 2.4 l2.4 1.0 l-2.4 1.0 l-1.0 2.4 l-1.0 -2.4 l-2.4 -1.0 l2.4 -1.0 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:19.4s;animation-delay:-8.9s" d="M593.0 82.3 l1.4 3.4 l3.4 1.4 l-3.4 1.4 l-1.4 3.4 l-1.4 -3.4 l-3.4 -1.4 l3.4 -1.4 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:12.1s;animation-delay:-4.8s" d="M909.0 145.3 l1.1 2.6 l2.6 1.1 l-2.6 1.1 l-1.1 2.6 l-1.1 -2.6 l-2.6 -1.1 l2.6 -1.1 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:9.5s;animation-delay:-4.2s" d="M424.0 18.3 l0.8 1.9 l1.9 0.8 l-1.9 0.8 l-0.8 1.9 l-0.8 -1.9 l-1.9 -0.8 l1.9 -0.8 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:8.3s;animation-delay:-4.5s" d="M629.0 14.1 l1.4 3.5 l3.5 1.4 l-3.5 1.4 l-1.4 3.5 l-1.4 -3.5 l-3.5 -1.4 l3.5 -1.4 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:7.9s;animation-delay:-4.9s" d="M642.0 9.2 l0.8 2.0 l2.0 0.8 l-2.0 0.8 l-0.8 2.0 l-0.8 -2.0 l-2.0 -0.8 l2.0 -0.8 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:14.8s;animation-delay:-1.8s" d="M272.0 89.4 l1.3 3.3 l3.3 1.3 l-3.3 1.3 l-1.3 3.3 l-1.3 -3.3 l-3.3 -1.3 l3.3 -1.3 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:13.3s;animation-delay:-1.9s" d="M491.0 123.7 l1.3 3.1 l3.1 1.3 l-3.1 1.3 l-1.3 3.1 l-1.3 -3.1 l-3.1 -1.3 l3.1 -1.3 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:13.2s;animation-delay:-6.8s" d="M772.0 70.1 l0.9 2.1 l2.1 0.9 l-2.1 0.9 l-0.9 2.1 l-0.9 -2.1 l-2.1 -0.9 l2.1 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:8.9s;animation-delay:-6.7s" d="M554.0 94.8 l0.9 2.3 l2.3 0.9 l-2.3 0.9 l-0.9 2.3 l-0.9 -2.3 l-2.3 -0.9 l2.3 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:13.7s;animation-delay:-4.9s" d="M726.0 69.0 l0.9 2.1 l2.1 0.9 l-2.1 0.9 l-0.9 2.1 l-0.9 -2.1 l-2.1 -0.9 l2.1 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:11.3s;animation-delay:-6.9s" d="M568.0 129.6 l1.3 3.2 l3.2 1.3 l-3.2 1.3 l-1.3 3.2 l-1.3 -3.2 l-3.2 -1.3 l3.2 -1.3 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:17.5s;animation-delay:-12.9s" d="M790.0 52.0 l0.9 2.2 l2.2 0.9 l-2.2 0.9 l-0.9 2.2 l-0.9 -2.2 l-2.2 -0.9 l2.2 -0.9 z" fill="#C8DCE6"/>
+<path class="st" style="animation-duration:11.6s;animation-delay:-11.5s" d="M544.0 127.5 l1.3 3.2 l3.2 1.3 l-3.2 1.3 l-1.3 3.2 l-1.3 -3.2 l-3.2 -1.3 l3.2 -1.3 z" fill="#C8DCE6"/>
+<path class="st2" style="animation-duration:9.5s;animation-delay:-4.2s" d="M497.0 67.2 l1.4 3.5 l3.5 1.4 l-3.5 1.4 l-1.4 3.5 l-1.4 -3.5 l-3.5 -1.4 l3.5 -1.4 z" fill="#C8DCE6"/>
 <circle cx="888" cy="40" r="17" fill="#F4EBC4"/>
 <circle cx="893" cy="44" r="3.0" fill="#D9CB99" opacity="0.7"/>
 <circle cx="882" cy="37" r="2.1" fill="#D9CB99" opacity="0.7"/>

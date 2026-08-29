@@ -17,7 +17,7 @@ ROOFLINE = GROUND - 158
 SKY = {
     "light": dict(top="#F7F9FA", horizon="#DCE9ED", far="#AFC4CD", mid="#7F98A3",
                   near="#48626D", win="#B08243", win2="#0E5468", winop=".55",
-                  star="#7E99A5", trail="#2C7F8C", head="#0E5468",
+                  star="#5A7784", trail="#2C7F8C", head="#0E5468",
                   moon="#E9DEB0", crater="#C6B686",
                   warm=("#B08243", "#C2954E", "#8A6A34"), cool=("#0E5468", "#2C7F8C")),
     "dark":  dict(top="#0A1015", horizon="#16303B", far="#101F27", mid="#0A151B",
@@ -163,8 +163,8 @@ def skyline(t):
                        'animation-iteration-count:infinite}' % (b, b) for b in BLINKS) +
              '.bl{animation:bl 2.6s step-end infinite}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
-             '@keyframes tw{0%,100%{opacity:.95}50%{opacity:.18}}'
-             '@keyframes tw2{0%,100%{opacity:.22}38%{opacity:1}}'
+             '@keyframes tw{0%,100%{opacity:1}50%{opacity:.06}}'
+             '@keyframes tw2{0%,100%{opacity:.08}38%{opacity:1}}'
              # Every transition is a ramp, and the flats between them are long enough that
              # the window is off or on rather than permanently crossfading.
              '@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:0}100%{opacity:1}}'
@@ -197,10 +197,12 @@ def skyline(t):
             if 250 < x < 750 and TEXT_Y - 22 < y < TEXT_Y + 12:
                 continue
             period = round(rnd.uniform(7.0, 20.0), 1)
-            p.append('<circle class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
-                     'cx="%d" cy="%d" r="%.1f" fill="%s"/>'
+            # A four-pointed star loses more area to its notches than a disc of the same
+            # radius, so it has to be drawn larger to read at all.
+            p.append('<path class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
+                     'd="%s" fill="%s"/>'
                      % (rnd.choice(("st", "st2")), period, rnd.uniform(0, period),
-                        x, y, rnd.uniform(1.2, 2.6), k["star"]))
+                        star(x, y, rnd.uniform(2.4, 5.0)), k["star"]))
             placed += 1
 
         # A warm disc and its craters. Nothing behind it and nothing cutting it.
