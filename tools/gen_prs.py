@@ -58,15 +58,15 @@ def prs(t):
     p.append('<text class="t" x="%d" y="46" font-size="12" font-weight="700" fill="%s" '
              'letter-spacing="1.8">PULL REQUESTS PER YEAR</text>' % (LEFT - 44, c["mut"]))
     p.append('<g class="t" style="animation-delay:.1s">')
-    p.append('<circle cx="%d" cy="42" r="5" fill="%s" opacity="0.38"/>' % (RIGHT - 268, c["acc"]))
-    p.append('<text x="%d" y="46" font-size="12" fill="%s">authored</text>' % (RIGHT - 256, c["dim"]))
-    p.append('<circle cx="%d" cy="42" r="5" fill="%s"/>' % (RIGHT - 168, c["acc"]))
+    p.append('<circle cx="%d" cy="42" r="5" fill="%s" opacity="0.38"/>' % (RIGHT - 372, c["acc"]))
+    p.append('<text x="%d" y="46" font-size="12" fill="%s">authored</text>' % (RIGHT - 360, c["dim"]))
+    p.append('<circle cx="%d" cy="42" r="5" fill="%s"/>' % (RIGHT - 272, c["acc"]))
     p.append('<text x="%d" y="46" font-size="12" fill="%s">reviewed for others</text>'
-             % (RIGHT - 156, c["dim"]))
+             % (RIGHT - 260, c["dim"]))
     p.append('<rect x="%d" y="36" width="16" height="11" rx="2" fill="none" stroke="%s" '
-             'stroke-width="1.6" stroke-dasharray="4 3"/>' % (RIGHT + 8, c["acc"]))
+             'stroke-width="1.6" stroke-dasharray="4 3"/>' % (RIGHT - 96, c["acc"]))
     p.append('<text x="%d" y="46" font-size="12" fill="%s">projection</text>'
-             % (RIGHT + 30, c["dim"]))
+             % (RIGHT - 74, c["dim"]))
     p.append('</g>')
 
     p.append('<line class="t" style="animation-delay:.15s" x1="%d" y1="%d" x2="%d" y2="%d" '
@@ -81,21 +81,6 @@ def prs(t):
             top = BASE - bh
             if not complete:
                 ph = projected(value) * SCALE
-                # An arrow from where the year stands to where it lands, so the dashed
-                # outline reads as a forecast rather than a second measurement.
-                p.append('<line class="t" style="animation-delay:%.2fs" x1="%.1f" y1="%.1f" '
-                         'x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6" '
-                         'marker-end="url(#ah%s)" opacity="0.9"/>'
-                         % (d + .62 + j * .06, x + BW / 2.0, BASE - bh - 26,
-                            x + BW / 2.0, BASE - ph + 14, c["acc"], t))
-                p.append('<rect class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
-                         'height="%.1f" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
-                         'stroke-dasharray="4 4" opacity="0.75"/>'
-                         % (d + .5 + j * .06, x, BASE - ph, BW, ph, c["acc"]))
-                p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" '
-                         'font-size="13" font-weight="700" fill="%s" text-anchor="middle" '
-                         'opacity="0.85">%d</text>'
-                         % (d + .55 + j * .06, x + BW / 2.0, BASE - ph - 9, c["acc"], projected(value)))
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
                      % (d + j * .06, x, top, BW, bh, c["acc"],
@@ -108,6 +93,25 @@ def prs(t):
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="17" '
                  'font-weight="700" fill="%s" text-anchor="middle">%s</text>'
                  % (d + .35, cx, BASE + 32, c["mut"], label))
+
+    last = YEARS[-1]
+    solid_top = BASE - max(last[1], last[2]) * SCALE
+    dashed_top = BASE - max(projected(last[1]), projected(last[2])) * SCALE
+    ax = RIGHT + 34
+    lift = int(round((RATE - 1) * 100))
+    p.append('<g class="t" style="animation-delay:1.25s">')
+    p.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="2" '
+             'marker-end="url(#ah%s)"/>' % (ax, solid_top, ax, dashed_top + 12, c["acc"], t))
+    p.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1" '
+             'stroke-dasharray="3 3" opacity="0.5"/>'
+             % (ax - 26, solid_top, ax + 6, solid_top, c["dim"]))
+    p.append('<text x="%.1f" y="%.1f" font-size="16" font-weight="700" fill="%s">+%d%%</text>'
+             % (ax + 14, dashed_top + 20, c["acc"], lift))
+    p.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">if the pace</text>'
+             % (ax + 14, dashed_top + 38, c["dim"]))
+    p.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s">holds</text>'
+             % (ax + 14, dashed_top + 52, c["dim"]))
+    p.append('</g>')
 
     for i in range(len(YEARS) - 1):
         x = (centre(i) + centre(i + 1)) / 2.0

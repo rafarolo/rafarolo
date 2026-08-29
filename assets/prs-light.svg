@@ -6,12 +6,12 @@
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <text class="t" x="48" y="46" font-size="12" font-weight="700" fill="#5A6675" letter-spacing="1.8">PULL REQUESTS PER YEAR</text>
 <g class="t" style="animation-delay:.1s">
-<circle cx="562" cy="42" r="5" fill="#0E5468" opacity="0.38"/>
-<text x="574" y="46" font-size="12" fill="#808C99">authored</text>
-<circle cx="662" cy="42" r="5" fill="#0E5468"/>
-<text x="674" y="46" font-size="12" fill="#808C99">reviewed for others</text>
-<rect x="838" y="36" width="16" height="11" rx="2" fill="none" stroke="#0E5468" stroke-width="1.6" stroke-dasharray="4 3"/>
-<text x="860" y="46" font-size="12" fill="#808C99">projection</text>
+<circle cx="458" cy="42" r="5" fill="#0E5468" opacity="0.38"/>
+<text x="470" y="46" font-size="12" fill="#808C99">authored</text>
+<circle cx="558" cy="42" r="5" fill="#0E5468"/>
+<text x="570" y="46" font-size="12" fill="#808C99">reviewed for others</text>
+<rect x="734" y="36" width="16" height="11" rx="2" fill="none" stroke="#0E5468" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="756" y="46" font-size="12" fill="#808C99">projection</text>
 </g>
 <line class="t" style="animation-delay:.15s" x1="48" y1="253" x2="874" y2="253" stroke="#DDE3E8" stroke-width="1"/>
 <rect class="b" style="animation-delay:0.30s" x="134.2" y="189.6" width="46" height="62.4" rx="3" fill="#0E5468" opacity="0.38"/>
@@ -29,17 +29,18 @@
 <rect class="b" style="animation-delay:0.60s" x="557.2" y="142.3" width="46" height="109.7" rx="3" fill="#0E5468"/>
 <text class="t" style="animation-delay:0.90s" x="580.2" y="131.3" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">278</text>
 <text class="t" style="animation-delay:0.89s" x="553.2" y="284" font-size="17" font-weight="700" fill="#5A6675" text-anchor="middle">2025</text>
-<line class="t" style="animation-delay:1.28s" x1="710.8" y1="126.9" x2="710.8" y2="116.0" stroke="#0E5468" stroke-width="1.6" marker-end="url(#ahlight)" opacity="0.9"/>
-<rect class="t" style="animation-delay:1.16s" x="687.8" y="102.0" width="46" height="150.0" rx="3" fill="none" stroke="#0E5468" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.75"/>
-<text class="t" style="animation-delay:1.21s" x="710.8" y="93.0" font-size="13" font-weight="700" fill="#0E5468" text-anchor="middle" opacity="0.85">380</text>
 <rect class="b" style="animation-delay:0.66s" x="687.8" y="152.9" width="46" height="99.1" rx="3" fill="#0E5468" opacity="0.38"/>
 <text class="t" style="animation-delay:0.96s" x="710.8" y="141.9" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">251</text>
-<line class="t" style="animation-delay:1.34s" x1="764.8" y1="144.7" x2="764.8" y2="142.8" stroke="#0E5468" stroke-width="1.6" marker-end="url(#ahlight)" opacity="0.9"/>
-<rect class="t" style="animation-delay:1.22s" x="741.8" y="128.8" width="46" height="123.2" rx="3" fill="none" stroke="#0E5468" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.75"/>
-<text class="t" style="animation-delay:1.27s" x="764.8" y="119.8" font-size="13" font-weight="700" fill="#0E5468" text-anchor="middle" opacity="0.85">312</text>
 <rect class="b" style="animation-delay:0.72s" x="741.8" y="170.7" width="46" height="81.3" rx="3" fill="#0E5468"/>
 <text class="t" style="animation-delay:1.02s" x="764.8" y="159.7" font-size="17" font-weight="700" fill="#0E151C" text-anchor="middle">206</text>
 <text class="t" style="animation-delay:1.01s" x="737.8" y="284" font-size="17" font-weight="700" fill="#5A6675" text-anchor="middle">2026 *</text>
+<g class="t" style="animation-delay:1.25s">
+<line x1="864.0" y1="152.9" x2="864.0" y2="114.0" stroke="#0E5468" stroke-width="2" marker-end="url(#ahlight)"/>
+<line x1="838.0" y1="152.9" x2="870.0" y2="152.9" stroke="#808C99" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+<text x="878.0" y="122.0" font-size="16" font-weight="700" fill="#0E5468">+51%</text>
+<text x="878.0" y="140.0" font-size="11" fill="#808C99">if the pace</text>
+<text x="878.0" y="154.0" font-size="11" fill="#808C99">holds</text>
+</g>
 <text class="t" style="animation-delay:1.00s" x="276.5" y="312" font-size="13" font-weight="700" fill="#0E5468" text-anchor="middle">+10%</text>
 <text class="t" style="animation-delay:1.10s" x="461.0" y="312" font-size="13" font-weight="700" fill="#0E5468" text-anchor="middle">+26%</text>
 <text class="t" style="animation-delay:1.20s" x="645.5" y="312" font-size="13" font-weight="600" fill="#808C99" text-anchor="middle">8 of 12 months</text>
