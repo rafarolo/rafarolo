@@ -10,6 +10,8 @@
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
 - I review more than I write: **906 reviews against 798 pull requests of my own**, for 17 engineers
 
+<br>
+
 All of it in private corporate repositories, which is why the contribution graph below is
 green and unclickable.
 
