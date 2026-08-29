@@ -90,7 +90,7 @@ green and unclickable.
 <details>
 <summary>Years as text</summary>
 
-| Years | |
+| Years | Technology |
 |---|---|
 | `17` | `Java` |
 | `14` | `PostgreSQL` |
