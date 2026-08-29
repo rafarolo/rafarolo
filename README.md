@@ -4,6 +4,7 @@
 </picture>
 
 <br>
+<br>
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
