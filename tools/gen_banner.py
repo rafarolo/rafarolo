@@ -20,6 +20,13 @@ RAIN = {
 }
 
 
+NAME = "RAFAEL"
+GLYPHS = "RAFAEL01"
+# A handful of columns spell it outright. Any more and the eye reads the texture instead of
+# the name set in type above it, which is the one thing the background must not do.
+SPELLING_COLUMNS = 5
+
+
 def banner(t):
     c = THEMES[t]
     rnd = random.Random(11)
@@ -36,6 +43,7 @@ def banner(t):
             block,
             round(rnd.uniform(4.0, 13.0), 1),
             round(rnd.uniform(-13.0, 0.0), 1),
+            col % (COLS // SPELLING_COLUMNS) == 0,
         ))
         keyframe_rules.append("@keyframes d%d{to{transform:translateY(%dpx)}}" % (col, block))
     keyframes = "".join(keyframe_rules)
@@ -83,7 +91,7 @@ def banner(t):
 
     p.append('<g mask="url(#m%s)" font-family="%s" font-size="12" fill="%s" opacity="%s">'
              % (t, MONO, r["tail"], r["group"]))
-    for col, (x, length, block, dur, delay) in enumerate(columns):
+    for col, (x, length, block, dur, delay, spells) in enumerate(columns):
         p.append('<g style="animation:d%d %ss linear %ss infinite">' % (col, dur, delay))
         # The trail is emitted twice, one block above the other, and the column travels
         # exactly one block. The loop is seamless and the column is never off the band --
@@ -93,12 +101,16 @@ def banner(t):
             for i in range(length):
                 ratio = i / float(length - 1)
                 y = -block + copy * block + i * STEP
+                # A spelling column runs the name upward, so the drop's head lands on the
+                # last letter and the name is read in the direction it falls.
+                glyph = (NAME[(length - 1 - i) % len(NAME)] if spells
+                         else rnd.choice(GLYPHS))
                 if i == length - 1:
                     p.append('<text x="%d" y="%d" fill="%s">%s</text>'
-                             % (x, y, r["head"], rnd.choice("01")))
+                             % (x, y, r["head"], glyph))
                 elif i >= length - 3:
                     p.append('<text x="%d" y="%d" fill="%s" opacity=".78">%s</text>'
-                             % (x, y, r["mid"], rnd.choice("01")))
+                             % (x, y, r["mid"], glyph))
                 else:
                     op = round(ratio ** 1.6, 2)
                     # Anything fainter than this is not visible once the group opacity and
@@ -106,7 +118,7 @@ def banner(t):
                     if op < 0.08:
                         continue
                     p.append('<text x="%d" y="%d" opacity="%s">%s</text>'
-                             % (x, y, op, rnd.choice("01")))
+                             % (x, y, op, glyph))
         p.append('</g>')
     p.append('</g>')
 
