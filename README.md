@@ -35,10 +35,20 @@ private corporate repositories, which is why the graph below is green and unclic
 
 </details>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
+  <img alt="" src="assets/dot-light.svg">
+</picture>
+
 ## Stack
 
 Kotlin and Java on Spring Boot · Postgres, SQL Server, Cosmos DB · Azure with Pulumi, AKS
 and GitHub Actions · Airflow for ingestion · Prometheus, Grafana and SonarQube
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
+  <img alt="" src="assets/dot-light.svg">
+</picture>
 
 ## rolo.m.rafael
 
@@ -52,13 +62,13 @@ adapters, because the stack is the part that gets replaced.
 
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
-  &nbsp;&nbsp;
-  <a href="https://stackexchange.com/users/7394006/">Stack Exchange</a>
+  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg" alt="Stack Exchange: rafarolo" height="28"></a>
+  &nbsp; · &nbsp; São Paulo, Brazil
 </p>
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
-    <img alt="To an artificial mind, all reality is virtual. São Paulo, Brazil — a city skyline at dusk." src="assets/skyline-light.svg">
+    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg">
   </picture>
 </a>
