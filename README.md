@@ -42,8 +42,14 @@ private corporate repositories, which is why the graph below is green and unclic
 
 ## Stack
 
-Kotlin and Java on Spring Boot · Postgres, SQL Server, Cosmos DB · Azure with Pulumi, AKS
-and GitHub Actions · Airflow for ingestion · Prometheus, Grafana and SonarQube
+| | |
+|---|---|
+| **Language** | `Kotlin` `Java 21` |
+| **Framework** | `Spring Boot` `Spring Data` `Spring Security` `GraphQL` `OpenAPI` |
+| **Data** | `PostgreSQL` `SQL Server` `Cosmos DB` `MongoDB` |
+| **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
+| **Signals** | `Prometheus` `Grafana` `OpenTelemetry` `SonarQube` |
+| **Ingestion** | `Airflow` |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
