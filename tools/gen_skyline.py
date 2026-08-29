@@ -128,22 +128,27 @@ def skyline(t):
 
     p.append('<style>'
              '.st{animation-name:tw;animation-timing-function:ease-in-out;'
-             'animation-iteration-count:infinite}'
-             + "".join('.%s{animation-name:%s;animation-timing-function:step-end;'
+             'animation-iteration-count:infinite;animation-direction:alternate}'
+             '.st2{animation-name:tw2;animation-timing-function:ease-in-out;'
+             'animation-iteration-count:infinite;animation-direction:alternate}'
+             + "".join('.%s{animation-name:%s;animation-timing-function:ease-in-out;'
                        'animation-iteration-count:infinite}' % (b, b) for b in BLINKS) +
              '.bl{animation:bl 2.6s step-end infinite}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
-             '@keyframes tw{0%,100%{opacity:.82}50%{opacity:.34}}'
-             '@keyframes bk{0%,58%{opacity:1}59%,100%{opacity:.06}}'
-             '@keyframes bo{0%,44%{opacity:.06}45%,100%{opacity:1}}'
-             '@keyframes b3{0%,21%{opacity:1}22%,49%{opacity:.06}50%,73%{opacity:1}'
-             '74%,100%{opacity:.06}}'
-             '@keyframes b4{0%,12%{opacity:.06}13%,31%{opacity:1}32%,81%{opacity:.06}'
-             '82%,100%{opacity:1}}'
+             '@keyframes tw{0%,100%{opacity:.85}50%{opacity:.32}}'
+             '@keyframes tw2{0%,100%{opacity:.42}38%{opacity:.88}}'
+             # Every transition is a ramp, and the flats between them are long enough that
+             # the window is off or on rather than permanently crossfading.
+             '@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:.05}100%{opacity:1}}'
+             '@keyframes bo{0%,34%{opacity:.05}44%,88%{opacity:1}100%{opacity:.05}}'
+             '@keyframes b3{0%,17%{opacity:1}26%,44%{opacity:.05}53%,71%{opacity:1}'
+             '80%,96%{opacity:.05}100%{opacity:1}}'
+             '@keyframes b4{0%,9%{opacity:.05}19%,29%{opacity:1}38%,77%{opacity:.05}'
+             '86%,96%{opacity:1}100%{opacity:.05}}'
              '@keyframes bl{50%{opacity:.15}}'
              '@keyframes ftin{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){'
-             '.st,.bk,.bo,.b3,.b4,.bl{animation:none}.ft{opacity:1;animation:none}}'
+             '.st,.st2,.bk,.bo,.b3,.b4,.bl{animation:none}.ft{opacity:1;animation:none}}'
              '</style>')
 
     p.append('<g clip-path="url(#sc%s)">' % t)
@@ -159,9 +164,10 @@ def skyline(t):
             if 250 < x < 750 and TEXT_Y - 22 < y < TEXT_Y + 12:
                 continue
             period = round(rnd.uniform(7.0, 20.0), 1)
-            p.append('<circle class="st" style="animation-duration:%ss;animation-delay:-%.1fs" '
+            p.append('<circle class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
                      'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6"/>'
-                     % (period, rnd.uniform(0, period), x, y, rnd.uniform(.6, 1.5)))
+                     % (rnd.choice(("st", "st2")), period, rnd.uniform(0, period),
+                        x, y, rnd.uniform(.6, 1.5)))
             placed += 1
 
         # A warm disc and its craters. Nothing behind it and nothing cutting it.
@@ -228,9 +234,11 @@ def skyline(t):
                                 # switching from a lamp to a screen, which is what a window
                                 # at night actually does.
                                 order = list(palette) + [palette[0]]
+                                keys = ";".join("0.42 0 0.58 1" for _ in order[:-1])
                                 shifts = ('<animate attributeName="fill" values="%s" '
-                                          'dur="%.1fs" repeatCount="indefinite"/>'
-                                          % (";".join(order), period * 2.7))
+                                          'calcMode="spline" keySplines="%s" dur="%.1fs" '
+                                          'repeatCount="indefinite"/>'
+                                          % (";".join(order), keys, period * 2.7))
                             p.append('<rect class="%s" style="animation-duration:%ss;'
                                      'animation-delay:-%.1fs" x="%d" y="%d" width="4" height="5" '
                                      'fill="%s">%s</rect>'
