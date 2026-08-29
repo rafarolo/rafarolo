@@ -141,7 +141,7 @@ Domain at the core, stack as adapters, because the stack is the part that gets r
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=1bd5b38eb">
-    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg?v=595391d9b">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=b769859eb">
+    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg?v=7e8332efb">
   </picture>
 </a>

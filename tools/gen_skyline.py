@@ -17,9 +17,13 @@ ROOFLINE = GROUND - 158
 SKY = {
     "light": dict(top="#F7F9FA", horizon="#DCE9ED", far="#AFC4CD", mid="#7F98A3",
                   near="#48626D", win="#B08243", win2="#0E5468", winop=".55",
+                  star="#7E99A5", trail="#2C7F8C", head="#0E5468",
+                  moon="#E9DEB0", crater="#C6B686",
                   warm=("#B08243", "#C2954E", "#8A6A34"), cool=("#0E5468", "#2C7F8C")),
     "dark":  dict(top="#0A1015", horizon="#16303B", far="#101F27", mid="#0A151B",
                   near="#050C10", win="#C9A468", win2="#56AEC2", winop=".95",
+                  star="#C8DCE6", trail="#DCEEF6", head="#FFFFFF",
+                  moon="#F4EBC4", crater="#D9CB99",
                   warm=("#C9A468", "#F0D79A", "#A8823F"), cool=("#56AEC2", "#8FCEDC")),
 }
 
@@ -92,7 +96,7 @@ def star(cx, cy, r):
             % (cx, cy - r, a, b, b, a, -b, a, -a, b, -a, -b, -b, -a, b, -a))
 
 
-def streak(t, name, length, width, slots, runs):
+def streak(t, head, name, length, width, slots, runs):
     """One shared cycle with the two objects on alternating slots, so they can never be on
     screen together. Independent cycles drift into each other eventually -- 74 and 173
     seconds coincide sooner than it sounds.
@@ -115,12 +119,12 @@ def streak(t, name, length, width, slots, runs):
     return ('<g opacity="0">'
             '<line x1="0" y1="0" x2="%d" y2="%d" stroke="url(#%s%s)" stroke-width="%.1f" '
             'stroke-linecap="round"/>'
-            '<path d="%s" fill="#FFFFFF"/>'
+            '<path d="%s" fill="%s"/>'
             '<animate attributeName="opacity" values="%s" keyTimes="%s" dur="%.1fs" '
             'repeatCount="indefinite"/>'
             '<animateTransform attributeName="transform" type="translate" values="%s" '
             'keyTimes="%s" dur="%.1fs" repeatCount="indefinite"/>'
-            '</g>' % (length, dy, name, t, width, star(length, dy, width * 2.7),
+            '</g>' % (length, dy, name, t, width, star(length, dy, width * 2.7), head,
                       ";".join(fade), ";".join(ftimes), SKY_CYCLE,
                       ";".join(pos), ";".join(times), SKY_CYCLE))
 
@@ -142,10 +146,10 @@ def skyline(t):
              % (t, c["g0"], c["g1"], c["g2"]))
     for name in ("shooting", "comet"):
         p.append('<linearGradient id="%s%s" x1="0" y1="0" x2="1" y2="1">'
-                 '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
-                 '<stop offset="0.6" stop-color="#DCEEF6" stop-opacity="0.45"/>'
-                 '<stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/></linearGradient>'
-                 % (name, t))
+                 '<stop offset="0" stop-color="%s" stop-opacity="0"/>'
+                 '<stop offset="0.6" stop-color="%s" stop-opacity="0.45"/>'
+                 '<stop offset="1" stop-color="%s" stop-opacity="1"/></linearGradient>'
+                 % (name, t, k["trail"], k["trail"], k["head"]))
     p.append('<clipPath id="sc%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath>' % (t, H))
     p.append('</defs>')
@@ -178,7 +182,7 @@ def skyline(t):
     p.append('<g clip-path="url(#sc%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#sky%s)"/>' % (H, t))
 
-    if t == "dark":
+    if True:
         mx, my, mr = MOON
         placed = 0
         while placed < 34:
@@ -189,25 +193,25 @@ def skyline(t):
                 continue
             period = round(rnd.uniform(7.0, 20.0), 1)
             p.append('<circle class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
-                     'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6"/>'
+                     'cx="%d" cy="%d" r="%.1f" fill="%s"/>'
                      % (rnd.choice(("st", "st2")), period, rnd.uniform(0, period),
-                        x, y, rnd.uniform(1.2, 2.6)))
+                        x, y, rnd.uniform(1.2, 2.6), k["star"]))
             placed += 1
 
         # A warm disc and its craters. Nothing behind it and nothing cutting it.
-        p.append('<circle cx="%d" cy="%d" r="%d" fill="#F4EBC4"/>' % (mx, my, mr))
+        p.append('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (mx, my, mr, k["moon"]))
         for dx, dy, r in ((5, 4, 3.0), (-6, -3, 2.1), (2, -8, 1.5),
                           (-2, 7, 1.7), (9, -5, 1.2), (-8, 6, 1.1)):
-            p.append('<circle cx="%d" cy="%d" r="%.1f" fill="#D9CB99" opacity="0.7"/>'
-                     % (mx + dx, my + dy, r))
+            p.append('<circle cx="%d" cy="%d" r="%.1f" fill="%s" opacity="0.7"/>'
+                     % (mx + dx, my + dy, r, k["crater"]))
 
         lo, hi = COMET_BAND
-        p.append(streak(t, "shooting", 52, 1.9, (0, 2, 4),
+        p.append(streak(t, k["head"], "shooting", 52, 1.9, (0, 2, 4),
                         ((52, -20, 236, 40), (16, -14, 190, 34), (96, -24, 254, 26))))
         # Close to the meteor in size on purpose: alternating every twenty-five
         # seconds, two streaks of the same family read as one thing recurring,
         # where a long bright one against a short faint one reads as two.
-        p.append(streak(t, "comet", 68, 2.2, (1, 3, 5),
+        p.append(streak(t, k["head"], "comet", 68, 2.2, (1, 3, 5),
                         ((-130, lo, 470, hi), (250, hi, 900, lo), (-90, hi - 6, 640, lo + 4))))
 
     for name, count, wmin, wmax, hmin, hmax, lit in LAYERS:
