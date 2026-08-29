@@ -68,6 +68,9 @@ adapters, because the stack is the part that gets replaced.
   <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg">
 </picture>
 
+<br>
+<br>
+
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
