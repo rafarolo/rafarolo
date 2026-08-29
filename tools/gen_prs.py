@@ -81,6 +81,15 @@ def prs(t):
             top = BASE - bh
             if not complete:
                 ph = projected(value) * SCALE
+                p.append('<rect class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" '
+                         'width="%d" height="%.1f" rx="3" fill="none" stroke="%s" '
+                         'stroke-width="1.6" stroke-dasharray="4 4" opacity="0.8"/>'
+                         % (d + .5 + j * .06, x, BASE - ph, BW, ph, c["acc"]))
+                p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" '
+                         'font-size="14" font-weight="700" fill="%s" text-anchor="middle" '
+                         'opacity="0.9">%d</text>'
+                         % (d + .55 + j * .06, x + BW / 2.0, BASE - ph - 9, c["acc"],
+                            projected(value)))
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
                      % (d + j * .06, x, top, BW, bh, c["acc"],
