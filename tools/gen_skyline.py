@@ -43,8 +43,12 @@ def plane(t, k, ident, delay, flip):
     # A side profile against the horizon: the wing reads as a swept shape below the
     # fuselage and the fin rises at the tail. Seen from above the wings sit either side of
     # the body and the whole thing flattens into a cross.
-    body = ('<path d="M22 2 L7 15 L15.5 15 L31 3 Z" fill="#FFFFFF" opacity="0.92"/>'
-            '<ellipse cx="18" cy="8.6" rx="4.2" ry="2.3" fill="#FFFFFF" opacity="0.92"/>'
+    body = (
+            # The far wing first, behind the fuselage: a short stub on the other side, dimmer
+            # for the distance. Without it the aircraft has one wing and reads as a paper dart.
+            '<path d="M25 -2.4 L17 -9 L22 -9 L31 -2.8 Z" fill="#FFFFFF" opacity="0.55"/>'
+            '<path d="M23 2.4 L12 12 L18.5 12 L31 3.2 Z" fill="#FFFFFF" opacity="0.92"/>'
+            '<ellipse cx="19" cy="7" rx="4" ry="2.2" fill="#FFFFFF" opacity="0.92"/>'
             '<path d="M3 -3.6 L0 -16 L5.5 -16 L12 -3.6 Z" fill="#FFFFFF"/>'
             '<path d="M3 2.2 L-4 8 L2 8 L9.5 3.2 Z" fill="#FFFFFF" opacity="0.92"/>'
             '<path d="M4 -4 L30 -4 Q40 -3.2 42 0 Q40 3.2 30 4 L4 4 Q0 3 0 0 Q0 -3 4 -4 Z" '
@@ -53,7 +57,7 @@ def plane(t, k, ident, delay, flip):
             '<circle cx="2" cy="-16" r="1.5" fill="%s">'
             '<animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/>'
             '</circle>'
-            '<circle cx="10" cy="15" r="1.4" fill="%s">'
+            '<circle cx="14" cy="12" r="1.4" fill="%s">'
             '<animate attributeName="opacity" values="0.1;1;0.1" dur="1.4s" repeatCount="indefinite"/>'
             '</circle>' % (blue, blue, blue))
     inner = '<g transform="scale(-1 1)">%s</g>' % body if flip else body
