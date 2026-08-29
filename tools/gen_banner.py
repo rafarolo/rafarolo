@@ -8,9 +8,12 @@ BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"),
 
 H = 372
 STEP = 15
+SEQ = "RAFAEL01"
+# Trail lengths are multiples of the sequence, because a column travels exactly its own
+# height per loop: any other length puts a jump in the middle of the word at the seam.
+LENGTHS = (16, 24)
 COLS = 40
-TRAIL_MIN, TRAIL_MAX = 15, 24
-FALL = H + TRAIL_MAX * STEP
+FALL = H + max(LENGTHS) * STEP
 
 # The head is the bright drop, the trail fades behind it. On a light ground a white head
 # is invisible, so light runs the same structure with the accent as its brightest tone.
@@ -18,13 +21,6 @@ RAIN = {
     "light": dict(head="#08323F", mid="#146A80", tail="#2C7F8C", group="0.34"),
     "dark":  dict(head="#F2FBFD", mid="#A6DCE8", tail="#56AEC2", group="0.55"),
 }
-
-
-NAME = "RAFAEL"
-GLYPHS = "RAFAEL01"
-# A handful of columns spell it outright. Any more and the eye reads the texture instead of
-# the name set in type above it, which is the one thing the background must not do.
-SPELLING_COLUMNS = 5
 
 
 def banner(t):
@@ -35,7 +31,7 @@ def banner(t):
     columns = []
     keyframe_rules = []
     for col in range(COLS):
-        length = rnd.randint(TRAIL_MIN, TRAIL_MAX)
+        length = rnd.choice(LENGTHS)
         block = length * STEP
         columns.append((
             10 + col * 25,
@@ -43,7 +39,7 @@ def banner(t):
             block,
             round(rnd.uniform(4.0, 13.0), 1),
             round(rnd.uniform(-13.0, 0.0), 1),
-            col % (COLS // SPELLING_COLUMNS) == 0,
+            rnd.randrange(len(SEQ)),
         ))
         keyframe_rules.append("@keyframes d%d{to{transform:translateY(%dpx)}}" % (col, block))
     keyframes = "".join(keyframe_rules)
@@ -91,7 +87,7 @@ def banner(t):
 
     p.append('<g mask="url(#m%s)" font-family="%s" font-size="12" fill="%s" opacity="%s">'
              % (t, MONO, r["tail"], r["group"]))
-    for col, (x, length, block, dur, delay, spells) in enumerate(columns):
+    for col, (x, length, block, dur, delay, phase) in enumerate(columns):
         p.append('<g style="animation:d%d %ss linear %ss infinite">' % (col, dur, delay))
         # The trail is emitted twice, one block above the other, and the column travels
         # exactly one block. The loop is seamless and the column is never off the band --
@@ -101,10 +97,10 @@ def banner(t):
             for i in range(length):
                 ratio = i / float(length - 1)
                 y = -block + copy * block + i * STEP
-                # A spelling column runs the name upward, so the drop's head lands on the
-                # last letter and the name is read in the direction it falls.
-                glyph = (NAME[(length - 1 - i) % len(NAME)] if spells
-                         else rnd.choice(GLYPHS))
+                # Read down a column and the sequence is always R A F A E L 0 1, in order.
+                # Each column enters the cycle at its own point; starting every one at R
+                # would band the field into rows of a single letter.
+                glyph = SEQ[(i + phase) % len(SEQ)]
                 if i == length - 1:
                     p.append('<text x="%d" y="%d" fill="%s">%s</text>'
                              % (x, y, r["head"], glyph))
