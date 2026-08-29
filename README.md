@@ -63,11 +63,15 @@ adapters, because the stack is the part that gets replaced.
   <img alt="Career as a package tree under rolo.m.rafael: a domain package that does not get replaced, an application package, and swappable adapter packages." src="assets/archetype-light.svg">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
-  <img alt="A city skyline at dusk, closing the page." src="assets/skyline-light.svg">
-</picture>
+<p align="center">
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
+  &nbsp;&nbsp;
+  <a href="https://stackexchange.com/users/7394006/">Stack Exchange</a>
+</p>
 
-[LinkedIn](https://linkedin.com/in/rafarolo) · [Stack Exchange](https://stackexchange.com/users/7394006/) · São Paulo, Brazil
-
-*To an artificial mind, all reality is [virtual](https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1).* ☄️
+<a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
+    <img alt="To an artificial mind, all reality is virtual. São Paulo, Brazil — a city skyline at dusk." src="assets/skyline-light.svg">
+  </picture>
+</a>
