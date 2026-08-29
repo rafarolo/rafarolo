@@ -268,9 +268,16 @@ def skyline(t):
     p.append(plane(t, k, "out", 0.0, False))
     p.append(plane(t, k, "back", 60.0, True))
 
+    # The line drifts through the same three colours as the strip that closes the panel,
+    # so it belongs to the page rather than being tinted for the sake of it. Ink to gold and
+    # back, never through a tone that loses contrast against its own sky.
+    palette = (c["ink"], c["g1"], c["g2"], c["g0"], c["ink"])
     p.append('<text class="ft" x="500" y="%d" font-family="%s" font-size="24" '
-             'fill="%s" text-anchor="middle">To an artificial mind, '
-             'all reality is virtual</text>' % (TEXT_Y, SERIF, c["ink"]))
+             'fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual'
+             '<animate attributeName="fill" values="%s" calcMode="spline" keySplines="%s" '
+             'dur="26s" repeatCount="indefinite"/></text>'
+             % (TEXT_Y, SERIF, c["ink"], ";".join(palette),
+                ";".join("0.42 0 0.58 1" for _ in palette[:-1])))
     p.append('<rect x="0" y="%d" width="1000" height="5" fill="url(#st%s)"/>' % (H - 5, t))
     p.append('</g></svg>')
     return NL.join(p) + NL
