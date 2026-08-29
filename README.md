@@ -73,7 +73,7 @@ green and unclickable.
 
 <br>
 
-### Stack by area
+### Stack
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
@@ -82,18 +82,25 @@ green and unclickable.
 
 <br>
 
+The radar above groups by area, so the list below sorts by tenure instead — counted from the
+first role in which each one appears.
 
-Depth counts from the first role in which each one appears<br>
-Focus is measured from the 337 pull requests I opened in the last twelve months.
+| | |
+|---|---|
+| **17y** | `Java` |
+| **14y** | `PostgreSQL` |
+| **12y** | `MongoDB` |
+| **11y** | `Spring Boot` `SQL Server` |
+| **7y** | `Spring Security` `OpenAPI` `Kubernetes` `Docker` `SonarQube` |
+| **5y** | `AWS` `Prometheus` `Grafana` |
+| **3y** | `Kotlin` `Azure` `Pulumi` `GitHub Actions` `Cosmos DB` `GraphQL` `OpenTelemetry` |
+| **2y** | `Airflow` `Spring AI` |
+| **1y** | `GCP` |
 
-| Area | | |
-|---|---|---|
-| **Backend on the JVM** | `17y` | `Java · 17y` `Spring Boot · 11y` `Spring Security · 7y` `OpenAPI · 7y` `Kotlin · 3y` `GraphQL · 3y` |
-| **Data** | `14y` | `PostgreSQL · 14y` `MongoDB · 12y` `SQL Server · 11y` `Cosmos DB · 3y` `Airflow · 2y` |
-| **Cloud & platform** | `7y` | `Kubernetes · 7y` `Docker · 7y` `AWS · 5y` `Azure · 3y` `Pulumi · 3y` `GitHub Actions · 3y` `GCP · 1y` |
-| **Security & identity** | `7y` | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity` |
-| **Observability & quality** | `7y` | `SonarQube · 7y` `Prometheus · 5y` `Grafana · 5y` `OpenTelemetry · 3y` |
-| **AI** | `2y` | `Spring AI` `Azure OpenAI` |
+Standards and protocols, which have no tenure worth quoting:
+`OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity`
+
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">

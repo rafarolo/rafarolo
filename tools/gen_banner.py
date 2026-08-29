@@ -8,21 +8,37 @@ BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"),
 
 H = 372
 STEP = 15
-COLS = 48
-TRAIL_MIN, TRAIL_MAX = 7, 22
+COLS = 40
+TRAIL_MIN, TRAIL_MAX = 15, 24
 FALL = H + TRAIL_MAX * STEP
 
 # The head is the bright drop, the trail fades behind it. On a light ground a white head
 # is invisible, so light runs the same structure with the accent as its brightest tone.
 RAIN = {
-    "light": dict(head="#0B4152", mid="#2C7F8C", tail="#0E5468", group="0.26"),
-    "dark":  dict(head="#EAF7FB", mid="#8FCEDC", tail="#56AEC2", group="0.44"),
+    "light": dict(head="#08323F", mid="#146A80", tail="#2C7F8C", group="0.34"),
+    "dark":  dict(head="#F2FBFD", mid="#A6DCE8", tail="#56AEC2", group="0.55"),
 }
 
 
 def banner(t):
     c = THEMES[t]
     rnd = random.Random(11)
+
+    r = RAIN[t]
+    columns = []
+    keyframe_rules = []
+    for col in range(COLS):
+        length = rnd.randint(TRAIL_MIN, TRAIL_MAX)
+        block = length * STEP
+        columns.append((
+            10 + col * 25,
+            length,
+            block,
+            round(rnd.uniform(4.0, 13.0), 1),
+            round(rnd.uniform(-13.0, 0.0), 1),
+        ))
+        keyframe_rules.append("@keyframes d%d{to{transform:translateY(%dpx)}}" % (col, block))
+    keyframes = "".join(keyframe_rules)
 
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. '
@@ -43,8 +59,8 @@ def banner(t):
     # Fades the digits out before they reach the figures, so texture never competes with data.
     p.append('<linearGradient id="f%s" x1="0" y1="0" x2="0" y2="1">'
              '<stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>'
-             '<stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0.85"/>'
-             '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>' % t)
+             '<stop offset="0.30" stop-color="#FFFFFF" stop-opacity="0.92"/>'
+             '<stop offset="0.60" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>' % t)
     # userSpaceOnUse, or the mask region is derived from the bounding box of the digits --
     # which sit above the canvas before they fall -- and almost nothing survives it.
     p.append('<mask id="m%s" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="%d">'
@@ -57,35 +73,40 @@ def banner(t):
              '.fade{opacity:0;animation:f .6s ease forwards}'
              '.rain{animation:fall linear infinite}'
              '@keyframes f{to{opacity:1}}'
-             '@keyframes fall{to{transform:translateY(%dpx)}}'
+             '%s'
              '@media (prefers-reduced-motion: reduce){'
              '.fade{opacity:1;animation:none}.rain{animation:none}}'
-             '</style>' % FALL)
+             '</style>' % keyframes)
 
     p.append('<g clip-path="url(#r%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#w%s)"/>' % (H, t))
 
-    r = RAIN[t]
-    p.append('<g mask="url(#m%s)" font-family="%s" font-size="12" opacity="%s">'
-             % (t, MONO, r["group"]))
-    for col in range(COLS):
-        x = 8 + col * 21
-        length = rnd.randint(TRAIL_MIN, TRAIL_MAX)
-        dur = round(rnd.uniform(3.2, 12.5), 1)
-        delay = round(rnd.uniform(-12.5, 0.0), 1)
-        top = -length * STEP
-        p.append('<g class="rain" style="animation-duration:%ss;animation-delay:%ss">' % (dur, delay))
-        for i in range(length):
-            # i counts up towards the head, so the trail thins out behind the drop
-            ratio = i / float(length - 1) if length > 1 else 1.0
-            if i == length - 1:
-                fill, op = r["head"], 1.0
-            elif i >= length - 3:
-                fill, op = r["mid"], 0.72
-            else:
-                fill, op = r["tail"], round(ratio ** 1.7, 3)
-            p.append('<text x="%d" y="%d" fill="%s" opacity="%s">%s</text>'
-                     % (x, top + i * STEP, fill, op, rnd.choice("01")))
+    p.append('<g mask="url(#m%s)" font-family="%s" font-size="12" fill="%s" opacity="%s">'
+             % (t, MONO, r["tail"], r["group"]))
+    for col, (x, length, block, dur, delay) in enumerate(columns):
+        p.append('<g style="animation:d%d %ss linear %ss infinite">' % (col, dur, delay))
+        # The trail is emitted twice, one block above the other, and the column travels
+        # exactly one block. The loop is seamless and the column is never off the band --
+        # which is what the previous version got wrong: each drop spent most of its cycle
+        # above or below the banner, so at any instant most columns were simply absent.
+        for copy in range(2):
+            for i in range(length):
+                ratio = i / float(length - 1)
+                y = -block + copy * block + i * STEP
+                if i == length - 1:
+                    p.append('<text x="%d" y="%d" fill="%s">%s</text>'
+                             % (x, y, r["head"], rnd.choice("01")))
+                elif i >= length - 3:
+                    p.append('<text x="%d" y="%d" fill="%s" opacity=".78">%s</text>'
+                             % (x, y, r["mid"], rnd.choice("01")))
+                else:
+                    op = round(ratio ** 1.6, 2)
+                    # Anything fainter than this is not visible once the group opacity and
+                    # the mask are applied, so it is weight in the file and nothing else.
+                    if op < 0.08:
+                        continue
+                    p.append('<text x="%d" y="%d" opacity="%s">%s</text>'
+                             % (x, y, op, rnd.choice("01")))
         p.append('</g>')
     p.append('</g>')
 
