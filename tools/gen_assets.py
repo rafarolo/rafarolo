@@ -17,7 +17,8 @@ THEMES = {
 SANS = "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', monospace"
 
-BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"), ("906", "CODE REVIEWS")]
+BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"), ("906", "CODE REVIEWS"),
+       ("8", "SECTORS SERVED")]
 YEARS = [("'23", 158, 201), ("'24", 173, 221), ("'25", 217, 278), ("'26", 251, 206)]
 SCALE = 58.0 / 278.0
 BASE = 196
@@ -26,8 +27,9 @@ BASE = 196
 def banner(t):
     c = THEMES[t]
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" '
-         'role="img" aria-label="Rafael M. Rolo, Specialist and Tech Lead in Capital Markets. '
-         '17 years on the JVM, 798 pull requests authored, 906 code reviews for others. Reviews '
+         'role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. '
+         '17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight '
+         'sectors served. Reviews '
          'given exceed pull requests authored in every completed year.">']
     p.append('<defs>')
     p.append('<linearGradient id="s%s" x1="0" y1="0" x2="1" y2="0">'
@@ -50,14 +52,14 @@ def banner(t):
     p.append('<rect x="0" y="0" width="4" height="250" fill="url(#s%s)"/>' % t)
     p.append('<g font-family="%s">' % SANS)
     p.append('<text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="%s" '
-             'letter-spacing="-0.4">Rafael M. Rôlo</text>' % c["ink"])
+             'letter-spacing="-0.4">Rafael Rôlo</text>' % c["ink"])
     p.append('<text class="fade" style="animation-delay:.1s" x="48" y="86" font-size="12" '
              'font-weight="600" fill="%s" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · '
              'CAPITAL MARKETS</text>' % c["role"])
     p.append('<line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" '
              'stroke="%s" stroke-width="1"/>' % c["line"])
     for i, (val, lab) in enumerate(BIG):
-        x, d = 48 + i * 195, 0.26 + i * 0.09
+        x, d = 48 + i * 167, 0.26 + i * 0.08
         p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="166" font-size="42" '
                  'font-weight="700" fill="%s" letter-spacing="-1">%s</text>' % (d, x, c["ink"], val))
         p.append('<text class="fade" style="animation-delay:%.2fs" x="%d" y="189" font-size="12" '

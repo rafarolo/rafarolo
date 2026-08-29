@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 524" width="1000" height="524" role="img" aria-label="A terminal typing tree rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 545" width="1000" height="545" role="img" aria-label="A terminal typing tree rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work.">
 <defs>
-<clipPath id="radark"><rect x="0" y="0" width="1000" height="524" rx="10"/></clipPath>
+<clipPath id="radark"><rect x="0" y="0" width="1000" height="545" rx="10"/></clipPath>
 <clipPath id="tpdark"><rect class="type" x="44" y="24" width="193.7" height="22"/></clipPath>
 </defs>
 <style>.type{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:tw 1.05s steps(23,end) .25s forwards}.caret{opacity:0;animation:show 0s linear 1.30s forwards,blink 1.06s step-end 1.30s infinite}.ln{opacity:0;animation:fa .34s ease forwards}.dot{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}@keyframes blink{50%{opacity:0}}@media (prefers-reduced-motion: reduce){.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}</style>
 <g clip-path="url(#radark)">
-<rect x="0" y="0" width="1000" height="524" fill="#141C23"/>
-<rect x="0" y="0" width="3" height="524" fill="#56AEC2"/>
+<rect x="0" y="0" width="1000" height="545" fill="#141C23"/>
+<rect x="0" y="0" width="3" height="545" fill="#56AEC2"/>
 <circle cx="26" cy="22" r="4.5" fill="#C9A468" opacity="0.85"/>
 <circle cx="41" cy="22" r="4.5" fill="#3E93A8" opacity="0.85"/>
 <circle cx="56" cy="22" r="4.5" fill="#56AEC2" opacity="0.85"/>
@@ -46,10 +46,12 @@
 <text class="ln" style="animation-delay:2.14s" x="380" y="393" font-size="12.5" fill="#6B7783">prometheus · grafana · sonarqube</text>
 <circle class="dot" style="animation-delay:2.15s" cx="34" cy="410" r="4" fill="#56AEC2"/>
 <text class="ln" style="animation-delay:2.15s" x="44" y="414" fill="#56AEC2" font-weight="700">└─ person/</text>
-<text class="ln" style="animation-delay:2.19s" x="44" y="435" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ languages</text>
-<text class="ln" style="animation-delay:2.23s" x="380" y="435" font-size="12.5" fill="#6B7783">português · english · español</text>
-<text class="ln" style="animation-delay:2.23s" x="44" y="456" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ education</text>
-<text class="ln" style="animation-delay:2.27s" x="380" y="456" font-size="12.5" fill="#6B7783">UNICAMP · three graduate degrees</text>
-<text class="ln" style="animation-delay:2.28s" x="44" y="477" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;└─ published</text>
-<text class="ln" style="animation-delay:2.32s" x="380" y="477" font-size="12.5" fill="#6B7783">three papers · one biometric lab system</text>
+<text class="ln" style="animation-delay:2.19s" x="44" y="435" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ industries</text>
+<text class="ln" style="animation-delay:2.23s" x="380" y="435" font-size="12.5" fill="#6B7783">capital markets · banking · insurance · government · e-commerce</text>
+<text class="ln" style="animation-delay:2.23s" x="44" y="456" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ languages</text>
+<text class="ln" style="animation-delay:2.27s" x="380" y="456" font-size="12.5" fill="#6B7783">português · english · español</text>
+<text class="ln" style="animation-delay:2.28s" x="44" y="477" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ education</text>
+<text class="ln" style="animation-delay:2.32s" x="380" y="477" font-size="12.5" fill="#6B7783">UNICAMP · three graduate degrees</text>
+<text class="ln" style="animation-delay:2.33s" x="44" y="498" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;└─ published</text>
+<text class="ln" style="animation-delay:2.37s" x="380" y="498" font-size="12.5" fill="#6B7783">three papers · one biometric lab system</text>
 </g></g></svg>

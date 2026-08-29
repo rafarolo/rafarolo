@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Rafael M. Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others. Reviews given exceed pull requests authored in every completed year.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight sectors served. Reviews given exceed pull requests authored in every completed year.">
 <defs>
 <linearGradient id="slight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E5468"/><stop offset="0.55" stop-color="#2C7F8C"/><stop offset="1" stop-color="#B08243"/></linearGradient>
 <clipPath id="rlight"><rect x="0" y="0" width="1000" height="250" rx="10"/></clipPath>
@@ -8,15 +8,17 @@
 <rect x="0" y="0" width="1000" height="250" fill="#F7F9FA"/>
 <rect x="0" y="0" width="4" height="250" fill="url(#slight)"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
-<text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="#0E151C" letter-spacing="-0.4">Rafael M. Rôlo</text>
+<text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="#0E151C" letter-spacing="-0.4">Rafael Rôlo</text>
 <text class="fade" style="animation-delay:.1s" x="48" y="86" font-size="12" font-weight="600" fill="#0E5468" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · CAPITAL MARKETS</text>
 <line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" stroke="#DDE3E8" stroke-width="1"/>
 <text class="fade" style="animation-delay:0.26s" x="48" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">17</text>
 <text class="fade" style="animation-delay:0.32s" x="49" y="189" font-size="12" font-weight="600" fill="#5A6675" letter-spacing="1.5">YEARS ON THE JVM</text>
-<text class="fade" style="animation-delay:0.35s" x="243" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">798</text>
-<text class="fade" style="animation-delay:0.41s" x="244" y="189" font-size="12" font-weight="600" fill="#5A6675" letter-spacing="1.5">PULL REQUESTS</text>
-<text class="fade" style="animation-delay:0.44s" x="438" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">906</text>
-<text class="fade" style="animation-delay:0.50s" x="439" y="189" font-size="12" font-weight="600" fill="#5A6675" letter-spacing="1.5">CODE REVIEWS</text>
+<text class="fade" style="animation-delay:0.34s" x="215" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">798</text>
+<text class="fade" style="animation-delay:0.40s" x="216" y="189" font-size="12" font-weight="600" fill="#5A6675" letter-spacing="1.5">PULL REQUESTS</text>
+<text class="fade" style="animation-delay:0.42s" x="382" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">906</text>
+<text class="fade" style="animation-delay:0.48s" x="383" y="189" font-size="12" font-weight="600" fill="#5A6675" letter-spacing="1.5">CODE REVIEWS</text>
+<text class="fade" style="animation-delay:0.50s" x="549" y="166" font-size="42" font-weight="700" fill="#0E151C" letter-spacing="-1">8</text>
+<text class="fade" style="animation-delay:0.56s" x="550" y="189" font-size="12" font-weight="600" fill="#5A6675" letter-spacing="1.5">SECTORS SERVED</text>
 <text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" font-weight="600" fill="#5A6675" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>
 <rect class="bar" style="animation-delay:0.62s" x="700" y="163.0" width="24" height="33.0" rx="1.5" fill="#0E5468" opacity="0.38"/>
 <rect class="bar" style="animation-delay:0.67s" x="727" y="154.1" width="24" height="41.9" rx="1.5" fill="#0E5468"/>

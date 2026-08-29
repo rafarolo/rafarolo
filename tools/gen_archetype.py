@@ -34,6 +34,7 @@ TREE = [
             f("cloud", "azure · aks · pulumi · actions"),
             f("signals", "prometheus · grafana · sonarqube")])]),
     d("person/", "", [
+        f("industries", "capital markets · banking · insurance · government · e-commerce"),
         f("languages", "português · english · español"),
         f("education", "UNICAMP · three graduate degrees"),
         f("published", "three papers · one biometric lab system")]),

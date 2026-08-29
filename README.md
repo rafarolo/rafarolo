@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
 </picture>
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
