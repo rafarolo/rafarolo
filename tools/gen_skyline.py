@@ -15,9 +15,11 @@ ROOFLINE = GROUND - 158
 
 SKY = {
     "light": dict(top="#F7F9FA", horizon="#DCE9ED", far="#BACDD5", mid="#93AEB9",
-                  near="#5F7C88", win="#B08243", win2="#0E5468", winop=".55"),
+                  near="#5F7C88", win="#B08243", win2="#0E5468", winop=".55",
+                  warm=("#B08243", "#C2954E", "#8A6A34"), cool=("#0E5468", "#2C7F8C")),
     "dark":  dict(top="#0A1015", horizon="#16303B", far="#1C3540", mid="#142731",
-                  near="#0B161C", win="#C9A468", win2="#56AEC2", winop=".95"),
+                  near="#0B161C", win="#C9A468", win2="#56AEC2", winop=".95",
+                  warm=("#C9A468", "#F0D79A", "#A8823F"), cool=("#56AEC2", "#8FCEDC")),
 }
 
 LAYERS = [("far", 27, 20, 46, 38, 92, False), ("mid", 19, 30, 62, 58, 126, True),
@@ -120,7 +122,7 @@ def skyline(t):
                        'animation-iteration-count:infinite}' % (b, b) for b in BLINKS) +
              '.bl{animation:bl 2.6s step-end infinite}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
-             '@keyframes tw{0%,100%{opacity:.78}50%{opacity:.30}}'
+             '@keyframes tw{0%,100%{opacity:.82}50%{opacity:.34}}'
              '@keyframes bk{0%,58%{opacity:1}59%,100%{opacity:.06}}'
              '@keyframes bo{0%,44%{opacity:.06}45%,100%{opacity:1}}'
              '@keyframes b3{0%,21%{opacity:1}22%,49%{opacity:.06}50%,73%{opacity:1}'
@@ -143,7 +145,9 @@ def skyline(t):
             x, y = rnd.randint(14, 986), rnd.randint(6, ROOFLINE - 16)
             if (x - mx) ** 2 + (y - my) ** 2 < 46 * 46:
                 continue
-            period = round(rnd.uniform(4.5, 14.0), 1)
+            if 250 < x < 750 and TEXT_Y - 22 < y < TEXT_Y + 12:
+                continue
+            period = round(rnd.uniform(7.0, 20.0), 1)
             p.append('<circle class="st" style="animation-duration:%ss;animation-delay:-%.1fs" '
                      'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6"/>'
                      % (period, rnd.uniform(0, period), x, y, rnd.uniform(.6, 1.5)))
@@ -202,12 +206,23 @@ def skyline(t):
                                      % (wx, wy, unlit))
                             continue
                         fill = k["win2"] if r < .11 else k["win"]
-                        if r < .20:
-                            period = round(rnd.uniform(2.4, 11.0), 1)
+                        if r < .32:
+                            period = round(rnd.uniform(2.2, 10.0), 1)
+                            palette = k["cool"] if r < .11 else k["warm"]
+                            shifts = ""
+                            if r < .17:
+                                # A light that changes colour as well as state: someone
+                                # switching from a lamp to a screen, which is what a window
+                                # at night actually does.
+                                order = list(palette) + [palette[0]]
+                                shifts = ('<animate attributeName="fill" values="%s" '
+                                          'dur="%.1fs" repeatCount="indefinite"/>'
+                                          % (";".join(order), period * 2.7))
                             p.append('<rect class="%s" style="animation-duration:%ss;'
                                      'animation-delay:-%.1fs" x="%d" y="%d" width="4" height="5" '
-                                     'fill="%s"/>' % (rnd.choice(BLINKS), period,
-                                                      rnd.uniform(0, period), wx, wy, fill))
+                                     'fill="%s">%s</rect>'
+                                     % (rnd.choice(BLINKS), period, rnd.uniform(0, period),
+                                        wx, wy, fill, shifts))
                         else:
                             p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s" '
                                      'opacity="%s"/>' % (wx, wy, fill, k["winop"]))
