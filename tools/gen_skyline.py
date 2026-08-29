@@ -83,6 +83,15 @@ SLOTS = 6          # the meteor takes the even ones, the comet the odd
 TRAVEL = 0.019     # fraction of the cycle a crossing is on screen
 
 
+def star(cx, cy, r):
+    """A four-pointed sparkle for the head of a streak. A dot is a dot; the points are what
+    make it read as a star travelling rather than a bead on a wire."""
+    a, b = r * 0.29, r * 0.72
+    return ("M%.1f %.1f l%.1f %.1f l%.1f %.1f l%.1f %.1f l%.1f %.1f "
+            "l%.1f %.1f l%.1f %.1f l%.1f %.1f z"
+            % (cx, cy - r, a, b, b, a, -b, a, -a, b, -a, -b, -b, -a, b, -a))
+
+
 def streak(t, name, length, width, slots, runs):
     """One shared cycle with the two objects on alternating slots, so they can never be on
     screen together. Independent cycles drift into each other eventually -- 74 and 173
@@ -106,12 +115,12 @@ def streak(t, name, length, width, slots, runs):
     return ('<g opacity="0">'
             '<line x1="0" y1="0" x2="%d" y2="%d" stroke="url(#%s%s)" stroke-width="%.1f" '
             'stroke-linecap="round"/>'
-            '<circle cx="%d" cy="%d" r="%.1f" fill="#FFFFFF"/>'
+            '<path d="%s" fill="#FFFFFF"/>'
             '<animate attributeName="opacity" values="%s" keyTimes="%s" dur="%.1fs" '
             'repeatCount="indefinite"/>'
             '<animateTransform attributeName="transform" type="translate" values="%s" '
             'keyTimes="%s" dur="%.1fs" repeatCount="indefinite"/>'
-            '</g>' % (length, dy, name, t, width, length, dy, width * 0.85,
+            '</g>' % (length, dy, name, t, width, star(length, dy, width * 2.7),
                       ";".join(fade), ";".join(ftimes), SKY_CYCLE,
                       ";".join(pos), ";".join(times), SKY_CYCLE))
 
