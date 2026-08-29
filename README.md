@@ -17,7 +17,7 @@ green and unclickable.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
-  <img alt="Three proportions: 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else; 89% of pull requests opened were merged." src="assets/rings-light.svg">
+  <img alt="Three proportions: 89% of pull requests opened were merged; 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else." src="assets/rings-light.svg">
 </picture>
 
 <br>

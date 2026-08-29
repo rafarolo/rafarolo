@@ -81,9 +81,10 @@ def glass_bg(t, ident, w, h):
     )
 
 
-RINGS = [(0.88, "88%", "TEST COVERAGE", "core service, up from 74.7%"),
-         (0.53, "53%", "OF EVERY PR I TOUCHED", "906 reviews against 798 of my own"),
-         (0.89, "89%", "PULL REQUESTS MERGED", "707 merged of 798 opened")]
+# Largest to smallest, so the row reads downhill instead of zig-zagging.
+RINGS = [(0.89, "89%", "PULL REQUESTS MERGED", "707 merged of 798 opened"),
+         (0.88, "88%", "TEST COVERAGE", "core service, up from 74.7%"),
+         (0.53, "53%", "OF EVERY PR I TOUCHED", "906 reviews against 798 of my own")]
 RR = 46.0
 RC = 2 * math.pi * RR
 ROW = 40
@@ -99,9 +100,9 @@ def ramp(final, n=FRAMES):
 def rings(t):
     c = THEMES[t]
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 212" width="1000" height="212" '
-         'role="img" aria-label="Three proportions. Test coverage 88 percent, up from 74.7. '
-         '53 percent of every pull request touched belonged to someone else: 906 reviews against '
-         '798 of my own. 89 percent of pull requests opened were merged: 707 of 798.">']
+         'role="img" aria-label="Three proportions. 89 percent of pull requests opened were '
+         'merged, 707 of 798. Test coverage 88 percent, up from 74.7. 53 percent of every pull '
+         'request touched belonged to someone else: 906 reviews against 798 of my own.">']
     p.append('<defs>' + glass_defs(t, "rg") +
              '<clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath>' % t)
     for i in range(len(RINGS)):
