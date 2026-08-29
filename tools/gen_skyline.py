@@ -1,7 +1,7 @@
 import io, os, sys, random
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, SERIF, OUT, NL
+from gen_all import THEMES, SANS, OUT, NL
 
 H = 330
 GROUND = 325
@@ -272,11 +272,14 @@ def skyline(t):
     # so it belongs to the page rather than being tinted for the sake of it. Ink to gold and
     # back, never through a tone that loses contrast against its own sky.
     palette = (c["ink"], c["g1"], c["g2"], c["g0"], c["ink"])
-    p.append('<text class="ft" x="500" y="%d" font-family="%s" font-size="24" '
+    # Bold sans rather than the serif. A serif at 24px against a gradient loses its thin
+    # strokes to antialiasing; a hinted sans at 700 holds every stem.
+    p.append('<text class="ft" x="500" y="%d" font-family="%s" font-size="25" '
+             'font-weight="700" letter-spacing="0.3" '
              'fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual'
              '<animate attributeName="fill" values="%s" calcMode="spline" keySplines="%s" '
              'dur="26s" repeatCount="indefinite"/></text>'
-             % (TEXT_Y, SERIF, c["ink"], ";".join(palette),
+             % (TEXT_Y, SANS, c["ink"], ";".join(palette),
                 ";".join("0.42 0 0.58 1" for _ in palette[:-1])))
     p.append('<rect x="0" y="%d" width="1000" height="5" fill="url(#st%s)"/>' % (H - 5, t))
     p.append('</g></svg>')
