@@ -117,12 +117,12 @@ green and unclickable.
 
 ### Artifact of my life
 
-`rolo.rafael.life`, laid out the way I'd lay out a service<br>
+`my.life:rafael.rolo`, laid out the way I'd lay out a service<br>
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=e65c65f1">
-  <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=8412537d">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=5f0d982e">
+  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=997208d2">
 </picture>
 
 <br>
