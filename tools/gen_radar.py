@@ -1,28 +1,30 @@
 import io, os, sys, math
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import carbon, THEMES, SANS, OUT, NL
+from gen_all import THEMES, SANS, OUT, NL
 
 
 def esc(v):
     return v.replace("&", "&amp;")
 
 # label, years, share of last 12 months' classified PRs (%), anchor
+# Ordered so the two deepest areas sit next to each other: the depth polygon reads as one
+# mass instead of two spurs, and the notch where focus drops falls right after its peak.
 AXES = [
     ("BACKEND ON THE JVM", 17, 31.6, "middle"),
-    ("SECURITY & IDENTITY", 7, 30.5, "start"),
+    ("DATA", 14, 6.8, "start"),
     ("CLOUD & PLATFORM", 7, 14.7, "start"),
+    ("SECURITY & IDENTITY", 7, 30.5, "end"),
     ("OBSERVABILITY", 7, 16.3, "end"),
-    ("DATA", 14, 6.8, "end"),
 ]
 MAXY = max(a[1] for a in AXES) * 1.0
 MAXS = max(a[2] for a in AXES) * 1.0
 
 CX, CY, R = 296, 232, 138
 NOTES = [
+    ("Backend on the JVM", "17 years deep, 32% of the last year", "the anchor: deepest, and still the busiest"),
     ("Data", "14 years deep, 7% of the last year", "the longest history, the smallest slice now"),
     ("Security & identity", "7 years deep, 31% of the last year", "the steepest climb of the five"),
-    ("Backend on the JVM", "17 years deep, 32% of the last year", "the one that anchors both readings"),
 ]
 
 
@@ -45,7 +47,7 @@ def radar(t):
           "; ".join("%s: %d years, %.0f percent" % (esc(a[0].title()), a[1], a[2]) for a in AXES)
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
-    p.append(carbon(t, "rd") + '<defs><clipPath id="rd%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+    p.append('<defs><clipPath id="rd%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
              '.gr{opacity:0;animation:gi .5s ease .1s forwards}'
@@ -57,7 +59,7 @@ def radar(t):
              '.pg{transform:scale(1);opacity:1;animation:none}}'
              '</style>')
     p.append('<g clip-path="url(#rd%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#cfrd%s)"/>' % (h, t))
+    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
     p.append('<g font-family="%s">' % SANS)
 
     for ring in (.25, .5, .75, 1.0):
