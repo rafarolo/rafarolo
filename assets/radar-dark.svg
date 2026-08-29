@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-label="Radar comparing depth in years against share of the last twelve months of pull requests. Backend On The Jvm: 17 years, 32 percent; Security &amp; Identity: 7 years, 30 percent; Cloud &amp; Platform: 7 years, 15 percent; Observability: 7 years, 16 percent; Data: 14 years, 7 percent">
-<defs><clipPath id="rddark"><rect x="0" y="0" width="1000" height="470" rx="10"/></clipPath></defs>
-<style>.gr{opacity:0;animation:gi .5s ease .1s forwards}.pg{transform-box:fill-box;transform-origin:50%% 50%%;transform:scale(.05);opacity:0;animation:gw .95s cubic-bezier(.25,.9,.3,1) forwards}.tx{opacity:0;animation:gi .5s ease forwards}@keyframes gi{to{opacity:1}}@keyframes gw{to{transform:scale(1);opacity:1}}@media (prefers-reduced-motion: reduce){.gr,.tx{opacity:1;animation:none}.pg{transform:scale(1);opacity:1;animation:none}}</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-label="Radar comparing depth in years against share of the last twelve months of pull requests. Backend On The Jvm: 17 years, 32 percent; Data: 14 years, 7 percent; Cloud &amp; Platform: 7 years, 15 percent; Security &amp; Identity: 7 years, 30 percent; Observability: 7 years, 16 percent">
+<defs><linearGradient id="pgrddark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A242D"/><stop offset="1" stop-color="#11181E"/></linearGradient><linearGradient id="snrddark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFE6F0" stop-opacity="0"/><stop offset="0.5" stop-color="#BFE6F0" stop-opacity="0.07"/><stop offset="1" stop-color="#BFE6F0" stop-opacity="0"/></linearGradient><filter id="dsrddark" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.55"/></filter><clipPath id="rddark"><rect x="0" y="0" width="1000" height="470" rx="10"/></clipPath></defs>
+<style>.gr{opacity:0;animation:gi .5s ease .1s forwards}.pg{transform-box:fill-box;transform-origin:50%% 50%%;transform:scale(.05);opacity:0;animation:gw .95s cubic-bezier(.25,.9,.3,1) forwards}.tx{opacity:0;animation:gi .5s ease forwards}@keyframes gi{to{opacity:1}}@keyframes gw{to{transform:scale(1);opacity:1}}@media (prefers-reduced-motion: reduce){.gr,.tx{opacity:1;animation:none}.pg{transform:scale(1);opacity:1;animation:none}}.sheen{animation:sweep 60s ease-in-out 14s infinite}@keyframes sweep{0%{transform:translateX(-115%)}9%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}</style>
 <g clip-path="url(#rddark)">
-<rect x="0" y="0" width="1000" height="470" fill="#141C23"/>
+<rect x="0" y="0" width="1000" height="470" fill="url(#pgrddark)"/><rect class="sheen" x="-450" y="0" width="450" height="470" fill="url(#snrddark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.10"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <polygon class="gr" points="296.0,197.5 328.8,221.3 316.3,259.9 275.7,259.9 263.2,221.3" fill="none" stroke="#23303A" stroke-width="1" opacity="0.80"/>
 <polygon class="gr" points="296.0,163.0 361.6,210.7 336.6,287.8 255.4,287.8 230.4,210.7" fill="none" stroke="#23303A" stroke-width="1" opacity="0.80"/>
@@ -13,36 +13,36 @@
 <line class="gr" x1="296" y1="232" x2="377.1" y2="343.6" stroke="#23303A" stroke-width="1" opacity="0.7"/>
 <line class="gr" x1="296" y1="232" x2="214.9" y2="343.6" stroke="#23303A" stroke-width="1" opacity="0.7"/>
 <line class="gr" x1="296" y1="232" x2="164.8" y2="189.4" stroke="#23303A" stroke-width="1" opacity="0.7"/>
-<polygon class="pg" points="296.0,94.0 350.0,214.4 329.4,278.0 262.6,278.0 187.9,196.9" fill="#56AEC2" fill-opacity="0.14" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.9"/>
-<polygon class="pg" style="animation-delay:.22s" points="296.0,94.0 422.7,190.8 333.7,283.9 254.2,289.6 267.8,222.8" fill="#56AEC2" fill-opacity="0.34" stroke="#56AEC2" stroke-width="2.4"/>
+<polygon class="pg" points="296.0,94.0 404.1,196.9 329.4,278.0 262.6,278.0 242.0,214.4" fill="#56AEC2" fill-opacity="0.14" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.9"/>
+<polygon class="pg" style="animation-delay:.22s" points="296.0,94.0 324.2,222.8 333.7,283.9 217.7,339.8 228.3,210.0" fill="#56AEC2" fill-opacity="0.34" stroke="#56AEC2" stroke-width="2.4"/>
 <circle class="tx" style="animation-delay:0.90s" cx="296.0" cy="94.0" r="4" fill="#56AEC2"/>
-<circle class="tx" style="animation-delay:0.96s" cx="422.7" cy="190.8" r="4" fill="#56AEC2"/>
+<circle class="tx" style="animation-delay:0.96s" cx="324.2" cy="222.8" r="4" fill="#56AEC2"/>
 <circle class="tx" style="animation-delay:1.02s" cx="333.7" cy="283.9" r="4" fill="#56AEC2"/>
-<circle class="tx" style="animation-delay:1.08s" cx="254.2" cy="289.6" r="4" fill="#56AEC2"/>
-<circle class="tx" style="animation-delay:1.14s" cx="267.8" cy="222.8" r="4" fill="#56AEC2"/>
+<circle class="tx" style="animation-delay:1.08s" cx="217.7" cy="339.8" r="4" fill="#56AEC2"/>
+<circle class="tx" style="animation-delay:1.14s" cx="228.3" cy="210.0" r="4" fill="#56AEC2"/>
 <text class="tx" style="animation-delay:0.75s" x="296.0" y="78.0" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.2">BACKEND ON THE JVM</text>
 <text class="tx" style="animation-delay:0.80s" x="296.0" y="93.0" font-size="10.5" fill="#6B7783" text-anchor="middle">17y · 32%</text>
-<text class="tx" style="animation-delay:0.81s" x="443.2" y="195.4" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="start" letter-spacing="1.2">SECURITY &amp; IDENTITY</text>
-<text class="tx" style="animation-delay:0.86s" x="443.2" y="210.4" font-size="10.5" fill="#6B7783" text-anchor="start">7y · 30%</text>
+<text class="tx" style="animation-delay:0.81s" x="443.2" y="195.4" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="start" letter-spacing="1.2">DATA</text>
+<text class="tx" style="animation-delay:0.86s" x="443.2" y="210.4" font-size="10.5" fill="#6B7783" text-anchor="start">14y · 7%</text>
 <text class="tx" style="animation-delay:0.87s" x="393.1" y="363.6" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="start" letter-spacing="1.2">CLOUD &amp; PLATFORM</text>
 <text class="tx" style="animation-delay:0.92s" x="393.1" y="378.6" font-size="10.5" fill="#6B7783" text-anchor="start">7y · 15%</text>
-<text class="tx" style="animation-delay:0.93s" x="198.9" y="363.6" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="end" letter-spacing="1.2">OBSERVABILITY</text>
-<text class="tx" style="animation-delay:0.98s" x="198.9" y="378.6" font-size="10.5" fill="#6B7783" text-anchor="end">7y · 16%</text>
-<text class="tx" style="animation-delay:0.99s" x="148.8" y="195.4" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="end" letter-spacing="1.2">DATA</text>
-<text class="tx" style="animation-delay:1.04s" x="148.8" y="210.4" font-size="10.5" fill="#6B7783" text-anchor="end">14y · 7%</text>
+<text class="tx" style="animation-delay:0.93s" x="198.9" y="363.6" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="end" letter-spacing="1.2">SECURITY &amp; IDENTITY</text>
+<text class="tx" style="animation-delay:0.98s" x="198.9" y="378.6" font-size="10.5" fill="#6B7783" text-anchor="end">7y · 30%</text>
+<text class="tx" style="animation-delay:0.99s" x="148.8" y="195.4" font-size="10.5" font-weight="700" fill="#94A3AE" text-anchor="end" letter-spacing="1.2">OBSERVABILITY</text>
+<text class="tx" style="animation-delay:1.04s" x="148.8" y="210.4" font-size="10.5" fill="#6B7783" text-anchor="end">7y · 16%</text>
 <text class="tx" style="animation-delay:1.15s" x="620" y="70" font-size="11" font-weight="700" fill="#94A3AE" letter-spacing="1.6">WHAT THE SHAPE SAYS</text>
 <circle class="tx" style="animation-delay:1.20s" cx="624" cy="103" r="3.5" fill="#56AEC2"/>
-<text class="tx" style="animation-delay:1.20s" x="638" y="108" font-size="14" font-weight="700" fill="#E8EEF2">Data</text>
-<text class="tx" style="animation-delay:1.25s" x="638" y="127" font-size="12" fill="#56AEC2">14 years deep, 7% of the last year</text>
-<text class="tx" style="animation-delay:1.28s" x="638" y="145" font-size="12" fill="#6B7783">the longest history, the smallest slice now</text>
+<text class="tx" style="animation-delay:1.20s" x="638" y="108" font-size="14" font-weight="700" fill="#E8EEF2">Backend on the JVM</text>
+<text class="tx" style="animation-delay:1.25s" x="638" y="127" font-size="12" fill="#56AEC2">17 years deep, 32% of the last year</text>
+<text class="tx" style="animation-delay:1.28s" x="638" y="145" font-size="12" fill="#6B7783">the anchor: deepest, and still the busiest</text>
 <circle class="tx" style="animation-delay:1.30s" cx="624" cy="179" r="3.5" fill="#56AEC2"/>
-<text class="tx" style="animation-delay:1.30s" x="638" y="184" font-size="14" font-weight="700" fill="#E8EEF2">Security &amp; identity</text>
-<text class="tx" style="animation-delay:1.35s" x="638" y="203" font-size="12" fill="#56AEC2">7 years deep, 31% of the last year</text>
-<text class="tx" style="animation-delay:1.38s" x="638" y="221" font-size="12" fill="#6B7783">the steepest climb of the five</text>
+<text class="tx" style="animation-delay:1.30s" x="638" y="184" font-size="14" font-weight="700" fill="#E8EEF2">Data</text>
+<text class="tx" style="animation-delay:1.35s" x="638" y="203" font-size="12" fill="#56AEC2">14 years deep, 7% of the last year</text>
+<text class="tx" style="animation-delay:1.38s" x="638" y="221" font-size="12" fill="#6B7783">the longest history, the smallest slice now</text>
 <circle class="tx" style="animation-delay:1.40s" cx="624" cy="255" r="3.5" fill="#56AEC2"/>
-<text class="tx" style="animation-delay:1.40s" x="638" y="260" font-size="14" font-weight="700" fill="#E8EEF2">Backend on the JVM</text>
-<text class="tx" style="animation-delay:1.45s" x="638" y="279" font-size="12" fill="#56AEC2">17 years deep, 32% of the last year</text>
-<text class="tx" style="animation-delay:1.48s" x="638" y="297" font-size="12" fill="#6B7783">the one that anchors both readings</text>
+<text class="tx" style="animation-delay:1.40s" x="638" y="260" font-size="14" font-weight="700" fill="#E8EEF2">Security &amp; identity</text>
+<text class="tx" style="animation-delay:1.45s" x="638" y="279" font-size="12" fill="#56AEC2">7 years deep, 31% of the last year</text>
+<text class="tx" style="animation-delay:1.48s" x="638" y="297" font-size="12" fill="#6B7783">the steepest climb of the five</text>
 <g class="tx" style="animation-delay:1.5s">
 <rect x="620" y="358" width="26" height="3" fill="#56AEC2" opacity="0.55"/>
 <text x="654" y="363" font-size="10.5" fill="#6B7783">depth, years since first use</text>

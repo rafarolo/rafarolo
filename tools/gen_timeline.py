@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, OUT, NL
+from gen_all import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, headline, detail, major
 ITEMS = [
@@ -36,7 +36,7 @@ def timeline(t):
     alt = "; ".join("%s %s: %s" % (i[0], i[1], i[2]) for i in ITEMS)
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="Timeline of selected work. %s">' % (h, h, alt)]
-    p.append('<defs><clipPath id="tl%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
+    p.append('<defs>' + glass_defs(t, "tl") + '<clipPath id="tl%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
              '.sp{transform-box:fill-box;transform-origin:50%% 0;transform:scaleY(0);'
@@ -48,9 +48,9 @@ def timeline(t):
              '@keyframes fi{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){.sp{transform:scaleY(1);animation:none}'
              '.nd{transform:scale(1);animation:none}.tx{opacity:1;animation:none}}'
-             '</style>')
+             + glass_style(15) + '</style>')
     p.append('<g clip-path="url(#tl%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append(glass_bg(t, "tl", 1000, h))
     p.append('<rect class="sp" x="%d" y="%d" width="2" height="%d" fill="%s" opacity="0.45"/>'
              % (SPINE - 1, TOP - 22, y_last - TOP + 44, c["acc"]))
     p.append('<g font-family="%s">' % SANS)

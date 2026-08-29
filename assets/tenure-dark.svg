@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 498" width="1000" height="498" role="img" aria-label="Years with each technology, longest first. 17 years: Java; 14 years: PostgreSQL; 12 years: MongoDB; 11 years: Spring Boot, SQL Server; 7 years: Spring Security, OpenAPI, Kubernetes, Docker, SonarQube; 5 years: AWS, Prometheus, Grafana; 3 years: Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL, OpenTelemetry; 2 years: Airflow, Spring AI; 1 years: GCP. Standards without a tenure: OAuth2, OpenID Connect, JWT, Keycloak, Entra ID, FAPI, Workload Identity.">
+<defs><linearGradient id="pgtndark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A242D"/><stop offset="1" stop-color="#11181E"/></linearGradient><linearGradient id="sntndark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFE6F0" stop-opacity="0"/><stop offset="0.5" stop-color="#BFE6F0" stop-opacity="0.07"/><stop offset="1" stop-color="#BFE6F0" stop-opacity="0"/></linearGradient><filter id="dstndark" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.55"/></filter><clipPath id="tndark"><rect x="0" y="0" width="1000" height="498" rx="10"/></clipPath><linearGradient id="bgdark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#56AEC2"/><stop offset="1" stop-color="#3E93A8"/></linearGradient><linearGradient id="gldark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.42"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<clipPath id="cb0dark"><rect x="96" y="91.0" width="232.0" height="10" rx="5"/></clipPath>
+<clipPath id="cb1dark"><rect x="96" y="125.0" width="191.1" height="10" rx="5"/></clipPath>
+<clipPath id="cb2dark"><rect x="96" y="159.0" width="163.8" height="10" rx="5"/></clipPath>
+<clipPath id="cb3dark"><rect x="96" y="193.0" width="150.1" height="10" rx="5"/></clipPath>
+<clipPath id="cb4dark"><rect x="96" y="227.0" width="95.5" height="10" rx="5"/></clipPath>
+<clipPath id="cb5dark"><rect x="96" y="261.0" width="68.2" height="10" rx="5"/></clipPath>
+<clipPath id="cb6dark"><rect x="96" y="295.0" width="40.9" height="10" rx="5"/></clipPath>
+<clipPath id="cb7dark"><rect x="96" y="329.0" width="27.3" height="10" rx="5"/></clipPath>
+<clipPath id="cb8dark"><rect x="96" y="363.0" width="13.6" height="10" rx="5"/></clipPath>
+</defs>
+<style>.t{opacity:0;animation:fi .45s ease forwards}@keyframes fi{to{opacity:1}}@media (prefers-reduced-motion: reduce){.t{opacity:1;animation:none}}.sheen{animation:sweep 60s ease-in-out 14s infinite}@keyframes sweep{0%{transform:translateX(-115%)}9%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}</style>
+<g clip-path="url(#tndark)">
+<rect x="0" y="0" width="1000" height="498" fill="url(#pgtndark)"/><rect class="sheen" x="-450" y="0" width="450" height="498" fill="url(#sntndark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.10"/>
+<g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+<text class="t" x="52" y="52" font-size="12" font-weight="700" fill="#94A3AE" letter-spacing="1.8">YEARS WITH EACH</text>
+<text class="t" style="animation-delay:.08s" x="232" y="52" font-size="12" fill="#6B7783">counted from the first role in which it appears</text>
+<text class="t" style="animation-delay:0.20s" x="82" y="101" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">17y</text>
+<rect x="96" y="91.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="91.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="232.0" begin="0.20s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb0dark)"><rect x="24.0" y="91.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;328.0;328.0" keyTimes="0;0.04;1" begin="1.30s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.45s">
+<rect x="356.0" y="84.5" width="46.0" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="100" font-size="12" fill="#E8EEF2">Java</text>
+</g>
+<text class="t" style="animation-delay:0.27s" x="82" y="135" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">14y</text>
+<rect x="96" y="125.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="125.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="191.1" begin="0.27s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb1dark)"><rect x="24.0" y="125.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;287.1;287.1" keyTimes="0;0.04;1" begin="1.65s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.52s">
+<rect x="356.0" y="118.5" width="84.8" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="134" font-size="12" fill="#E8EEF2">PostgreSQL</text>
+</g>
+<text class="t" style="animation-delay:0.34s" x="82" y="169" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">12y</text>
+<rect x="96" y="159.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="159.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="163.8" begin="0.34s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb2dark)"><rect x="24.0" y="159.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;259.8;259.8" keyTimes="0;0.04;1" begin="2.00s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.59s">
+<rect x="356.0" y="152.5" width="70.6" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="168" font-size="12" fill="#E8EEF2">MongoDB</text>
+</g>
+<text class="t" style="animation-delay:0.41s" x="82" y="203" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">11y</text>
+<rect x="96" y="193.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="193.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="150.1" begin="0.41s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb3dark)"><rect x="24.0" y="193.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;246.1;246.1" keyTimes="0;0.04;1" begin="2.35s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.66s">
+<rect x="356.0" y="186.5" width="83.0" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="202" font-size="12" fill="#E8EEF2">Spring Boot</text>
+</g>
+<g class="t" style="animation-delay:0.66s">
+<rect x="446.0" y="186.5" width="82.3" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="455.0" y="202" font-size="12" fill="#E8EEF2">SQL Server</text>
+</g>
+<text class="t" style="animation-delay:0.48s" x="82" y="237" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">7y</text>
+<rect x="96" y="227.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="227.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="95.5" begin="0.48s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb4dark)"><rect x="24.0" y="227.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;191.5;191.5" keyTimes="0;0.04;1" begin="2.70s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.73s">
+<rect x="356.0" y="220.5" width="103.7" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="236" font-size="12" fill="#E8EEF2">Spring Security</text>
+</g>
+<g class="t" style="animation-delay:0.73s">
+<rect x="466.7" y="220.5" width="64.9" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="475.7" y="236" font-size="12" fill="#E8EEF2">OpenAPI</text>
+</g>
+<g class="t" style="animation-delay:0.73s">
+<rect x="538.6" y="220.5" width="81.2" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="547.6" y="236" font-size="12" fill="#E8EEF2">Kubernetes</text>
+</g>
+<g class="t" style="animation-delay:0.73s">
+<rect x="626.8" y="220.5" width="56.9" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="635.8" y="236" font-size="12" fill="#E8EEF2">Docker</text>
+</g>
+<g class="t" style="animation-delay:0.73s">
+<rect x="690.7" y="220.5" width="78.2" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="699.7" y="236" font-size="12" fill="#E8EEF2">SonarQube</text>
+</g>
+<text class="t" style="animation-delay:0.55s" x="82" y="271" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">5y</text>
+<rect x="96" y="261.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="261.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="68.2" begin="0.55s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb5dark)"><rect x="24.0" y="261.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;164.2;164.2" keyTimes="0;0.04;1" begin="3.05s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.80s">
+<rect x="356.0" y="254.5" width="43.8" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="270" font-size="12" fill="#E8EEF2">AWS</text>
+</g>
+<g class="t" style="animation-delay:0.80s">
+<rect x="406.8" y="254.5" width="84.5" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="415.8" y="270" font-size="12" fill="#E8EEF2">Prometheus</text>
+</g>
+<g class="t" style="animation-delay:0.80s">
+<rect x="498.3" y="254.5" width="61.1" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="507.3" y="270" font-size="12" fill="#E8EEF2">Grafana</text>
+</g>
+<text class="t" style="animation-delay:0.62s" x="82" y="305" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">3y</text>
+<rect x="96" y="295.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="295.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="40.9" begin="0.62s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb6dark)"><rect x="24.0" y="295.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;136.9;136.9" keyTimes="0;0.04;1" begin="3.40s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="356.0" y="288.5" width="49.7" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="304" font-size="12" fill="#E8EEF2">Kotlin</text>
+</g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="412.7" y="288.5" width="50.2" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="421.7" y="304" font-size="12" fill="#E8EEF2">Azure</text>
+</g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="469.9" y="288.5" width="55.5" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="478.9" y="304" font-size="12" fill="#E8EEF2">Pulumi</text>
+</g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="532.4" y="288.5" width="100.7" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="541.4" y="304" font-size="12" fill="#E8EEF2">GitHub Actions</text>
+</g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="640.1" y="288.5" width="82.7" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="649.1" y="304" font-size="12" fill="#E8EEF2">Cosmos DB</text>
+</g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="729.8" y="288.5" width="66.0" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="738.8" y="304" font-size="12" fill="#E8EEF2">GraphQL</text>
+</g>
+<g class="t" style="animation-delay:0.87s">
+<rect x="802.8" y="288.5" width="102.2" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="811.8" y="304" font-size="12" fill="#E8EEF2">OpenTelemetry</text>
+</g>
+<text class="t" style="animation-delay:0.69s" x="82" y="339" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">2y</text>
+<rect x="96" y="329.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="329.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="27.3" begin="0.69s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb7dark)"><rect x="24.0" y="329.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;123.3;123.3" keyTimes="0;0.04;1" begin="3.75s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:0.94s">
+<rect x="356.0" y="322.5" width="57.2" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="338" font-size="12" fill="#E8EEF2">Airflow</text>
+</g>
+<g class="t" style="animation-delay:0.94s">
+<rect x="420.2" y="322.5" width="68.5" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="429.2" y="338" font-size="12" fill="#E8EEF2">Spring AI</text>
+</g>
+<text class="t" style="animation-delay:0.76s" x="82" y="373" font-size="15" font-weight="700" fill="#E8EEF2" text-anchor="end">1y</text>
+<rect x="96" y="363.0" width="232" height="10" rx="5" fill="#23303A" opacity="0.30"/>
+<rect x="96" y="363.0" width="0" height="10" rx="5" fill="url(#bgdark)"><animate attributeName="width" from="0" to="13.6" begin="0.76s" dur="0.9s" calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>
+<g clip-path="url(#cb8dark)"><rect x="24.0" y="363.0" width="72" height="10" fill="url(#gldark)"><animate attributeName="x" values="24.0;109.6;109.6" keyTimes="0;0.04;1" begin="4.10s" dur="60s" repeatCount="indefinite"/></rect></g>
+<g class="t" style="animation-delay:1.01s">
+<rect x="356.0" y="356.5" width="41.7" height="21" rx="5" fill="#0D1319" opacity="0.55"/>
+<text x="365.0" y="372" font-size="12" fill="#E8EEF2">GCP</text>
+</g>
+<line class="t" style="animation-delay:.9s" x1="52" y1="410" x2="948" y2="410" stroke="#23303A" stroke-width="1"/>
+<text class="t" style="animation-delay:.95s" x="52" y="432" font-size="12" fill="#6B7783">Standards and protocols, which have no tenure worth quoting</text>
+<g class="t" style="animation-delay:1.0s">
+<rect x="52.0" y="446.5" width="58.2" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="61.0" y="462" font-size="12" fill="#94A3AE">OAuth2</text>
+</g>
+<g class="t" style="animation-delay:1.0s">
+<rect x="117.2" y="446.5" width="106.8" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="126.2" y="462" font-size="12" fill="#94A3AE">OpenID Connect</text>
+</g>
+<g class="t" style="animation-delay:1.0s">
+<rect x="231.0" y="446.5" width="43.8" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="240.0" y="462" font-size="12" fill="#94A3AE">JWT</text>
+</g>
+<g class="t" style="animation-delay:1.0s">
+<rect x="281.8" y="446.5" width="69.2" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="290.8" y="462" font-size="12" fill="#94A3AE">Keycloak</text>
+</g>
+<g class="t" style="animation-delay:1.0s">
+<rect x="358.0" y="446.5" width="62.9" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="367.0" y="462" font-size="12" fill="#94A3AE">Entra ID</text>
+</g>
+<g class="t" style="animation-delay:1.0s">
+<rect x="427.9" y="446.5" width="44.8" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="436.9" y="462" font-size="12" fill="#94A3AE">FAPI</text>
+</g>
+<g class="t" style="animation-delay:1.0s">
+<rect x="479.7" y="446.5" width="114.4" height="21" rx="5" fill="none" stroke="#23303A" stroke-width="1" opacity="0.7"/>
+<text x="488.7" y="462" font-size="12" fill="#94A3AE">Workload Identity</text>
+</g>
+</g></g></svg>

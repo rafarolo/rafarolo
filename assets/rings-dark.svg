@@ -1,22 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 212" width="1000" height="212" role="img" aria-label="Three proportions. Test coverage 88 percent, up from 74.7. 53 percent of every pull request touched belonged to someone else: 906 reviews against 798 of my own. 89 percent of pull requests opened were merged: 707 of 798.">
-<defs><clipPath id="rgdark"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath></defs>
-<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}.a0{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k0 1.15s cubic-bezier(.25,.9,.3,1) 0.25s forwards}@keyframes k0{to{stroke-dashoffset:34.7}}.a1{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k1 1.15s cubic-bezier(.25,.9,.3,1) 0.41s forwards}@keyframes k1{to{stroke-dashoffset:135.8}}.a2{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k2 1.15s cubic-bezier(.25,.9,.3,1) 0.57s forwards}@keyframes k2{to{stroke-dashoffset:31.8}}@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}.a0{stroke-dashoffset:34.7;animation:none}.a1{stroke-dashoffset:135.8;animation:none}.a2{stroke-dashoffset:31.8;animation:none}}</style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 212" width="1000" height="212" role="img" aria-label="Three proportions. 89 percent of pull requests opened were merged, 707 of 798. Test coverage 88 percent, up from 74.7. 53 percent of every pull request touched belonged to someone else: 906 reviews against 798 of my own.">
+<defs><linearGradient id="pgrgdark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A242D"/><stop offset="1" stop-color="#11181E"/></linearGradient><linearGradient id="snrgdark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFE6F0" stop-opacity="0"/><stop offset="0.5" stop-color="#BFE6F0" stop-opacity="0.07"/><stop offset="1" stop-color="#BFE6F0" stop-opacity="0"/></linearGradient><filter id="dsrgdark" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.55"/></filter><clipPath id="rgdark"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath>
+<clipPath id="win0dark"><rect x="130" y="70" width="120" height="40"/></clipPath>
+<clipPath id="win1dark"><rect x="440" y="70" width="120" height="40"/></clipPath>
+<clipPath id="win2dark"><rect x="750" y="70" width="120" height="40"/></clipPath>
+</defs>
+<style>.lb{opacity:0;animation:fa .5s ease forwards}@keyframes fa{to{opacity:1}}.a0{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k0 60.0s linear 0.25s infinite}@keyframes k0{0%{stroke-dashoffset:289.0;opacity:1;animation-timing-function:linear}7%{stroke-dashoffset:31.8;opacity:1}96%{stroke-dashoffset:31.8;opacity:1}99%{stroke-dashoffset:31.8;opacity:0}100%{stroke-dashoffset:289.0;opacity:0}}.a1{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k1 60.0s linear 1.65s infinite}@keyframes k1{0%{stroke-dashoffset:289.0;opacity:1;animation-timing-function:linear}7%{stroke-dashoffset:34.7;opacity:1}96%{stroke-dashoffset:34.7;opacity:1}99%{stroke-dashoffset:34.7;opacity:0}100%{stroke-dashoffset:289.0;opacity:0}}.a2{stroke-dasharray:289.0;stroke-dashoffset:289.0;animation:k2 60.0s linear 3.05s infinite}@keyframes k2{0%{stroke-dashoffset:289.0;opacity:1;animation-timing-function:linear}7%{stroke-dashoffset:135.8;opacity:1}96%{stroke-dashoffset:135.8;opacity:1}99%{stroke-dashoffset:135.8;opacity:0}100%{stroke-dashoffset:289.0;opacity:0}}@media (prefers-reduced-motion: reduce){.lb{opacity:1;animation:none}.n0{animation:none;transform:translateY(-840px)}.n1{animation:none;transform:translateY(-840px)}.n2{animation:none;transform:translateY(-840px)}.a0{stroke-dashoffset:31.8;animation:none}.a1{stroke-dashoffset:34.7;animation:none}.a2{stroke-dashoffset:135.8;animation:none}.n0{animation:c0 60.0s linear 0.25s infinite}@keyframes c0{0%{transform:translateY(0);opacity:1;animation-timing-function:steps(21,end)}7%{transform:translateY(-840px);opacity:1}96%{transform:translateY(-840px);opacity:1}99%{transform:translateY(-840px);opacity:0}100%{transform:translateY(0);opacity:0}}.n1{animation:c1 60.0s linear 1.65s infinite}@keyframes c1{0%{transform:translateY(0);opacity:1;animation-timing-function:steps(21,end)}7%{transform:translateY(-840px);opacity:1}96%{transform:translateY(-840px);opacity:1}99%{transform:translateY(-840px);opacity:0}100%{transform:translateY(0);opacity:0}}.n2{animation:c2 60.0s linear 3.05s infinite}@keyframes c2{0%{transform:translateY(0);opacity:1;animation-timing-function:steps(21,end)}7%{transform:translateY(-840px);opacity:1}96%{transform:translateY(-840px);opacity:1}99%{transform:translateY(-840px);opacity:0}100%{transform:translateY(0);opacity:0}}.sheen{animation:sweep 60s ease-in-out 13s infinite}@keyframes sweep{0%{transform:translateX(-115%)}9%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}}</style>
 <g clip-path="url(#rgdark)">
-<rect x="0" y="0" width="1000" height="212" fill="#141C23"/>
+<rect x="0" y="0" width="1000" height="212" fill="url(#pgrgdark)"/><rect class="sheen" x="-450" y="0" width="450" height="212" fill="url(#snrgdark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.10"/>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
 <circle cx="190" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
-<circle class="a0" cx="190" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" transform="rotate(-90 190 86)"/>
-<text x="190" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">88%</text>
-<text class="lb" style="animation-delay:0.70s" x="190" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">TEST COVERAGE</text>
-<text class="lb" style="animation-delay:0.78s" x="190" y="189" font-size="12" fill="#6B7783" text-anchor="middle">core service, up from 74.7%</text>
+<circle class="a0" cx="190" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" filter="url(#dsrgdark)" transform="rotate(-90 190 86)"/>
+<g>
+<animateTransform attributeName="transform" type="rotate" values="0 190 86;320.40 190 86;320.40 190 86;0 190 86" keyTimes="0;0.068;0.990;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1" begin="0.25s" dur="60.0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.955;0.990;1" begin="0.25s" dur="60.0s" repeatCount="indefinite"/>
+<circle cx="190" cy="40.0" r="11" fill="#56AEC2" opacity="0.22"/>
+<circle cx="190" cy="40.0" r="5.5" fill="#FFFFFF" stroke="#56AEC2" stroke-width="1.5"/>
+</g>
+<g clip-path="url(#win0dark)"><g class="n0">
+<text x="190" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">0%</text>
+<text x="190" y="136" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">4%</text>
+<text x="190" y="176" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">8%</text>
+<text x="190" y="216" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">13%</text>
+<text x="190" y="256" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">17%</text>
+<text x="190" y="296" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">21%</text>
+<text x="190" y="336" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">25%</text>
+<text x="190" y="376" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">30%</text>
+<text x="190" y="416" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">34%</text>
+<text x="190" y="456" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">38%</text>
+<text x="190" y="496" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">42%</text>
+<text x="190" y="536" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">47%</text>
+<text x="190" y="576" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">51%</text>
+<text x="190" y="616" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">55%</text>
+<text x="190" y="656" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">59%</text>
+<text x="190" y="696" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">64%</text>
+<text x="190" y="736" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">68%</text>
+<text x="190" y="776" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">72%</text>
+<text x="190" y="816" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">76%</text>
+<text x="190" y="856" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">81%</text>
+<text x="190" y="896" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">85%</text>
+<text x="190" y="936" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">89%</text>
+</g></g>
+<text class="lb" style="animation-delay:0.70s" x="190" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">PULL REQUESTS MERGED</text>
+<text class="lb" style="animation-delay:0.78s" x="190" y="189" font-size="12" fill="#6B7783" text-anchor="middle">707 merged of 798 opened</text>
 <circle cx="500" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
-<circle class="a1" cx="500" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" transform="rotate(-90 500 86)"/>
-<text x="500" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">53%</text>
-<text class="lb" style="animation-delay:0.82s" x="500" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">OF EVERY PR I TOUCHED</text>
-<text class="lb" style="animation-delay:0.90s" x="500" y="189" font-size="12" fill="#6B7783" text-anchor="middle">906 reviews against 798 of my own</text>
+<circle class="a1" cx="500" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" filter="url(#dsrgdark)" transform="rotate(-90 500 86)"/>
+<g>
+<animateTransform attributeName="transform" type="rotate" values="0 500 86;316.80 500 86;316.80 500 86;0 500 86" keyTimes="0;0.068;0.990;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1" begin="0.55s" dur="60.0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.955;0.990;1" begin="0.55s" dur="60.0s" repeatCount="indefinite"/>
+<circle cx="500" cy="40.0" r="11" fill="#56AEC2" opacity="0.22"/>
+<circle cx="500" cy="40.0" r="5.5" fill="#FFFFFF" stroke="#56AEC2" stroke-width="1.5"/>
+</g>
+<g clip-path="url(#win1dark)"><g class="n1">
+<text x="500" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">0%</text>
+<text x="500" y="136" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">4%</text>
+<text x="500" y="176" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">8%</text>
+<text x="500" y="216" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">13%</text>
+<text x="500" y="256" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">17%</text>
+<text x="500" y="296" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">21%</text>
+<text x="500" y="336" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">25%</text>
+<text x="500" y="376" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">29%</text>
+<text x="500" y="416" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">34%</text>
+<text x="500" y="456" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">38%</text>
+<text x="500" y="496" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">42%</text>
+<text x="500" y="536" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">46%</text>
+<text x="500" y="576" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">50%</text>
+<text x="500" y="616" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">54%</text>
+<text x="500" y="656" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">59%</text>
+<text x="500" y="696" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">63%</text>
+<text x="500" y="736" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">67%</text>
+<text x="500" y="776" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">71%</text>
+<text x="500" y="816" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">75%</text>
+<text x="500" y="856" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">80%</text>
+<text x="500" y="896" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">84%</text>
+<text x="500" y="936" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">88%</text>
+</g></g>
+<text class="lb" style="animation-delay:0.82s" x="500" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">TEST COVERAGE</text>
+<text class="lb" style="animation-delay:0.90s" x="500" y="189" font-size="12" fill="#6B7783" text-anchor="middle">core service, up from 74.7%</text>
 <circle cx="810" cy="86" r="46.0" fill="none" stroke="#1E2932" stroke-width="11"/>
-<circle class="a2" cx="810" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" transform="rotate(-90 810 86)"/>
-<text x="810" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">89%</text>
-<text class="lb" style="animation-delay:0.94s" x="810" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">PULL REQUESTS MERGED</text>
-<text class="lb" style="animation-delay:1.02s" x="810" y="189" font-size="12" fill="#6B7783" text-anchor="middle">707 merged of 798 opened</text>
+<circle class="a2" cx="810" cy="86" r="46.0" fill="none" stroke="#56AEC2" stroke-width="11" stroke-linecap="round" filter="url(#dsrgdark)" transform="rotate(-90 810 86)"/>
+<g>
+<animateTransform attributeName="transform" type="rotate" values="0 810 86;190.80 810 86;190.80 810 86;0 810 86" keyTimes="0;0.068;0.990;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1" begin="0.85s" dur="60.0s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.955;0.990;1" begin="0.85s" dur="60.0s" repeatCount="indefinite"/>
+<circle cx="810" cy="40.0" r="11" fill="#56AEC2" opacity="0.22"/>
+<circle cx="810" cy="40.0" r="5.5" fill="#FFFFFF" stroke="#56AEC2" stroke-width="1.5"/>
+</g>
+<g clip-path="url(#win2dark)"><g class="n2">
+<text x="810" y="96" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">0%</text>
+<text x="810" y="136" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">3%</text>
+<text x="810" y="176" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">5%</text>
+<text x="810" y="216" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">8%</text>
+<text x="810" y="256" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">10%</text>
+<text x="810" y="296" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">13%</text>
+<text x="810" y="336" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">15%</text>
+<text x="810" y="376" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">18%</text>
+<text x="810" y="416" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">20%</text>
+<text x="810" y="456" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">23%</text>
+<text x="810" y="496" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">25%</text>
+<text x="810" y="536" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">28%</text>
+<text x="810" y="576" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">30%</text>
+<text x="810" y="616" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">33%</text>
+<text x="810" y="656" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">35%</text>
+<text x="810" y="696" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">38%</text>
+<text x="810" y="736" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">40%</text>
+<text x="810" y="776" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">43%</text>
+<text x="810" y="816" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">45%</text>
+<text x="810" y="856" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">48%</text>
+<text x="810" y="896" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">50%</text>
+<text x="810" y="936" font-size="30" font-weight="700" fill="#E8EEF2" text-anchor="middle" letter-spacing="-1">53%</text>
+</g></g>
+<text class="lb" style="animation-delay:0.94s" x="810" y="170" font-size="12" font-weight="700" fill="#94A3AE" text-anchor="middle" letter-spacing="1.5">OF EVERY PR I TOUCHED</text>
+<text class="lb" style="animation-delay:1.02s" x="810" y="189" font-size="12" fill="#6B7783" text-anchor="middle">906 reviews against 798 of my own</text>
 </g></g></svg>

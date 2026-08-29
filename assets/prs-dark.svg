@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 378" width="1000" height="378" role="img" aria-label="Pull requests per year, authored and reviewed for others. 2023: 158 authored, 201 reviewed; 2024: 173 authored, 221 reviewed; 2025: 217 authored, 278 reviewed; 2026: 251 authored, 206 reviewed, to 29 August">
+<defs><linearGradient id="pgprdark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A242D"/><stop offset="1" stop-color="#11181E"/></linearGradient><linearGradient id="snprdark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFE6F0" stop-opacity="0"/><stop offset="0.5" stop-color="#BFE6F0" stop-opacity="0.07"/><stop offset="1" stop-color="#BFE6F0" stop-opacity="0"/></linearGradient><filter id="dsprdark" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.55"/></filter><clipPath id="prdark"><rect x="0" y="0" width="1000" height="378" rx="10"/></clipPath><marker id="ahdark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#56AEC2"/></marker></defs>
+<style>.b{transform-box:fill-box;transform-origin:50%% 100%%;transform:scaleY(0);animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}.t{opacity:0;animation:fi .45s ease forwards}@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}@media (prefers-reduced-motion: reduce){.b{transform:scaleY(1);animation:none}.t{opacity:1;animation:none}}.sheen{animation:sweep 60s ease-in-out 12s infinite}@keyframes sweep{0%{transform:translateX(-115%)}9%,100%{transform:translateX(115%)}}@media (prefers-reduced-motion: reduce){.sheen{display:none}}</style>
+<g clip-path="url(#prdark)">
+<rect x="0" y="0" width="1000" height="378" fill="url(#pgprdark)"/><rect class="sheen" x="-450" y="0" width="450" height="378" fill="url(#snprdark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.10"/>
+<g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+<text class="t" x="48" y="46" font-size="12" font-weight="700" fill="#94A3AE" letter-spacing="1.8">PULL REQUESTS PER YEAR</text>
+<g class="t" style="animation-delay:.1s">
+<circle cx="458" cy="42" r="5" fill="#56AEC2" opacity="0.38"/>
+<text x="470" y="46" font-size="12" fill="#6B7783">authored</text>
+<circle cx="558" cy="42" r="5" fill="#56AEC2"/>
+<text x="570" y="46" font-size="12" fill="#6B7783">reviewed for others</text>
+<rect x="734" y="36" width="16" height="11" rx="2" fill="none" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="756" y="46" font-size="12" fill="#6B7783">projection</text>
+</g>
+<line class="t" style="animation-delay:.15s" x1="48" y1="253" x2="874" y2="253" stroke="#23303A" stroke-width="1"/>
+<rect class="b" style="animation-delay:0.30s" x="134.2" y="189.6" width="46" height="62.4" rx="3" fill="#56AEC2" opacity="0.38"/>
+<text class="t" style="animation-delay:0.60s" x="157.2" y="178.6" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">158</text>
+<rect class="b" style="animation-delay:0.36s" x="188.2" y="172.7" width="46" height="79.3" rx="3" fill="#56AEC2"/>
+<text class="t" style="animation-delay:0.66s" x="211.2" y="161.7" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">201</text>
+<text class="t" style="animation-delay:0.65s" x="184.2" y="284" font-size="17" font-weight="700" fill="#94A3AE" text-anchor="middle">2023</text>
+<rect class="b" style="animation-delay:0.42s" x="318.8" y="183.7" width="46" height="68.3" rx="3" fill="#56AEC2" opacity="0.38"/>
+<text class="t" style="animation-delay:0.72s" x="341.8" y="172.7" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">173</text>
+<rect class="b" style="animation-delay:0.48s" x="372.8" y="164.8" width="46" height="87.2" rx="3" fill="#56AEC2"/>
+<text class="t" style="animation-delay:0.78s" x="395.8" y="153.8" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">221</text>
+<text class="t" style="animation-delay:0.77s" x="368.8" y="284" font-size="17" font-weight="700" fill="#94A3AE" text-anchor="middle">2024</text>
+<rect class="b" style="animation-delay:0.54s" x="503.2" y="166.3" width="46" height="85.7" rx="3" fill="#56AEC2" opacity="0.38"/>
+<text class="t" style="animation-delay:0.84s" x="526.2" y="155.3" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">217</text>
+<rect class="b" style="animation-delay:0.60s" x="557.2" y="142.3" width="46" height="109.7" rx="3" fill="#56AEC2"/>
+<text class="t" style="animation-delay:0.90s" x="580.2" y="131.3" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">278</text>
+<text class="t" style="animation-delay:0.89s" x="553.2" y="284" font-size="17" font-weight="700" fill="#94A3AE" text-anchor="middle">2025</text>
+<g opacity="1"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.90;0.95;0.99;1" begin="1.16s" dur="60.0s" repeatCount="indefinite"/>
+<rect x="687.8" y="252.0" width="46" height="0" rx="3" fill="none" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85"><animate attributeName="height" values="0;150.0;150.0;0;0" begin="1.16s" keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" dur="60.0s" repeatCount="indefinite"/><animate attributeName="y" values="252;102.0;102.0;252;252" begin="1.16s" keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" dur="60.0s" repeatCount="indefinite"/><animate attributeName="stroke-dashoffset" values="0;16;16" keyTimes="0;0.03;1" begin="1.16s" dur="60s" repeatCount="indefinite"/></rect>
+<text x="710.8" y="243" font-size="14" font-weight="700" fill="#56AEC2" text-anchor="middle" opacity="0.9">380<animate attributeName="y" values="243;93.0;93.0;243;243" begin="1.16s" keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" dur="60.0s" repeatCount="indefinite"/></text>
+</g>
+<rect class="b" style="animation-delay:0.66s" x="687.8" y="152.9" width="46" height="99.1" rx="3" fill="#56AEC2" opacity="0.38"/>
+<text class="t" style="animation-delay:0.96s" x="710.8" y="141.9" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">251</text>
+<g opacity="1"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.90;0.95;0.99;1" begin="1.22s" dur="60.0s" repeatCount="indefinite"/>
+<rect x="741.8" y="252.0" width="46" height="0" rx="3" fill="none" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85"><animate attributeName="height" values="0;123.2;123.2;0;0" begin="1.22s" keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" dur="60.0s" repeatCount="indefinite"/><animate attributeName="y" values="252;128.8;128.8;252;252" begin="1.22s" keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" dur="60.0s" repeatCount="indefinite"/><animate attributeName="stroke-dashoffset" values="0;16;16" keyTimes="0;0.03;1" begin="1.22s" dur="60s" repeatCount="indefinite"/></rect>
+<text x="764.8" y="243" font-size="14" font-weight="700" fill="#56AEC2" text-anchor="middle" opacity="0.9">312<animate attributeName="y" values="243;119.8;119.8;243;243" begin="1.22s" keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" dur="60.0s" repeatCount="indefinite"/></text>
+</g>
+<rect class="b" style="animation-delay:0.72s" x="741.8" y="170.7" width="46" height="81.3" rx="3" fill="#56AEC2"/>
+<text class="t" style="animation-delay:1.02s" x="764.8" y="159.7" font-size="17" font-weight="700" fill="#E8EEF2" text-anchor="middle">206</text>
+<text class="t" style="animation-delay:1.01s" x="737.8" y="284" font-size="17" font-weight="700" fill="#94A3AE" text-anchor="middle">2026 *</text>
+<g class="t" style="animation-delay:1.25s">
+<line x1="864.0" y1="152.9" x2="864.0" y2="114.0" stroke="#56AEC2" stroke-width="2" marker-end="url(#ahdark)"/>
+<line x1="838.0" y1="152.9" x2="870.0" y2="152.9" stroke="#6B7783" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+<text x="878.0" y="122.0" font-size="16" font-weight="700" fill="#56AEC2">+51%</text>
+<text x="878.0" y="140.0" font-size="11" fill="#6B7783">if the pace</text>
+<text x="878.0" y="154.0" font-size="11" fill="#6B7783">holds</text>
+</g>
+<text class="t" style="animation-delay:1.00s" x="276.5" y="312" font-size="13" font-weight="700" fill="#56AEC2" text-anchor="middle">+10%</text>
+<text class="t" style="animation-delay:1.10s" x="461.0" y="312" font-size="13" font-weight="700" fill="#56AEC2" text-anchor="middle">+26%</text>
+<text class="t" style="animation-delay:1.20s" x="645.5" y="312" font-size="13" font-weight="600" fill="#6B7783" text-anchor="middle">8 of 12 months</text>
+<g class="t" style="animation-delay:1.4s">
+<rect x="48" y="334" width="20" height="11" rx="2" fill="none" stroke="#56AEC2" stroke-width="1.6" stroke-dasharray="4 4"/>
+<text x="76" y="344" font-size="12" fill="#6B7783">* 2026 counts to 29 August. The dashed outline is where each bar lands if the pace holds — 692 pull requests touched against 495 in 2025.</text>
+</g>
+</g></g></svg>

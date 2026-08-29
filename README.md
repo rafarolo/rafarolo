@@ -1,30 +1,51 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=1e5d997c">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews, 8 sectors served." src="assets/banner-light.svg?v=c13e8a9f">
 </picture>
+
+<br>
+<br>
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
 - I review more than I write: **906 reviews against 798 pull requests of my own**, for 17 engineers
 
+<br>
+
 All of it in private corporate repositories, which is why the contribution graph below is
 green and unclickable.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
-  <img alt="Three proportions: 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else; 89% of pull requests opened were merged." src="assets/rings-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg?v=0bba55ef">
+  <img alt="Three proportions: 89% of pull requests opened were merged; 88% test coverage, up from 74.7%; 53% of every pull request touched belonged to someone else." src="assets/rings-light.svg?v=6c04fa05">
 </picture>
+
+<br>
+
+
+<br>
+
+### Pull requests per year
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=d5404aee">
+  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 251 and 206 in 2026 to 29 August." src="assets/prs-light.svg?v=26668d18">
+</picture>
+
+<br>
+
 
 <br>
 
 ### Selected work
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg">
-  <img alt="Timeline of selected work, 2014 to 2026." src="assets/timeline-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg?v=feda58f8">
+  <img alt="Timeline of selected work, 2014 to 2026." src="assets/timeline-light.svg?v=87f0b042">
 </picture>
 
 <br>
+
 
 <details>
 <summary>Timeline as text</summary>
@@ -44,64 +65,83 @@ green and unclickable.
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
-  <img alt="" src="assets/dot-light.svg">
-</picture>
-
-### Stack by area
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
-  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=10355b7c">
+  <img alt="" src="assets/dot-light.svg?v=c7a6ded9">
 </picture>
 
 <br>
 
-Depth counts from the first role in which each one appears<br>
-Focus is measured from the 337 pull requests I opened in the last twelve months.
-
-| Area | | |
-|---|---|---|
-| **Backend on the JVM** | `17y` | `Java · 17y` `Spring Boot · 11y` `Spring Security · 7y` `OpenAPI · 7y` `Kotlin · 3y` `GraphQL · 3y` |
-| **Data** | `14y` | `PostgreSQL · 14y` `MongoDB · 12y` `SQL Server · 11y` `Cosmos DB · 3y` `Airflow · 2y` |
-| **Cloud & platform** | `7y` | `Kubernetes · 7y` `Docker · 7y` `AWS · 5y` `Azure · 3y` `Pulumi · 3y` `GitHub Actions · 3y` `GCP · 1y` |
-| **Security & identity** | `7y` | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity` |
-| **Observability & quality** | `7y` | `SonarQube · 7y` `Prometheus · 5y` `Grafana · 5y` `OpenTelemetry · 3y` |
-| **AI** | `2y` | `Spring AI` `Azure OpenAI` |
+### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg">
-  <img alt="" src="assets/dot-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=9ecfa301">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=81392118">
 </picture>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg?v=0fceeb42">
+  <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg?v=f41e2333">
+</picture>
+
+<details>
+<summary>Years as text</summary>
+
+| Years | Technology |
+|---|---|
+| `17` | `Java` |
+| `14` | `PostgreSQL` |
+| `12` | `MongoDB` |
+| `11` | `Spring Boot` `SQL Server` |
+| `7` | `Spring Security` `OpenAPI` `Kubernetes` `Docker` `SonarQube` |
+| `5` | `AWS` `Prometheus` `Grafana` |
+| `3` | `Kotlin` `Azure` `Pulumi` `GitHub Actions` `Cosmos DB` `GraphQL` `OpenTelemetry` |
+| `2` | `Airflow` `Spring AI` |
+| `1` | `GCP` |
+
+`OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity`
+
+</details>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=10355b7c">
+  <img alt="" src="assets/dot-light.svg?v=c7a6ded9">
+</picture>
+
+<br>
 
 ### Artifact of my life
 
-`rolo.rafael.life`, laid out the way I'd lay out a service<br>
+`my.life:rafael.rolo`, laid out the way I'd lay out a service<br>
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
-  <img alt="A package tree under rolo.rafael.life. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=5f0d982e">
+  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=997208d2">
 </picture>
 
-<br>
 <br>
 <br>
 
 <p align="center">
-  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg" alt="LinkedIn: rafarolo" height="28"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg" alt="Stack Exchange profile" height="28"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/location.svg" alt="São Paulo, Brasil" height="28">
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622a" alt="LinkedIn: rafarolo" height="28"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=0d65e882" alt="Stack Exchange profile" height="28"></a>
 </p>
 
-<br>
+<p align="center">
+  <img src="assets/location.svg?v=a7d87508" alt="São Paulo, Brasil" height="28">
+</p>
+
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg">
-    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/skyline-dark.svg?v=df1b3727">
+    <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg?v=1a522678">
   </picture>
 </a>

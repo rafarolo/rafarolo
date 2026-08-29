@@ -1,9 +1,11 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, MONO, OUT, NL
+from gen_all import glass_bg, glass_defs, glass_style, THEMES, MONO, OUT, NL
 
-ROOT = "rolo.rafael.life"
+GROUP = "my.life"
+ARTIFACT = "rafael.rolo"
+ROOT = "life"
 CMD = "$ tree " + ROOT
 CH = 8.42
 TYPE_S = 1.05
@@ -61,12 +63,12 @@ def archetype(t):
     h = 44 + 34 + (len(rows) + 1) * 21 + 26
     w = CH * len(CMD)
 
-    alt = ("A terminal typing tree %s. Under professional: domain, which does not get replaced; "
-           "practice; and adapters, swappable on purpose. Under person: languages, education, "
-           "published work." % ROOT)
+    alt = ("A terminal typing tree %s, the source root of %s:%s. Under professional: domain, "
+           "which does not get replaced; practice; and adapters, swappable on purpose. Under "
+           "person: industries, languages, education, published work." % (ROOT, GROUP, ARTIFACT))
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
-    p.append('<defs>')
+    p.append('<defs>' + glass_defs(t, "ra"))
     p.append('<clipPath id="ra%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>' % (t, h))
     p.append('<clipPath id="tp%s"><rect class="type" x="44" y="24" width="%.1f" height="22"/></clipPath>'
              % (t, w))
@@ -86,7 +88,7 @@ def archetype(t):
              '.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}'
              '</style>' % (TYPE_S, len(CMD), TYPE_S + .25, TYPE_S + .25))
     p.append('<g clip-path="url(#ra%s)">' % t)
-    p.append('<rect x="0" y="0" width="1000" height="%d" fill="%s"/>' % (h, c["panel"]))
+    p.append(glass_bg(t, "ra", 1000, h))
     p.append('<rect x="0" y="0" width="3" height="%d" fill="%s"/>' % (h, c["acc"]))
     for i, col in enumerate((c["g2"], c["g1"], c["g0"])):
         p.append('<circle cx="%d" cy="22" r="4.5" fill="%s" opacity="0.85"/>' % (26 + i * 15, col))
@@ -99,7 +101,11 @@ def archetype(t):
     y = 78
     base = TYPE_S + .35
     p.append('<text class="ln" style="animation-delay:%.2fs" x="44" y="%d" font-size="14" '
-             'font-weight="700" fill="%s">%s</text>' % (base, y, c["ink"], ROOT))
+             'font-weight="700" fill="%s">%s/</text>' % (base, y, c["ink"], ROOT))
+    # The coordinate sits beside the root the way a GAV sits beside its source tree.
+    p.append('<text class="ln" style="animation-delay:%.2fs" x="380" y="%d" font-size="11.5" '
+             'font-style="italic" fill="%s">%s : %s</text>'
+             % (base + .04, y, c["dim"], GROUP, ARTIFACT))
     y += 21
 
     for i, (prefix, name, note, is_dir, depth) in enumerate(rows):

@@ -1,44 +1,1365 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight sectors served. Reviews given exceed pull requests authored in every completed year.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 372" width="1000" height="372" role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. 17 years on the JVM, 798 pull requests authored, 906 code reviews for others, eight sectors served.">
 <defs>
 <linearGradient id="sdark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#56AEC2"/><stop offset="0.55" stop-color="#3E93A8"/><stop offset="1" stop-color="#C9A468"/></linearGradient>
-<clipPath id="rdark"><rect x="0" y="0" width="1000" height="250" rx="10"/></clipPath>
+<linearGradient id="wdark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16303B"/><stop offset="1" stop-color="#0A1015"/></linearGradient>
+<linearGradient id="fdark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="0.30" stop-color="#FFFFFF" stop-opacity="0.92"/><stop offset="0.60" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<mask id="mdark" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="372"><rect x="0" y="0" width="1000" height="372" fill="url(#fdark)"/></mask>
+<clipPath id="rdark"><rect x="0" y="0" width="1000" height="372" rx="10"/></clipPath>
 </defs>
-<style>.fade{opacity:0;animation:f .55s ease forwards}.bar{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:g .75s cubic-bezier(.2,.85,.25,1) forwards}.live{animation:g .75s cubic-bezier(.2,.85,.25,1) forwards,pulse 3.4s ease-in-out 1.6s infinite}@keyframes f{to{opacity:1}}@keyframes g{to{transform:scaleY(1)}}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.62}}@media (prefers-reduced-motion: reduce){.fade{opacity:1;animation:none}.bar,.live{transform:scaleY(1);animation:none}}</style>
+<style>.fade{opacity:0;animation:f .6s ease forwards}.rain{animation:fall linear infinite}@keyframes f{to{opacity:1}}@keyframes d0{to{transform:translateY(360px)}}@keyframes d1{to{transform:translateY(360px)}}@keyframes d2{to{transform:translateY(360px)}}@keyframes d3{to{transform:translateY(360px)}}@keyframes d4{to{transform:translateY(360px)}}@keyframes d5{to{transform:translateY(240px)}}@keyframes d6{to{transform:translateY(240px)}}@keyframes d7{to{transform:translateY(360px)}}@keyframes d8{to{transform:translateY(360px)}}@keyframes d9{to{transform:translateY(360px)}}@keyframes d10{to{transform:translateY(360px)}}@keyframes d11{to{transform:translateY(240px)}}@keyframes d12{to{transform:translateY(240px)}}@keyframes d13{to{transform:translateY(240px)}}@keyframes d14{to{transform:translateY(360px)}}@keyframes d15{to{transform:translateY(240px)}}@keyframes d16{to{transform:translateY(360px)}}@keyframes d17{to{transform:translateY(240px)}}@keyframes d18{to{transform:translateY(240px)}}@keyframes d19{to{transform:translateY(360px)}}@keyframes d20{to{transform:translateY(360px)}}@keyframes d21{to{transform:translateY(240px)}}@keyframes d22{to{transform:translateY(240px)}}@keyframes d23{to{transform:translateY(240px)}}@keyframes d24{to{transform:translateY(240px)}}@keyframes d25{to{transform:translateY(360px)}}@keyframes d26{to{transform:translateY(240px)}}@keyframes d27{to{transform:translateY(240px)}}@keyframes d28{to{transform:translateY(360px)}}@keyframes d29{to{transform:translateY(240px)}}@keyframes d30{to{transform:translateY(360px)}}@keyframes d31{to{transform:translateY(240px)}}@keyframes d32{to{transform:translateY(240px)}}@keyframes d33{to{transform:translateY(360px)}}@keyframes d34{to{transform:translateY(240px)}}@keyframes d35{to{transform:translateY(360px)}}@keyframes d36{to{transform:translateY(240px)}}@keyframes d37{to{transform:translateY(240px)}}@keyframes d38{to{transform:translateY(240px)}}@keyframes d39{to{transform:translateY(240px)}}@media (prefers-reduced-motion: reduce){.fade{opacity:1;animation:none}.rain{animation:none}}</style>
 <g clip-path="url(#rdark)">
-<rect x="0" y="0" width="1000" height="250" fill="#0D1319"/>
-<rect x="0" y="0" width="4" height="250" fill="url(#sdark)"/>
+<rect x="0" y="0" width="1000" height="372" fill="url(#wdark)"/>
+<g mask="url(#mdark)" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, 'Liberation Mono', monospace" font-size="12" fill="#56AEC2" opacity="0.55">
+<g style="animation:d0 11.8s linear -1.9s infinite">
+<text x="10" y="-285" opacity="0.09">E</text>
+<text x="10" y="-270" opacity="0.12">L</text>
+<text x="10" y="-255" opacity="0.15">0</text>
+<text x="10" y="-240" opacity="0.18">1</text>
+<text x="10" y="-225" opacity="0.22">R</text>
+<text x="10" y="-210" opacity="0.26">A</text>
+<text x="10" y="-195" opacity="0.31">F</text>
+<text x="10" y="-180" opacity="0.35">A</text>
+<text x="10" y="-165" opacity="0.4">E</text>
+<text x="10" y="-150" opacity="0.45">L</text>
+<text x="10" y="-135" opacity="0.5">0</text>
+<text x="10" y="-120" opacity="0.56">1</text>
+<text x="10" y="-105" opacity="0.62">R</text>
+<text x="10" y="-90" opacity="0.68">A</text>
+<text x="10" y="-75" opacity="0.74">F</text>
+<text x="10" y="-60" opacity="0.8">A</text>
+<text x="10" y="-45" fill="#A6DCE8" opacity=".78">E</text>
+<text x="10" y="-30" fill="#A6DCE8" opacity=".78">L</text>
+<text x="10" y="-15" fill="#F2FBFD">0</text>
+<text x="10" y="75" opacity="0.09">E</text>
+<text x="10" y="90" opacity="0.12">L</text>
+<text x="10" y="105" opacity="0.15">0</text>
+<text x="10" y="120" opacity="0.18">1</text>
+<text x="10" y="135" opacity="0.22">R</text>
+<text x="10" y="150" opacity="0.26">A</text>
+<text x="10" y="165" opacity="0.31">F</text>
+<text x="10" y="180" opacity="0.35">A</text>
+<text x="10" y="195" opacity="0.4">E</text>
+<text x="10" y="210" opacity="0.45">L</text>
+<text x="10" y="225" opacity="0.5">0</text>
+<text x="10" y="240" opacity="0.56">1</text>
+<text x="10" y="255" opacity="0.62">R</text>
+<text x="10" y="270" opacity="0.68">A</text>
+<text x="10" y="285" opacity="0.74">F</text>
+<text x="10" y="300" opacity="0.8">A</text>
+<text x="10" y="315" fill="#A6DCE8" opacity=".78">E</text>
+<text x="10" y="330" fill="#A6DCE8" opacity=".78">L</text>
+<text x="10" y="345" fill="#F2FBFD">0</text>
+</g>
+<g style="animation:d1 8.6s linear -5.4s infinite">
+<text x="35" y="-285" opacity="0.09">1</text>
+<text x="35" y="-270" opacity="0.12">R</text>
+<text x="35" y="-255" opacity="0.15">A</text>
+<text x="35" y="-240" opacity="0.18">F</text>
+<text x="35" y="-225" opacity="0.22">A</text>
+<text x="35" y="-210" opacity="0.26">E</text>
+<text x="35" y="-195" opacity="0.31">L</text>
+<text x="35" y="-180" opacity="0.35">0</text>
+<text x="35" y="-165" opacity="0.4">1</text>
+<text x="35" y="-150" opacity="0.45">R</text>
+<text x="35" y="-135" opacity="0.5">A</text>
+<text x="35" y="-120" opacity="0.56">F</text>
+<text x="35" y="-105" opacity="0.62">A</text>
+<text x="35" y="-90" opacity="0.68">E</text>
+<text x="35" y="-75" opacity="0.74">L</text>
+<text x="35" y="-60" opacity="0.8">0</text>
+<text x="35" y="-45" fill="#A6DCE8" opacity=".78">1</text>
+<text x="35" y="-30" fill="#A6DCE8" opacity=".78">R</text>
+<text x="35" y="-15" fill="#F2FBFD">A</text>
+<text x="35" y="75" opacity="0.09">1</text>
+<text x="35" y="90" opacity="0.12">R</text>
+<text x="35" y="105" opacity="0.15">A</text>
+<text x="35" y="120" opacity="0.18">F</text>
+<text x="35" y="135" opacity="0.22">A</text>
+<text x="35" y="150" opacity="0.26">E</text>
+<text x="35" y="165" opacity="0.31">L</text>
+<text x="35" y="180" opacity="0.35">0</text>
+<text x="35" y="195" opacity="0.4">1</text>
+<text x="35" y="210" opacity="0.45">R</text>
+<text x="35" y="225" opacity="0.5">A</text>
+<text x="35" y="240" opacity="0.56">F</text>
+<text x="35" y="255" opacity="0.62">A</text>
+<text x="35" y="270" opacity="0.68">E</text>
+<text x="35" y="285" opacity="0.74">L</text>
+<text x="35" y="300" opacity="0.8">0</text>
+<text x="35" y="315" fill="#A6DCE8" opacity=".78">1</text>
+<text x="35" y="330" fill="#A6DCE8" opacity=".78">R</text>
+<text x="35" y="345" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d2 9.7s linear -2.7s infinite">
+<text x="60" y="-285" opacity="0.09">0</text>
+<text x="60" y="-270" opacity="0.12">1</text>
+<text x="60" y="-255" opacity="0.15">R</text>
+<text x="60" y="-240" opacity="0.18">A</text>
+<text x="60" y="-225" opacity="0.22">F</text>
+<text x="60" y="-210" opacity="0.26">A</text>
+<text x="60" y="-195" opacity="0.31">E</text>
+<text x="60" y="-180" opacity="0.35">L</text>
+<text x="60" y="-165" opacity="0.4">0</text>
+<text x="60" y="-150" opacity="0.45">1</text>
+<text x="60" y="-135" opacity="0.5">R</text>
+<text x="60" y="-120" opacity="0.56">A</text>
+<text x="60" y="-105" opacity="0.62">F</text>
+<text x="60" y="-90" opacity="0.68">A</text>
+<text x="60" y="-75" opacity="0.74">E</text>
+<text x="60" y="-60" opacity="0.8">L</text>
+<text x="60" y="-45" fill="#A6DCE8" opacity=".78">0</text>
+<text x="60" y="-30" fill="#A6DCE8" opacity=".78">1</text>
+<text x="60" y="-15" fill="#F2FBFD">R</text>
+<text x="60" y="75" opacity="0.09">0</text>
+<text x="60" y="90" opacity="0.12">1</text>
+<text x="60" y="105" opacity="0.15">R</text>
+<text x="60" y="120" opacity="0.18">A</text>
+<text x="60" y="135" opacity="0.22">F</text>
+<text x="60" y="150" opacity="0.26">A</text>
+<text x="60" y="165" opacity="0.31">E</text>
+<text x="60" y="180" opacity="0.35">L</text>
+<text x="60" y="195" opacity="0.4">0</text>
+<text x="60" y="210" opacity="0.45">1</text>
+<text x="60" y="225" opacity="0.5">R</text>
+<text x="60" y="240" opacity="0.56">A</text>
+<text x="60" y="255" opacity="0.62">F</text>
+<text x="60" y="270" opacity="0.68">A</text>
+<text x="60" y="285" opacity="0.74">E</text>
+<text x="60" y="300" opacity="0.8">L</text>
+<text x="60" y="315" fill="#A6DCE8" opacity=".78">0</text>
+<text x="60" y="330" fill="#A6DCE8" opacity=".78">1</text>
+<text x="60" y="345" fill="#F2FBFD">R</text>
+</g>
+<g style="animation:d3 6.7s linear -11.8s infinite">
+<text x="85" y="-285" opacity="0.09">L</text>
+<text x="85" y="-270" opacity="0.12">0</text>
+<text x="85" y="-255" opacity="0.15">1</text>
+<text x="85" y="-240" opacity="0.18">R</text>
+<text x="85" y="-225" opacity="0.22">A</text>
+<text x="85" y="-210" opacity="0.26">F</text>
+<text x="85" y="-195" opacity="0.31">A</text>
+<text x="85" y="-180" opacity="0.35">E</text>
+<text x="85" y="-165" opacity="0.4">L</text>
+<text x="85" y="-150" opacity="0.45">0</text>
+<text x="85" y="-135" opacity="0.5">1</text>
+<text x="85" y="-120" opacity="0.56">R</text>
+<text x="85" y="-105" opacity="0.62">A</text>
+<text x="85" y="-90" opacity="0.68">F</text>
+<text x="85" y="-75" opacity="0.74">A</text>
+<text x="85" y="-60" opacity="0.8">E</text>
+<text x="85" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="85" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="85" y="-15" fill="#F2FBFD">1</text>
+<text x="85" y="75" opacity="0.09">L</text>
+<text x="85" y="90" opacity="0.12">0</text>
+<text x="85" y="105" opacity="0.15">1</text>
+<text x="85" y="120" opacity="0.18">R</text>
+<text x="85" y="135" opacity="0.22">A</text>
+<text x="85" y="150" opacity="0.26">F</text>
+<text x="85" y="165" opacity="0.31">A</text>
+<text x="85" y="180" opacity="0.35">E</text>
+<text x="85" y="195" opacity="0.4">L</text>
+<text x="85" y="210" opacity="0.45">0</text>
+<text x="85" y="225" opacity="0.5">1</text>
+<text x="85" y="240" opacity="0.56">R</text>
+<text x="85" y="255" opacity="0.62">A</text>
+<text x="85" y="270" opacity="0.68">F</text>
+<text x="85" y="285" opacity="0.74">A</text>
+<text x="85" y="300" opacity="0.8">E</text>
+<text x="85" y="315" fill="#A6DCE8" opacity=".78">L</text>
+<text x="85" y="330" fill="#A6DCE8" opacity=".78">0</text>
+<text x="85" y="345" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d4 12.7s linear -4.5s infinite">
+<text x="110" y="-285" opacity="0.09">1</text>
+<text x="110" y="-270" opacity="0.12">R</text>
+<text x="110" y="-255" opacity="0.15">A</text>
+<text x="110" y="-240" opacity="0.18">F</text>
+<text x="110" y="-225" opacity="0.22">A</text>
+<text x="110" y="-210" opacity="0.26">E</text>
+<text x="110" y="-195" opacity="0.31">L</text>
+<text x="110" y="-180" opacity="0.35">0</text>
+<text x="110" y="-165" opacity="0.4">1</text>
+<text x="110" y="-150" opacity="0.45">R</text>
+<text x="110" y="-135" opacity="0.5">A</text>
+<text x="110" y="-120" opacity="0.56">F</text>
+<text x="110" y="-105" opacity="0.62">A</text>
+<text x="110" y="-90" opacity="0.68">E</text>
+<text x="110" y="-75" opacity="0.74">L</text>
+<text x="110" y="-60" opacity="0.8">0</text>
+<text x="110" y="-45" fill="#A6DCE8" opacity=".78">1</text>
+<text x="110" y="-30" fill="#A6DCE8" opacity=".78">R</text>
+<text x="110" y="-15" fill="#F2FBFD">A</text>
+<text x="110" y="75" opacity="0.09">1</text>
+<text x="110" y="90" opacity="0.12">R</text>
+<text x="110" y="105" opacity="0.15">A</text>
+<text x="110" y="120" opacity="0.18">F</text>
+<text x="110" y="135" opacity="0.22">A</text>
+<text x="110" y="150" opacity="0.26">E</text>
+<text x="110" y="165" opacity="0.31">L</text>
+<text x="110" y="180" opacity="0.35">0</text>
+<text x="110" y="195" opacity="0.4">1</text>
+<text x="110" y="210" opacity="0.45">R</text>
+<text x="110" y="225" opacity="0.5">A</text>
+<text x="110" y="240" opacity="0.56">F</text>
+<text x="110" y="255" opacity="0.62">A</text>
+<text x="110" y="270" opacity="0.68">E</text>
+<text x="110" y="285" opacity="0.74">L</text>
+<text x="110" y="300" opacity="0.8">0</text>
+<text x="110" y="315" fill="#A6DCE8" opacity=".78">1</text>
+<text x="110" y="330" fill="#A6DCE8" opacity=".78">R</text>
+<text x="110" y="345" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d5 11.5s linear -12.2s infinite">
+<text x="135" y="-195" opacity="0.08">A</text>
+<text x="135" y="-180" opacity="0.12">E</text>
+<text x="135" y="-165" opacity="0.17">L</text>
+<text x="135" y="-150" opacity="0.23">0</text>
+<text x="135" y="-135" opacity="0.3">1</text>
+<text x="135" y="-120" opacity="0.37">R</text>
+<text x="135" y="-105" opacity="0.44">A</text>
+<text x="135" y="-90" opacity="0.52">F</text>
+<text x="135" y="-75" opacity="0.61">A</text>
+<text x="135" y="-60" opacity="0.7">E</text>
+<text x="135" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="135" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="135" y="-15" fill="#F2FBFD">1</text>
+<text x="135" y="45" opacity="0.08">A</text>
+<text x="135" y="60" opacity="0.12">E</text>
+<text x="135" y="75" opacity="0.17">L</text>
+<text x="135" y="90" opacity="0.23">0</text>
+<text x="135" y="105" opacity="0.3">1</text>
+<text x="135" y="120" opacity="0.37">R</text>
+<text x="135" y="135" opacity="0.44">A</text>
+<text x="135" y="150" opacity="0.52">F</text>
+<text x="135" y="165" opacity="0.61">A</text>
+<text x="135" y="180" opacity="0.7">E</text>
+<text x="135" y="195" fill="#A6DCE8" opacity=".78">L</text>
+<text x="135" y="210" fill="#A6DCE8" opacity=".78">0</text>
+<text x="135" y="225" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d6 11.9s linear -5.2s infinite">
+<text x="160" y="-195" opacity="0.08">F</text>
+<text x="160" y="-180" opacity="0.12">A</text>
+<text x="160" y="-165" opacity="0.17">E</text>
+<text x="160" y="-150" opacity="0.23">L</text>
+<text x="160" y="-135" opacity="0.3">0</text>
+<text x="160" y="-120" opacity="0.37">1</text>
+<text x="160" y="-105" opacity="0.44">R</text>
+<text x="160" y="-90" opacity="0.52">A</text>
+<text x="160" y="-75" opacity="0.61">F</text>
+<text x="160" y="-60" opacity="0.7">A</text>
+<text x="160" y="-45" fill="#A6DCE8" opacity=".78">E</text>
+<text x="160" y="-30" fill="#A6DCE8" opacity=".78">L</text>
+<text x="160" y="-15" fill="#F2FBFD">0</text>
+<text x="160" y="45" opacity="0.08">F</text>
+<text x="160" y="60" opacity="0.12">A</text>
+<text x="160" y="75" opacity="0.17">E</text>
+<text x="160" y="90" opacity="0.23">L</text>
+<text x="160" y="105" opacity="0.3">0</text>
+<text x="160" y="120" opacity="0.37">1</text>
+<text x="160" y="135" opacity="0.44">R</text>
+<text x="160" y="150" opacity="0.52">A</text>
+<text x="160" y="165" opacity="0.61">F</text>
+<text x="160" y="180" opacity="0.7">A</text>
+<text x="160" y="195" fill="#A6DCE8" opacity=".78">E</text>
+<text x="160" y="210" fill="#A6DCE8" opacity=".78">L</text>
+<text x="160" y="225" fill="#F2FBFD">0</text>
+</g>
+<g style="animation:d7 8.0s linear -2.0s infinite">
+<text x="185" y="-285" opacity="0.09">R</text>
+<text x="185" y="-270" opacity="0.12">A</text>
+<text x="185" y="-255" opacity="0.15">F</text>
+<text x="185" y="-240" opacity="0.18">A</text>
+<text x="185" y="-225" opacity="0.22">E</text>
+<text x="185" y="-210" opacity="0.26">L</text>
+<text x="185" y="-195" opacity="0.31">0</text>
+<text x="185" y="-180" opacity="0.35">1</text>
+<text x="185" y="-165" opacity="0.4">R</text>
+<text x="185" y="-150" opacity="0.45">A</text>
+<text x="185" y="-135" opacity="0.5">F</text>
+<text x="185" y="-120" opacity="0.56">A</text>
+<text x="185" y="-105" opacity="0.62">E</text>
+<text x="185" y="-90" opacity="0.68">L</text>
+<text x="185" y="-75" opacity="0.74">0</text>
+<text x="185" y="-60" opacity="0.8">1</text>
+<text x="185" y="-45" fill="#A6DCE8" opacity=".78">R</text>
+<text x="185" y="-30" fill="#A6DCE8" opacity=".78">A</text>
+<text x="185" y="-15" fill="#F2FBFD">F</text>
+<text x="185" y="75" opacity="0.09">R</text>
+<text x="185" y="90" opacity="0.12">A</text>
+<text x="185" y="105" opacity="0.15">F</text>
+<text x="185" y="120" opacity="0.18">A</text>
+<text x="185" y="135" opacity="0.22">E</text>
+<text x="185" y="150" opacity="0.26">L</text>
+<text x="185" y="165" opacity="0.31">0</text>
+<text x="185" y="180" opacity="0.35">1</text>
+<text x="185" y="195" opacity="0.4">R</text>
+<text x="185" y="210" opacity="0.45">A</text>
+<text x="185" y="225" opacity="0.5">F</text>
+<text x="185" y="240" opacity="0.56">A</text>
+<text x="185" y="255" opacity="0.62">E</text>
+<text x="185" y="270" opacity="0.68">L</text>
+<text x="185" y="285" opacity="0.74">0</text>
+<text x="185" y="300" opacity="0.8">1</text>
+<text x="185" y="315" fill="#A6DCE8" opacity=".78">R</text>
+<text x="185" y="330" fill="#A6DCE8" opacity=".78">A</text>
+<text x="185" y="345" fill="#F2FBFD">F</text>
+</g>
+<g style="animation:d8 8.5s linear -4.4s infinite">
+<text x="210" y="-285" opacity="0.09">E</text>
+<text x="210" y="-270" opacity="0.12">L</text>
+<text x="210" y="-255" opacity="0.15">0</text>
+<text x="210" y="-240" opacity="0.18">1</text>
+<text x="210" y="-225" opacity="0.22">R</text>
+<text x="210" y="-210" opacity="0.26">A</text>
+<text x="210" y="-195" opacity="0.31">F</text>
+<text x="210" y="-180" opacity="0.35">A</text>
+<text x="210" y="-165" opacity="0.4">E</text>
+<text x="210" y="-150" opacity="0.45">L</text>
+<text x="210" y="-135" opacity="0.5">0</text>
+<text x="210" y="-120" opacity="0.56">1</text>
+<text x="210" y="-105" opacity="0.62">R</text>
+<text x="210" y="-90" opacity="0.68">A</text>
+<text x="210" y="-75" opacity="0.74">F</text>
+<text x="210" y="-60" opacity="0.8">A</text>
+<text x="210" y="-45" fill="#A6DCE8" opacity=".78">E</text>
+<text x="210" y="-30" fill="#A6DCE8" opacity=".78">L</text>
+<text x="210" y="-15" fill="#F2FBFD">0</text>
+<text x="210" y="75" opacity="0.09">E</text>
+<text x="210" y="90" opacity="0.12">L</text>
+<text x="210" y="105" opacity="0.15">0</text>
+<text x="210" y="120" opacity="0.18">1</text>
+<text x="210" y="135" opacity="0.22">R</text>
+<text x="210" y="150" opacity="0.26">A</text>
+<text x="210" y="165" opacity="0.31">F</text>
+<text x="210" y="180" opacity="0.35">A</text>
+<text x="210" y="195" opacity="0.4">E</text>
+<text x="210" y="210" opacity="0.45">L</text>
+<text x="210" y="225" opacity="0.5">0</text>
+<text x="210" y="240" opacity="0.56">1</text>
+<text x="210" y="255" opacity="0.62">R</text>
+<text x="210" y="270" opacity="0.68">A</text>
+<text x="210" y="285" opacity="0.74">F</text>
+<text x="210" y="300" opacity="0.8">A</text>
+<text x="210" y="315" fill="#A6DCE8" opacity=".78">E</text>
+<text x="210" y="330" fill="#A6DCE8" opacity=".78">L</text>
+<text x="210" y="345" fill="#F2FBFD">0</text>
+</g>
+<g style="animation:d9 7.7s linear -5.8s infinite">
+<text x="235" y="-285" opacity="0.09">0</text>
+<text x="235" y="-270" opacity="0.12">1</text>
+<text x="235" y="-255" opacity="0.15">R</text>
+<text x="235" y="-240" opacity="0.18">A</text>
+<text x="235" y="-225" opacity="0.22">F</text>
+<text x="235" y="-210" opacity="0.26">A</text>
+<text x="235" y="-195" opacity="0.31">E</text>
+<text x="235" y="-180" opacity="0.35">L</text>
+<text x="235" y="-165" opacity="0.4">0</text>
+<text x="235" y="-150" opacity="0.45">1</text>
+<text x="235" y="-135" opacity="0.5">R</text>
+<text x="235" y="-120" opacity="0.56">A</text>
+<text x="235" y="-105" opacity="0.62">F</text>
+<text x="235" y="-90" opacity="0.68">A</text>
+<text x="235" y="-75" opacity="0.74">E</text>
+<text x="235" y="-60" opacity="0.8">L</text>
+<text x="235" y="-45" fill="#A6DCE8" opacity=".78">0</text>
+<text x="235" y="-30" fill="#A6DCE8" opacity=".78">1</text>
+<text x="235" y="-15" fill="#F2FBFD">R</text>
+<text x="235" y="75" opacity="0.09">0</text>
+<text x="235" y="90" opacity="0.12">1</text>
+<text x="235" y="105" opacity="0.15">R</text>
+<text x="235" y="120" opacity="0.18">A</text>
+<text x="235" y="135" opacity="0.22">F</text>
+<text x="235" y="150" opacity="0.26">A</text>
+<text x="235" y="165" opacity="0.31">E</text>
+<text x="235" y="180" opacity="0.35">L</text>
+<text x="235" y="195" opacity="0.4">0</text>
+<text x="235" y="210" opacity="0.45">1</text>
+<text x="235" y="225" opacity="0.5">R</text>
+<text x="235" y="240" opacity="0.56">A</text>
+<text x="235" y="255" opacity="0.62">F</text>
+<text x="235" y="270" opacity="0.68">A</text>
+<text x="235" y="285" opacity="0.74">E</text>
+<text x="235" y="300" opacity="0.8">L</text>
+<text x="235" y="315" fill="#A6DCE8" opacity=".78">0</text>
+<text x="235" y="330" fill="#A6DCE8" opacity=".78">1</text>
+<text x="235" y="345" fill="#F2FBFD">R</text>
+</g>
+<g style="animation:d10 6.8s linear -10.0s infinite">
+<text x="260" y="-285" opacity="0.09">A</text>
+<text x="260" y="-270" opacity="0.12">F</text>
+<text x="260" y="-255" opacity="0.15">A</text>
+<text x="260" y="-240" opacity="0.18">E</text>
+<text x="260" y="-225" opacity="0.22">L</text>
+<text x="260" y="-210" opacity="0.26">0</text>
+<text x="260" y="-195" opacity="0.31">1</text>
+<text x="260" y="-180" opacity="0.35">R</text>
+<text x="260" y="-165" opacity="0.4">A</text>
+<text x="260" y="-150" opacity="0.45">F</text>
+<text x="260" y="-135" opacity="0.5">A</text>
+<text x="260" y="-120" opacity="0.56">E</text>
+<text x="260" y="-105" opacity="0.62">L</text>
+<text x="260" y="-90" opacity="0.68">0</text>
+<text x="260" y="-75" opacity="0.74">1</text>
+<text x="260" y="-60" opacity="0.8">R</text>
+<text x="260" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="260" y="-30" fill="#A6DCE8" opacity=".78">F</text>
+<text x="260" y="-15" fill="#F2FBFD">A</text>
+<text x="260" y="75" opacity="0.09">A</text>
+<text x="260" y="90" opacity="0.12">F</text>
+<text x="260" y="105" opacity="0.15">A</text>
+<text x="260" y="120" opacity="0.18">E</text>
+<text x="260" y="135" opacity="0.22">L</text>
+<text x="260" y="150" opacity="0.26">0</text>
+<text x="260" y="165" opacity="0.31">1</text>
+<text x="260" y="180" opacity="0.35">R</text>
+<text x="260" y="195" opacity="0.4">A</text>
+<text x="260" y="210" opacity="0.45">F</text>
+<text x="260" y="225" opacity="0.5">A</text>
+<text x="260" y="240" opacity="0.56">E</text>
+<text x="260" y="255" opacity="0.62">L</text>
+<text x="260" y="270" opacity="0.68">0</text>
+<text x="260" y="285" opacity="0.74">1</text>
+<text x="260" y="300" opacity="0.8">R</text>
+<text x="260" y="315" fill="#A6DCE8" opacity=".78">A</text>
+<text x="260" y="330" fill="#A6DCE8" opacity=".78">F</text>
+<text x="260" y="345" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d11 4.6s linear -3.0s infinite">
+<text x="285" y="-195" opacity="0.08">A</text>
+<text x="285" y="-180" opacity="0.12">F</text>
+<text x="285" y="-165" opacity="0.17">A</text>
+<text x="285" y="-150" opacity="0.23">E</text>
+<text x="285" y="-135" opacity="0.3">L</text>
+<text x="285" y="-120" opacity="0.37">0</text>
+<text x="285" y="-105" opacity="0.44">1</text>
+<text x="285" y="-90" opacity="0.52">R</text>
+<text x="285" y="-75" opacity="0.61">A</text>
+<text x="285" y="-60" opacity="0.7">F</text>
+<text x="285" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="285" y="-30" fill="#A6DCE8" opacity=".78">E</text>
+<text x="285" y="-15" fill="#F2FBFD">L</text>
+<text x="285" y="45" opacity="0.08">A</text>
+<text x="285" y="60" opacity="0.12">F</text>
+<text x="285" y="75" opacity="0.17">A</text>
+<text x="285" y="90" opacity="0.23">E</text>
+<text x="285" y="105" opacity="0.3">L</text>
+<text x="285" y="120" opacity="0.37">0</text>
+<text x="285" y="135" opacity="0.44">1</text>
+<text x="285" y="150" opacity="0.52">R</text>
+<text x="285" y="165" opacity="0.61">A</text>
+<text x="285" y="180" opacity="0.7">F</text>
+<text x="285" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="285" y="210" fill="#A6DCE8" opacity=".78">E</text>
+<text x="285" y="225" fill="#F2FBFD">L</text>
+</g>
+<g style="animation:d12 11.6s linear -8.0s infinite">
+<text x="310" y="-195" opacity="0.08">A</text>
+<text x="310" y="-180" opacity="0.12">E</text>
+<text x="310" y="-165" opacity="0.17">L</text>
+<text x="310" y="-150" opacity="0.23">0</text>
+<text x="310" y="-135" opacity="0.3">1</text>
+<text x="310" y="-120" opacity="0.37">R</text>
+<text x="310" y="-105" opacity="0.44">A</text>
+<text x="310" y="-90" opacity="0.52">F</text>
+<text x="310" y="-75" opacity="0.61">A</text>
+<text x="310" y="-60" opacity="0.7">E</text>
+<text x="310" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="310" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="310" y="-15" fill="#F2FBFD">1</text>
+<text x="310" y="45" opacity="0.08">A</text>
+<text x="310" y="60" opacity="0.12">E</text>
+<text x="310" y="75" opacity="0.17">L</text>
+<text x="310" y="90" opacity="0.23">0</text>
+<text x="310" y="105" opacity="0.3">1</text>
+<text x="310" y="120" opacity="0.37">R</text>
+<text x="310" y="135" opacity="0.44">A</text>
+<text x="310" y="150" opacity="0.52">F</text>
+<text x="310" y="165" opacity="0.61">A</text>
+<text x="310" y="180" opacity="0.7">E</text>
+<text x="310" y="195" fill="#A6DCE8" opacity=".78">L</text>
+<text x="310" y="210" fill="#A6DCE8" opacity=".78">0</text>
+<text x="310" y="225" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d13 5.9s linear -0.9s infinite">
+<text x="335" y="-195" opacity="0.08">A</text>
+<text x="335" y="-180" opacity="0.12">E</text>
+<text x="335" y="-165" opacity="0.17">L</text>
+<text x="335" y="-150" opacity="0.23">0</text>
+<text x="335" y="-135" opacity="0.3">1</text>
+<text x="335" y="-120" opacity="0.37">R</text>
+<text x="335" y="-105" opacity="0.44">A</text>
+<text x="335" y="-90" opacity="0.52">F</text>
+<text x="335" y="-75" opacity="0.61">A</text>
+<text x="335" y="-60" opacity="0.7">E</text>
+<text x="335" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="335" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="335" y="-15" fill="#F2FBFD">1</text>
+<text x="335" y="45" opacity="0.08">A</text>
+<text x="335" y="60" opacity="0.12">E</text>
+<text x="335" y="75" opacity="0.17">L</text>
+<text x="335" y="90" opacity="0.23">0</text>
+<text x="335" y="105" opacity="0.3">1</text>
+<text x="335" y="120" opacity="0.37">R</text>
+<text x="335" y="135" opacity="0.44">A</text>
+<text x="335" y="150" opacity="0.52">F</text>
+<text x="335" y="165" opacity="0.61">A</text>
+<text x="335" y="180" opacity="0.7">E</text>
+<text x="335" y="195" fill="#A6DCE8" opacity=".78">L</text>
+<text x="335" y="210" fill="#A6DCE8" opacity=".78">0</text>
+<text x="335" y="225" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d14 7.4s linear -3.8s infinite">
+<text x="360" y="-285" opacity="0.09">A</text>
+<text x="360" y="-270" opacity="0.12">E</text>
+<text x="360" y="-255" opacity="0.15">L</text>
+<text x="360" y="-240" opacity="0.18">0</text>
+<text x="360" y="-225" opacity="0.22">1</text>
+<text x="360" y="-210" opacity="0.26">R</text>
+<text x="360" y="-195" opacity="0.31">A</text>
+<text x="360" y="-180" opacity="0.35">F</text>
+<text x="360" y="-165" opacity="0.4">A</text>
+<text x="360" y="-150" opacity="0.45">E</text>
+<text x="360" y="-135" opacity="0.5">L</text>
+<text x="360" y="-120" opacity="0.56">0</text>
+<text x="360" y="-105" opacity="0.62">1</text>
+<text x="360" y="-90" opacity="0.68">R</text>
+<text x="360" y="-75" opacity="0.74">A</text>
+<text x="360" y="-60" opacity="0.8">F</text>
+<text x="360" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="360" y="-30" fill="#A6DCE8" opacity=".78">E</text>
+<text x="360" y="-15" fill="#F2FBFD">L</text>
+<text x="360" y="75" opacity="0.09">A</text>
+<text x="360" y="90" opacity="0.12">E</text>
+<text x="360" y="105" opacity="0.15">L</text>
+<text x="360" y="120" opacity="0.18">0</text>
+<text x="360" y="135" opacity="0.22">1</text>
+<text x="360" y="150" opacity="0.26">R</text>
+<text x="360" y="165" opacity="0.31">A</text>
+<text x="360" y="180" opacity="0.35">F</text>
+<text x="360" y="195" opacity="0.4">A</text>
+<text x="360" y="210" opacity="0.45">E</text>
+<text x="360" y="225" opacity="0.5">L</text>
+<text x="360" y="240" opacity="0.56">0</text>
+<text x="360" y="255" opacity="0.62">1</text>
+<text x="360" y="270" opacity="0.68">R</text>
+<text x="360" y="285" opacity="0.74">A</text>
+<text x="360" y="300" opacity="0.8">F</text>
+<text x="360" y="315" fill="#A6DCE8" opacity=".78">A</text>
+<text x="360" y="330" fill="#A6DCE8" opacity=".78">E</text>
+<text x="360" y="345" fill="#F2FBFD">L</text>
+</g>
+<g style="animation:d15 9.1s linear -10.4s infinite">
+<text x="385" y="-195" opacity="0.08">1</text>
+<text x="385" y="-180" opacity="0.12">R</text>
+<text x="385" y="-165" opacity="0.17">A</text>
+<text x="385" y="-150" opacity="0.23">F</text>
+<text x="385" y="-135" opacity="0.3">A</text>
+<text x="385" y="-120" opacity="0.37">E</text>
+<text x="385" y="-105" opacity="0.44">L</text>
+<text x="385" y="-90" opacity="0.52">0</text>
+<text x="385" y="-75" opacity="0.61">1</text>
+<text x="385" y="-60" opacity="0.7">R</text>
+<text x="385" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="385" y="-30" fill="#A6DCE8" opacity=".78">F</text>
+<text x="385" y="-15" fill="#F2FBFD">A</text>
+<text x="385" y="45" opacity="0.08">1</text>
+<text x="385" y="60" opacity="0.12">R</text>
+<text x="385" y="75" opacity="0.17">A</text>
+<text x="385" y="90" opacity="0.23">F</text>
+<text x="385" y="105" opacity="0.3">A</text>
+<text x="385" y="120" opacity="0.37">E</text>
+<text x="385" y="135" opacity="0.44">L</text>
+<text x="385" y="150" opacity="0.52">0</text>
+<text x="385" y="165" opacity="0.61">1</text>
+<text x="385" y="180" opacity="0.7">R</text>
+<text x="385" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="385" y="210" fill="#A6DCE8" opacity=".78">F</text>
+<text x="385" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d16 4.8s linear -8.7s infinite">
+<text x="410" y="-285" opacity="0.09">A</text>
+<text x="410" y="-270" opacity="0.12">E</text>
+<text x="410" y="-255" opacity="0.15">L</text>
+<text x="410" y="-240" opacity="0.18">0</text>
+<text x="410" y="-225" opacity="0.22">1</text>
+<text x="410" y="-210" opacity="0.26">R</text>
+<text x="410" y="-195" opacity="0.31">A</text>
+<text x="410" y="-180" opacity="0.35">F</text>
+<text x="410" y="-165" opacity="0.4">A</text>
+<text x="410" y="-150" opacity="0.45">E</text>
+<text x="410" y="-135" opacity="0.5">L</text>
+<text x="410" y="-120" opacity="0.56">0</text>
+<text x="410" y="-105" opacity="0.62">1</text>
+<text x="410" y="-90" opacity="0.68">R</text>
+<text x="410" y="-75" opacity="0.74">A</text>
+<text x="410" y="-60" opacity="0.8">F</text>
+<text x="410" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="410" y="-30" fill="#A6DCE8" opacity=".78">E</text>
+<text x="410" y="-15" fill="#F2FBFD">L</text>
+<text x="410" y="75" opacity="0.09">A</text>
+<text x="410" y="90" opacity="0.12">E</text>
+<text x="410" y="105" opacity="0.15">L</text>
+<text x="410" y="120" opacity="0.18">0</text>
+<text x="410" y="135" opacity="0.22">1</text>
+<text x="410" y="150" opacity="0.26">R</text>
+<text x="410" y="165" opacity="0.31">A</text>
+<text x="410" y="180" opacity="0.35">F</text>
+<text x="410" y="195" opacity="0.4">A</text>
+<text x="410" y="210" opacity="0.45">E</text>
+<text x="410" y="225" opacity="0.5">L</text>
+<text x="410" y="240" opacity="0.56">0</text>
+<text x="410" y="255" opacity="0.62">1</text>
+<text x="410" y="270" opacity="0.68">R</text>
+<text x="410" y="285" opacity="0.74">A</text>
+<text x="410" y="300" opacity="0.8">F</text>
+<text x="410" y="315" fill="#A6DCE8" opacity=".78">A</text>
+<text x="410" y="330" fill="#A6DCE8" opacity=".78">E</text>
+<text x="410" y="345" fill="#F2FBFD">L</text>
+</g>
+<g style="animation:d17 5.2s linear -3.8s infinite">
+<text x="435" y="-195" opacity="0.08">A</text>
+<text x="435" y="-180" opacity="0.12">E</text>
+<text x="435" y="-165" opacity="0.17">L</text>
+<text x="435" y="-150" opacity="0.23">0</text>
+<text x="435" y="-135" opacity="0.3">1</text>
+<text x="435" y="-120" opacity="0.37">R</text>
+<text x="435" y="-105" opacity="0.44">A</text>
+<text x="435" y="-90" opacity="0.52">F</text>
+<text x="435" y="-75" opacity="0.61">A</text>
+<text x="435" y="-60" opacity="0.7">E</text>
+<text x="435" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="435" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="435" y="-15" fill="#F2FBFD">1</text>
+<text x="435" y="45" opacity="0.08">A</text>
+<text x="435" y="60" opacity="0.12">E</text>
+<text x="435" y="75" opacity="0.17">L</text>
+<text x="435" y="90" opacity="0.23">0</text>
+<text x="435" y="105" opacity="0.3">1</text>
+<text x="435" y="120" opacity="0.37">R</text>
+<text x="435" y="135" opacity="0.44">A</text>
+<text x="435" y="150" opacity="0.52">F</text>
+<text x="435" y="165" opacity="0.61">A</text>
+<text x="435" y="180" opacity="0.7">E</text>
+<text x="435" y="195" fill="#A6DCE8" opacity=".78">L</text>
+<text x="435" y="210" fill="#A6DCE8" opacity=".78">0</text>
+<text x="435" y="225" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d18 8.2s linear -6.7s infinite">
+<text x="460" y="-195" opacity="0.08">0</text>
+<text x="460" y="-180" opacity="0.12">1</text>
+<text x="460" y="-165" opacity="0.17">R</text>
+<text x="460" y="-150" opacity="0.23">A</text>
+<text x="460" y="-135" opacity="0.3">F</text>
+<text x="460" y="-120" opacity="0.37">A</text>
+<text x="460" y="-105" opacity="0.44">E</text>
+<text x="460" y="-90" opacity="0.52">L</text>
+<text x="460" y="-75" opacity="0.61">0</text>
+<text x="460" y="-60" opacity="0.7">1</text>
+<text x="460" y="-45" fill="#A6DCE8" opacity=".78">R</text>
+<text x="460" y="-30" fill="#A6DCE8" opacity=".78">A</text>
+<text x="460" y="-15" fill="#F2FBFD">F</text>
+<text x="460" y="45" opacity="0.08">0</text>
+<text x="460" y="60" opacity="0.12">1</text>
+<text x="460" y="75" opacity="0.17">R</text>
+<text x="460" y="90" opacity="0.23">A</text>
+<text x="460" y="105" opacity="0.3">F</text>
+<text x="460" y="120" opacity="0.37">A</text>
+<text x="460" y="135" opacity="0.44">E</text>
+<text x="460" y="150" opacity="0.52">L</text>
+<text x="460" y="165" opacity="0.61">0</text>
+<text x="460" y="180" opacity="0.7">1</text>
+<text x="460" y="195" fill="#A6DCE8" opacity=".78">R</text>
+<text x="460" y="210" fill="#A6DCE8" opacity=".78">A</text>
+<text x="460" y="225" fill="#F2FBFD">F</text>
+</g>
+<g style="animation:d19 8.6s linear -0.2s infinite">
+<text x="485" y="-285" opacity="0.09">1</text>
+<text x="485" y="-270" opacity="0.12">R</text>
+<text x="485" y="-255" opacity="0.15">A</text>
+<text x="485" y="-240" opacity="0.18">F</text>
+<text x="485" y="-225" opacity="0.22">A</text>
+<text x="485" y="-210" opacity="0.26">E</text>
+<text x="485" y="-195" opacity="0.31">L</text>
+<text x="485" y="-180" opacity="0.35">0</text>
+<text x="485" y="-165" opacity="0.4">1</text>
+<text x="485" y="-150" opacity="0.45">R</text>
+<text x="485" y="-135" opacity="0.5">A</text>
+<text x="485" y="-120" opacity="0.56">F</text>
+<text x="485" y="-105" opacity="0.62">A</text>
+<text x="485" y="-90" opacity="0.68">E</text>
+<text x="485" y="-75" opacity="0.74">L</text>
+<text x="485" y="-60" opacity="0.8">0</text>
+<text x="485" y="-45" fill="#A6DCE8" opacity=".78">1</text>
+<text x="485" y="-30" fill="#A6DCE8" opacity=".78">R</text>
+<text x="485" y="-15" fill="#F2FBFD">A</text>
+<text x="485" y="75" opacity="0.09">1</text>
+<text x="485" y="90" opacity="0.12">R</text>
+<text x="485" y="105" opacity="0.15">A</text>
+<text x="485" y="120" opacity="0.18">F</text>
+<text x="485" y="135" opacity="0.22">A</text>
+<text x="485" y="150" opacity="0.26">E</text>
+<text x="485" y="165" opacity="0.31">L</text>
+<text x="485" y="180" opacity="0.35">0</text>
+<text x="485" y="195" opacity="0.4">1</text>
+<text x="485" y="210" opacity="0.45">R</text>
+<text x="485" y="225" opacity="0.5">A</text>
+<text x="485" y="240" opacity="0.56">F</text>
+<text x="485" y="255" opacity="0.62">A</text>
+<text x="485" y="270" opacity="0.68">E</text>
+<text x="485" y="285" opacity="0.74">L</text>
+<text x="485" y="300" opacity="0.8">0</text>
+<text x="485" y="315" fill="#A6DCE8" opacity=".78">1</text>
+<text x="485" y="330" fill="#A6DCE8" opacity=".78">R</text>
+<text x="485" y="345" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d20 9.8s linear -11.5s infinite">
+<text x="510" y="-285" opacity="0.09">A</text>
+<text x="510" y="-270" opacity="0.12">E</text>
+<text x="510" y="-255" opacity="0.15">L</text>
+<text x="510" y="-240" opacity="0.18">0</text>
+<text x="510" y="-225" opacity="0.22">1</text>
+<text x="510" y="-210" opacity="0.26">R</text>
+<text x="510" y="-195" opacity="0.31">A</text>
+<text x="510" y="-180" opacity="0.35">F</text>
+<text x="510" y="-165" opacity="0.4">A</text>
+<text x="510" y="-150" opacity="0.45">E</text>
+<text x="510" y="-135" opacity="0.5">L</text>
+<text x="510" y="-120" opacity="0.56">0</text>
+<text x="510" y="-105" opacity="0.62">1</text>
+<text x="510" y="-90" opacity="0.68">R</text>
+<text x="510" y="-75" opacity="0.74">A</text>
+<text x="510" y="-60" opacity="0.8">F</text>
+<text x="510" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="510" y="-30" fill="#A6DCE8" opacity=".78">E</text>
+<text x="510" y="-15" fill="#F2FBFD">L</text>
+<text x="510" y="75" opacity="0.09">A</text>
+<text x="510" y="90" opacity="0.12">E</text>
+<text x="510" y="105" opacity="0.15">L</text>
+<text x="510" y="120" opacity="0.18">0</text>
+<text x="510" y="135" opacity="0.22">1</text>
+<text x="510" y="150" opacity="0.26">R</text>
+<text x="510" y="165" opacity="0.31">A</text>
+<text x="510" y="180" opacity="0.35">F</text>
+<text x="510" y="195" opacity="0.4">A</text>
+<text x="510" y="210" opacity="0.45">E</text>
+<text x="510" y="225" opacity="0.5">L</text>
+<text x="510" y="240" opacity="0.56">0</text>
+<text x="510" y="255" opacity="0.62">1</text>
+<text x="510" y="270" opacity="0.68">R</text>
+<text x="510" y="285" opacity="0.74">A</text>
+<text x="510" y="300" opacity="0.8">F</text>
+<text x="510" y="315" fill="#A6DCE8" opacity=".78">A</text>
+<text x="510" y="330" fill="#A6DCE8" opacity=".78">E</text>
+<text x="510" y="345" fill="#F2FBFD">L</text>
+</g>
+<g style="animation:d21 4.0s linear -1.8s infinite">
+<text x="535" y="-195" opacity="0.08">1</text>
+<text x="535" y="-180" opacity="0.12">R</text>
+<text x="535" y="-165" opacity="0.17">A</text>
+<text x="535" y="-150" opacity="0.23">F</text>
+<text x="535" y="-135" opacity="0.3">A</text>
+<text x="535" y="-120" opacity="0.37">E</text>
+<text x="535" y="-105" opacity="0.44">L</text>
+<text x="535" y="-90" opacity="0.52">0</text>
+<text x="535" y="-75" opacity="0.61">1</text>
+<text x="535" y="-60" opacity="0.7">R</text>
+<text x="535" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="535" y="-30" fill="#A6DCE8" opacity=".78">F</text>
+<text x="535" y="-15" fill="#F2FBFD">A</text>
+<text x="535" y="45" opacity="0.08">1</text>
+<text x="535" y="60" opacity="0.12">R</text>
+<text x="535" y="75" opacity="0.17">A</text>
+<text x="535" y="90" opacity="0.23">F</text>
+<text x="535" y="105" opacity="0.3">A</text>
+<text x="535" y="120" opacity="0.37">E</text>
+<text x="535" y="135" opacity="0.44">L</text>
+<text x="535" y="150" opacity="0.52">0</text>
+<text x="535" y="165" opacity="0.61">1</text>
+<text x="535" y="180" opacity="0.7">R</text>
+<text x="535" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="535" y="210" fill="#A6DCE8" opacity=".78">F</text>
+<text x="535" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d22 5.9s linear -7.9s infinite">
+<text x="560" y="-195" opacity="0.08">E</text>
+<text x="560" y="-180" opacity="0.12">L</text>
+<text x="560" y="-165" opacity="0.17">0</text>
+<text x="560" y="-150" opacity="0.23">1</text>
+<text x="560" y="-135" opacity="0.3">R</text>
+<text x="560" y="-120" opacity="0.37">A</text>
+<text x="560" y="-105" opacity="0.44">F</text>
+<text x="560" y="-90" opacity="0.52">A</text>
+<text x="560" y="-75" opacity="0.61">E</text>
+<text x="560" y="-60" opacity="0.7">L</text>
+<text x="560" y="-45" fill="#A6DCE8" opacity=".78">0</text>
+<text x="560" y="-30" fill="#A6DCE8" opacity=".78">1</text>
+<text x="560" y="-15" fill="#F2FBFD">R</text>
+<text x="560" y="45" opacity="0.08">E</text>
+<text x="560" y="60" opacity="0.12">L</text>
+<text x="560" y="75" opacity="0.17">0</text>
+<text x="560" y="90" opacity="0.23">1</text>
+<text x="560" y="105" opacity="0.3">R</text>
+<text x="560" y="120" opacity="0.37">A</text>
+<text x="560" y="135" opacity="0.44">F</text>
+<text x="560" y="150" opacity="0.52">A</text>
+<text x="560" y="165" opacity="0.61">E</text>
+<text x="560" y="180" opacity="0.7">L</text>
+<text x="560" y="195" fill="#A6DCE8" opacity=".78">0</text>
+<text x="560" y="210" fill="#A6DCE8" opacity=".78">1</text>
+<text x="560" y="225" fill="#F2FBFD">R</text>
+</g>
+<g style="animation:d23 12.9s linear -10.2s infinite">
+<text x="585" y="-195" opacity="0.08">1</text>
+<text x="585" y="-180" opacity="0.12">R</text>
+<text x="585" y="-165" opacity="0.17">A</text>
+<text x="585" y="-150" opacity="0.23">F</text>
+<text x="585" y="-135" opacity="0.3">A</text>
+<text x="585" y="-120" opacity="0.37">E</text>
+<text x="585" y="-105" opacity="0.44">L</text>
+<text x="585" y="-90" opacity="0.52">0</text>
+<text x="585" y="-75" opacity="0.61">1</text>
+<text x="585" y="-60" opacity="0.7">R</text>
+<text x="585" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="585" y="-30" fill="#A6DCE8" opacity=".78">F</text>
+<text x="585" y="-15" fill="#F2FBFD">A</text>
+<text x="585" y="45" opacity="0.08">1</text>
+<text x="585" y="60" opacity="0.12">R</text>
+<text x="585" y="75" opacity="0.17">A</text>
+<text x="585" y="90" opacity="0.23">F</text>
+<text x="585" y="105" opacity="0.3">A</text>
+<text x="585" y="120" opacity="0.37">E</text>
+<text x="585" y="135" opacity="0.44">L</text>
+<text x="585" y="150" opacity="0.52">0</text>
+<text x="585" y="165" opacity="0.61">1</text>
+<text x="585" y="180" opacity="0.7">R</text>
+<text x="585" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="585" y="210" fill="#A6DCE8" opacity=".78">F</text>
+<text x="585" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d24 11.0s linear -8.7s infinite">
+<text x="610" y="-195" opacity="0.08">1</text>
+<text x="610" y="-180" opacity="0.12">R</text>
+<text x="610" y="-165" opacity="0.17">A</text>
+<text x="610" y="-150" opacity="0.23">F</text>
+<text x="610" y="-135" opacity="0.3">A</text>
+<text x="610" y="-120" opacity="0.37">E</text>
+<text x="610" y="-105" opacity="0.44">L</text>
+<text x="610" y="-90" opacity="0.52">0</text>
+<text x="610" y="-75" opacity="0.61">1</text>
+<text x="610" y="-60" opacity="0.7">R</text>
+<text x="610" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="610" y="-30" fill="#A6DCE8" opacity=".78">F</text>
+<text x="610" y="-15" fill="#F2FBFD">A</text>
+<text x="610" y="45" opacity="0.08">1</text>
+<text x="610" y="60" opacity="0.12">R</text>
+<text x="610" y="75" opacity="0.17">A</text>
+<text x="610" y="90" opacity="0.23">F</text>
+<text x="610" y="105" opacity="0.3">A</text>
+<text x="610" y="120" opacity="0.37">E</text>
+<text x="610" y="135" opacity="0.44">L</text>
+<text x="610" y="150" opacity="0.52">0</text>
+<text x="610" y="165" opacity="0.61">1</text>
+<text x="610" y="180" opacity="0.7">R</text>
+<text x="610" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="610" y="210" fill="#A6DCE8" opacity=".78">F</text>
+<text x="610" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d25 4.7s linear -11.8s infinite">
+<text x="635" y="-285" opacity="0.09">R</text>
+<text x="635" y="-270" opacity="0.12">A</text>
+<text x="635" y="-255" opacity="0.15">F</text>
+<text x="635" y="-240" opacity="0.18">A</text>
+<text x="635" y="-225" opacity="0.22">E</text>
+<text x="635" y="-210" opacity="0.26">L</text>
+<text x="635" y="-195" opacity="0.31">0</text>
+<text x="635" y="-180" opacity="0.35">1</text>
+<text x="635" y="-165" opacity="0.4">R</text>
+<text x="635" y="-150" opacity="0.45">A</text>
+<text x="635" y="-135" opacity="0.5">F</text>
+<text x="635" y="-120" opacity="0.56">A</text>
+<text x="635" y="-105" opacity="0.62">E</text>
+<text x="635" y="-90" opacity="0.68">L</text>
+<text x="635" y="-75" opacity="0.74">0</text>
+<text x="635" y="-60" opacity="0.8">1</text>
+<text x="635" y="-45" fill="#A6DCE8" opacity=".78">R</text>
+<text x="635" y="-30" fill="#A6DCE8" opacity=".78">A</text>
+<text x="635" y="-15" fill="#F2FBFD">F</text>
+<text x="635" y="75" opacity="0.09">R</text>
+<text x="635" y="90" opacity="0.12">A</text>
+<text x="635" y="105" opacity="0.15">F</text>
+<text x="635" y="120" opacity="0.18">A</text>
+<text x="635" y="135" opacity="0.22">E</text>
+<text x="635" y="150" opacity="0.26">L</text>
+<text x="635" y="165" opacity="0.31">0</text>
+<text x="635" y="180" opacity="0.35">1</text>
+<text x="635" y="195" opacity="0.4">R</text>
+<text x="635" y="210" opacity="0.45">A</text>
+<text x="635" y="225" opacity="0.5">F</text>
+<text x="635" y="240" opacity="0.56">A</text>
+<text x="635" y="255" opacity="0.62">E</text>
+<text x="635" y="270" opacity="0.68">L</text>
+<text x="635" y="285" opacity="0.74">0</text>
+<text x="635" y="300" opacity="0.8">1</text>
+<text x="635" y="315" fill="#A6DCE8" opacity=".78">R</text>
+<text x="635" y="330" fill="#A6DCE8" opacity=".78">A</text>
+<text x="635" y="345" fill="#F2FBFD">F</text>
+</g>
+<g style="animation:d26 9.4s linear -8.2s infinite">
+<text x="660" y="-195" opacity="0.08">F</text>
+<text x="660" y="-180" opacity="0.12">A</text>
+<text x="660" y="-165" opacity="0.17">E</text>
+<text x="660" y="-150" opacity="0.23">L</text>
+<text x="660" y="-135" opacity="0.3">0</text>
+<text x="660" y="-120" opacity="0.37">1</text>
+<text x="660" y="-105" opacity="0.44">R</text>
+<text x="660" y="-90" opacity="0.52">A</text>
+<text x="660" y="-75" opacity="0.61">F</text>
+<text x="660" y="-60" opacity="0.7">A</text>
+<text x="660" y="-45" fill="#A6DCE8" opacity=".78">E</text>
+<text x="660" y="-30" fill="#A6DCE8" opacity=".78">L</text>
+<text x="660" y="-15" fill="#F2FBFD">0</text>
+<text x="660" y="45" opacity="0.08">F</text>
+<text x="660" y="60" opacity="0.12">A</text>
+<text x="660" y="75" opacity="0.17">E</text>
+<text x="660" y="90" opacity="0.23">L</text>
+<text x="660" y="105" opacity="0.3">0</text>
+<text x="660" y="120" opacity="0.37">1</text>
+<text x="660" y="135" opacity="0.44">R</text>
+<text x="660" y="150" opacity="0.52">A</text>
+<text x="660" y="165" opacity="0.61">F</text>
+<text x="660" y="180" opacity="0.7">A</text>
+<text x="660" y="195" fill="#A6DCE8" opacity=".78">E</text>
+<text x="660" y="210" fill="#A6DCE8" opacity=".78">L</text>
+<text x="660" y="225" fill="#F2FBFD">0</text>
+</g>
+<g style="animation:d27 12.6s linear -6.7s infinite">
+<text x="685" y="-195" opacity="0.08">L</text>
+<text x="685" y="-180" opacity="0.12">0</text>
+<text x="685" y="-165" opacity="0.17">1</text>
+<text x="685" y="-150" opacity="0.23">R</text>
+<text x="685" y="-135" opacity="0.3">A</text>
+<text x="685" y="-120" opacity="0.37">F</text>
+<text x="685" y="-105" opacity="0.44">A</text>
+<text x="685" y="-90" opacity="0.52">E</text>
+<text x="685" y="-75" opacity="0.61">L</text>
+<text x="685" y="-60" opacity="0.7">0</text>
+<text x="685" y="-45" fill="#A6DCE8" opacity=".78">1</text>
+<text x="685" y="-30" fill="#A6DCE8" opacity=".78">R</text>
+<text x="685" y="-15" fill="#F2FBFD">A</text>
+<text x="685" y="45" opacity="0.08">L</text>
+<text x="685" y="60" opacity="0.12">0</text>
+<text x="685" y="75" opacity="0.17">1</text>
+<text x="685" y="90" opacity="0.23">R</text>
+<text x="685" y="105" opacity="0.3">A</text>
+<text x="685" y="120" opacity="0.37">F</text>
+<text x="685" y="135" opacity="0.44">A</text>
+<text x="685" y="150" opacity="0.52">E</text>
+<text x="685" y="165" opacity="0.61">L</text>
+<text x="685" y="180" opacity="0.7">0</text>
+<text x="685" y="195" fill="#A6DCE8" opacity=".78">1</text>
+<text x="685" y="210" fill="#A6DCE8" opacity=".78">R</text>
+<text x="685" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d28 5.6s linear -11.0s infinite">
+<text x="710" y="-285" opacity="0.09">R</text>
+<text x="710" y="-270" opacity="0.12">A</text>
+<text x="710" y="-255" opacity="0.15">F</text>
+<text x="710" y="-240" opacity="0.18">A</text>
+<text x="710" y="-225" opacity="0.22">E</text>
+<text x="710" y="-210" opacity="0.26">L</text>
+<text x="710" y="-195" opacity="0.31">0</text>
+<text x="710" y="-180" opacity="0.35">1</text>
+<text x="710" y="-165" opacity="0.4">R</text>
+<text x="710" y="-150" opacity="0.45">A</text>
+<text x="710" y="-135" opacity="0.5">F</text>
+<text x="710" y="-120" opacity="0.56">A</text>
+<text x="710" y="-105" opacity="0.62">E</text>
+<text x="710" y="-90" opacity="0.68">L</text>
+<text x="710" y="-75" opacity="0.74">0</text>
+<text x="710" y="-60" opacity="0.8">1</text>
+<text x="710" y="-45" fill="#A6DCE8" opacity=".78">R</text>
+<text x="710" y="-30" fill="#A6DCE8" opacity=".78">A</text>
+<text x="710" y="-15" fill="#F2FBFD">F</text>
+<text x="710" y="75" opacity="0.09">R</text>
+<text x="710" y="90" opacity="0.12">A</text>
+<text x="710" y="105" opacity="0.15">F</text>
+<text x="710" y="120" opacity="0.18">A</text>
+<text x="710" y="135" opacity="0.22">E</text>
+<text x="710" y="150" opacity="0.26">L</text>
+<text x="710" y="165" opacity="0.31">0</text>
+<text x="710" y="180" opacity="0.35">1</text>
+<text x="710" y="195" opacity="0.4">R</text>
+<text x="710" y="210" opacity="0.45">A</text>
+<text x="710" y="225" opacity="0.5">F</text>
+<text x="710" y="240" opacity="0.56">A</text>
+<text x="710" y="255" opacity="0.62">E</text>
+<text x="710" y="270" opacity="0.68">L</text>
+<text x="710" y="285" opacity="0.74">0</text>
+<text x="710" y="300" opacity="0.8">1</text>
+<text x="710" y="315" fill="#A6DCE8" opacity=".78">R</text>
+<text x="710" y="330" fill="#A6DCE8" opacity=".78">A</text>
+<text x="710" y="345" fill="#F2FBFD">F</text>
+</g>
+<g style="animation:d29 10.5s linear -10.9s infinite">
+<text x="735" y="-195" opacity="0.08">0</text>
+<text x="735" y="-180" opacity="0.12">1</text>
+<text x="735" y="-165" opacity="0.17">R</text>
+<text x="735" y="-150" opacity="0.23">A</text>
+<text x="735" y="-135" opacity="0.3">F</text>
+<text x="735" y="-120" opacity="0.37">A</text>
+<text x="735" y="-105" opacity="0.44">E</text>
+<text x="735" y="-90" opacity="0.52">L</text>
+<text x="735" y="-75" opacity="0.61">0</text>
+<text x="735" y="-60" opacity="0.7">1</text>
+<text x="735" y="-45" fill="#A6DCE8" opacity=".78">R</text>
+<text x="735" y="-30" fill="#A6DCE8" opacity=".78">A</text>
+<text x="735" y="-15" fill="#F2FBFD">F</text>
+<text x="735" y="45" opacity="0.08">0</text>
+<text x="735" y="60" opacity="0.12">1</text>
+<text x="735" y="75" opacity="0.17">R</text>
+<text x="735" y="90" opacity="0.23">A</text>
+<text x="735" y="105" opacity="0.3">F</text>
+<text x="735" y="120" opacity="0.37">A</text>
+<text x="735" y="135" opacity="0.44">E</text>
+<text x="735" y="150" opacity="0.52">L</text>
+<text x="735" y="165" opacity="0.61">0</text>
+<text x="735" y="180" opacity="0.7">1</text>
+<text x="735" y="195" fill="#A6DCE8" opacity=".78">R</text>
+<text x="735" y="210" fill="#A6DCE8" opacity=".78">A</text>
+<text x="735" y="225" fill="#F2FBFD">F</text>
+</g>
+<g style="animation:d30 11.9s linear -5.2s infinite">
+<text x="760" y="-285" opacity="0.09">A</text>
+<text x="760" y="-270" opacity="0.12">E</text>
+<text x="760" y="-255" opacity="0.15">L</text>
+<text x="760" y="-240" opacity="0.18">0</text>
+<text x="760" y="-225" opacity="0.22">1</text>
+<text x="760" y="-210" opacity="0.26">R</text>
+<text x="760" y="-195" opacity="0.31">A</text>
+<text x="760" y="-180" opacity="0.35">F</text>
+<text x="760" y="-165" opacity="0.4">A</text>
+<text x="760" y="-150" opacity="0.45">E</text>
+<text x="760" y="-135" opacity="0.5">L</text>
+<text x="760" y="-120" opacity="0.56">0</text>
+<text x="760" y="-105" opacity="0.62">1</text>
+<text x="760" y="-90" opacity="0.68">R</text>
+<text x="760" y="-75" opacity="0.74">A</text>
+<text x="760" y="-60" opacity="0.8">F</text>
+<text x="760" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="760" y="-30" fill="#A6DCE8" opacity=".78">E</text>
+<text x="760" y="-15" fill="#F2FBFD">L</text>
+<text x="760" y="75" opacity="0.09">A</text>
+<text x="760" y="90" opacity="0.12">E</text>
+<text x="760" y="105" opacity="0.15">L</text>
+<text x="760" y="120" opacity="0.18">0</text>
+<text x="760" y="135" opacity="0.22">1</text>
+<text x="760" y="150" opacity="0.26">R</text>
+<text x="760" y="165" opacity="0.31">A</text>
+<text x="760" y="180" opacity="0.35">F</text>
+<text x="760" y="195" opacity="0.4">A</text>
+<text x="760" y="210" opacity="0.45">E</text>
+<text x="760" y="225" opacity="0.5">L</text>
+<text x="760" y="240" opacity="0.56">0</text>
+<text x="760" y="255" opacity="0.62">1</text>
+<text x="760" y="270" opacity="0.68">R</text>
+<text x="760" y="285" opacity="0.74">A</text>
+<text x="760" y="300" opacity="0.8">F</text>
+<text x="760" y="315" fill="#A6DCE8" opacity=".78">A</text>
+<text x="760" y="330" fill="#A6DCE8" opacity=".78">E</text>
+<text x="760" y="345" fill="#F2FBFD">L</text>
+</g>
+<g style="animation:d31 4.9s linear -12.5s infinite">
+<text x="785" y="-195" opacity="0.08">1</text>
+<text x="785" y="-180" opacity="0.12">R</text>
+<text x="785" y="-165" opacity="0.17">A</text>
+<text x="785" y="-150" opacity="0.23">F</text>
+<text x="785" y="-135" opacity="0.3">A</text>
+<text x="785" y="-120" opacity="0.37">E</text>
+<text x="785" y="-105" opacity="0.44">L</text>
+<text x="785" y="-90" opacity="0.52">0</text>
+<text x="785" y="-75" opacity="0.61">1</text>
+<text x="785" y="-60" opacity="0.7">R</text>
+<text x="785" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="785" y="-30" fill="#A6DCE8" opacity=".78">F</text>
+<text x="785" y="-15" fill="#F2FBFD">A</text>
+<text x="785" y="45" opacity="0.08">1</text>
+<text x="785" y="60" opacity="0.12">R</text>
+<text x="785" y="75" opacity="0.17">A</text>
+<text x="785" y="90" opacity="0.23">F</text>
+<text x="785" y="105" opacity="0.3">A</text>
+<text x="785" y="120" opacity="0.37">E</text>
+<text x="785" y="135" opacity="0.44">L</text>
+<text x="785" y="150" opacity="0.52">0</text>
+<text x="785" y="165" opacity="0.61">1</text>
+<text x="785" y="180" opacity="0.7">R</text>
+<text x="785" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="785" y="210" fill="#A6DCE8" opacity=".78">F</text>
+<text x="785" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d32 10.7s linear -7.9s infinite">
+<text x="810" y="-195" opacity="0.08">A</text>
+<text x="810" y="-180" opacity="0.12">F</text>
+<text x="810" y="-165" opacity="0.17">A</text>
+<text x="810" y="-150" opacity="0.23">E</text>
+<text x="810" y="-135" opacity="0.3">L</text>
+<text x="810" y="-120" opacity="0.37">0</text>
+<text x="810" y="-105" opacity="0.44">1</text>
+<text x="810" y="-90" opacity="0.52">R</text>
+<text x="810" y="-75" opacity="0.61">A</text>
+<text x="810" y="-60" opacity="0.7">F</text>
+<text x="810" y="-45" fill="#A6DCE8" opacity=".78">A</text>
+<text x="810" y="-30" fill="#A6DCE8" opacity=".78">E</text>
+<text x="810" y="-15" fill="#F2FBFD">L</text>
+<text x="810" y="45" opacity="0.08">A</text>
+<text x="810" y="60" opacity="0.12">F</text>
+<text x="810" y="75" opacity="0.17">A</text>
+<text x="810" y="90" opacity="0.23">E</text>
+<text x="810" y="105" opacity="0.3">L</text>
+<text x="810" y="120" opacity="0.37">0</text>
+<text x="810" y="135" opacity="0.44">1</text>
+<text x="810" y="150" opacity="0.52">R</text>
+<text x="810" y="165" opacity="0.61">A</text>
+<text x="810" y="180" opacity="0.7">F</text>
+<text x="810" y="195" fill="#A6DCE8" opacity=".78">A</text>
+<text x="810" y="210" fill="#A6DCE8" opacity=".78">E</text>
+<text x="810" y="225" fill="#F2FBFD">L</text>
+</g>
+<g style="animation:d33 6.6s linear -10.7s infinite">
+<text x="835" y="-285" opacity="0.09">0</text>
+<text x="835" y="-270" opacity="0.12">1</text>
+<text x="835" y="-255" opacity="0.15">R</text>
+<text x="835" y="-240" opacity="0.18">A</text>
+<text x="835" y="-225" opacity="0.22">F</text>
+<text x="835" y="-210" opacity="0.26">A</text>
+<text x="835" y="-195" opacity="0.31">E</text>
+<text x="835" y="-180" opacity="0.35">L</text>
+<text x="835" y="-165" opacity="0.4">0</text>
+<text x="835" y="-150" opacity="0.45">1</text>
+<text x="835" y="-135" opacity="0.5">R</text>
+<text x="835" y="-120" opacity="0.56">A</text>
+<text x="835" y="-105" opacity="0.62">F</text>
+<text x="835" y="-90" opacity="0.68">A</text>
+<text x="835" y="-75" opacity="0.74">E</text>
+<text x="835" y="-60" opacity="0.8">L</text>
+<text x="835" y="-45" fill="#A6DCE8" opacity=".78">0</text>
+<text x="835" y="-30" fill="#A6DCE8" opacity=".78">1</text>
+<text x="835" y="-15" fill="#F2FBFD">R</text>
+<text x="835" y="75" opacity="0.09">0</text>
+<text x="835" y="90" opacity="0.12">1</text>
+<text x="835" y="105" opacity="0.15">R</text>
+<text x="835" y="120" opacity="0.18">A</text>
+<text x="835" y="135" opacity="0.22">F</text>
+<text x="835" y="150" opacity="0.26">A</text>
+<text x="835" y="165" opacity="0.31">E</text>
+<text x="835" y="180" opacity="0.35">L</text>
+<text x="835" y="195" opacity="0.4">0</text>
+<text x="835" y="210" opacity="0.45">1</text>
+<text x="835" y="225" opacity="0.5">R</text>
+<text x="835" y="240" opacity="0.56">A</text>
+<text x="835" y="255" opacity="0.62">F</text>
+<text x="835" y="270" opacity="0.68">A</text>
+<text x="835" y="285" opacity="0.74">E</text>
+<text x="835" y="300" opacity="0.8">L</text>
+<text x="835" y="315" fill="#A6DCE8" opacity=".78">0</text>
+<text x="835" y="330" fill="#A6DCE8" opacity=".78">1</text>
+<text x="835" y="345" fill="#F2FBFD">R</text>
+</g>
+<g style="animation:d34 6.1s linear -5.7s infinite">
+<text x="860" y="-195" opacity="0.08">E</text>
+<text x="860" y="-180" opacity="0.12">L</text>
+<text x="860" y="-165" opacity="0.17">0</text>
+<text x="860" y="-150" opacity="0.23">1</text>
+<text x="860" y="-135" opacity="0.3">R</text>
+<text x="860" y="-120" opacity="0.37">A</text>
+<text x="860" y="-105" opacity="0.44">F</text>
+<text x="860" y="-90" opacity="0.52">A</text>
+<text x="860" y="-75" opacity="0.61">E</text>
+<text x="860" y="-60" opacity="0.7">L</text>
+<text x="860" y="-45" fill="#A6DCE8" opacity=".78">0</text>
+<text x="860" y="-30" fill="#A6DCE8" opacity=".78">1</text>
+<text x="860" y="-15" fill="#F2FBFD">R</text>
+<text x="860" y="45" opacity="0.08">E</text>
+<text x="860" y="60" opacity="0.12">L</text>
+<text x="860" y="75" opacity="0.17">0</text>
+<text x="860" y="90" opacity="0.23">1</text>
+<text x="860" y="105" opacity="0.3">R</text>
+<text x="860" y="120" opacity="0.37">A</text>
+<text x="860" y="135" opacity="0.44">F</text>
+<text x="860" y="150" opacity="0.52">A</text>
+<text x="860" y="165" opacity="0.61">E</text>
+<text x="860" y="180" opacity="0.7">L</text>
+<text x="860" y="195" fill="#A6DCE8" opacity=".78">0</text>
+<text x="860" y="210" fill="#A6DCE8" opacity=".78">1</text>
+<text x="860" y="225" fill="#F2FBFD">R</text>
+</g>
+<g style="animation:d35 5.9s linear -1.1s infinite">
+<text x="885" y="-285" opacity="0.09">L</text>
+<text x="885" y="-270" opacity="0.12">0</text>
+<text x="885" y="-255" opacity="0.15">1</text>
+<text x="885" y="-240" opacity="0.18">R</text>
+<text x="885" y="-225" opacity="0.22">A</text>
+<text x="885" y="-210" opacity="0.26">F</text>
+<text x="885" y="-195" opacity="0.31">A</text>
+<text x="885" y="-180" opacity="0.35">E</text>
+<text x="885" y="-165" opacity="0.4">L</text>
+<text x="885" y="-150" opacity="0.45">0</text>
+<text x="885" y="-135" opacity="0.5">1</text>
+<text x="885" y="-120" opacity="0.56">R</text>
+<text x="885" y="-105" opacity="0.62">A</text>
+<text x="885" y="-90" opacity="0.68">F</text>
+<text x="885" y="-75" opacity="0.74">A</text>
+<text x="885" y="-60" opacity="0.8">E</text>
+<text x="885" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="885" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="885" y="-15" fill="#F2FBFD">1</text>
+<text x="885" y="75" opacity="0.09">L</text>
+<text x="885" y="90" opacity="0.12">0</text>
+<text x="885" y="105" opacity="0.15">1</text>
+<text x="885" y="120" opacity="0.18">R</text>
+<text x="885" y="135" opacity="0.22">A</text>
+<text x="885" y="150" opacity="0.26">F</text>
+<text x="885" y="165" opacity="0.31">A</text>
+<text x="885" y="180" opacity="0.35">E</text>
+<text x="885" y="195" opacity="0.4">L</text>
+<text x="885" y="210" opacity="0.45">0</text>
+<text x="885" y="225" opacity="0.5">1</text>
+<text x="885" y="240" opacity="0.56">R</text>
+<text x="885" y="255" opacity="0.62">A</text>
+<text x="885" y="270" opacity="0.68">F</text>
+<text x="885" y="285" opacity="0.74">A</text>
+<text x="885" y="300" opacity="0.8">E</text>
+<text x="885" y="315" fill="#A6DCE8" opacity=".78">L</text>
+<text x="885" y="330" fill="#A6DCE8" opacity=".78">0</text>
+<text x="885" y="345" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d36 6.4s linear -7.2s infinite">
+<text x="910" y="-195" opacity="0.08">A</text>
+<text x="910" y="-180" opacity="0.12">E</text>
+<text x="910" y="-165" opacity="0.17">L</text>
+<text x="910" y="-150" opacity="0.23">0</text>
+<text x="910" y="-135" opacity="0.3">1</text>
+<text x="910" y="-120" opacity="0.37">R</text>
+<text x="910" y="-105" opacity="0.44">A</text>
+<text x="910" y="-90" opacity="0.52">F</text>
+<text x="910" y="-75" opacity="0.61">A</text>
+<text x="910" y="-60" opacity="0.7">E</text>
+<text x="910" y="-45" fill="#A6DCE8" opacity=".78">L</text>
+<text x="910" y="-30" fill="#A6DCE8" opacity=".78">0</text>
+<text x="910" y="-15" fill="#F2FBFD">1</text>
+<text x="910" y="45" opacity="0.08">A</text>
+<text x="910" y="60" opacity="0.12">E</text>
+<text x="910" y="75" opacity="0.17">L</text>
+<text x="910" y="90" opacity="0.23">0</text>
+<text x="910" y="105" opacity="0.3">1</text>
+<text x="910" y="120" opacity="0.37">R</text>
+<text x="910" y="135" opacity="0.44">A</text>
+<text x="910" y="150" opacity="0.52">F</text>
+<text x="910" y="165" opacity="0.61">A</text>
+<text x="910" y="180" opacity="0.7">E</text>
+<text x="910" y="195" fill="#A6DCE8" opacity=".78">L</text>
+<text x="910" y="210" fill="#A6DCE8" opacity=".78">0</text>
+<text x="910" y="225" fill="#F2FBFD">1</text>
+</g>
+<g style="animation:d37 5.6s linear -8.2s infinite">
+<text x="935" y="-195" opacity="0.08">L</text>
+<text x="935" y="-180" opacity="0.12">0</text>
+<text x="935" y="-165" opacity="0.17">1</text>
+<text x="935" y="-150" opacity="0.23">R</text>
+<text x="935" y="-135" opacity="0.3">A</text>
+<text x="935" y="-120" opacity="0.37">F</text>
+<text x="935" y="-105" opacity="0.44">A</text>
+<text x="935" y="-90" opacity="0.52">E</text>
+<text x="935" y="-75" opacity="0.61">L</text>
+<text x="935" y="-60" opacity="0.7">0</text>
+<text x="935" y="-45" fill="#A6DCE8" opacity=".78">1</text>
+<text x="935" y="-30" fill="#A6DCE8" opacity=".78">R</text>
+<text x="935" y="-15" fill="#F2FBFD">A</text>
+<text x="935" y="45" opacity="0.08">L</text>
+<text x="935" y="60" opacity="0.12">0</text>
+<text x="935" y="75" opacity="0.17">1</text>
+<text x="935" y="90" opacity="0.23">R</text>
+<text x="935" y="105" opacity="0.3">A</text>
+<text x="935" y="120" opacity="0.37">F</text>
+<text x="935" y="135" opacity="0.44">A</text>
+<text x="935" y="150" opacity="0.52">E</text>
+<text x="935" y="165" opacity="0.61">L</text>
+<text x="935" y="180" opacity="0.7">0</text>
+<text x="935" y="195" fill="#A6DCE8" opacity=".78">1</text>
+<text x="935" y="210" fill="#A6DCE8" opacity=".78">R</text>
+<text x="935" y="225" fill="#F2FBFD">A</text>
+</g>
+<g style="animation:d38 7.3s linear -1.4s infinite">
+<text x="960" y="-195" opacity="0.08">R</text>
+<text x="960" y="-180" opacity="0.12">A</text>
+<text x="960" y="-165" opacity="0.17">F</text>
+<text x="960" y="-150" opacity="0.23">A</text>
+<text x="960" y="-135" opacity="0.3">E</text>
+<text x="960" y="-120" opacity="0.37">L</text>
+<text x="960" y="-105" opacity="0.44">0</text>
+<text x="960" y="-90" opacity="0.52">1</text>
+<text x="960" y="-75" opacity="0.61">R</text>
+<text x="960" y="-60" opacity="0.7">A</text>
+<text x="960" y="-45" fill="#A6DCE8" opacity=".78">F</text>
+<text x="960" y="-30" fill="#A6DCE8" opacity=".78">A</text>
+<text x="960" y="-15" fill="#F2FBFD">E</text>
+<text x="960" y="45" opacity="0.08">R</text>
+<text x="960" y="60" opacity="0.12">A</text>
+<text x="960" y="75" opacity="0.17">F</text>
+<text x="960" y="90" opacity="0.23">A</text>
+<text x="960" y="105" opacity="0.3">E</text>
+<text x="960" y="120" opacity="0.37">L</text>
+<text x="960" y="135" opacity="0.44">0</text>
+<text x="960" y="150" opacity="0.52">1</text>
+<text x="960" y="165" opacity="0.61">R</text>
+<text x="960" y="180" opacity="0.7">A</text>
+<text x="960" y="195" fill="#A6DCE8" opacity=".78">F</text>
+<text x="960" y="210" fill="#A6DCE8" opacity=".78">A</text>
+<text x="960" y="225" fill="#F2FBFD">E</text>
+</g>
+<g style="animation:d39 9.3s linear -1.0s infinite">
+<text x="985" y="-195" opacity="0.08">F</text>
+<text x="985" y="-180" opacity="0.12">A</text>
+<text x="985" y="-165" opacity="0.17">E</text>
+<text x="985" y="-150" opacity="0.23">L</text>
+<text x="985" y="-135" opacity="0.3">0</text>
+<text x="985" y="-120" opacity="0.37">1</text>
+<text x="985" y="-105" opacity="0.44">R</text>
+<text x="985" y="-90" opacity="0.52">A</text>
+<text x="985" y="-75" opacity="0.61">F</text>
+<text x="985" y="-60" opacity="0.7">A</text>
+<text x="985" y="-45" fill="#A6DCE8" opacity=".78">E</text>
+<text x="985" y="-30" fill="#A6DCE8" opacity=".78">L</text>
+<text x="985" y="-15" fill="#F2FBFD">0</text>
+<text x="985" y="45" opacity="0.08">F</text>
+<text x="985" y="60" opacity="0.12">A</text>
+<text x="985" y="75" opacity="0.17">E</text>
+<text x="985" y="90" opacity="0.23">L</text>
+<text x="985" y="105" opacity="0.3">0</text>
+<text x="985" y="120" opacity="0.37">1</text>
+<text x="985" y="135" opacity="0.44">R</text>
+<text x="985" y="150" opacity="0.52">A</text>
+<text x="985" y="165" opacity="0.61">F</text>
+<text x="985" y="180" opacity="0.7">A</text>
+<text x="985" y="195" fill="#A6DCE8" opacity=".78">E</text>
+<text x="985" y="210" fill="#A6DCE8" opacity=".78">L</text>
+<text x="985" y="225" fill="#F2FBFD">0</text>
+</g>
+</g>
 <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
-<text class="fade" x="48" y="58" font-size="36" font-weight="700" fill="#E8EEF2" letter-spacing="-0.4">Rafael Rôlo</text>
-<text class="fade" style="animation-delay:.1s" x="48" y="86" font-size="12" font-weight="600" fill="#7FC6D6" letter-spacing="2.4">SPECIALIST &amp; TECH LEAD · CAPITAL MARKETS</text>
-<line class="fade" style="animation-delay:.18s" x1="48" y1="110" x2="952" y2="110" stroke="#23303A" stroke-width="1"/>
-<text class="fade" style="animation-delay:0.26s" x="48" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">17</text>
-<text class="fade" style="animation-delay:0.32s" x="49" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">YEARS ON THE JVM</text>
-<text class="fade" style="animation-delay:0.34s" x="215" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">798</text>
-<text class="fade" style="animation-delay:0.40s" x="216" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS</text>
-<text class="fade" style="animation-delay:0.42s" x="382" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">906</text>
-<text class="fade" style="animation-delay:0.48s" x="383" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">CODE REVIEWS</text>
-<text class="fade" style="animation-delay:0.50s" x="549" y="166" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-1">8</text>
-<text class="fade" style="animation-delay:0.56s" x="550" y="189" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.5">SECTORS SERVED</text>
-<text class="fade" style="animation-delay:.55s" x="700" y="128" font-size="10" font-weight="600" fill="#94A3AE" letter-spacing="1.5">PULL REQUESTS PER YEAR</text>
-<rect class="bar" style="animation-delay:0.62s" x="700" y="163.0" width="24" height="33.0" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="bar" style="animation-delay:0.67s" x="727" y="154.1" width="24" height="41.9" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:0.72s" x="725" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'23</text>
-<rect class="bar" style="animation-delay:0.73s" x="763" y="159.9" width="24" height="36.1" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="bar" style="animation-delay:0.78s" x="790" y="149.9" width="24" height="46.1" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:0.83s" x="788" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'24</text>
-<rect class="bar" style="animation-delay:0.84s" x="826" y="150.7" width="24" height="45.3" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="bar" style="animation-delay:0.89s" x="853" y="138.0" width="24" height="58.0" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:0.94s" x="851" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'25</text>
-<rect class="bar" style="animation-delay:0.95s" x="889" y="143.6" width="24" height="52.4" rx="1.5" fill="#56AEC2" opacity="0.38"/>
-<rect class="live" style="animation-delay:1.00s" x="916" y="153.0" width="24" height="43.0" rx="1.5" fill="#56AEC2"/>
-<text class="fade" style="animation-delay:1.05s" x="914" y="210" font-size="9" font-weight="600" fill="#6B7783" text-anchor="middle">'26</text>
-<g class="fade" style="animation-delay:1.15s">
-<circle cx="704" cy="226" r="4" fill="#56AEC2" opacity="0.38"/>
-<text x="713" y="229" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1">AUTHORED</text>
-<circle cx="794" cy="226" r="4" fill="#56AEC2"/>
-<text x="803" y="229" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1">REVIEWED FOR OTHERS</text>
+<text class="fade" x="60" y="176" font-size="42" font-weight="700" fill="#E8EEF2" letter-spacing="-0.6">Rafael Rôlo</text>
+<text class="fade" style="animation-delay:.12s" x="60" y="208" font-size="13" font-weight="600" fill="#7FC6D6" letter-spacing="2.6">SPECIALIST &amp; TECH LEAD · CAPITAL MARKETS</text>
+<line class="fade" style="animation-delay:.2s" x1="60" y1="238" x2="940" y2="238" stroke="#23303A" stroke-width="1"/>
+<text class="fade" style="animation-delay:0.30s" x="60" y="304" font-size="46" font-weight="700" fill="#E8EEF2" letter-spacing="-1.2">17</text>
+<text class="fade" style="animation-delay:0.36s" x="61" y="328" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.6">YEARS ON THE JVM</text>
+<text class="fade" style="animation-delay:0.39s" x="288" y="304" font-size="46" font-weight="700" fill="#E8EEF2" letter-spacing="-1.2">798</text>
+<text class="fade" style="animation-delay:0.45s" x="289" y="328" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.6">PULL REQUESTS</text>
+<text class="fade" style="animation-delay:0.48s" x="516" y="304" font-size="46" font-weight="700" fill="#E8EEF2" letter-spacing="-1.2">906</text>
+<text class="fade" style="animation-delay:0.54s" x="517" y="328" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.6">CODE REVIEWS</text>
+<text class="fade" style="animation-delay:0.57s" x="744" y="304" font-size="46" font-weight="700" fill="#E8EEF2" letter-spacing="-1.2">8</text>
+<text class="fade" style="animation-delay:0.63s" x="745" y="328" font-size="12" font-weight="600" fill="#94A3AE" letter-spacing="1.6">SECTORS SERVED</text>
+<text class="fade" style="animation-delay:.75s" x="60" y="358" font-size="9.5" font-weight="600" fill="#6B7783" letter-spacing="1.2">PRIVATE CORPORATE REPOSITORIES · MEASURED AUGUST 2026</text>
 </g>
-<text class="fade" style="animation-delay:1.15s" x="48" y="229" font-size="8.5" font-weight="600" fill="#6B7783" letter-spacing="1.1">PRIVATE CORPORATE REPOSITORIES · MEASURED AUGUST 2026 · 2026 PARTIAL</text>
-</g>
-<rect x="0" y="245" width="1000" height="5" fill="url(#sdark)"/>
+<rect x="0" y="0" width="1000" height="5" fill="url(#sdark)"/>
 </g></svg>
