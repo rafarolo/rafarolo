@@ -85,26 +85,28 @@ def prs(t):
                 begin = d + .5 + j * .06
                 # The forecast is rebuilt every cycle: grows in the first 5%, holds, then
                 # fades out and resets its geometry while nothing is on screen.
-                times = 'keyTimes="0;0.05;0.93;0.955" calcMode="spline" '                         'keySplines="0 0 1 1;0 0 1 1;0 0 1 1" '                         'dur="%.1fs" repeatCount="indefinite"' % LOOP
+                # keyTimes has to end at 1. It ended at 0.955, which is invalid, and an
+                # invalid list makes the browser drop the animation without a word.
+                times = 'keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" '                         'keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" '                         'dur="%.1fs" repeatCount="indefinite"' % LOOP
                 fade = ('<animate attributeName="opacity" values="1;1;0;0;1" '
                         'keyTimes="0;0.90;0.95;0.99;1" begin="%.2fs" dur="%.1fs" '
                         'repeatCount="indefinite"/>' % (begin, LOOP))
                 p.append('<g opacity="1">%s' % fade)
                 p.append('<rect x="%.1f" y="%.1f" width="%d" height="0" rx="3" fill="none" '
                          'stroke="%s" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85">'
-                         '<animate attributeName="height" values="0;%.1f;%.1f;0" begin="%.2fs" %s/>'
-                         '<animate attributeName="y" values="%d;%.1f;%.1f;%d" begin="%.2fs" %s/>'
+                         '<animate attributeName="height" values="0;%.1f;%.1f;0;0" begin="%.2fs" %s/>'
+                         '<animate attributeName="y" values="%d;%.1f;%.1f;%d;%d" begin="%.2fs" %s/>'
                          '<animate attributeName="stroke-dashoffset" from="0" to="16" '
                          'begin="%.2fs" dur="1.6s" repeatCount="indefinite"/>'
                          '</rect>'
                          % (x, BASE, BW, c["acc"], ph, ph, begin, times,
-                            BASE, BASE - ph, BASE - ph, BASE, begin, times, begin))
+                            BASE, BASE - ph, BASE - ph, BASE, BASE, begin, times, begin))
                 p.append('<text x="%.1f" y="%d" font-size="14" font-weight="700" fill="%s" '
                          'text-anchor="middle" opacity="0.9">%d'
-                         '<animate attributeName="y" values="%d;%.1f;%.1f;%d" begin="%.2fs" %s/>'
+                         '<animate attributeName="y" values="%d;%.1f;%.1f;%d;%d" begin="%.2fs" %s/>'
                          '</text>'
                          % (x + BW / 2.0, BASE - 9, c["acc"], projected(value),
-                            BASE - 9, BASE - ph - 9, BASE - ph - 9, BASE - 9, begin, times))
+                            BASE - 9, BASE - ph - 9, BASE - ph - 9, BASE - 9, BASE - 9, begin, times))
                 p.append('</g>')
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'

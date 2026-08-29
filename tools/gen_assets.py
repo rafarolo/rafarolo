@@ -226,22 +226,35 @@ def skyline(t):
     p.append('<clipPath id="sc%s"><rect x="0" y="0" width="1000" height="260" rx="10"/></clipPath>' % t)
     p.append('</defs>')
     p.append('<style>.w{animation:tw 4s ease-in-out infinite}'
-             '.bk{animation:bk 3.1s step-end infinite}'
+             '.bk{animation-name:bk;animation-timing-function:step-end;animation-iteration-count:infinite}'
+             '.bo{animation-name:bo;animation-timing-function:step-end;animation-iteration-count:infinite}'
              '.bl{animation:bl 2.6s step-end infinite}'
              '@keyframes tw{0%%,100%%{opacity:%s}45%%{opacity:.16}}'
-             '@keyframes bk{0%%,62%%{opacity:1}63%%,100%%{opacity:.08}}'
+             '@keyframes bk{0%%,58%%{opacity:1}59%%,100%%{opacity:.06}}'
+             '@keyframes bo{0%%,44%%{opacity:.06}45%%,100%%{opacity:1}}'
              '@keyframes bl{50%%{opacity:.15}}'
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}@keyframes ftin{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){.w,.bk,.bl,.plane{animation:none}.ft{opacity:1;animation:none}}</style>' % k["winop"])
     p.append('<g clip-path="url(#sc%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="260" fill="url(#sky%s)"/>' % t)
     if t == "dark":
-        for i in range(52):
-            cls = "bk" if i % 3 == 0 else "w"
-            p.append('<circle class="%s" style="animation-delay:%.1fs" cx="%d" cy="%d" r="%.1f" '
-                     'fill="#C8DCE6" opacity=".55"/>'
-                     % (cls, rnd.uniform(0, 4), rnd.randint(10, 990), rnd.randint(8, 104),
-                        rnd.uniform(.6, 1.4)))
+        for i in range(58):
+            period = round(rnd.uniform(1.8, 7.5), 1)
+            p.append('<circle class="%s" style="animation-duration:%ss;animation-delay:-%.1fs" '
+                     'cx="%d" cy="%d" r="%.1f" fill="#C8DCE6" opacity=".6"/>'
+                     % (rnd.choice(("w", "bk", "bo")), period, rnd.uniform(0, period),
+                        rnd.randint(10, 990), rnd.randint(8, 104), rnd.uniform(.6, 1.4)))
+
+        sx, sy = 908, 42
+        p.append('<g opacity="0.9">'
+                 '<animateTransform attributeName="transform" type="scale" '
+                 'values="1;1.35;1" keyTimes="0;0.5;1" additive="sum" dur="4.4s" '
+                 'repeatCount="indefinite"/>'
+                 '<animate attributeName="opacity" values="0.55;1;0.55" dur="4.4s" '
+                 'repeatCount="indefinite"/>'
+                 '<path d="M%d %d l3.5 9 l9 3.5 l-9 3.5 l-3.5 9 l-3.5 -9 l-9 -3.5 l9 -3.5 z" '
+                 'fill="#FFFFFF" transform="translate(%d %d)"/>'
+                 '</g>' % (0, -12, sx, sy))
 
         # A streak every half minute and something slower and brighter every three, both
         # off screen for almost all of their cycle so they stay events rather than motion.
@@ -267,7 +280,32 @@ def skyline(t):
                         length, int(length * 0.36), width * 0.9,
                         cross * 0.92, cross, cycle,
                         length, y0, y0 + drop, y0 + drop, cross, cycle))
+    def bridge():
+        col = k["mid"]
+        deck_y = GROUND - 34
+        x0, x1, mast = 548, 918, 742
+        top = GROUND - 168
+        out = ['<g>']
+        out.append('<rect x="%d" y="%d" width="%d" height="5" fill="%s"/>'
+                   % (x0, deck_y, x1 - x0, col))
+        out.append('<rect x="%d" y="%d" width="6" height="%d" fill="%s"/>'
+                   % (mast - 3, top, deck_y - top + 5, col))
+        for step in range(1, 8):
+            span = step * 24
+            out.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1.1" '
+                       'opacity="0.85"/>' % (mast, top + 10, mast - span, deck_y, col))
+            out.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="1.1" '
+                       'opacity="0.85"/>' % (mast, top + 10, mast + span, deck_y, col))
+        for pier in (x0 + 40, x1 - 40):
+            out.append('<rect x="%d" y="%d" width="7" height="%d" fill="%s"/>'
+                       % (pier, deck_y, GROUND - deck_y, col))
+        out.append('<circle class="bl" cx="%d" cy="%d" r="2.2" fill="%s"/>' % (mast, top - 4, k["win"]))
+        out.append('</g>')
+        return "".join(out)
+
     for name, count, wmin, wmax, hmin, hmax, lit in LAYERS:
+        if name == "near":
+            p.append(bridge())
         col, x = k[name], -20
         while x < 1010 and count > 0:
             bw, bh = rnd.randint(wmin, wmax), rnd.randint(hmin, hmax)
@@ -291,37 +329,40 @@ def skyline(t):
                         if r < .09:
                             p.append('<rect class="w" style="animation-delay:%.1fs" x="%d" y="%d" '
                                      'width="4" height="5" fill="%s"/>' % (rnd.uniform(0, 4), wx, wy, fill))
-                        elif r < .18:
-                            p.append('<rect class="bk" style="animation-delay:%.1fs" x="%d" y="%d" '
-                                     'width="4" height="5" fill="%s"/>' % (rnd.uniform(0, 3.1), wx, wy, fill))
+                        elif r < .20:
+                            # Own period per window: a shared one makes the whole facade
+                            # beat in time, which is the opposite of a building at night.
+                            period = round(rnd.uniform(2.4, 11.0), 1)
+                            p.append('<rect class="%s" style="animation-duration:%ss;'
+                                     'animation-delay:-%.1fs" x="%d" y="%d" width="4" height="5" '
+                                     'fill="%s"/>'
+                                     % (rnd.choice(("bk", "bo")), period,
+                                        rnd.uniform(0, period), wx, wy, fill))
                         else:
                             p.append('<rect x="%d" y="%d" width="4" height="5" fill="%s" opacity="%s"/>'
                                      % (wx, wy, fill, k["winop"]))
             x += bw + rnd.randint(3, 14)
             count -= 1
-    # Two silhouettes that make the skyline São Paulo rather than any city: the stepped
-    # setbacks and spire of the Altino Arantes, and the long curved slab of the Copan.
-    n = k["near"]
-    bx = 196
-    for w_, dh in ((58, 0), (46, 26), (34, 48), (22, 66)):
-        p.append('<rect x="%d" y="%d" width="%d" height="%d" fill="%s"/>'
-                 % (bx + (58 - w_) // 2, GROUND - 176 + dh, w_, 176 - dh, n))
-    p.append('<rect x="%d" y="%d" width="3" height="26" fill="%s"/>' % (bx + 27, GROUND - 202, n))
-    p.append('<circle class="bl" cx="%.1f" cy="%d" r="2.4" fill="%s"/>'
-             % (bx + 28.5, GROUND - 204, k["win"]))
-
-    cx0 = 470
-    p.append('<path d="M%d %d q60 -22 120 0 q60 22 120 0 l0 128 l-240 0 z" fill="%s"/>'
-             % (cx0, GROUND - 128, n))
-
+    # Seen from above: fuselage, swept wings and tailplane. At this size a side view
+    # loses its wings entirely and reads as a helicopter.
+    blue = c["acc"] if t == "light" else "#7FC6D6"
     p.append('<g class="plane">'
-             '<path d="M0 0 l16 0 l6 -4 l4 4 l-4 4 l-6 0 z" fill="%s" opacity="0.9"/>'
-             '<circle cx="1" cy="0" r="1.8" fill="%s"><animate attributeName="opacity" '
-             'values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/></circle>'
+             '<path d="M16 -1.2 L7 -13 L11.5 -13 L23 -1.2 Z" fill="#FFFFFF"/>'
+             '<path d="M16 1.2 L7 13 L11.5 13 L23 1.2 Z" fill="#FFFFFF"/>'
+             '<path d="M4 -1 L0 -6.5 L3 -6.5 L8.5 -1 Z" fill="#FFFFFF"/>'
+             '<path d="M4 1 L0 6.5 L3 6.5 L8.5 1 Z" fill="#FFFFFF"/>'
+             '<path d="M2 -2.6 L27 -2.6 Q35 0 27 2.6 L2 2.6 Q-1 0 2 -2.6 Z" fill="#FFFFFF"/>'
+             '<path d="M6 0 L28 0" stroke="%s" stroke-width="1.4" stroke-linecap="round"/>'
+             '<circle cx="8" cy="-13" r="1.5" fill="%s">'
+             '<animate attributeName="opacity" values="1;0.1;1" dur="1.4s" '
+             'repeatCount="indefinite"/></circle>'
+             '<circle cx="8" cy="13" r="1.5" fill="%s">'
+             '<animate attributeName="opacity" values="0.1;1;0.1" dur="1.4s" '
+             'repeatCount="indefinite"/></circle>'
              '<animateTransform attributeName="transform" type="translate" '
-             'values="-60 62;1060 40;1060 40" keyTimes="0;0.16;1" '
+             'values="-70 62;1070 40;1070 40" keyTimes="0;0.16;1" '
              'dur="60s" repeatCount="indefinite"/>'
-             '</g>' % (k["win"], k["win"]))
+             '</g>' % (blue, blue, blue))
 
     p.append('<text class="ft" x="500" y="44" font-family="%s" font-size="24" font-style="italic" fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual.</text>' % (SERIF, c["ink"]))
     p.append('<rect x="0" y="255" width="1000" height="5" fill="url(#st%s)"/>' % t)
