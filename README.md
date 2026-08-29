@@ -3,11 +3,13 @@
   <img alt="Rafael M. Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 798 pull requests, 906 code reviews." src="assets/banner-light.svg">
 </picture>
 
-Seventeen years on the JVM. I work where a wrong number has a settlement date — custody
-positions, asset and liability ledgers, regulatory reporting.
+Seventeen years on the JVM<br>
+I work where a wrong number has a settlement date — custody positions, asset and liability
+ledgers, regulatory reporting.
 
-In every completed year I have reviewed more pull requests than I opened. All of it in
-private corporate repositories, which is why the graph below is green and unclickable.
+In every completed year I have reviewed more pull requests than I opened<br>
+All of it in private corporate repositories, which is why the graph below is green and
+unclickable.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rings-dark.svg">
@@ -66,8 +68,8 @@ Years count from the first role in which each one appears.
 
 ## Artifact of my life
 
-`rolo.rafael.life`, laid out the way I'd lay out a service — domain at the core, stack as
-adapters, because the stack is the part that gets replaced.
+`rolo.rafael.life`, laid out the way I'd lay out a service<br>
+Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg">
