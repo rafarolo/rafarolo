@@ -247,9 +247,10 @@ def skyline(t):
         # The sky is laid out so nothing crosses anything else. The aircraft flies a shallow
         # line from y=62 down to y=40; every other object is placed clear of it, and the
         # moon anchors the right where the meteor never reaches.
-        moon = (884, 60, 21)
-        sparkle = (744, 28)
-        keep_clear = ((moon[0], moon[1], 46), (sparkle[0], sparkle[1], 26))
+        # High enough that the aircraft passes below it: the flight line is at y=44
+        # under the moon, and the disc stops at 36.
+        moon = (886, 20, 16)
+        keep_clear = ((moon[0], moon[1], 44),)
 
         placed = 0
         while placed < 34:
@@ -263,21 +264,14 @@ def skyline(t):
             placed += 1
 
         mx, my, mr = moon
-        p.append('<circle cx="%d" cy="%d" r="%d" fill="#E8F2F7" opacity="0.10"/>' % (mx, my, mr + 13))
+        p.append('<circle cx="%d" cy="%d" r="%d" fill="#E8F2F7" opacity="0.10"/>' % (mx, my, mr + 14))
         p.append('<circle cx="%d" cy="%d" r="%d" fill="#EDF5F9"/>' % (mx, my, mr))
         # The shadow is a second disc in the sky colour, which gives the crescent its edge
         # without needing a mask.
-        p.append('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (mx - 9, my - 5, mr, k["top"]))
-        for dx, dy, r in ((7, 6, 3.4), (2, -8, 2.2), (12, -2, 1.8)):
+        p.append('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (mx - 7, my - 4, mr, k["top"]))
+        for dx, dy, r in ((6, 5, 2.6), (2, -6, 1.7), (9, -1, 1.4)):
             p.append('<circle cx="%d" cy="%d" r="%.1f" fill="#CBDDE6" opacity="0.45"/>'
                      % (mx + dx, my + dy, r))
-
-        p.append('<g opacity="0.9">'
-                 '<animate attributeName="opacity" values="0.5;1;0.5" dur="6.5s" '
-                 'repeatCount="indefinite"/>'
-                 '<path d="M0 -11 l3.2 8 l8 3.2 l-8 3.2 l-3.2 8 l-3.2 -8 l-8 -3.2 l8 -3.2 z" '
-                 'fill="#FFFFFF" transform="translate(%d %d)"/>'
-                 '</g>' % sparkle)
 
         # A meteor is a short, steep scratch that arrives and is gone. Run across the full
         # width on a shallow line it reads as another aircraft trail -- which is what the
