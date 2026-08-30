@@ -67,8 +67,8 @@ green and unclickable.
 
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=10355b7cb">
-  <img alt="" src="assets/dot-light.svg?v=c7a6ded9b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=bc89bb7fb">
+  <img alt="" src="assets/dot-light.svg?v=3de0b021b">
 </picture>
 
 <br>
@@ -109,8 +109,8 @@ green and unclickable.
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=10355b7cb">
-  <img alt="" src="assets/dot-light.svg?v=c7a6ded9b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=bc89bb7fb">
+  <img alt="" src="assets/dot-light.svg?v=3de0b021b">
 </picture>
 
 <br>

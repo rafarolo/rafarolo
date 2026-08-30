@@ -40,14 +40,33 @@ def badge(logo, label, brand, msg=None, aria=None):
     return NL.join(p) + NL
 
 
+CYCLE = 4.6
+STEP = 0.10
+
+
 def divider(t):
+    """A pulse crossing the dots left to right, then a long wait.
+
+    The graduated sizes are what give the divider its shape, so they stay; only the light
+    moves. A wave every four and a half seconds reads as a separator that is alive rather
+    than as something asking to be looked at."""
     c = THEMES[t]
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 22" width="1000" height="22" '
          'role="presentation" aria-hidden="true">']
     for i, op in enumerate((".3", ".62", "1", ".62", ".3")):
         r = 2.0 if i in (0, 4) else (2.6 if i in (1, 3) else 3.4)
-        p.append('<circle cx="%d" cy="11" r="%.1f" fill="%s" opacity="%s"/>'
-                 % (476 + i * 12, r, c["acc"], op))
+        lit = min(1.0, float(op) + 0.55)
+        p.append('<circle cx="%d" cy="11" r="%.1f" fill="%s" opacity="%s">'
+                 '<animate attributeName="opacity" values="%s;%.2f;%s;%s" '
+                 'keyTimes="0;0.05;0.13;1" begin="%.2fs" dur="%.1fs" '
+                 'repeatCount="indefinite"/>'
+                 '<animate attributeName="r" values="%.1f;%.1f;%.1f;%.1f" '
+                 'keyTimes="0;0.05;0.13;1" begin="%.2fs" dur="%.1fs" '
+                 'repeatCount="indefinite"/>'
+                 '</circle>'
+                 % (476 + i * 12, r, c["acc"], op,
+                    op, lit, op, op, i * STEP, CYCLE,
+                    r, r + 1.1, r, r, i * STEP, CYCLE))
     p.append('</svg>')
     return NL.join(p) + NL
 
