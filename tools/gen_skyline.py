@@ -163,12 +163,18 @@ def skyline(t):
              '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
              # Four rhythms, none of them symmetrical. A star that dims and brightens on a
              # even beat reads as a signal; a real one holds, flickers, holds again.
-             '@keyframes tw1{0%,100%{opacity:1}31%{opacity:.62}46%{opacity:.9}68%{opacity:.44}}'
-             '@keyframes tw2{0%,58%{opacity:1}70%{opacity:.1}79%{opacity:.85}86%{opacity:.2}'
-             '94%,100%{opacity:1}}'
-             '@keyframes tw3{0%,100%{opacity:.86}18%{opacity:.3}37%{opacity:1}}'
-             '@keyframes tw4{0%,42%{opacity:.95}52%{opacity:.18}61%{opacity:.7}'
-             '73%,100%{opacity:.95}}'
+             # All four run the full range, from all but invisible to solid. Two of them
+             # only dipped to a half and read as nothing at this size. The positions stay
+             # irregular and every one holds somewhere, so it is still a night sky and not
+             # a row of indicator lamps.
+             '@keyframes tw1{0%,24%{opacity:1}39%{opacity:.04}55%{opacity:.92}'
+             '69%{opacity:.07}85%,100%{opacity:1}}'
+             '@keyframes tw2{0%,51%{opacity:1}62%{opacity:.05}77%{opacity:.98}'
+             '87%{opacity:.09}100%{opacity:1}}'
+             '@keyframes tw3{0%{opacity:.06}17%{opacity:1}43%{opacity:.04}'
+             '64%{opacity:.95}82%{opacity:.12}100%{opacity:.06}}'
+             '@keyframes tw4{0%,36%{opacity:.97}47%{opacity:.03}58%{opacity:.55}'
+             '71%{opacity:1}88%,100%{opacity:.97}}'
              # Every transition is a ramp, and the flats between them are long enough that
              # the window is off or on rather than permanently crossfading.
              '@keyframes bk{0%,46%{opacity:1}58%,94%{opacity:0}100%{opacity:1}}'
@@ -204,7 +210,7 @@ def skyline(t):
             # A four-pointed star loses more area to its notches than a disc of the same
             # radius, so it has to be drawn larger to read at all.
             shape = star(x, y, rnd.uniform(2.4, 5.0))
-            if rnd.random() < 0.28:
+            if rnd.random() < 0.10:
                 # A sky where every point moves is a sky nobody believes. Some just sit.
                 p.append('<path d="%s" fill="%s" opacity="%.2f"/>'
                          % (shape, k["star"], rnd.uniform(.55, .95)))
