@@ -1,7 +1,7 @@
 import io, os, sys, math
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
+from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 
 def esc(v):
@@ -51,7 +51,7 @@ def radar(t):
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
              '.gr{opacity:0;animation:gi .5s ease .1s forwards}'
-             '.pg{transform-box:fill-box;transform-origin:50%% 50%%;transform:scale(.05);opacity:0;'
+             '.pg{transform-box:fill-box;transform-origin:50% 50%;transform:scale(.05);opacity:0;'
              'animation:gw .95s cubic-bezier(.25,.9,.3,1) forwards}'
              '.tx{opacity:0;animation:gi .5s ease forwards}'
              '@keyframes gi{to{opacity:1}}@keyframes gw{to{transform:scale(1);opacity:1}}'

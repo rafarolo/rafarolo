@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
+from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, headline, detail, major
 ITEMS = [
@@ -39,9 +39,9 @@ def timeline(t):
     p.append('<defs>' + glass_defs(t, "tl") + '<clipPath id="tl%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
              '</clipPath></defs>' % (t, h))
     p.append('<style>'
-             '.sp{transform-box:fill-box;transform-origin:50%% 0;transform:scaleY(0);'
+             '.sp{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(0);'
              'animation:dn 1.1s cubic-bezier(.3,.8,.3,1) .1s forwards}'
-             '.nd{transform-box:fill-box;transform-origin:50%% 50%%;transform:scale(0);'
+             '.nd{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);'
              'animation:pp .45s cubic-bezier(.3,1.6,.5,1) forwards}'
              '.tx{opacity:0;animation:fi .45s ease forwards}'
              '@keyframes dn{to{transform:scaleY(1)}}@keyframes pp{to{transform:scale(1)}}'

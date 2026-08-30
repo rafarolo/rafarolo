@@ -1,7 +1,7 @@
 import io, os, sys, random
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SANS, OUT, NL
+from gen_assets import THEMES, SANS, OUT, NL
 
 H = 330
 GROUND = 325
@@ -184,6 +184,13 @@ def skyline(t):
              '@keyframes b4{0%,9%{opacity:0}19%,29%{opacity:1}38%,77%{opacity:0}'
              '86%,96%{opacity:1}100%{opacity:0}}'
              '@keyframes bl{50%{opacity:.15}}'
+             # Colour as CSS rather than as sixty SMIL animations. Same stops, same easing;
+             # SMIL interpolates a paint attribute outside the animation pipeline the rest
+             # of this panel already runs in.
+             + ''.join('@keyframes %s{%s}' % (name, ''.join(
+                 '%d%%{fill:%s}' % (round(100.0 * j / (len(stops) - 1)), col)
+                 for j, col in enumerate(list(stops) + [stops[0]])))
+                 for name, stops in (('cw', k['warm']), ('cc', k['cool']))) +
              '@keyframes ftin{to{opacity:1}}'
              # Nothing in this panel's CSS moves anything: the windows and the stars only
              # change opacity, and a gentle cross-fade is the sort of thing the reduced
@@ -284,23 +291,21 @@ def skyline(t):
                             # in a room. Two of the four patterns change twice per period, so
                             # the fastest state change here is still four seconds apart.
                             period = round(rnd.uniform(9.0, 38.0), 1)
-                            palette = k["cool"] if r < .11 else k["warm"]
-                            shifts = ""
+                            names, durs, delays = [rnd.choice(BLINKS)], ['%ss' % period], []
+                            delays.append('-%.1fs' % rnd.uniform(0, period))
                             if r < .17:
                                 # A light that changes colour as well as state: someone
-                                # switching from a lamp to a screen, which is what a window
-                                # at night actually does.
-                                order = list(palette) + [palette[0]]
-                                keys = ";".join("0.42 0 0.58 1" for _ in order[:-1])
-                                shifts = ('<animate attributeName="fill" values="%s" '
-                                          'calcMode="spline" keySplines="%s" dur="%.1fs" '
-                                          'repeatCount="indefinite"/>'
-                                          % (";".join(order), keys, period * 2.7))
-                            p.append('<rect class="%s" style="animation-duration:%ss;'
-                                     'animation-delay:-%.1fs" x="%d" y="%d" width="5" height="7" '
-                                     'fill="%s">%s</rect>'
-                                     % (rnd.choice(BLINKS), period, rnd.uniform(0, period),
-                                        wx, wy, fill, shifts))
+                                # moving from a lamp to a screen. On its own period, so
+                                # the two changes never arrive together.
+                                names.append('cc' if r < .11 else 'cw')
+                                durs.append('%.1fs' % (period * 2.7))
+                                delays.append('0s')
+                            p.append('<rect style="animation-name:%s;animation-duration:%s;'
+                                     'animation-delay:%s;animation-timing-function:ease-in-out;'
+                                     'animation-iteration-count:infinite" x="%d" y="%d" '
+                                     'width="5" height="7" fill="%s"/>'
+                                     % (','.join(names), ','.join(durs), ','.join(delays),
+                                        wx, wy, fill))
                         else:
                             p.append('<rect x="%d" y="%d" width="5" height="7" fill="%s" '
                                      'opacity="%s"/>' % (wx, wy, fill, k["winop"]))

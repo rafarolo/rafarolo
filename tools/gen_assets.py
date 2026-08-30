@@ -39,28 +39,32 @@ GLASS = {
 }
 
 
-def glass_defs(t, ident, w=1000):
+def glass_defs(t, ident, w=1000, shadow=False):
     """One surface treatment shared by every panel, so the page reads as a set.
 
     A real frosted pane would sample what is behind it, which an SVG in a README cannot
     see. What it can do is behave like glass: a vertical gradient, a lit top edge where
-    the light lands, and a slow reflection crossing the surface."""
+    the light lands, and a slow reflection crossing the surface.
+
+    The drop shadow is opt-in. Only the rings apply it, and for a while every other panel
+    carried the declaration without ever referencing it."""
     g, c = GLASS[t], THEMES[t]
     base = c["panel"]
-    return (
+    defs = (
         '<linearGradient id="pg%s%s" x1="0" y1="0" x2="0" y2="1">'
         '<stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>'
         '<linearGradient id="sn%s%s" x1="0" y1="0" x2="1" y2="0">'
         '<stop offset="0" stop-color="%s" stop-opacity="0"/>'
         '<stop offset="0.5" stop-color="%s" stop-opacity="%s"/>'
         '<stop offset="1" stop-color="%s" stop-opacity="0"/></linearGradient>'
-        '<filter id="ds%s%s" x="-30%%" y="-30%%" width="160%%" height="160%%">'
-        '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="%s" flood-opacity="%s"/>'
-        '</filter>'
         % (ident, t, shade(base, g["top"]), shade(base, g["bottom"]),
-           ident, t, g["sheen"], g["sheen"], g["sheen_op"], g["sheen"],
-           ident, t, "#000000" if t == "light" else "#000000", g["shadow"])
+           ident, t, g["sheen"], g["sheen"], g["sheen_op"], g["sheen"])
     )
+    if shadow:
+        defs += ('<filter id="ds%s%s" x="-30%%" y="-30%%" width="160%%" height="160%%">'
+                 '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" '
+                 'flood-opacity="%s"/></filter>' % (ident, t, g["shadow"]))
+    return defs
 
 
 def glass_style(offset=0):
@@ -114,7 +118,7 @@ def rings(t):
          'role="img" aria-label="Three proportions. 89 percent of pull requests opened were '
          'merged, 707 of 798. Test coverage 88 percent, up from 74.7. 53 percent of every pull '
          'request touched belonged to someone else: 906 reviews against 798 of my own.">']
-    p.append('<defs>' + glass_defs(t, "rg") +
+    p.append('<defs>' + glass_defs(t, "rg", shadow=True) +
              '<clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath>' % t)
     for i in range(len(RINGS)):
         cx = 190 + i * 310

@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
+from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
@@ -45,7 +45,7 @@ def prs(t):
              'markerHeight="6" orient="auto-start-reverse">'
              '<path d="M0 0L10 5L0 10z" fill="%s"/></marker></defs>' % (t, h, t, c["acc"]))
     p.append('<style>'
-             '.b{transform-box:fill-box;transform-origin:50%% 100%%;transform:scaleY(0);'
+             '.b{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);'
              'animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}'
              '.t{opacity:0;animation:fi .45s ease forwards}'
              '@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}'

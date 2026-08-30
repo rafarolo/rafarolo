@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import glass_bg, glass_defs, glass_style, THEMES, MONO, OUT, NL
+from gen_assets import glass_bg, glass_defs, glass_style, THEMES, MONO, OUT, NL
 
 GROUP = "my.life"
 ARTIFACT = "rafael.rolo"

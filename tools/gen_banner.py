@@ -1,7 +1,7 @@
 import io, os, sys, random
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_all import THEMES, SKY, SANS, MONO, OUT, NL
+from gen_assets import THEMES, SKY, SANS, MONO, OUT, NL
 
 BIG = [("17", "YEARS ON THE JVM"), ("798", "PULL REQUESTS"),
        ("906", "CODE REVIEWS"), ("8", "SECTORS SERVED")]
