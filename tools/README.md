@@ -16,6 +16,9 @@ python tools/gen_badges.py      the three contact badges
 python tools/stamp_assets.py    always last
 ```
 
+See [NUMBERS.md](NUMBERS.md) for where every figure on the page came from and the command
+that produced it. They were measured on 29 August 2026 and should be re-measured, not edited.
+
 `stamp_assets.py` rewrites each asset URL in the README with a hash of the file it points
 at. GitHub proxies README images and caches them by URL: without this an updated drawing
 keeps serving from the old copy, which looks exactly like a change that never landed.
