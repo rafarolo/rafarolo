@@ -83,8 +83,8 @@ green and unclickable.
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg?v=0fceeb42b">
-  <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg?v=f41e2333b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg?v=258c6706b">
+  <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg?v=b4dabe7cb">
 </picture>
 
 <details>

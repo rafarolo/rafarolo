@@ -68,10 +68,12 @@ def tenure(t):
              '<clipPath id="tn%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/></clipPath>'
              '<linearGradient id="bg%s" x1="0" y1="0" x2="1" y2="0">'
              '<stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>'
-             '<linearGradient id="gl%s" x1="0" y1="0" x2="1" y2="0">'
-             '<stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
-             '<stop offset="0.5" stop-color="#FFFFFF" stop-opacity="%s"/>'
-             '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>'
+             '<pattern id="gl%s" width="16" height="16" patternUnits="userSpaceOnUse" '
+             'patternTransform="rotate(48)">'
+             '<rect width="7" height="16" fill="#FFFFFF" opacity="%s"/>'
+             '<animateTransform attributeName="patternTransform" type="translate" '
+             'from="0 0" to="16 0" dur="1.9s" repeatCount="indefinite" additive="sum"/>'
+             '</pattern>'
              % (t, h, t, c["acc"], c["g1"], t, "0.62" if t == "light" else "0.42"))
     for i, (years, _) in enumerate(ROWS):
         p_y = TOP + i * STEP - 5
@@ -106,14 +108,14 @@ def tenure(t):
                  '<animate attributeName="width" from="0" to="%.1f" begin="%.2fs" dur="0.9s" '
                  'calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>'
                  % (BAR_X, y - 5, t, w, d))
-        # A highlight running the length of the bar, once the bar has finished growing.
-        # Staggered per row so the panel reads as alive rather than as one blinking block.
+        # Diagonal stripes travelling along the bar. A highlight that crossed once a
+        # minute told you nothing in the fifty-nine seconds either side of it; this reads
+        # as movement at any moment you happen to look.
         p.append('<g clip-path="url(#cb%d%s)">'
-                 '<rect x="%.1f" y="%.1f" width="72" height="10" fill="url(#gl%s)">'
-                 '<animate attributeName="x" values="%.1f;%.1f;%.1f" keyTimes="0;0.04;1" '
-                 'begin="%.2fs" dur="60s" repeatCount="indefinite"/></rect></g>'
-                 % (i, t, BAR_X - 72, y - 5, t, BAR_X - 72, BAR_X + w, BAR_X + w,
-                    d + 1.1 + i * 0.28))
+                 '<rect x="%d" y="%.1f" width="%.1f" height="10" fill="url(#gl%s)" opacity="0">'
+                 '<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="%.2fs" '
+                 'dur="0.5s" fill="freeze"/></rect></g>'
+                 % (i, t, BAR_X, y - 5, w, t, d + 0.9))
 
         x = CHIP_X
         for name in names:
