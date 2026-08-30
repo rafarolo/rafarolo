@@ -65,6 +65,22 @@ green and unclickable.
 
 <br>
 
+### Worked examples
+
+Three of the things above, extracted and made runnable. Each takes a handful of failures
+that give no error at all, and proves every one with a test that counts what actually
+happened.
+
+| | |
+|---|---|
+| [**spring-boot-azure-passwordless**](https://github.com/rafarolo/spring-boot-azure-passwordless) | The token is the password and it expires under the pool. `CREATE USER` goes by object ID, and the SID is not the object ID with the dashes removed. |
+| [**spring-boot-cache-patterns**](https://github.com/rafarolo/spring-boot-cache-patterns) | A cached method called from inside its own bean is not cached. Concurrent misses on one key all compute. A cache that is not working does not throw. |
+| [**spring-boot-messaging-outbox**](https://github.com/rafarolo/spring-boot-messaging-outbox) | Publishing from the service body is wrong in both orderings. At-least-once is the contract, not a caveat. A poison record blocks a partition, not a topic. |
+
+Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in CI.
+
+<br>
+
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=bc89bb7fb">
