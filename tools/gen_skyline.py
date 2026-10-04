@@ -34,6 +34,15 @@ LAYERS = [("far", 27, 20, 46, 38, 92, False), ("mid", 19, 30, 62, 58, 126, False
           ("near", 17, 46, 92, 78, 158, True)]
 
 BLINKS = ("bk", "bo", "b3", "b4")
+# One window as a path segment rather than as its own element. A lit floor is five by
+# seven pixels and never anything else, so "M123 456h5v7h-5z" says what forty-three
+# characters of rect attributes said, and a whole bucket of them is one path.
+WIN = "M%d %dh5v7h-5z"
+# Four rhythms against four periods against three entry points is forty-eight ways for a
+# window to blink, which is more variety than anyone reads off a skyline -- and it is a
+# pool of shared classes rather than a style attribute on every lit window.
+PERIODS = (7.0, 11.0, 16.0, 21.0)
+PHASES = 3
 
 
 def darken(hexcol, f):
@@ -60,11 +69,14 @@ def plane(t, k, ident, delay, flip):
             'fill="#FFFFFF"/>'
             '<path d="M8 -1 L34 -1" stroke="%s" stroke-width="1.5" stroke-linecap="round"/>'
             '<circle cx="2" cy="-16" r="1.5" fill="%s">'
-            '<animate attributeName="opacity" values="1;0.1;1" dur="1.4s" repeatCount="indefinite"/>'
+            '<animate attributeName="opacity" values="1;0.1;1" dur="1.1s" repeatCount="indefinite"/>'
             '</circle>'
             '<circle cx="14" cy="12" r="1.4" fill="%s">'
-            '<animate attributeName="opacity" values="0.1;1;0.1" dur="1.4s" repeatCount="indefinite"/>'
+            '<animate attributeName="opacity" values="0.1;1;0.1" dur="1.1s" repeatCount="indefinite"/>'
             '</circle>' % (blue, blue, blue))
+    if t == "light":
+        body = body.replace('fill="#FFFFFF"', 'fill="#FFFFFF" stroke="#000000" '
+                            'stroke-width="0.6" stroke-linejoin="round"')
     # Pitched nose down. Inside the mirrored group a positive rotation renders as a
     # negative one, which is nose down for an aircraft pointing the other way -- so the
     # same value serves both legs.
@@ -75,16 +87,16 @@ def plane(t, k, ident, delay, flip):
                                    # and one coming in reads as two unrelated events
     return ('<g opacity="0">'
             '<animate attributeName="opacity" values="0;1;1;0;0" '
-            'keyTimes="0;0.005;0.155;0.16;1" begin="%.1fs" dur="120s" repeatCount="indefinite"/>'
+            'keyTimes="0;0.01;0.44;0.45;1" begin="%.1fs" dur="56s" repeatCount="indefinite"/>'
             '<animateTransform attributeName="transform" type="translate" '
-            'values="%d %d;%d %d;%d %d" keyTimes="0;0.16;1" begin="%.1fs" dur="120s" '
+            'values="%d %d;%d %d;%d %d" keyTimes="0;0.45;1" begin="%.1fs" dur="56s" '
             'repeatCount="indefinite"/>%s</g>'
             % (delay, x0, y0, x1, y1, x1, y1, delay, inner))
 
 
-SKY_CYCLE = 150.0
+SKY_CYCLE = 58.0
 SLOTS = 6          # the meteor takes the even ones, the comet the odd
-TRAVEL = 0.019     # fraction of the cycle a crossing is on screen
+TRAVEL = 0.042     # fraction of the cycle a crossing is on screen
 
 
 def star(cx, cy, r):
@@ -113,6 +125,13 @@ def streak(t, head, name, length, width, slots, runs):
         fade += ["0", "1", "1", "0"]
         ftimes += ["%.4f" % base, "%.4f" % (base + TRAVEL * 0.16),
                    "%.4f" % (base + TRAVEL * 0.82), "%.4f" % (base + TRAVEL)]
+    # keyTimes has to start at 0 and end at 1. The comet takes the odd slots, so its
+    # first crossing begins a sixth of the way into the cycle and its list opened on
+    # 0.1667 -- which is invalid, and an invalid list makes the browser drop the whole
+    # animation. It had not crossed the sky since.
+    if float(times[0]) > 0:
+        pos.insert(0, pos[0]); times.insert(0, "0")
+        fade.insert(0, "0"); ftimes.insert(0, "0")
     if float(times[-1]) < 1:
         pos.append(pos[-1]); times.append("1")
         fade.append("0"); ftimes.append("1")
@@ -154,13 +173,13 @@ def skyline(t):
              '</clipPath>' % (t, H))
     p.append('</defs>')
 
-    p.append('<style>'
+    css = (''
              + "".join('.st%d{animation-name:tw%d;animation-timing-function:ease-in-out;'
                        'animation-iteration-count:infinite}' % (i, i) for i in range(1, 5))
              + "".join('.%s{animation-name:%s;animation-timing-function:ease-in-out;'
                        'animation-iteration-count:infinite}' % (b, b) for b in BLINKS) +
-             '.bl{animation:bl 2.6s step-end infinite}'
-             '.ft{opacity:0;animation:ftin .9s ease .2s forwards}'
+             '.bl{animation:bl 2s step-end infinite}'
+             '.ft{opacity:0;animation:ftin .7s ease .15s forwards}'
              # Four rhythms, none of them symmetrical. A star that dims and brightens on a
              # even beat reads as a signal; a real one holds, flickers, holds again.
              # All four run the full range, from all but invisible to solid. Two of them
@@ -198,8 +217,9 @@ def skyline(t):
              # everything that travels here -- the aircraft, the meteor, the comet -- is
              # SMIL, which the setting does not reach anyway. Disabling these was blanket
              # caution that switched off the whole city for anyone who has it on.
-             '@media (prefers-reduced-motion: reduce){.ft{opacity:1;animation:none}}'
-             '</style>')
+             '@media (prefers-reduced-motion: reduce){.ft{opacity:1;animation:none}}')
+    style_slot = len(p)
+    p.append("")
 
     p.append('<g clip-path="url(#sc%s)">' % t)
     p.append('<rect x="0" y="0" width="1000" height="%d" fill="url(#sky%s)"/>' % (H, t))
@@ -213,7 +233,7 @@ def skyline(t):
                 continue
             if 250 < x < 750 and TEXT_Y - 22 < y < TEXT_Y + 12:
                 continue
-            period = round(rnd.uniform(6.0, 26.0), 1)
+            period = round(rnd.uniform(3.5, 14.0), 1)
             # A four-pointed star loses more area to its notches than a disc of the same
             # radius, so it has to be drawn larger to read at all.
             shape = star(x, y, rnd.uniform(2.4, 5.0))
@@ -243,6 +263,11 @@ def skyline(t):
         p.append(streak(t, k["head"], "comet", 68, 2.2, (1, 3, 5),
                         ((-130, lo, 470, hi), (250, hi, 900, lo), (-90, hi - 6, 640, lo + 4))))
 
+    # Every window used to carry its own fill, its own opacity and, if it blinked, a
+    # hundred and fifty characters of inline style. They are collected here instead and
+    # written out as a handful of groups and a pool of classes: the same city, a third of
+    # the bytes, and far fewer distinct styles for the renderer to resolve.
+    dim, steady, blinking = [], {}, {}
     for name, count, wmin, wmax, hmin, hmax, lit in LAYERS:
         if name == "near":
             col = k["mid"]
@@ -274,46 +299,62 @@ def skyline(t):
                 p.append('<circle class="bl" style="animation-delay:%.1fs" cx="%d" cy="%d" '
                          'r="2.2" fill="%s"/>' % (rnd.uniform(0, 2), ax + 1, btop - 20, k["win"]))
             if lit:
-                unlit = darken(col, .58 if t == "light" else .55)
                 # Inset from every edge. Flush against a silhouette that blends into the
                 # sky, a window stops reading as part of the building it is on.
                 for wx in range(x + 10, x + bw - 13, 13):
                     for wy in range(btop + 16, GROUND - 13, 16):
                         r = rnd.random()
                         if r > .52:
-                            p.append('<rect x="%d" y="%d" width="5" height="7" fill="%s"/>'
-                                     % (wx, wy, unlit))
+                            dim.append((wx, wy))
                             continue
                         fill = k["win2"] if r < .11 else k["win"]
-                        if r < .32:
-                            # Nine to thirty-eight seconds. A window is not a pilot light: at a couple of
-                            # seconds it reads as a fault indicator rather than as somebody
-                            # in a room. Two of the four patterns change twice per period, so
-                            # the fastest state change here is still four seconds apart.
-                            period = round(rnd.uniform(9.0, 38.0), 1)
-                            names, durs, delays = [rnd.choice(BLINKS)], ['%ss' % period], []
-                            delays.append('-%.1fs' % rnd.uniform(0, period))
-                            if r < .17:
-                                # A light that changes colour as well as state: someone
-                                # moving from a lamp to a screen. On its own period, so
-                                # the two changes never arrive together.
-                                names.append('cc' if r < .11 else 'cw')
-                                durs.append('%.1fs' % (period * 2.7))
-                                delays.append('0s')
-                            p.append('<rect style="animation-name:%s;animation-duration:%s;'
-                                     'animation-delay:%s;animation-timing-function:ease-in-out;'
-                                     'animation-iteration-count:infinite" x="%d" y="%d" '
-                                     'width="5" height="7" fill="%s"/>'
-                                     % (','.join(names), ','.join(durs), ','.join(delays),
-                                        wx, wy, fill))
-                        else:
-                            p.append('<rect x="%d" y="%d" width="5" height="7" fill="%s" '
-                                     'opacity="%s"/>' % (wx, wy, fill, k["winop"]))
+                        if r >= .32:
+                            steady.setdefault(fill, []).append((wx, wy))
+                            continue
+                        # A window is not a pilot light: at a couple of seconds it reads
+                        # as a fault indicator rather than as somebody in a room. Two of
+                        # the four patterns change twice per period, so even on the
+                        # shortest one a state change is three seconds from the last.
+                        names = (rnd.choice(BLINKS),)
+                        period = rnd.choice(PERIODS)
+                        phase = rnd.randrange(PHASES)
+                        if r < .17:
+                            # A light that changes colour as well as state: someone
+                            # moving from a lamp to a screen. On its own period, so the
+                            # two changes never arrive together.
+                            names += ('cc' if r < .11 else 'cw',)
+                        blinking.setdefault((names, period, phase, fill), []).append((wx, wy))
             x += bw + rnd.randint(3, 14)
             count -= 1
 
+    classes = {}
+    for key in sorted(blinking):
+        classes[key] = "k%d" % len(classes)
+    shared = ",".join("." + n for n in sorted(classes.values(), key=lambda v: int(v[1:])))
+    blink_css = ['%s{animation-timing-function:ease-in-out;animation-iteration-count:infinite}'
+                 % shared] if classes else []
+    for key, cls in sorted(classes.items(), key=lambda kv: int(kv[1][1:])):
+        names, period, phase, _ = key
+        # The colour drift runs on its own period, so the two changes never arrive together.
+        durs = [period] + [period * 2.7] * (len(names) - 1)
+        delays = [-period * phase / float(PHASES)] + [0.0] * (len(names) - 1)
+        blink_css.append('.%s{animation-name:%s;animation-duration:%s;animation-delay:%s}'
+                         % (cls, ",".join(names),
+                            ",".join("%.1fs" % d for d in durs),
+                            ",".join("%.1fs" % d for d in delays)))
+    p[style_slot] = '<style>' + css + "".join(blink_css) + '</style>'
+
+    unlit = darken(k["near"], .58 if t == "light" else .55)
+    p.append('<path fill="%s" d="%s"/>' % (unlit, "".join(WIN % w for w in dim)))
+    for fill, cells in sorted(steady.items()):
+        p.append('<path fill="%s" opacity="%s" d="%s"/>'
+                 % (fill, k["winop"], "".join(WIN % w for w in cells)))
+    for key, cells in sorted(blinking.items(), key=lambda kv: int(classes[kv[0]][1:])):
+        p.append('<path class="%s" fill="%s" d="%s"/>'
+                 % (classes[key], key[3], "".join(WIN % w for w in cells)))
+
     p.append(plane(t, k, "out", 0.0, False))
-    p.append(plane(t, k, "back", 60.0, True))
+    p.append(plane(t, k, "back", 28.0, True))
 
     # The line drifts through the same three colours as the strip that closes the panel,
     # so it belongs to the page rather than being tinted for the sake of it. Ink to gold and
@@ -325,7 +366,7 @@ def skyline(t):
              'font-weight="700" letter-spacing="0.3" '
              'fill="%s" text-anchor="middle">To an artificial mind, all reality is virtual'
              '<animate attributeName="fill" values="%s" calcMode="spline" keySplines="%s" '
-             'dur="26s" repeatCount="indefinite"/></text>'
+             'dur="18s" repeatCount="indefinite"/></text>'
              % (TEXT_Y, SANS, c["ink"], ";".join(palette),
                 ";".join("0.42 0 0.58 1" for _ in palette[:-1])))
     p.append('<rect x="0" y="%d" width="1000" height="5" fill="url(#st%s)"/>' % (H - 5, t))
