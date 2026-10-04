@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 545" width="1000" height="545" role="img" aria-label="A terminal typing tree life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: industries, languages, education, published work.">
-<defs><linearGradient id="pgradark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A242D"/><stop offset="1" stop-color="#11181E"/></linearGradient><linearGradient id="snradark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFE6F0" stop-opacity="0"/><stop offset="0.5" stop-color="#BFE6F0" stop-opacity="0.07"/><stop offset="1" stop-color="#BFE6F0" stop-opacity="0"/></linearGradient>
+<defs><linearGradient id="pgradark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0D1117"/><stop offset="1" stop-color="#152836"/></linearGradient><linearGradient id="snradark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFE6F0" stop-opacity="0"/><stop offset="0.5" stop-color="#BFE6F0" stop-opacity="0.07"/><stop offset="1" stop-color="#BFE6F0" stop-opacity="0"/></linearGradient>
 <clipPath id="radark"><rect x="0" y="0" width="1000" height="545" rx="10"/></clipPath>
 <clipPath id="tpdark"><rect class="type" x="44" y="24" width="92.6" height="22"/></clipPath>
 </defs>
-<style>.type{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:tw 1.05s steps(11,end) .25s forwards}.caret{opacity:0;animation:show 0s linear 1.30s forwards,blink 1.06s step-end 1.30s infinite}.ln{opacity:0;animation:fa .34s ease forwards}.dot{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}@keyframes blink{50%{opacity:0}}@media (prefers-reduced-motion: reduce){.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}</style>
+<style>.type{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:tw 1.05s steps(11,end) .25s forwards}.caret{opacity:0;animation:show 0s linear 1.30s forwards,blink 1.06s step-end 1.30s infinite}.ln{opacity:0;animation:fa .3s ease forwards}.dot{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);animation:pop .34s cubic-bezier(.3,1.5,.5,1) forwards}@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}@keyframes blink{50%{opacity:0}}@media (prefers-reduced-motion: reduce){.type{transform:scaleX(1);animation:none}.ln{opacity:1;animation:none}.dot{transform:scale(1);animation:none}.caret{opacity:1;animation:none}}</style>
 <g clip-path="url(#radark)">
-<rect x="0" y="0" width="1000" height="545" fill="url(#pgradark)"/><rect class="sheen" x="-450" y="0" width="450" height="545" fill="url(#snradark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#FFFFFF" opacity="0.10"/>
+<rect x="0" y="0" width="1000" height="545" fill="url(#pgradark)"/><rect class="sheen" x="-450" y="0" width="450" height="545" fill="url(#snradark)"/><rect x="0" y="0" width="1000" height="1.2" fill="#7FC6D6" opacity="0.16"/>
 <rect x="0" y="0" width="3" height="545" fill="#56AEC2"/>
 <circle cx="26" cy="22" r="4.5" fill="#C9A468" opacity="0.85"/>
 <circle cx="41" cy="22" r="4.5" fill="#3E93A8" opacity="0.85"/>
@@ -15,44 +15,44 @@
 <rect class="caret" x="137.6" y="28" width="7.5" height="14" fill="#56AEC2"/>
 <text class="ln" style="animation-delay:1.40s" x="44" y="78" font-size="14" font-weight="700" fill="#E8EEF2">life/</text>
 <text class="ln" style="animation-delay:1.44s" x="380" y="78" font-size="11.5" font-style="italic" fill="#6B7783">my.life : rafael.rolo</text>
-<circle class="dot" style="animation-delay:1.47s" cx="34" cy="95" r="4" fill="#56AEC2"/>
-<text class="ln" style="animation-delay:1.47s" x="44" y="99" fill="#56AEC2" font-weight="700">├─ professional/</text>
-<text class="ln" style="animation-delay:1.51s" x="44" y="120" fill="#56AEC2" font-weight="700">│&#160;&#160;├─ domain/</text>
-<text class="ln" style="animation-delay:1.55s" x="380" y="120" font-size="12.5" font-style="italic" fill="#6B7783">the part that does not get replaced</text>
-<text class="ln" style="animation-delay:1.56s" x="44" y="141" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ securitization</text>
-<text class="ln" style="animation-delay:1.60s" x="380" y="141" font-size="12.5" fill="#6B7783">CRI · CRA · series · lastro</text>
-<text class="ln" style="animation-delay:1.60s" x="44" y="162" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ settlement</text>
-<text class="ln" style="animation-delay:1.65s" x="380" y="162" font-size="12.5" fill="#6B7783">B3 · custody · liquidation dates</text>
-<text class="ln" style="animation-delay:1.65s" x="44" y="183" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;└─ accounting</text>
-<text class="ln" style="animation-delay:1.69s" x="380" y="183" font-size="12.5" fill="#6B7783">asset × liability · roll-forward</text>
-<text class="ln" style="animation-delay:1.69s" x="44" y="204" fill="#56AEC2" font-weight="700">│&#160;&#160;├─ practice/</text>
-<text class="ln" style="animation-delay:1.73s" x="380" y="204" font-size="12.5" font-style="italic" fill="#6B7783">what the days are actually spent on</text>
-<text class="ln" style="animation-delay:1.74s" x="44" y="225" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ review</text>
-<text class="ln" style="animation-delay:1.78s" x="380" y="225" font-size="12.5" fill="#6B7783">906 usages, 17 callers</text>
-<text class="ln" style="animation-delay:1.78s" x="44" y="246" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ architecture</text>
-<text class="ln" style="animation-delay:1.82s" x="380" y="246" font-size="12.5" fill="#6B7783">hexagonal · one contract per capability</text>
-<text class="ln" style="animation-delay:1.83s" x="44" y="267" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ reliability</text>
-<text class="ln" style="animation-delay:1.87s" x="380" y="267" font-size="12.5" fill="#6B7783">0 bugs · 0 vulnerabilities · rating A</text>
-<text class="ln" style="animation-delay:1.88s" x="44" y="288" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;└─ advocacy</text>
-<text class="ln" style="animation-delay:1.92s" x="380" y="288" font-size="12.5" fill="#6B7783">AI and backend culture for the engineering team</text>
-<text class="ln" style="animation-delay:1.92s" x="44" y="309" fill="#56AEC2" font-weight="700">│&#160;&#160;└─ adapters/</text>
-<text class="ln" style="animation-delay:1.96s" x="380" y="309" font-size="12.5" font-style="italic" fill="#6B7783">swappable on purpose — that is the point</text>
-<text class="ln" style="animation-delay:1.96s" x="44" y="330" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;├─ jvm</text>
-<text class="ln" style="animation-delay:2.00s" x="380" y="330" font-size="12.5" fill="#6B7783">kotlin · java · spring boot</text>
-<text class="ln" style="animation-delay:2.01s" x="44" y="351" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;├─ storage</text>
-<text class="ln" style="animation-delay:2.05s" x="380" y="351" font-size="12.5" fill="#6B7783">postgres · sql server · cosmos</text>
-<text class="ln" style="animation-delay:2.05s" x="44" y="372" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;├─ cloud</text>
-<text class="ln" style="animation-delay:2.09s" x="380" y="372" font-size="12.5" fill="#6B7783">azure · aks · pulumi · actions</text>
-<text class="ln" style="animation-delay:2.10s" x="44" y="393" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;└─ signals</text>
-<text class="ln" style="animation-delay:2.14s" x="380" y="393" font-size="12.5" fill="#6B7783">prometheus · grafana · sonarqube</text>
-<circle class="dot" style="animation-delay:2.15s" cx="34" cy="410" r="4" fill="#56AEC2"/>
-<text class="ln" style="animation-delay:2.15s" x="44" y="414" fill="#56AEC2" font-weight="700">└─ person/</text>
-<text class="ln" style="animation-delay:2.19s" x="44" y="435" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ industries</text>
-<text class="ln" style="animation-delay:2.23s" x="380" y="435" font-size="12.5" fill="#6B7783">capital markets · banking · insurance · government · e-commerce</text>
-<text class="ln" style="animation-delay:2.23s" x="44" y="456" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ languages</text>
-<text class="ln" style="animation-delay:2.27s" x="380" y="456" font-size="12.5" fill="#6B7783">português · english · español</text>
-<text class="ln" style="animation-delay:2.28s" x="44" y="477" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ education</text>
-<text class="ln" style="animation-delay:2.32s" x="380" y="477" font-size="12.5" fill="#6B7783">UNICAMP · three graduate degrees</text>
-<text class="ln" style="animation-delay:2.33s" x="44" y="498" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;└─ published</text>
-<text class="ln" style="animation-delay:2.37s" x="380" y="498" font-size="12.5" fill="#6B7783">three papers · one biometric lab system</text>
+<circle class="dot" style="animation-delay:1.46s" cx="34" cy="95" r="4" fill="#56AEC2"/>
+<text class="ln" style="animation-delay:1.46s" x="44" y="99" fill="#56AEC2" font-weight="700">├─ professional/</text>
+<text class="ln" style="animation-delay:1.49s" x="44" y="120" fill="#56AEC2" font-weight="700">│&#160;&#160;├─ domain/</text>
+<text class="ln" style="animation-delay:1.53s" x="380" y="120" font-size="12.5" font-style="italic" fill="#6B7783">the part that does not get replaced</text>
+<text class="ln" style="animation-delay:1.53s" x="44" y="141" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ securitization</text>
+<text class="ln" style="animation-delay:1.57s" x="380" y="141" font-size="12.5" fill="#6B7783">CRI · CRA · series · lastro</text>
+<text class="ln" style="animation-delay:1.56s" x="44" y="162" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ settlement</text>
+<text class="ln" style="animation-delay:1.60s" x="380" y="162" font-size="12.5" fill="#6B7783">B3 · custody · liquidation dates</text>
+<text class="ln" style="animation-delay:1.60s" x="44" y="183" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;└─ accounting</text>
+<text class="ln" style="animation-delay:1.64s" x="380" y="183" font-size="12.5" fill="#6B7783">asset × liability · roll-forward</text>
+<text class="ln" style="animation-delay:1.64s" x="44" y="204" fill="#56AEC2" font-weight="700">│&#160;&#160;├─ practice/</text>
+<text class="ln" style="animation-delay:1.68s" x="380" y="204" font-size="12.5" font-style="italic" fill="#6B7783">what the days are actually spent on</text>
+<text class="ln" style="animation-delay:1.67s" x="44" y="225" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ review</text>
+<text class="ln" style="animation-delay:1.71s" x="380" y="225" font-size="12.5" fill="#6B7783">963 usages, 17 callers</text>
+<text class="ln" style="animation-delay:1.71s" x="44" y="246" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ architecture</text>
+<text class="ln" style="animation-delay:1.75s" x="380" y="246" font-size="12.5" fill="#6B7783">hexagonal · one contract per capability</text>
+<text class="ln" style="animation-delay:1.74s" x="44" y="267" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ reliability</text>
+<text class="ln" style="animation-delay:1.78s" x="380" y="267" font-size="12.5" fill="#6B7783">0 bugs · 0 vulnerabilities · rating A</text>
+<text class="ln" style="animation-delay:1.77s" x="44" y="288" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;└─ advocacy</text>
+<text class="ln" style="animation-delay:1.81s" x="380" y="288" font-size="12.5" fill="#6B7783">AI and backend culture for the engineering team</text>
+<text class="ln" style="animation-delay:1.81s" x="44" y="309" fill="#56AEC2" font-weight="700">│&#160;&#160;└─ adapters/</text>
+<text class="ln" style="animation-delay:1.85s" x="380" y="309" font-size="12.5" font-style="italic" fill="#6B7783">swappable on purpose — that is the point</text>
+<text class="ln" style="animation-delay:1.84s" x="44" y="330" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;├─ jvm</text>
+<text class="ln" style="animation-delay:1.89s" x="380" y="330" font-size="12.5" fill="#6B7783">kotlin · java · spring boot</text>
+<text class="ln" style="animation-delay:1.88s" x="44" y="351" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;├─ storage</text>
+<text class="ln" style="animation-delay:1.92s" x="380" y="351" font-size="12.5" fill="#6B7783">postgres · sql server · cosmos</text>
+<text class="ln" style="animation-delay:1.92s" x="44" y="372" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;├─ cloud</text>
+<text class="ln" style="animation-delay:1.96s" x="380" y="372" font-size="12.5" fill="#6B7783">azure · aks · pulumi · actions</text>
+<text class="ln" style="animation-delay:1.95s" x="44" y="393" fill="#94A3AE" font-weight="400">│&#160;&#160;&#160;&#160;&#160;└─ signals</text>
+<text class="ln" style="animation-delay:1.99s" x="380" y="393" font-size="12.5" fill="#6B7783">prometheus · grafana · sonarqube</text>
+<circle class="dot" style="animation-delay:1.98s" cx="34" cy="410" r="4" fill="#56AEC2"/>
+<text class="ln" style="animation-delay:1.98s" x="44" y="414" fill="#56AEC2" font-weight="700">└─ person/</text>
+<text class="ln" style="animation-delay:2.02s" x="44" y="435" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ industries</text>
+<text class="ln" style="animation-delay:2.06s" x="380" y="435" font-size="12.5" fill="#6B7783">capital markets · banking · insurance · government · e-commerce</text>
+<text class="ln" style="animation-delay:2.06s" x="44" y="456" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ languages</text>
+<text class="ln" style="animation-delay:2.10s" x="380" y="456" font-size="12.5" fill="#6B7783">português · english · español</text>
+<text class="ln" style="animation-delay:2.09s" x="44" y="477" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;├─ education</text>
+<text class="ln" style="animation-delay:2.13s" x="380" y="477" font-size="12.5" fill="#6B7783">UNICAMP · three graduate degrees</text>
+<text class="ln" style="animation-delay:2.12s" x="44" y="498" fill="#94A3AE" font-weight="400">&#160;&#160;&#160;└─ published</text>
+<text class="ln" style="animation-delay:2.17s" x="380" y="498" font-size="12.5" fill="#6B7783">three papers · one biometric lab system</text>
 </g></g></svg>

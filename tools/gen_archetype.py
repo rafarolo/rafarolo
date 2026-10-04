@@ -26,7 +26,7 @@ TREE = [
             f("settlement", "B3 · custody · liquidation dates"),
             f("accounting", "asset × liability · roll-forward")]),
         d("practice/", "what the days are actually spent on", [
-            f("review", "906 usages, 17 callers"),
+            f("review", "963 usages, 17 callers"),
             f("architecture", "hexagonal · one contract per capability"),
             f("reliability", "0 bugs · 0 vulnerabilities · rating A"),
             f("advocacy", "AI and backend culture for the engineering team")]),
@@ -77,9 +77,9 @@ def archetype(t):
              '.type{transform-box:fill-box;transform-origin:0 50%%;transform:scaleX(0);'
              'animation:tw %.2fs steps(%d,end) .25s forwards}'
              '.caret{opacity:0;animation:show 0s linear %.2fs forwards,blink 1.06s step-end %.2fs infinite}'
-             '.ln{opacity:0;animation:fa .34s ease forwards}'
+             '.ln{opacity:0;animation:fa .3s ease forwards}'
              '.dot{transform-box:fill-box;transform-origin:50%% 50%%;transform:scale(0);'
-             'animation:pop .4s cubic-bezier(.3,1.5,.5,1) forwards}'
+             'animation:pop .34s cubic-bezier(.3,1.5,.5,1) forwards}'
              '@keyframes tw{to{transform:scaleX(1)}}@keyframes fa{to{opacity:1}}'
              '@keyframes pop{to{transform:scale(1)}}@keyframes show{to{opacity:1}}'
              '@keyframes blink{50%%{opacity:0}}'
@@ -109,7 +109,7 @@ def archetype(t):
     y += 21
 
     for i, (prefix, name, note, is_dir, depth) in enumerate(rows):
-        dl = base + .07 + i * .045
+        dl = base + .06 + i * .035
         fill = c["acc"] if is_dir else c["mut"]
         weight = "700" if is_dir else "400"
         if is_dir and depth == 1:

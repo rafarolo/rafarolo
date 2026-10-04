@@ -72,7 +72,7 @@ def tenure(t):
              'patternTransform="rotate(48)">'
              '<rect width="7" height="16" fill="#FFFFFF" opacity="%s"/>'
              '<animateTransform attributeName="patternTransform" type="translate" '
-             'from="0 0" to="16 0" dur="1.9s" repeatCount="indefinite" additive="sum"/>'
+             'from="0 0" to="16 0" dur="1.5s" repeatCount="indefinite" additive="sum"/>'
              '</pattern>'
              % (t, h, t, c["acc"], c["g1"], t, "0.62" if t == "light" else "0.42"))
     for i, (years, _) in enumerate(ROWS):
@@ -81,10 +81,10 @@ def tenure(t):
         p.append('<clipPath id="cb%d%s"><rect x="%d" y="%.1f" width="%.1f" height="10" rx="5"/>'
                  '</clipPath>' % (i, t, BAR_X, p_y, p_w))
     p.append('</defs>')
-    p.append('<style>.t{opacity:0;animation:fi .45s ease forwards}'
+    p.append('<style>.t{opacity:0;animation:fi .38s ease forwards}'
              '@keyframes fi{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){.t{opacity:1;animation:none}}'
-             + glass_style(14) + '</style>')
+             + glass_style(16) + '</style>')
     p.append('<g clip-path="url(#tn%s)">' % t)
     p.append(glass_bg(t, "tn", 1000, h))
     p.append('<g font-family="%s">' % SANS)
@@ -96,7 +96,7 @@ def tenure(t):
 
     for i, (years, names) in enumerate(ROWS):
         y = TOP + i * STEP
-        d = .2 + i * .07
+        d = .15 + i * .055
         w = BAR_W * years / float(MAX_YEARS)
 
         p.append('<text class="t" style="animation-delay:%.2fs" x="%d" y="%d" font-size="15" '
@@ -105,7 +105,7 @@ def tenure(t):
         p.append('<rect x="%d" y="%.1f" width="%d" height="10" rx="5" fill="%s" opacity="0.30"/>'
                  % (BAR_X, y - 5, BAR_W, c["line"]))
         p.append('<rect x="%d" y="%.1f" width="0" height="10" rx="5" fill="url(#bg%s)">'
-                 '<animate attributeName="width" from="0" to="%.1f" begin="%.2fs" dur="0.9s" '
+                 '<animate attributeName="width" from="0" to="%.1f" begin="%.2fs" dur="0.7s" '
                  'calcMode="spline" keySplines="0.25 0.9 0.3 1" fill="freeze"/></rect>'
                  % (BAR_X, y - 5, t, w, d))
         # Diagonal stripes travelling along the bar. A highlight that crossed once a
@@ -114,13 +114,13 @@ def tenure(t):
         p.append('<g clip-path="url(#cb%d%s)">'
                  '<rect x="%d" y="%.1f" width="%.1f" height="10" fill="url(#gl%s)" opacity="0">'
                  '<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="%.2fs" '
-                 'dur="0.5s" fill="freeze"/></rect></g>'
-                 % (i, t, BAR_X, y - 5, w, t, d + 0.9))
+                 'dur="0.4s" fill="freeze"/></rect></g>'
+                 % (i, t, BAR_X, y - 5, w, t, d + 0.7))
 
         x = CHIP_X
         for name in names:
             cw = chip_width(name)
-            p.append('<g class="t" style="animation-delay:%.2fs">' % (d + .25))
+            p.append('<g class="t" style="animation-delay:%.2fs">' % (d + .2))
             p.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" rx="5" fill="%s" '
                      'opacity="0.55"/>' % (x, y - CHIP_H / 2.0 - 1, cw, CHIP_H, c["bg"]))
             p.append('<text x="%.1f" y="%d" font-size="12" fill="%s">%s</text>'
@@ -129,9 +129,9 @@ def tenure(t):
             x += cw + CHIP_GAP
 
     y = body + 26
-    p.append('<line class="t" style="animation-delay:.9s" x1="52" y1="%d" x2="948" y2="%d" '
+    p.append('<line class="t" style="animation-delay:.8s" x1="52" y1="%d" x2="948" y2="%d" '
              'stroke="%s" stroke-width="1"/>' % (y - 18, y - 18, c["line"]))
-    p.append('<text class="t" style="animation-delay:.95s" x="52" y="%d" font-size="12" '
+    p.append('<text class="t" style="animation-delay:.85s" x="52" y="%d" font-size="12" '
              'fill="%s">Standards and protocols, which have no tenure worth quoting</text>'
              % (y + 4, c["dim"]))
 
@@ -139,7 +139,7 @@ def tenure(t):
     y += 30
     for name in PROTOCOLS:
         cw = chip_width(name)
-        p.append('<g class="t" style="animation-delay:1.0s">')
+        p.append('<g class="t" style="animation-delay:.9s">')
         p.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" rx="5" fill="none" '
                  'stroke="%s" stroke-width="1" opacity="0.7"/>'
                  % (x, y - CHIP_H / 2.0 - 1, cw, CHIP_H, c["line"]))
