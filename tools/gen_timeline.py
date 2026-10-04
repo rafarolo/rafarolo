@@ -1,7 +1,7 @@
 import io, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
+from gen_assets import THEMES, OUT, NL
 
 # year, headline, detail, major
 ITEMS = [
@@ -23,70 +23,54 @@ ITEMS = [
      "found the data bottleneck in a geomarketing platform's core calculation", False),
 ]
 
-ROW = 74
-TOP = 46
-SPINE = 128
+SIZE = 24
+SHOWN = 20
+PULSE = 6.0
+STRIPE = {"light": ("#FFFFFF", "#F6F8FA"), "dark": ("#0D1117", "#151B23")}
 
 
-def timeline(t):
+def node(t, i, major):
     c = THEMES[t]
-    h = TOP + len(ITEMS) * ROW + 18
-    y_last = TOP + (len(ITEMS) - 1) * ROW
-
-    alt = "; ".join("%s %s: %s" % (i[0], i[1], i[2]) for i in ITEMS)
-    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
-         'role="img" aria-label="Timeline of selected work. %s">' % (h, h, alt)]
-    p.append('<defs>' + glass_defs(t, "tl") + '<clipPath id="tl%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
-             '</clipPath></defs>' % (t, h))
+    mid = SIZE / 2
+    r = 6 if major else 4.5
+    pop = .22 + i * .1
+    wave = 1.2 + i * .35
+    p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" '
+         'role="presentation" aria-hidden="true">' % (SIZE, SIZE, SHOWN, SHOWN)]
     p.append('<style>'
-             '.sp{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(0);'
-             'animation:dn 1.1s cubic-bezier(.3,.8,.3,1) .1s forwards}'
-             '.nd{transform-box:fill-box;transform-origin:50% 50%;transform:scale(0);'
-             'animation:pp .45s cubic-bezier(.3,1.6,.5,1) forwards}'
-             '.tx{opacity:0;animation:fi .45s ease forwards}'
-             '@keyframes dn{to{transform:scaleY(1)}}@keyframes pp{to{transform:scale(1)}}'
-             '@keyframes fi{to{opacity:1}}'
-             '@media (prefers-reduced-motion: reduce){.sp{transform:scaleY(1);animation:none}'
-             '.nd{transform:scale(1);animation:none}.tx{opacity:1;animation:none}}'
-             + glass_style(15) + '</style>')
-    p.append('<g clip-path="url(#tl%s)">' % t)
-    p.append(glass_bg(t, "tl", 1000, h))
-    p.append('<rect class="sp" x="%d" y="%d" width="2" height="%d" fill="%s" opacity="0.45"/>'
-             % (SPINE - 1, TOP - 22, y_last - TOP + 44, c["acc"]))
-    p.append('<g font-family="%s">' % SANS)
-
-    for i, (yr, head, det, major) in enumerate(ITEMS):
-        y = TOP + i * ROW
-        d = .3 + i * .13
-        r = 9 if major else 5.5
-        p.append('<circle class="nd" style="animation-delay:%.2fs" cx="%d" cy="%d" r="%.1f" '
-                 'fill="%s" stroke="%s" stroke-width="%d"/>'
-                 % (d, SPINE, y, r, c["acc"] if major else c["panel"], c["acc"], 3 if major else 2.5))
-        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="14" '
-                 'font-weight="700" fill="%s" text-anchor="end" letter-spacing="0.3">%s</text>'
-                 % (d + .05, SPINE - 24, y + 5, c["acc"], yr))
-        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="%d" '
-                 'font-weight="700" fill="%s" letter-spacing="-0.2">%s</text>'
-                 % (d + .08, SPINE + 26, y + 1, 19 if major else 17, c["ink"], head))
-        p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="14" '
-                 'fill="%s">%s</text>' % (d + .12, SPINE + 26, y + 24, c["dim"], det))
-
-    p.append('</g></g></svg>')
+             '.nd,.hl{transform-origin:%gpx %gpx}'
+             '.nd{transform:scale(0);animation:pp .38s cubic-bezier(.3,1.6,.5,1) %.2fs forwards}'
+             '.hl{opacity:0;animation:hl %.1fs ease-out %.2fs infinite}'
+             '@keyframes pp{to{transform:scale(1)}}'
+             '@keyframes hl{0%%{opacity:.6;transform:scale(1)}20%%{opacity:0;transform:scale(1.9)}'
+             '100%%{opacity:0;transform:scale(1.9)}}'
+             '@media (prefers-reduced-motion: reduce){.nd{transform:none;animation:none}'
+             '.hl{display:none}}'
+             '</style>' % (mid, mid, pop, PULSE, wave))
+    p.append('<rect width="%d" height="%d" fill="%s"/>' % (SIZE, SIZE, STRIPE[t][i % 2]))
+    p.append('<circle class="hl" cx="%g" cy="%g" r="%g" fill="none" stroke="%s" stroke-width="1.5"/>'
+             % (mid, mid, r, c["acc"]))
+    p.append('<circle class="nd" cx="%g" cy="%g" r="%g" fill="%s" stroke="%s" stroke-width="%g"/>'
+             % (mid, mid, r, c["acc"] if major else "none", c["acc"], 2.5 if major else 2))
+    p.append('</svg>')
     return NL.join(p) + NL
 
 
-def esc(s):
-    return s.replace("&", "&amp;").replace("<", "&lt;")
+def picture(i):
+    return ('<picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-%d-dark.svg">'
+            '<img src="assets/tl-%d-light.svg" width="%d" height="%d" alt=""></picture>'
+            % (i, i, SHOWN, SHOWN))
 
 
 for t in ("light", "dark"):
-    io.open(os.path.join(OUT, "timeline-%s.svg" % t), "w", encoding="utf-8",
-            newline="\n").write(timeline(t))
-    print("wrote timeline-%s.svg" % t)
+    for i, item in enumerate(ITEMS):
+        io.open(os.path.join(OUT, "tl-%d-%s.svg" % (i, t)), "w", encoding="utf-8",
+                newline="\n").write(node(t, i, item[3]))
+    print("wrote tl-*-%s.svg" % t)
 
 # U+2011 non-breaking hyphen: an en dash is a line-break opportunity and splits the cell
-rows = NL.join("| `%s` | **%s** | %s |"
-               % (i[0].replace(u"–", u"‑"), i[1], i[2]) for i in ITEMS)
+rows = NL.join("| %s | `%s` | **%s** | %s |"
+               % (picture(n), i[0].replace(u"–", u"‑"), i[1], i[2]) for n, i in enumerate(ITEMS))
 io.open(os.path.join(os.path.dirname(OUT), "_timeline_table.md"), "w",
         encoding="utf-8", newline="\n").write(rows + NL)
-print("wrote table fallback")
+print("wrote table")
