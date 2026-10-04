@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" role="presentation" aria-hidden="true">
+<style>.nd,.hl{transform-origin:12px 12px}.nd{transform:scale(0);animation:pp .38s cubic-bezier(.3,1.6,.5,1) 0.62s forwards}.hl{opacity:0;animation:hl 6.0s ease-out 2.60s infinite}@keyframes pp{to{transform:scale(1)}}@keyframes hl{0%{opacity:.6;transform:scale(1)}20%{opacity:0;transform:scale(1.9)}100%{opacity:0;transform:scale(1.9)}}@media (prefers-reduced-motion: reduce){.nd{transform:none;animation:none}.hl{display:none}}</style>
+<rect width="24" height="24" fill="#FFFFFF"/>
+<circle class="hl" cx="12" cy="12" r="4.5" fill="none" stroke="#0E5468" stroke-width="1.5"/>
+<circle class="nd" cx="12" cy="12" r="4.5" fill="none" stroke="#0E5468" stroke-width="2"/>
+</svg>

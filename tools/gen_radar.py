@@ -11,22 +11,60 @@ def esc(v):
 # Ordered so the two deepest areas sit next to each other: the depth polygon reads as one
 # mass instead of two spurs, and the notch where focus drops falls right after its peak.
 AXES = [
-    ("BACKEND ON THE JVM", 17, 31.6, "middle"),
-    ("DATA", 14, 6.8, "start"),
-    ("CLOUD & PLATFORM", 7, 14.7, "start"),
-    ("SECURITY & IDENTITY", 7, 30.5, "end"),
-    ("OBSERVABILITY", 7, 16.3, "end"),
+    ("BACKEND ON THE JVM", 17, 18.2, "middle"),
+    ("DATA", 14, 13.7, "start"),
+    ("CLOUD & PLATFORM", 7, 20.9, "start"),
+    ("SECURITY & IDENTITY", 7, 25.7, "end"),
+    ("OBSERVABILITY", 7, 21.6, "end"),
 ]
+MATCHED, WINDOW = 292, 474
+
+# The keyword rules the shares above came from, in this order: the first area whose
+# keywords appear in a lowercased, accent-stripped pull request title takes it, and a
+# title matching none of them is not counted. Backend comes last on purpose -- every one
+# of these services is a JVM service, so its keywords would otherwise swallow titles that
+# are really about identity or a cluster.
+#
+# The rules lived nowhere before, which made the count underneath the chart a figure
+# nobody could reproduce.
+RULES = [
+    ("OBSERVABILITY", ("observab", "metric", "metrica", "log ", "logs", "logging", "trace",
+        "tracing", "telemetr", "otel", "grafana", "prometheus", "dashboard", "alert",
+        "slo", " sli", "health", "actuator", "monitor", "histogram", "span",
+        "logar", "logbook", " log ", "micrometer", "instrument", "scrape",
+        "lib-audit", "audit-api", "auditoria", "auditar", "auditada", "audit table",
+        "audit request", "updated audit", "register audit", "rmr/audit")),
+    ("SECURITY & IDENTITY", ("auth", "oauth", "oidc", "jwt", "token", "senha", "password",
+        "identity", "identidade", "entra", "keycloak", "rbac", "permiss", "credencia",
+        "credential", "secret", "certificad", " tls", "mtls", "cors", "csrf", "fapi",
+        "app registration", "app-registration", "key vault", "keyvault", "scope", "escopo",
+        "cve", "vulnerab", "login", "acesso", "grant", "consent")),
+    ("CLOUD & PLATFORM", ("pulumi", "terraform", "azure", "aks", "kubernetes", "k8s", "helm",
+        "docker", "ingress", "deploy", "pipeline", "github actions", "workflow", " ci ",
+        "apim", "infra", "cluster", "node pool", "stack", "container", "registry", "bicep",
+        "subscription", "dns", "vnet", "storage account", "blob", "runner", "release",
+        "namespace", "chart")),
+    ("DATA", ("sql", "postgres", "mongo", "cosmos", "migration", "migracao", "prisma",
+        "tabela", "table", "coluna", "column", "index", "indice", "query", "consulta",
+        "dwh", "etl", "airflow", " dag", "carga", "schema", "banco", "database", "seed",
+        "flyway", "liquibase", "backfill", "relatorio", "report", "planilha", "csv",
+        "excel", "xlsx")),
+    ("BACKEND ON THE JVM", ("kotlin", "spring", "jvm", "java", "endpoint", " api", "api ",
+        "controller", "service", "servico", "dto", "jpa", "hibernate", "feign", "rest",
+        "graphql", "cache", "retry", "validac", "problem details", "openapi", "swagger",
+        "webclient", "restclient", "coroutine", "suspend", "bean", "maven", "gradle",
+        "junit", "mockk", "teste", "test")),
+]
+
 MAXY = max(a[1] for a in AXES) * 1.0
 MAXS = max(a[2] for a in AXES) * 1.0
 
 CX, CY, R = 296, 232, 138
 NOTES = [
-    ("Backend on the JVM", "17 years deep, 32% of the last year", "the anchor: deepest, and still the busiest"),
-    ("Data", "14 years deep, 7% of the last year", "the longest history, the smallest slice now"),
-    ("Security & identity", "7 years deep, 31% of the last year", "the steepest climb of the five"),
+    ("Security & identity", "7 years deep, 26% of the last year", "the shallowest history, the largest slice now"),
+    ("Observability", "7 years deep, 22% of the last year", "every endpoint on Grafana: metrics, logs, traces"),
+    ("Backend on the JVM", "17 years deep, 18% of the last year", "the deepest, and the floor the other four stand on"),
 ]
-
 
 def pt(i, frac):
     ang = math.radians(-90 + i * (360.0 / len(AXES)))
@@ -48,16 +86,26 @@ def radar(t):
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
     p.append('<defs>' + glass_defs(t, "rd") + '<clipPath id="rd%s"><rect x="0" y="0" width="1000" height="%d" rx="10"/>'
-             '</clipPath></defs>' % (t, h))
+             '</clipPath>'
+             '<linearGradient id="sw%s" x1="0" y1="1" x2="1" y2="0">'
+             '<stop offset="0" stop-color="%s" stop-opacity="0.32"/>'
+             '<stop offset="1" stop-color="%s" stop-opacity="0"/></linearGradient>'
+             '</defs>' % (t, h, t, c["acc"], c["acc"]))
     p.append('<style>'
-             '.gr{opacity:0;animation:gi .5s ease .1s forwards}'
+             '.gr{opacity:0;animation:gi .4s ease .06s forwards}'
              '.pg{transform-box:fill-box;transform-origin:50% 50%;transform:scale(.05);opacity:0;'
-             'animation:gw .95s cubic-bezier(.25,.9,.3,1) forwards}'
-             '.tx{opacity:0;animation:gi .5s ease forwards}'
+             'animation:gw .7s cubic-bezier(.25,.9,.3,1) forwards}'
+             '.tx{opacity:0;animation:gi .38s ease forwards}'
              '@keyframes gi{to{opacity:1}}@keyframes gw{to{transform:scale(1);opacity:1}}'
+             '@keyframes spin{to{transform:rotate(360deg)}}'
+             # A sweep, because this is a radar. One wedge turning on its own axis: the
+             # polygons are still once they have grown, and a panel that never moves again
+             # sits on the page as a screenshot of the ones that do.
+             + ('.sw{transform-box:view-box;transform-origin:%dpx %dpx;'
+                'animation:spin 7s linear infinite}' % (CX, CY)) +
              '@media (prefers-reduced-motion: reduce){.gr,.tx{opacity:1;animation:none}'
-             '.pg{transform:scale(1);opacity:1;animation:none}}'
-             + glass_style(14) + '</style>')
+             '.pg{transform:scale(1);opacity:1;animation:none}.sw{display:none}}'
+             + glass_style(13) + '</style>')
     p.append('<g clip-path="url(#rd%s)">' % t)
     p.append(glass_bg(t, "rd", 1000, h))
     p.append('<g font-family="%s">' % SANS)
@@ -70,6 +118,8 @@ def radar(t):
         p.append('<line class="gr" x1="%d" y1="%d" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1" '
                  'opacity="0.7"/>' % (CX, CY, x, y, c["line"]))
 
+    p.append('<g class="sw"><path d="M%d %d L%.1f %.1f A%d %d 0 0 1 %.1f %.1f Z" fill="url(#sw%s)"/></g>'
+             % (CX, CY, CX, CY - R, R, R, CX + R * 0.82, CY - R * 0.57, t))
     p.append('<polygon class="pg" points="%s" fill="%s" fill-opacity="0.14" stroke="%s" '
              'stroke-width="1.6" stroke-dasharray="5 4" opacity="0.9"/>' % (poly(depth), c["acc"], c["acc"]))
     p.append('<polygon class="pg" style="animation-delay:.22s" points="%s" fill="%s" '
@@ -77,7 +127,7 @@ def radar(t):
     for i, f in enumerate(focus):
         x, y = pt(i, f)
         p.append('<circle class="tx" style="animation-delay:%.2fs" cx="%.1f" cy="%.1f" r="4" '
-                 'fill="%s"/>' % (.9 + i * .06, x, y, c["acc"]))
+                 'fill="%s"/>' % (.7 + i * .05, x, y, c["acc"]))
 
     for i, (lab, yrs, share, anchor) in enumerate(AXES):
         x, y = pt(i, 1.0)
@@ -86,18 +136,18 @@ def radar(t):
         oy = -16 if abs(ang + 90) < 1 else (20 if math.sin(math.radians(ang)) > .3 else 6)
         p.append('<text class="tx" style="animation-delay:%.2fs" x="%.1f" y="%.1f" font-size="10.5" '
                  'font-weight="700" fill="%s" text-anchor="%s" letter-spacing="1.2">%s</text>'
-                 % (.75 + i * .06, x + ox, y + oy, c["mut"], anchor, esc(lab)))
+                 % (.6 + i * .05, x + ox, y + oy, c["mut"], anchor, esc(lab)))
         p.append('<text class="tx" style="animation-delay:%.2fs" x="%.1f" y="%.1f" font-size="10.5" '
                  'fill="%s" text-anchor="%s">%dy · %.0f%%</text>'
-                 % (.8 + i * .06, x + ox, y + oy + 15, c["dim"], anchor, yrs, share))
+                 % (.65 + i * .05, x + ox, y + oy + 15, c["dim"], anchor, yrs, share))
 
     lx = 620
-    p.append('<text class="tx" style="animation-delay:1.15s" x="%d" y="70" font-size="11" '
+    p.append('<text class="tx" style="animation-delay:.9s" x="%d" y="70" font-size="11" '
              'font-weight="700" fill="%s" letter-spacing="1.6">WHAT THE SHAPE SAYS</text>' % (lx, c["mut"]))
     y = 108
     for i, (title, num, note) in enumerate(NOTES):
         title = esc(title)
-        d = 1.2 + i * .1
+        d = .95 + i * .08
         p.append('<circle class="tx" style="animation-delay:%.2fs" cx="%d" cy="%d" r="3.5" fill="%s"/>'
                  % (d, lx + 4, y - 5, c["acc"]))
         p.append('<text class="tx" style="animation-delay:%.2fs" x="%d" y="%d" font-size="14" '
@@ -108,15 +158,15 @@ def radar(t):
                  'fill="%s">%s</text>' % (d + .08, lx + 18, y + 37, c["dim"], note))
         y += 76
 
-    p.append('<g class="tx" style="animation-delay:1.5s">')
+    p.append('<g class="tx" style="animation-delay:1.2s">')
     p.append('<rect x="%d" y="358" width="26" height="3" fill="%s" opacity="0.55"/>' % (lx, c["acc"]))
     p.append('<text x="%d" y="363" font-size="10.5" fill="%s">depth, years since first use</text>'
              % (lx + 34, c["dim"]))
     p.append('<rect x="%d" y="380" width="26" height="3" fill="%s"/>' % (lx, c["acc"]))
     p.append('<text x="%d" y="385" font-size="10.5" fill="%s">focus, share of the last 12 months</text>'
              % (lx + 34, c["dim"]))
-    p.append('<text x="%d" y="412" font-size="9.5" fill="%s">190 of 337 pull requests matched an area '
-             'by title</text>' % (lx, c["dim"]))
+    p.append('<text x="%d" y="412" font-size="9.5" fill="%s">%d of %d pull requests matched an area '
+             'by title</text>' % (lx, c["dim"], MATCHED, WINDOW))
     p.append('</g>')
 
     p.append('</g></g></svg>')

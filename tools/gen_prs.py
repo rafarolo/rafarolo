@@ -5,14 +5,15 @@ from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
-         (2025, 217, 278, True), (2026, 251, 206, False)]
+         (2025, 217, 278, True), (2026, 416, 263, False)]
 
-DAYS_ELAPSED, DAYS_IN_YEAR = 241, 365
+DAYS_ELAPSED, DAYS_IN_YEAR = 277, 365
+CUTOFF = "4 October"
 
 LEFT, RIGHT, BASE, MAXH = 92, 830, 252, 150
 BW, GAP = 46, 8
 RATE = DAYS_IN_YEAR / float(DAYS_ELAPSED)
-LOOP = 60.0
+LOOP = 15.0
 
 
 def projected(value):
@@ -35,7 +36,7 @@ def prs(t):
     projected_total = projected(YEARS[-1][1]) + projected(YEARS[-1][2])
 
     alt = ("Pull requests per year, authored and reviewed for others. " +
-           "; ".join("%d: %d authored, %d reviewed%s" % (y, a, r, "" if k else ", to 29 August")
+           "; ".join("%d: %d authored, %d reviewed%s" % (y, a, r, "" if k else ", to " + CUTOFF)
                      for y, a, r, k in YEARS))
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="%s">' % (h, h, alt)]
@@ -46,12 +47,12 @@ def prs(t):
              '<path d="M0 0L10 5L0 10z" fill="%s"/></marker></defs>' % (t, h, t, c["acc"]))
     p.append('<style>'
              '.b{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);'
-             'animation:gw .8s cubic-bezier(.2,.85,.25,1) forwards}'
-             '.t{opacity:0;animation:fi .45s ease forwards}'
+             'animation:gw .65s cubic-bezier(.2,.85,.25,1) forwards}'
+             '.t{opacity:0;animation:fi .38s ease forwards}'
              '@keyframes gw{to{transform:scaleY(1)}}@keyframes fi{to{opacity:1}}'
              '@media (prefers-reduced-motion: reduce){.b{transform:scaleY(1);animation:none}'
              '.t{opacity:1;animation:none}}'
-             + glass_style(12) + '</style>')
+             + glass_style(11) + '</style>')
     p.append('<g clip-path="url(#pr%s)">' % t)
     p.append(glass_bg(t, "pr", 1000, h))
     p.append('<g font-family="%s">' % SANS)
@@ -75,31 +76,33 @@ def prs(t):
 
     for i, (year, authored, reviewed, complete) in enumerate(YEARS):
         cx = centre(i)
-        d = .3 + i * .12
+        d = .2 + i * .09
         for j, (value, solid) in enumerate(((authored, False), (reviewed, True))):
             bh = value * SCALE
             x = cx - BW - GAP / 2 + j * (BW + GAP)
             top = BASE - bh
             if not complete:
                 ph = projected(value) * SCALE
-                begin = d + .5 + j * .06
-                # The forecast is rebuilt every cycle: grows in the first 5%, holds, then
-                # fades out and resets its geometry while nothing is on screen.
+                begin = d + .38 + j * .05
+                # The forecast is rebuilt every cycle: grows over the first tenth of it,
+                # holds, then fades out and resets its geometry while nothing is on screen.
                 # keyTimes has to end at 1. It ended at 0.955, which is invalid, and an
                 # invalid list makes the browser drop the animation without a word.
-                times = 'keyTimes="0;0.05;0.93;0.955;1" calcMode="spline" '                         'keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" '                         'dur="%.1fs" repeatCount="indefinite"' % LOOP
+                times = ('keyTimes="0;0.10;0.90;0.96;1" calcMode="spline" '
+                         'keySplines="0 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1" '
+                         'dur="%.1fs" repeatCount="indefinite"' % LOOP)
                 fade = ('<animate attributeName="opacity" values="1;1;0;0;1" '
-                        'keyTimes="0;0.90;0.95;0.99;1" begin="%.2fs" dur="%.1fs" '
+                        'keyTimes="0;0.90;0.94;0.99;1" begin="%.2fs" dur="%.1fs" '
                         'repeatCount="indefinite"/>' % (begin, LOOP))
                 p.append('<g opacity="1">%s' % fade)
                 p.append('<rect x="%.1f" y="%.1f" width="%d" height="0" rx="3" fill="none" '
                          'stroke="%s" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.85">'
                          '<animate attributeName="height" values="0;%.1f;%.1f;0;0" begin="%.2fs" %s/>'
                          '<animate attributeName="y" values="%d;%.1f;%.1f;%d;%d" begin="%.2fs" %s/>'
-                         '<animate attributeName="stroke-dashoffset" values="0;16;16" keyTimes="0;0.03;1" begin="%.2fs" dur="60s" repeatCount="indefinite"/>'
+                         '<animate attributeName="stroke-dashoffset" values="16;0" dur="1.4s" repeatCount="indefinite"/>'
                          '</rect>'
                          % (x, BASE, BW, c["acc"], ph, ph, begin, times,
-                            BASE, BASE - ph, BASE - ph, BASE, BASE, begin, times, begin))
+                            BASE, BASE - ph, BASE - ph, BASE, BASE, begin, times))
                 p.append('<text x="%.1f" y="%d" font-size="14" font-weight="700" fill="%s" '
                          'text-anchor="middle" opacity="0.9">%d'
                          '<animate attributeName="y" values="%d;%.1f;%.1f;%d;%d" begin="%.2fs" %s/>'
@@ -109,23 +112,23 @@ def prs(t):
                 p.append('</g>')
             p.append('<rect class="b" style="animation-delay:%.2fs" x="%.1f" y="%.1f" width="%d" '
                      'height="%.1f" rx="3" fill="%s"%s/>'
-                     % (d + j * .06, x, top, BW, bh, c["acc"],
+                     % (d + j * .05, x, top, BW, bh, c["acc"],
                         "" if solid else ' opacity="0.38"'))
             p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" font-size="17" '
                      'font-weight="700" fill="%s" text-anchor="middle">%d</text>'
-                     % (d + .3 + j * .06, x + BW / 2.0, top - 11, c["ink"], value))
+                     % (d + .24 + j * .05, x + BW / 2.0, top - 11, c["ink"], value))
 
         label = str(year) if complete else "%d *" % year
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="17" '
                  'font-weight="700" fill="%s" text-anchor="middle">%s</text>'
-                 % (d + .35, cx, BASE + 32, c["mut"], label))
+                 % (d + .28, cx, BASE + 32, c["mut"], label))
 
     last = YEARS[-1]
     solid_top = BASE - max(last[1], last[2]) * SCALE
     dashed_top = BASE - max(projected(last[1]), projected(last[2])) * SCALE
     ax = RIGHT + 34
     lift = int(round((RATE - 1) * 100))
-    p.append('<g class="t" style="animation-delay:1.25s">')
+    p.append('<g class="t" style="animation-delay:.95s">')
     p.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="2" '
              'marker-end="url(#ah%s)"/>' % (ax, solid_top, ax, dashed_top + 12, c["acc"], t))
     p.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1" '
@@ -147,19 +150,19 @@ def prs(t):
             text = "+%d%%" % round((growth[1] - growth[0]) * 100.0 / growth[0])
             fill, weight = c["acc"], "700"
         else:
-            text = "8 of 12 months"
+            text = "9 of 12 months"
             fill, weight = c["dim"], "600"
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="13" '
                  'font-weight="%s" fill="%s" text-anchor="middle">%s</text>'
-                 % (1.0 + i * .1, x, BASE + 60, weight, fill, text))
+                 % (.78 + i * .08, x, BASE + 60, weight, fill, text))
 
-    p.append('<g class="t" style="animation-delay:1.4s">')
+    p.append('<g class="t" style="animation-delay:1.1s">')
     p.append('<rect x="%d" y="%d" width="20" height="11" rx="2" fill="none" stroke="%s" '
              'stroke-width="1.6" stroke-dasharray="4 4"/>' % (LEFT - 44, BASE + 82, c["acc"]))
-    p.append('<text x="%d" y="%d" font-size="12" fill="%s">* 2026 counts to 29 August. The dashed '
+    p.append('<text x="%d" y="%d" font-size="12" fill="%s">* 2026 counts to %s. The dashed '
              'outline is where each bar lands if the pace holds — %d pull requests touched against '
              '%d in 2025.</text>'
-             % (LEFT - 16, BASE + 92, c["dim"], projected_total, totals[2]))
+             % (LEFT - 16, BASE + 92, c["dim"], CUTOFF, projected_total, totals[2]))
     p.append('</g>')
 
     p.append('</g></g></svg>')
