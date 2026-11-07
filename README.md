@@ -96,6 +96,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 <br>
 
+<div align="center">
+
 #### Main stack today
 
 | | |
@@ -107,6 +109,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 | **Data** | `PostgreSQL` `SQL Server` `MongoDB` `Cosmos DB` |
 | **Observability** | `Grafana` `Prometheus` `OpenTelemetry` |
 | **APIs** | `OpenAPI` `GraphQL` |
+
+</div>
 
 <br>
 
