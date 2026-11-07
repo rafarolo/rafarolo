@@ -124,6 +124,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 <br>
 
+<!-- Hidden on 7 November 2026 to rework the layout. Remove this comment line and the closing one to show it again.
+
 ### Artifact of my life
 
 `my.life:rafael.rolo`, laid out the way I'd lay out a service.<br>
@@ -134,7 +136,8 @@ Domain at the core, stack as adapters, because the stack is the part that gets r
   <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=1ff1c5a4b">
 </picture>
 
-<br>
+-->
+
 <br>
 
 <p align="center">
