@@ -25,7 +25,7 @@ All of it in private corporate repositories, which is why the contribution graph
 green and unclickable.
 
 <p align="center">
-  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=7e5d392bb" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals" height="28"></a>
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=629e650cb" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals" height="28"></a>
 </p>
 
 <a href="https://stackoverflow.com/users/5626568/">

@@ -39,8 +39,9 @@ def badge(logo, label, brand, msg=None, aria=None, medals=None):
              'fill="#FFFFFF">' % (SANS, FS, LS))
     p.append('<text x="%.1f" y="18.5">%s</text>' % (x_lab, label))
     if msg is not None:
-        dots = "".join(' <tspan fill="%s">●</tspan>&#160;%s' % (colour, n) for n, colour in medals or [])
-        p.append('<text x="%.1f" y="18.5">%s%s</text>' % (lw + 11, msg, dots))
+        dots = "".join(' <tspan fill="%s" font-size="14">●</tspan>&#160;%s' % (colour, n) for n, colour in medals or [])
+        fit = ' textLength="%.1f" lengthAdjust="spacing"' % (w - lw - 22) if medals else ''
+        p.append('<text x="%.1f" y="18.5"%s>%s%s</text>' % (lw + 11, fit, msg, dots))
     p.append('</g>')
     p.append('</svg>')
     return NL.join(p) + NL
