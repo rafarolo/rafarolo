@@ -139,25 +139,11 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 </picture>
 
 <br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
-  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
-</picture>
-
-<br>
 <br>
 
 <p align="center">
   <img src="assets/location.svg?v=a7d87508b" alt="São Paulo, Brasil" height="28">
 </p>
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
-  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
-</picture>
 
 <br>
 
