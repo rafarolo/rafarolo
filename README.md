@@ -35,6 +35,8 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 <br>
 <br>
 
+<div align="center">
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=9139334eb">
   <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 656 and 310 in 2026 to 7 November." src="assets/prs-light.svg?v=776428cdb">
@@ -74,8 +76,10 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 
 ### Worked examples
 
-Three of the things above, extracted and made runnable. Each takes a handful of failures
-that give no error at all, and proves every one with a test that counts what actually
+Three of the things above, extracted and made runnable.
+
+Each takes a handful of failures that give no error at all, and proves every one with a test
+that counts what actually
 happened.
 
 | | |
@@ -111,8 +115,6 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 <br>
 
-<div align="center">
-
 #### Main stack today
 
 | Layer | Technology |
@@ -125,7 +127,6 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 | **Observability** | `Grafana` `Prometheus` `OpenTelemetry` |
 | **APIs** | `OpenAPI` `GraphQL` |
 
-</div>
 
 <br>
 
@@ -156,3 +157,5 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
     <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg?v=f78de6bcb">
   </picture>
 </a>
+
+</div>
