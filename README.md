@@ -11,7 +11,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=3c191cfeb" alt="Stack Overflow: 5,486 reputation" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=f475c562b" alt="Stack Exchange profile" height="28"></a>
+  <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo" align="absmiddle"></picture></a>
 </p>
 
 <br>
