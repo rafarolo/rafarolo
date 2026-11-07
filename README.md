@@ -32,6 +32,7 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 </picture>
 
 <br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=9139334eb">
