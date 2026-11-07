@@ -79,8 +79,7 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 Three of the things above, extracted and made runnable.
 
 Each takes a handful of failures that give no error at all, and proves every one with a test
-that counts what actually
-happened.
+that counts what actually happened.
 
 | | |
 |---|---|
