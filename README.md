@@ -36,6 +36,7 @@ green and unclickable.
 </a>
 
 <br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
@@ -61,6 +62,7 @@ green and unclickable.
 </picture>
 
 <br>
+<br>
 
 ### Selected work
 
@@ -76,12 +78,14 @@ green and unclickable.
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-7-dark.svg?v=699d8679b"><img src="assets/tl-7-light.svg?v=05dec4f7b" width="20" height="20" alt=""></picture> | `2014‑2015` | **A study area, ten times faster** | found the data bottleneck in a geomarketing platform's core calculation |
 
 <br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
 
+<br>
 <br>
 
 ### Worked examples
@@ -100,12 +104,14 @@ that counts what actually happened.
 Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in CI.
 
 <br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
 
+<br>
 <br>
 
 ### Stack
@@ -116,12 +122,14 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 </picture>
 
 <br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
 
+<br>
 <br>
 
 #### Main stack today
@@ -138,12 +146,14 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 
 <br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
 
+<br>
 <br>
 
 <picture>
