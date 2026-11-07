@@ -12,7 +12,9 @@
 - Sectors served: **capital markets · banking · insurance · government · e-commerce**
 
 All of it in private corporate repositories, which is why the contribution graph below is
-green and unclickable. The public record is older: [**156 answers on Stack Overflow**](https://stackoverflow.com/users/5626568/)
+green and unclickable.
+
+The public record is older: [**156 answers on Stack Overflow**](https://stackoverflow.com/users/5626568/)
 from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 
 <br>
