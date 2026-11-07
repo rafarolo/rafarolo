@@ -96,6 +96,13 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 <br>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
+<br>
+
 <div align="center">
 
 #### Main stack today
@@ -111,6 +118,13 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 | **APIs** | `OpenAPI` `GraphQL` |
 
 </div>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
 
 <br>
 
