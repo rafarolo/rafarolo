@@ -19,6 +19,13 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 
 <br>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
+<br>
+
 ### Pull requests per year
 
 <picture>
@@ -27,6 +34,12 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 </picture>
 
 <br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
 <br>
 
 ### Selected work
@@ -41,6 +54,13 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-5-dark.svg?v=f95f0155b"><img src="assets/tl-5-light.svg?v=139f5d1ab" width="20" height="20" alt=""></picture> | `2020‑2021` | **Claims analytics on GCP** | predictive engine for suspicious claims at a 7M-client insurer, beside a COBOL/CICS core |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-6-dark.svg?v=2b30283cb"><img src="assets/tl-6-light.svg?v=0831e5a6b" width="20" height="20" alt=""></picture> | `2019‑2020` | **WebSphere to Kubernetes** | retail insurance systems onto Liberty on IBM Cloud Private, OpenShift pipeline |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-7-dark.svg?v=699d8679b"><img src="assets/tl-7-light.svg?v=05dec4f7b" width="20" height="20" alt=""></picture> | `2014‑2015` | **A study area, ten times faster** | found the data bottleneck in a geomarketing platform's core calculation |
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
 
 <br>
 
@@ -59,7 +79,6 @@ happened.
 Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in CI.
 
 <br>
-
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
