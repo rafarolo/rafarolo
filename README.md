@@ -9,9 +9,9 @@
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=f475c562b" alt="Stack Exchange profile" height="28"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=3c191cfeb" alt="Stack Overflow: 5,486 reputation" height="28"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=f475c562b" alt="Stack Exchange profile" height="28"></a>
 </p>
 
 <br>
