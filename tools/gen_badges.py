@@ -77,7 +77,8 @@ def divider(t):
 
 OUTS = {
     "linkedin.svg": badge(LOGO["linkedin"], "LINKEDIN", "#0A66C2", "RAFAROLO", "LinkedIn: rafarolo"),
-    "stackexchange.svg": badge(LOGO["stack"], "STACK EXCHANGE", "#F48024", None, "Stack Exchange profile"),
+    "stackexchange.svg": badge(LOGO["stack"], "STACK EXCHANGE", "#1E5397", None, "Stack Exchange profile"),
+    "stackoverflow.svg": badge(LOGO["stack"], "STACK OVERFLOW", "#F48024", "5,486 REP", "Stack Overflow: 5,486 reputation"),
     "location.svg": badge(LOGO["pin"], "SÃO PAULO", "#0E5468", "BRASIL", "São Paulo, Brasil"),
 }
 for name, svg in OUTS.items():
