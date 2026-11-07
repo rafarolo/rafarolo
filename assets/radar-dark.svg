@@ -37,9 +37,9 @@
 <text class="tx" style="animation-delay:1.00s" x="638" y="127" font-size="12" fill="#56AEC2">7 years deep, 26% of the last year</text>
 <text class="tx" style="animation-delay:1.03s" x="638" y="145" font-size="12" fill="#6B7783">the shallowest history, the largest slice now</text>
 <circle class="tx" style="animation-delay:1.03s" cx="624" cy="179" r="3.5" fill="#56AEC2"/>
-<text class="tx" style="animation-delay:1.03s" x="638" y="184" font-size="14" font-weight="700" fill="#E8EEF2">Observability</text>
-<text class="tx" style="animation-delay:1.08s" x="638" y="203" font-size="12" fill="#56AEC2">7 years deep, 19% of the last year</text>
-<text class="tx" style="animation-delay:1.11s" x="638" y="221" font-size="12" fill="#6B7783">every endpoint on Grafana: metrics, logs, traces</text>
+<text class="tx" style="animation-delay:1.03s" x="638" y="184" font-size="14" font-weight="700" fill="#E8EEF2">Cloud &amp; platform</text>
+<text class="tx" style="animation-delay:1.08s" x="638" y="203" font-size="12" fill="#56AEC2">7 years deep, 22% of the last year</text>
+<text class="tx" style="animation-delay:1.11s" x="638" y="221" font-size="12" fill="#6B7783">AKS, Pulumi and a single GitHub Actions pipeline</text>
 <circle class="tx" style="animation-delay:1.11s" cx="624" cy="255" r="3.5" fill="#56AEC2"/>
 <text class="tx" style="animation-delay:1.11s" x="638" y="260" font-size="14" font-weight="700" fill="#E8EEF2">Backend on the JVM</text>
 <text class="tx" style="animation-delay:1.16s" x="638" y="279" font-size="12" fill="#56AEC2">17 years deep, 17% of the last year</text>

@@ -8,11 +8,12 @@
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
-- I review as much as I write: **1,010 reviews against 1,204 pull requests of my own**, for 17 engineers
+- I review for 17 engineers: **1,010 reviews against 1,204 pull requests of my own**
 - Sectors served: **capital markets · banking · insurance · government · e-commerce**
 
 All of it in private corporate repositories, which is why the contribution graph below is
-green and unclickable.
+green and unclickable. The public record is older: [**156 answers on Stack Overflow**](https://stackoverflow.com/users/5626568/)
+from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 
 <br>
 
@@ -24,8 +25,6 @@ green and unclickable.
 </picture>
 
 <br>
-
-
 <br>
 
 ### Selected work
@@ -70,8 +69,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 ### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=a7d4b34fb">
-  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=68f7d322b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=d2f843e0b">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=d4d4f7b6b">
 </picture>
 
 <br>
@@ -81,7 +80,7 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 | | |
 |---|---|
 | **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
-| **Language** | `Kotlin 2.2` `Java 21` |
+| **Language** | `Kotlin 2.4` `Java 21` |
 | **Framework** | `Spring Boot 3.5` · Cloud, Data, Security, Cache, Retry, Circuit Breaker, AOP, Actuator |
 | **Security** | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` |
 | **Data** | `PostgreSQL` `SQL Server` `MongoDB` `Cosmos DB` |
@@ -125,7 +124,7 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 ### Artifact of my life
 
-`my.life:rafael.rolo`, laid out the way I'd lay out a service<br>
+`my.life:rafael.rolo`, laid out the way I'd lay out a service.<br>
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>

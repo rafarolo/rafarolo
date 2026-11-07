@@ -62,7 +62,7 @@ MAXS = max(a[2] for a in AXES) * 1.0
 CX, CY, R = 296, 232, 138
 NOTES = [
     ("Security & identity", "7 years deep, 26% of the last year", "the shallowest history, the largest slice now"),
-    ("Observability", "7 years deep, 19% of the last year", "every endpoint on Grafana: metrics, logs, traces"),
+    ("Cloud & platform", "7 years deep, 22% of the last year", "AKS, Pulumi and a single GitHub Actions pipeline"),
     ("Backend on the JVM", "17 years deep, 17% of the last year", "the deepest, and the floor the other four stand on"),
 ]
 
