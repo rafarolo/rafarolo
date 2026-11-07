@@ -33,13 +33,12 @@ from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 
 <br>
 
-### Pull requests per year
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=9139334eb">
   <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 656 and 310 in 2026 to 7 November." src="assets/prs-light.svg?v=776428cdb">
 </picture>
 
+<br>
 <br>
 
 <picture>
