@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=4fa389dbb" alt="LinkedIn: rafarolo" height="28"></a>
 </p>
 
 <br>
@@ -25,7 +25,7 @@ All of it in private corporate repositories, which is why the contribution graph
 green and unclickable.
 
 <p align="center">
-  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=932b9e1db" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze badges" height="28"></a>
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=2f7df8a2b" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze badges" height="28"></a>
 </p>
 
 <a href="https://stackoverflow.com/users/5626568/">
@@ -155,7 +155,7 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 <br>
 
 <p align="center">
-  <img src="assets/location.svg?v=a7d87508b" alt="São Paulo, Brasil" height="28">
+  <img src="assets/location.svg?v=afdb0c9fb" alt="São Paulo, Brasil" height="28">
 </p>
 
 <br>
