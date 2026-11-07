@@ -133,25 +133,6 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
   <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg?v=edb93425b">
 </picture>
 
-<details>
-<summary>Years as text</summary>
-
-| Years | Technology |
-|---|---|
-| `17` | `Java` |
-| `14` | `PostgreSQL` |
-| `12` | `MongoDB` |
-| `11` | `Spring Boot` `SQL Server` |
-| `7` | `Spring Security` `OpenAPI` `Kubernetes` `Docker` `SonarQube` |
-| `5` | `AWS` `Prometheus` `Grafana` |
-| `3` | `Kotlin` `Azure` `Pulumi` `GitHub Actions` `Cosmos DB` `GraphQL` `OpenTelemetry` |
-| `2` | `Airflow` `Spring AI` |
-| `1` | `GCP` |
-
-`OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity`
-
-</details>
-
 <br>
 
 <picture>
