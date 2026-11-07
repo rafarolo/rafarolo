@@ -7,11 +7,11 @@
 <br>
 
 <p align="center">
-  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28" align="absmiddle"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=e3b699c5b" alt="Stack Overflow: 6.3 million reached" height="28" align="absmiddle"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo" align="absmiddle"></picture></a>
+  <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo"></picture></a>
+</p>
+
+<p align="center">
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
 </p>
 
 <br>
@@ -24,8 +24,16 @@
 All of it in private corporate repositories, which is why the contribution graph below is
 green and unclickable.
 
-The public record is older: [**156 answers on Stack Overflow**](https://stackoverflow.com/users/5626568/)
-from 2016 to 2022, mostly Java, Spring Boot and Swagger.
+<p align="center">
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=932b9e1db" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze badges" height="28"></a>
+</p>
+
+<a href="https://stackoverflow.com/users/5626568/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/so-panel-dark.svg?v=31fc2c7ab">
+    <img alt="Stack Overflow, 2016 to 2022: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver and 61 bronze badges." src="assets/so-panel-light.svg?v=6fea41b3b">
+  </picture>
+</a>
 
 <br>
 

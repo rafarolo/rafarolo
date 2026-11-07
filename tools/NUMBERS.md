@@ -96,10 +96,10 @@ The Core Technologies line of the current role on LinkedIn, regrouped by layer, 
 under its current name, Entra ID. Versions are the ones the platform runs, not the latest
 released; change them when the platform moves, not when a release comes out.
 
-## Stack Overflow — `README.md`
+## Stack Overflow — `gen_badges.py`, `gen_so.py`
 
-The public answers, counted from the Stack Exchange API. The page states the 2016–2022
-range because that is where 156 of the 174 answers sit; 18 came after.
+The badge and the panel under it carry the same four figures: reach, reputation, answers and
+badges. The panel's 2016–2022 is where 156 of the 174 answers sit; 18 came after.
 
 ```bash
 curl -s --compressed "https://api.stackexchange.com/2.3/users/5626568/answers?site=stackoverflow&pagesize=100&page=1" \n  | jq -r '.items[].creation_date | todate[0:4]' | sort | uniq -c   # and page=2

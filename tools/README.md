@@ -11,7 +11,8 @@ python tools/gen_timeline.py    the nodes beside selected work, and its table
 python tools/gen_radar.py       depth against focus
 python tools/gen_tenure.py      years with each technology
 python tools/gen_archetype.py   the package tree
-python tools/gen_badges.py      the three contact badges
+python tools/gen_badges.py      the contact badges and the dot divider
+python tools/gen_so.py          the Stack Overflow panel
 
 python tools/stamp_assets.py    always last
 ```
