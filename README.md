@@ -107,8 +107,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 
 #### Main stack today
 
-| | |
-|---|---|
+| Layer | Technology |
+|:-:|---|
 | **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
 | **Language** | `Kotlin 2.4` `Java 21` |
 | **Framework** | `Spring Boot 3.5` · Cloud, Data, Security, Cache, Retry, Circuit Breaker, AOP, Actuator |
