@@ -21,7 +21,7 @@ that produced it. They were measured on 7 November 2026 and should be re-measure
 edited. Read the note at the top of it before running anything: `gh search prs` caps at
 1000 results without saying so, and the reviewed-by query is past that cap.
 
-`stamp_assets.py` rewrites each asset URL in the README with a hash of the file it points
+`stamp_assets.py` rewrites each asset URL in the README and SECTIONS-IN-REVIEW.md with a hash of the file it points
 at. GitHub proxies README images and caches them by URL: without this an updated drawing
 keeps serving from the old copy, which looks exactly like a change that never landed.
 

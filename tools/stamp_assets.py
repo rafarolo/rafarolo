@@ -1,4 +1,5 @@
-"""Stamp every asset URL in the README with a hash of the file it points at.
+"""Stamp every asset URL in the README, and in the sections held for review, with a hash of
+the file it points at.
 
 GitHub proxies README images and caches them by URL. These paths never change, so an
 updated drawing can keep serving from the old copy long after it was pushed. A hand-bumped
@@ -17,7 +18,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-README = os.path.join(ROOT, "README.md")
+PAGES = [os.path.join(ROOT, n) for n in ("README.md", "SECTIONS-IN-REVIEW.md")]
 # Bump when a URL has to change even though its file has not -- the proxy caches by URL,
 # so a version that was fetched while the wrong drawing was in the repository keeps serving
 # that drawing for as long as the URL stays the same.
@@ -39,8 +40,7 @@ def digest(name):
 
 
 def main():
-    text = io.open(README, encoding="utf-8").read()
-    seen, missing = {}, []
+    seen, missing, rewritten = {}, [], []
 
     def stamp(match):
         name = match.group(2)
@@ -50,18 +50,24 @@ def main():
         seen[name] = seen.get(name) or digest(name)
         return "%s?v=%s" % (match.group(1), seen[name])
 
-    stamped = PATTERN.sub(stamp, text)
+    pages = []
+    for page in PAGES:
+        if os.path.exists(page):
+            text = io.open(page, encoding="utf-8").read()
+            pages.append((page, text, PATTERN.sub(stamp, text)))
 
     if missing:
         print("referenced but not on disk: %s" % ", ".join(sorted(set(missing))))
         return 1
 
-    if stamped != text:
-        io.open(README, "w", encoding="utf-8", newline="\n").write(stamped)
+    for page, text, stamped in pages:
+        if stamped != text:
+            io.open(page, "w", encoding="utf-8", newline="\n").write(stamped)
+            rewritten.append(os.path.basename(page))
 
     for name in sorted(seen):
         print("%-24s %s" % (name, seen[name]))
-    print("%d assets stamped, README %s" % (len(seen), "rewritten" if stamped != text else "unchanged"))
+    print("%d assets stamped, %s" % (len(seen), "rewrote " + ", ".join(rewritten) if rewritten else "nothing rewritten"))
     return 0
 
 
