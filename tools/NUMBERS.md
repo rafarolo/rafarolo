@@ -107,6 +107,14 @@ curl -s --compressed "https://api.stackexchange.com/2.3/users/5626568/answers?si
 
 November 2026: 174 answers, 5,486 reputation, top tags java, spring-boot, springfox, swagger.
 
+The badge's 6.3M REACHED is the sum of the view counts of the 173 questions those answers
+sit on, 6,360,409 in November 2026, truncated rather than rounded. Collect the question ids
+from both answer pages, then ask for them a hundred at a time:
+
+```bash
+curl -s --compressed "https://api.stackexchange.com/2.3/questions/<id;id;...>?site=stackoverflow&pagesize=100" \n  | jq '[.items[].view_count] | add'
+```
+
 ## Coverage, sectors, platform size — `gen_assets.py`, `gen_banner.py`, `README.md`
 
 SonarQube for the coverage pair, and the platform's own repository count for its size.

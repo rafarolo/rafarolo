@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=3c191cfeb" alt="Stack Overflow: 5,486 reputation" height="28"></a>
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=5b4302bab" alt="Stack Overflow: 6.3 million reached" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo" align="absmiddle"></picture></a>
 </p>
