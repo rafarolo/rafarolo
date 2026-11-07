@@ -102,7 +102,8 @@ The badge and the panel under it carry the same four figures: reach, reputation,
 badges. The panel's 2016–2022 is where 156 of the 174 answers sit; 18 came after.
 
 ```bash
-curl -s --compressed "https://api.stackexchange.com/2.3/users/5626568/answers?site=stackoverflow&pagesize=100&page=1" \n  | jq -r '.items[].creation_date | todate[0:4]' | sort | uniq -c   # and page=2
+curl -s --compressed "https://api.stackexchange.com/2.3/users/5626568/answers?site=stackoverflow&pagesize=100&page=1" \
+  | jq -r '.items[].creation_date | todate[0:4]' | sort | uniq -c   # and page=2
 ```
 
 November 2026: 174 answers, 5,486 reputation, top tags java, spring-boot, springfox, swagger.
@@ -112,7 +113,8 @@ sit on, 6,360,409 in November 2026, truncated rather than rounded. Collect the q
 from both answer pages, then ask for them a hundred at a time:
 
 ```bash
-curl -s --compressed "https://api.stackexchange.com/2.3/questions/<id;id;...>?site=stackoverflow&pagesize=100" \n  | jq '[.items[].view_count] | add'
+curl -s --compressed "https://api.stackexchange.com/2.3/questions/<id;id;...>?site=stackoverflow&pagesize=100" \
+  | jq '[.items[].view_count] | add'
 ```
 
 ## Coverage, sectors, platform size — `gen_assets.py`, `gen_banner.py`, `README.md`
