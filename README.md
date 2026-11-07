@@ -120,7 +120,7 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 |:-:|---|
 | **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
 | **Language** | `Kotlin 2.4` `Java 21` `Java 25` |
-| **Framework** | `Spring Boot 3.5` `AI` `Actuator` `AOP` `Cache` `Circuit Breaker` `Cloud` `Data` `Retry` `Security` `Test` |
+| **Framework** | `Spring Boot 3.5` `AI` `Actuator` `AOP` `Cache` `Circuit Breaker` `Cloud` `Data` `Retry` `Security` `Test`<br>`Web MVC` `Undertow` `Validation` `JDBC` `OAuth2 Resource Server` `OpenFeign` `Azure Storage Blob` `springdoc-openapi` `GraphQL` `Freemarker` `Log4j2` `ShedLock` |
 | **Security** | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` |
 | **Data** | `PostgreSQL` `SQL Server` `MongoDB` `Cosmos DB` |
 | **Observability** | `Grafana` `Prometheus` `OpenTelemetry` |
