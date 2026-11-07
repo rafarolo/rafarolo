@@ -1,14 +1,24 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=8db893c5b">
-  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 964 pull requests, 963 code reviews, 5 sectors served." src="assets/banner-light.svg?v=63c58326b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=ec5b9cb5b">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 1,204 pull requests, 1,010 code reviews, 5 sectors served." src="assets/banner-light.svg?v=cb76ee0db">
 </picture>
 
 <br>
 <br>
 
+<p align="center">
+  <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo"></picture></a>
+</p>
+
+<p align="center">
+  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=4fa389dbb" alt="LinkedIn: rafarolo" height="28"></a>
+</p>
+
+<br>
+
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
-- I review as much as I write: **963 reviews against 964 pull requests of my own**, for 17 engineers
+- I review for 17 engineers: **1,010 reviews against 1,204 pull requests of my own**
 - Sectors served: **capital markets · banking · insurance · government · e-commerce**
 
 All of it in private corporate repositories, which is why the contribution graph below is
@@ -16,16 +26,44 @@ green and unclickable.
 
 <br>
 
-### Pull requests per year
+<p align="center">
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=629e650cb" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals" height="28"></a>
+</p>
+
+<a href="https://stackoverflow.com/users/5626568/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/so-panel-dark.svg?v=8a565d0eb">
+    <img alt="Stack Overflow, member since December 2015: 6.3 million reached, 5,486 reputation, 174 answers, 7,560 upvotes given, 6 gold, 43 silver and 61 bronze medals." src="assets/so-panel-light.svg?v=a3a9ab6bb">
+  </picture>
+</a>
+
+<br>
+<br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=d9a5261cb">
-  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 416 and 263 in 2026 to 4 October." src="assets/prs-light.svg?v=3c983315b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
 
 <br>
+<br>
 
+<div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=9139334eb">
+  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 656 and 310 in 2026 to 7 November." src="assets/prs-light.svg?v=776428cdb">
+</picture>
+
+<br>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
+<br>
 <br>
 
 ### Selected work
@@ -42,12 +80,22 @@ green and unclickable.
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-7-dark.svg?v=699d8679b"><img src="assets/tl-7-light.svg?v=05dec4f7b" width="20" height="20" alt=""></picture> | `2014‑2015` | **A study area, ten times faster** | found the data bottleneck in a geomarketing platform's core calculation |
 
 <br>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
+<br>
+<br>
 
 ### Worked examples
 
-Three of the things above, extracted and made runnable. Each takes a handful of failures
-that give no error at all, and proves every one with a test that counts what actually
-happened.
+Three of the things above, extracted and made runnable.
+
+Each takes a handful of failures that give no error at all, and proves every one with a test
+that counts what actually happened.
 
 | | |
 |---|---|
@@ -58,7 +106,7 @@ happened.
 Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in CI.
 
 <br>
-
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
@@ -66,28 +114,48 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 </picture>
 
 <br>
+<br>
 
 ### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=5c8316ecb">
-  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=c83944a2b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=d2f843e0b">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=d4d4f7b6b">
 </picture>
 
+<br>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
+<br>
 <br>
 
 #### Main stack today
 
-| | |
-|---|---|
+| Layer | Technology |
+|:-:|---|
 | **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
-| **Language** | `Kotlin 2.2` `Java 21` |
-| **Framework** | `Spring Boot 3.5` · Cloud, Data, Security, Cache, Retry, Circuit Breaker, AOP, Actuator |
+| **Language** | `Kotlin 2.4` `Java 21` `Java 25` |
+| **Framework** | `Spring Boot 3.5` `AI` `Actuator` `AOP` `Cache` `Circuit Breaker` `Cloud` `Data` `Retry` `Security` `Test`<br>`Web MVC` `Undertow` `Validation` `JDBC` `OAuth2 Resource Server` `OpenFeign` `Azure Storage Blob` `springdoc-openapi` `GraphQL` `Freemarker` `Log4j2` `ShedLock` |
 | **Security** | `OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` |
 | **Data** | `PostgreSQL` `SQL Server` `MongoDB` `Cosmos DB` |
 | **Observability** | `Grafana` `Prometheus` `OpenTelemetry` |
 | **APIs** | `OpenAPI` `GraphQL` |
 
+
+<br>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
+  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
+</picture>
+
+<br>
 <br>
 
 <picture>
@@ -95,57 +163,14 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
   <img alt="Years with each technology, longest first: 17 Java; 14 PostgreSQL; 12 MongoDB; 11 Spring Boot and SQL Server; 7 Spring Security, OpenAPI, Kubernetes, Docker and SonarQube; 5 AWS, Prometheus and Grafana; 3 Kotlin, Azure, Pulumi, GitHub Actions, Cosmos DB, GraphQL and OpenTelemetry; 2 Airflow and Spring AI; 1 GCP." src="assets/tenure-light.svg?v=edb93425b">
 </picture>
 
-<details>
-<summary>Years as text</summary>
-
-| Years | Technology |
-|---|---|
-| `17` | `Java` |
-| `14` | `PostgreSQL` |
-| `12` | `MongoDB` |
-| `11` | `Spring Boot` `SQL Server` |
-| `7` | `Spring Security` `OpenAPI` `Kubernetes` `Docker` `SonarQube` |
-| `5` | `AWS` `Prometheus` `Grafana` |
-| `3` | `Kotlin` `Azure` `Pulumi` `GitHub Actions` `Cosmos DB` `GraphQL` `OpenTelemetry` |
-| `2` | `Airflow` `Spring AI` |
-| `1` | `GCP` |
-
-`OAuth2` `OpenID Connect` `JWT` `Keycloak` `Entra ID` `FAPI` `Workload Identity`
-
-</details>
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
-  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
-</picture>
-
-<br>
-
-### Artifact of my life
-
-`my.life:rafael.rolo`, laid out the way I'd lay out a service<br>
-Domain at the core, stack as adapters, because the stack is the part that gets replaced.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=fa1740d6b">
-  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=41ffb582b">
-</picture>
-
 <br>
 <br>
 
 <p align="center">
-  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=0d65e882b" alt="Stack Exchange profile" height="28"></a>
+  <img src="assets/location.svg?v=afdb0c9fb" alt="São Paulo, Brasil" height="28">
 </p>
 
-<p align="center">
-  <img src="assets/location.svg?v=a7d87508b" alt="São Paulo, Brasil" height="28">
-</p>
-
+<br>
 
 <a href="https://1drv.ms/v/s!AsFSV30GJkPCiK9v6BW51rsUyXCeVA?s=256&g=1">
   <picture>
@@ -153,3 +178,5 @@ Domain at the core, stack as adapters, because the stack is the part that gets r
     <img alt="To an artificial mind, all reality is virtual — a city skyline at dusk." src="assets/skyline-light.svg?v=f78de6bcb">
   </picture>
 </a>
+
+</div>

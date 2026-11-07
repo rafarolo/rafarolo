@@ -6,6 +6,7 @@ from gen_assets import THEMES, SANS, OUT, NL
 BLACK = "#0D1319"
 FS, LS = 11.0, 1.15
 CW = FS * .70 + LS
+RUN = 7.3
 
 LOGO = {
     "linkedin": ('<rect x="0" y="5" width="3.4" height="11" rx="0.4"/>'
@@ -20,10 +21,13 @@ LOGO = {
 }
 
 
-def badge(logo, label, brand, msg=None, aria=None):
+def badge(logo, label, brand, msg=None, aria=None, medals=None):
     x_lab = 9 + 16 + 8
     lw = x_lab + len(label) * CW + 11
     w = lw if msg is None else lw + 11 + len(msg) * CW + 12
+    if medals:
+        chars = len(msg) + sum(len(" ● ") + len(n) for n, _ in medals)
+        w = lw + 11 + chars * RUN + 12
     h = 28
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %.0f %d" width="%.0f" height="%d" '
          'role="img" aria-label="%s">' % (w, h, w, h, aria or label.title())]
@@ -35,8 +39,11 @@ def badge(logo, label, brand, msg=None, aria=None):
              'fill="#FFFFFF">' % (SANS, FS, LS))
     p.append('<text x="%.1f" y="18.5">%s</text>' % (x_lab, label))
     if msg is not None:
-        p.append('<text x="%.1f" y="18.5">%s</text>' % (lw + 11, msg))
-    p.append('</g></svg>')
+        dots = "".join(' <tspan fill="%s" font-size="14">●</tspan>&#160;%s' % (colour, n) for n, colour in medals or [])
+        fit = ' textLength="%.1f" lengthAdjust="spacing"' % (w - lw - 22) if medals else ''
+        p.append('<text x="%.1f" y="18.5"%s>%s%s</text>' % (lw + 11, fit, msg, dots))
+    p.append('</g>')
+    p.append('</svg>')
     return NL.join(p) + NL
 
 
@@ -77,7 +84,9 @@ def divider(t):
 
 OUTS = {
     "linkedin.svg": badge(LOGO["linkedin"], "LINKEDIN", "#0A66C2", "RAFAROLO", "LinkedIn: rafarolo"),
-    "stackexchange.svg": badge(LOGO["stack"], "STACK EXCHANGE", "#F48024", None, "Stack Exchange profile"),
+    "stackoverflow.svg": badge(LOGO["stack"], "STACK OVERFLOW", "#FF5E00", "6.3M REACHED · 5,486 REP · 174 ANSWERS · MEDALS",
+                               "Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals",
+                               medals=[("6", "#F1B600"), ("43", "#9A9B9E"), ("61", "#AB8A5F")]),
     "location.svg": badge(LOGO["pin"], "SÃO PAULO", "#0E5468", "BRASIL", "São Paulo, Brasil"),
 }
 for name, svg in OUTS.items():

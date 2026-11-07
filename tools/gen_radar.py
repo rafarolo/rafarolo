@@ -11,13 +11,13 @@ def esc(v):
 # Ordered so the two deepest areas sit next to each other: the depth polygon reads as one
 # mass instead of two spurs, and the notch where focus drops falls right after its peak.
 AXES = [
-    ("BACKEND ON THE JVM", 17, 18.2, "middle"),
-    ("DATA", 14, 13.7, "start"),
-    ("CLOUD & PLATFORM", 7, 20.9, "start"),
-    ("SECURITY & IDENTITY", 7, 25.7, "end"),
-    ("OBSERVABILITY", 7, 21.6, "end"),
+    ("BACKEND ON THE JVM", 17, 16.7, "middle"),
+    ("DATA", 14, 16.5, "start"),
+    ("CLOUD & PLATFORM", 7, 22.0, "start"),
+    ("SECURITY & IDENTITY", 7, 26.2, "end"),
+    ("OBSERVABILITY", 7, 18.6, "end"),
 ]
-MATCHED, WINDOW = 292, 474
+MATCHED, WINDOW = 431, 686
 
 # The keyword rules the shares above came from, in this order: the first area whose
 # keywords appear in a lowercased, accent-stripped pull request title takes it, and a
@@ -62,8 +62,8 @@ MAXS = max(a[2] for a in AXES) * 1.0
 CX, CY, R = 296, 232, 138
 NOTES = [
     ("Security & identity", "7 years deep, 26% of the last year", "the shallowest history, the largest slice now"),
-    ("Observability", "7 years deep, 22% of the last year", "every endpoint on Grafana: metrics, logs, traces"),
-    ("Backend on the JVM", "17 years deep, 18% of the last year", "the deepest, and the floor the other four stand on"),
+    ("Cloud & platform", "7 years deep, 22% of the last year", "AKS, Pulumi and a single GitHub Actions pipeline"),
+    ("Backend on the JVM", "17 years deep, 17% of the last year", "the deepest, and the floor the other four stand on"),
 ]
 
 def pt(i, frac):
