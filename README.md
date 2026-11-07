@@ -3,9 +3,11 @@
   <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 1,204 pull requests, 1,010 code reviews, 5 sectors served." src="assets/banner-light.svg?v=cb76ee0db">
 </picture>
 
+<br>
+
 <p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=0d65e882b" alt="Stack Exchange profile" height="28"></a>
 </p>
 
