@@ -6,6 +6,7 @@ from gen_assets import THEMES, SANS, OUT, NL
 BLACK = "#0D1319"
 FS, LS = 11.0, 1.15
 CW = FS * .70 + LS
+RUN = 7.3
 
 LOGO = {
     "linkedin": ('<rect x="0" y="5" width="3.4" height="11" rx="0.4"/>'
@@ -25,7 +26,8 @@ def badge(logo, label, brand, msg=None, aria=None, medals=None):
     lw = x_lab + len(label) * CW + 11
     w = lw if msg is None else lw + 11 + len(msg) * CW + 12
     if medals:
-        w += sum(6 + 10 + len(n) * CW for n, _ in medals) + 4
+        chars = len(msg) + sum(len(" ● ") + len(n) for n, _ in medals)
+        w = lw + 11 + chars * RUN + 12
     h = 28
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %.0f %d" width="%.0f" height="%d" '
          'role="img" aria-label="%s">' % (w, h, w, h, aria or label.title())]
@@ -37,15 +39,9 @@ def badge(logo, label, brand, msg=None, aria=None, medals=None):
              'fill="#FFFFFF">' % (SANS, FS, LS))
     p.append('<text x="%.1f" y="18.5">%s</text>' % (x_lab, label))
     if msg is not None:
-        p.append('<text x="%.1f" y="18.5">%s</text>' % (lw + 11, msg))
+        dots = "".join(' <tspan fill="%s">●</tspan>&#160;%s' % (colour, n) for n, colour in medals or [])
+        p.append('<text x="%.1f" y="18.5">%s%s</text>' % (lw + 11, msg, dots))
     p.append('</g>')
-    if medals:
-        x = lw + 11 + len(msg) * CW + 6
-        for n, colour in medals:
-            p.append('<circle cx="%.1f" cy="14.5" r="4" fill="%s"/>' % (x + 4, colour))
-            p.append('<text x="%.1f" y="18.5" font-family="%s" font-size="%.1f" font-weight="700" '
-                     'letter-spacing="%.2f" fill="#FFFFFF">%s</text>' % (x + 11, SANS, FS, LS, n))
-            x += 6 + 10 + len(n) * CW
     p.append('</svg>')
     return NL.join(p) + NL
 
