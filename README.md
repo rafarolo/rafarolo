@@ -17,7 +17,7 @@ green and unclickable.
 The public record is older: [**156 answers on Stack Overflow**](https://stackoverflow.com/users/5626568/)
 from 2016 to 2022, mostly Java, Spring Boot and Swagger.
 
-<p>
+<p align="center">
   <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=0186622ab" alt="LinkedIn: rafarolo" height="28"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://stackexchange.com/users/7394006/"><img src="assets/stackexchange.svg?v=0d65e882b" alt="Stack Exchange profile" height="28"></a>
