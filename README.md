@@ -25,13 +25,13 @@ All of it in private corporate repositories, which is why the contribution graph
 green and unclickable.
 
 <p align="center">
-  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=0a6f2297b" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze badges" height="28"></a>
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=7e5d392bb" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals" height="28"></a>
 </p>
 
 <a href="https://stackoverflow.com/users/5626568/">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/so-panel-dark.svg?v=31fc2c7ab">
-    <img alt="Stack Overflow, 2016 to 2022: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver and 61 bronze badges." src="assets/so-panel-light.svg?v=6fea41b3b">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/so-panel-dark.svg?v=8a565d0eb">
+    <img alt="Stack Overflow, member since December 2015: 6.3 million reached, 5,486 reputation, 174 answers, 7,560 upvotes given, 6 gold, 43 silver and 61 bronze medals." src="assets/so-panel-light.svg?v=a3a9ab6bb">
   </picture>
 </a>
 

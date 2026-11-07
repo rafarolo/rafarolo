@@ -83,8 +83,8 @@ def divider(t):
 
 OUTS = {
     "linkedin.svg": badge(LOGO["linkedin"], "LINKEDIN", "#0A66C2", "RAFAROLO", "LinkedIn: rafarolo"),
-    "stackoverflow.svg": badge(LOGO["stack"], "STACK OVERFLOW", "#FF5E00", "6.3M REACHED · 5,486 REP · 174 ANSWERS ·",
-                               "Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze badges",
+    "stackoverflow.svg": badge(LOGO["stack"], "STACK OVERFLOW", "#FF5E00", "6.3M REACHED · 5,486 REP · 174 ANSWERS · MEDALS",
+                               "Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals",
                                medals=[("6", "#F1B600"), ("43", "#9A9B9E"), ("61", "#AB8A5F")]),
     "location.svg": badge(LOGO["pin"], "SÃO PAULO", "#0E5468", "BRASIL", "São Paulo, Brasil"),
 }

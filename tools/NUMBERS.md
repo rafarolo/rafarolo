@@ -98,8 +98,10 @@ released; change them when the platform moves, not when a release comes out.
 
 ## Stack Overflow — `gen_badges.py`, `gen_so.py`
 
-The badge and the panel under it carry the same four figures: reach, reputation, answers and
-badges. The panel's 2016–2022 is where 156 of the 174 answers sit; 18 came after.
+The badge carries reach, reputation, answers and medals. The panel under it adds the upvotes
+given, 7,560, and the date the account opened, December 2015, both from the user endpoint with
+`answer_count`, `up_vote_count` and `creation_date` included in the filter. 156 of the 174 answers
+are from 2016 to 2022; 18 came after.
 
 ```bash
 curl -s --compressed "https://api.stackexchange.com/2.3/users/5626568/answers?site=stackoverflow&pagesize=100&page=1" \
