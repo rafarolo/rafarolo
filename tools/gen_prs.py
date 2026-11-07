@@ -5,10 +5,10 @@ from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
-         (2025, 217, 278, True), (2026, 416, 263, False)]
+         (2025, 217, 278, True), (2026, 656, 310, False)]
 
-DAYS_ELAPSED, DAYS_IN_YEAR = 277, 365
-CUTOFF = "4 October"
+DAYS_ELAPSED, DAYS_IN_YEAR = 311, 365
+CUTOFF = "7 November"
 
 LEFT, RIGHT, BASE, MAXH = 92, 830, 252, 150
 BW, GAP = 46, 8
@@ -114,9 +114,11 @@ def prs(t):
                      'height="%.1f" rx="3" fill="%s"%s/>'
                      % (d + j * .05, x, top, BW, bh, c["acc"],
                         "" if solid else ' opacity="0.38"'))
+            inside = not complete and (projected(value) - value) * SCALE < 24
             p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%.1f" font-size="17" '
                      'font-weight="700" fill="%s" text-anchor="middle">%d</text>'
-                     % (d + .24 + j * .05, x + BW / 2.0, top - 11, c["ink"], value))
+                     % (d + .24 + j * .05, x + BW / 2.0, top + 22 if inside else top - 11,
+                        c["bg"] if inside and solid else c["ink"], value))
 
         label = str(year) if complete else "%d *" % year
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="17" '
@@ -150,7 +152,7 @@ def prs(t):
             text = "+%d%%" % round((growth[1] - growth[0]) * 100.0 / growth[0])
             fill, weight = c["acc"], "700"
         else:
-            text = "9 of 12 months"
+            text = "10 of 12 months"
             fill, weight = c["dim"], "600"
         p.append('<text class="t" style="animation-delay:%.2fs" x="%.1f" y="%d" font-size="13" '
                  'font-weight="%s" fill="%s" text-anchor="middle">%s</text>'

@@ -17,7 +17,7 @@ python tools/stamp_assets.py    always last
 ```
 
 See [NUMBERS.md](NUMBERS.md) for where every figure on the page came from and the command
-that produced it. They were measured on 21 September 2026 and should be re-measured, not
+that produced it. They were measured on 7 November 2026 and should be re-measured, not
 edited. Read the note at the top of it before running anything: `gh search prs` caps at
 1000 results without saying so, and the reviewed-by query is past that cap.
 

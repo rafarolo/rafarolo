@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=8db893c5b">
-  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 964 pull requests, 963 code reviews, 5 sectors served." src="assets/banner-light.svg?v=63c58326b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=ec5b9cb5b">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 1,204 pull requests, 1,010 code reviews, 5 sectors served." src="assets/banner-light.svg?v=cb76ee0db">
 </picture>
 
 <br>
@@ -8,7 +8,7 @@
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
-- I review as much as I write: **963 reviews against 964 pull requests of my own**, for 17 engineers
+- I review as much as I write: **1,010 reviews against 1,204 pull requests of my own**, for 17 engineers
 - Sectors served: **capital markets · banking · insurance · government · e-commerce**
 
 All of it in private corporate repositories, which is why the contribution graph below is
@@ -19,8 +19,8 @@ green and unclickable.
 ### Pull requests per year
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=d9a5261cb">
-  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 416 and 263 in 2026 to 4 October." src="assets/prs-light.svg?v=3c983315b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=9139334eb">
+  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 656 and 310 in 2026 to 7 November." src="assets/prs-light.svg?v=776428cdb">
 </picture>
 
 <br>
@@ -70,8 +70,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 ### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=5c8316ecb">
-  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=c83944a2b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=a7d4b34fb">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=68f7d322b">
 </picture>
 
 <br>
@@ -129,8 +129,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=fa1740d6b">
-  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=41ffb582b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=8668be82b">
+  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=1ff1c5a4b">
 </picture>
 
 <br>

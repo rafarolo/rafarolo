@@ -28,7 +28,7 @@
 <text class="ln" style="animation-delay:1.64s" x="44" y="204" fill="#56AEC2" font-weight="700">│&#160;&#160;├─ practice/</text>
 <text class="ln" style="animation-delay:1.68s" x="380" y="204" font-size="12.5" font-style="italic" fill="#6B7783">what the days are actually spent on</text>
 <text class="ln" style="animation-delay:1.67s" x="44" y="225" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ review</text>
-<text class="ln" style="animation-delay:1.71s" x="380" y="225" font-size="12.5" fill="#6B7783">963 usages, 17 callers</text>
+<text class="ln" style="animation-delay:1.71s" x="380" y="225" font-size="12.5" fill="#6B7783">1,010 usages, 17 callers</text>
 <text class="ln" style="animation-delay:1.71s" x="44" y="246" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ architecture</text>
 <text class="ln" style="animation-delay:1.75s" x="380" y="246" font-size="12.5" fill="#6B7783">hexagonal · one contract per capability</text>
 <text class="ln" style="animation-delay:1.74s" x="44" y="267" fill="#94A3AE" font-weight="400">│&#160;&#160;│&#160;&#160;├─ reliability</text>

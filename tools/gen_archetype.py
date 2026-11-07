@@ -26,7 +26,7 @@ TREE = [
             f("settlement", "B3 · custody · liquidation dates"),
             f("accounting", "asset × liability · roll-forward")]),
         d("practice/", "what the days are actually spent on", [
-            f("review", "963 usages, 17 callers"),
+            f("review", "1,010 usages, 17 callers"),
             f("architecture", "hexagonal · one contract per capability"),
             f("reliability", "0 bugs · 0 vulnerabilities · rating A"),
             f("advocacy", "AI and backend culture for the engineering team")]),
