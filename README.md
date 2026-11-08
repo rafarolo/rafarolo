@@ -3,19 +3,6 @@
   <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 1,204 pull requests, 1,010 code reviews, 5 sectors served." src="assets/banner-light.svg?v=cb76ee0db">
 </picture>
 
-<br>
-<br>
-
-<p align="center">
-  <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo"></picture></a>
-</p>
-
-<p align="center">
-  <a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=4fa389dbb" alt="LinkedIn: rafarolo" height="28"></a>
-</p>
-
-<br>
-
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
 - I review for 17 engineers: **1,010 reviews against 1,204 pull requests of my own**
@@ -23,30 +10,6 @@
 
 All of it in private corporate repositories, which is why the contribution graph below is
 green and unclickable.
-
-<br>
-
-<p align="center">
-  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=629e650cb" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals" height="28"></a>
-</p>
-
-<a href="https://stackoverflow.com/users/5626568/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/so-panel-dark.svg?v=8a565d0eb">
-    <img alt="Stack Overflow, member since December 2015: 6.3 million reached, 5,486 reputation, 174 answers, 7,560 upvotes given, 6 gold, 43 silver and 61 bronze medals." src="assets/so-panel-light.svg?v=a3a9ab6bb">
-  </picture>
-</a>
-
-<br>
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
-  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
-</picture>
-
-<br>
-<br>
 
 <div align="center">
 
@@ -167,7 +130,25 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 <br>
 
 <p align="center">
-  <img src="assets/location.svg?v=afdb0c9fb" alt="São Paulo, Brasil" height="28">
+  <a href="https://stackoverflow.com/users/5626568/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=dark"><img src="https://stackoverflow-readme-profile.johannchopin.fr/profile/5626568?website=true&location=true&theme=default" alt="Stack Overflow profile: 5,486 reputation, São Paulo"></picture></a>
+</p>
+
+<p align="center">
+  <a href="https://stackoverflow.com/users/5626568/"><img src="assets/stackoverflow.svg?v=629e650cb" alt="Stack Overflow: 6.3 million reached, 5,486 reputation, 174 answers, 6 gold, 43 silver, 61 bronze medals" height="28"></a>
+</p>
+
+<a href="https://stackoverflow.com/users/5626568/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/so-panel-dark.svg?v=8a565d0eb">
+    <img alt="Stack Overflow, member since December 2015: 6.3 million reached, 5,486 reputation, 174 answers, 7,560 upvotes given, 6 gold, 43 silver and 61 bronze medals." src="assets/so-panel-light.svg?v=a3a9ab6bb">
+  </picture>
+</a>
+
+<br>
+<br>
+
+<p align="center">
+  <img src="assets/location.svg?v=afdb0c9fb" alt="São Paulo, Brasil" height="28">&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/rafarolo"><img src="assets/linkedin.svg?v=4fa389dbb" alt="LinkedIn: rafarolo" height="28"></a>
 </p>
 
 <br>
