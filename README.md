@@ -18,16 +18,10 @@ green and unclickable.
   <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 656 and 310 in 2026 to 7 November." src="assets/prs-light.svg?v=776428cdb">
 </picture>
 
-<br>
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
-
-<br>
-<br>
 
 ### Selected work
 
@@ -42,16 +36,10 @@ green and unclickable.
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-6-dark.svg?v=2b30283cb"><img src="assets/tl-6-light.svg?v=0831e5a6b" width="20" height="20" alt=""></picture> | `2019‑2020` | **WebSphere to Kubernetes** | retail insurance systems onto Liberty on IBM Cloud Private, OpenShift pipeline |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tl-7-dark.svg?v=699d8679b"><img src="assets/tl-7-light.svg?v=05dec4f7b" width="20" height="20" alt=""></picture> | `2014‑2015` | **A study area, ten times faster** | found the data bottleneck in a geomarketing platform's core calculation |
 
-<br>
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
-
-<br>
-<br>
 
 ### Worked examples
 
@@ -68,16 +56,10 @@ that counts what actually happened.
 
 Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in CI.
 
-<br>
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
-
-<br>
-<br>
 
 ### Stack
 
@@ -86,16 +68,10 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
   <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=d4d4f7b6b">
 </picture>
 
-<br>
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
-
-<br>
-<br>
 
 #### Main stack today
 
@@ -109,17 +85,10 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 | **Observability** | `Grafana` `Prometheus` `OpenTelemetry` |
 | **APIs** | `OpenAPI` `GraphQL` |
 
-
-<br>
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
   <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
 </picture>
-
-<br>
-<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg?v=5afe24afb">
