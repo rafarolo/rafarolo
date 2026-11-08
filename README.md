@@ -68,13 +68,6 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
   <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=d4d4f7b6b">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
-  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
-</picture>
-
-#### Main stack today
-
 | Layer | Technology |
 |:-:|---|
 | **Cloud** | `Azure` `AKS` `Docker` `Pulumi` `GitHub Actions` |
@@ -84,11 +77,6 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 | **Data** | `PostgreSQL` `SQL Server` `MongoDB` `Cosmos DB` |
 | **Observability** | `Grafana` `Prometheus` `OpenTelemetry` |
 | **APIs** | `OpenAPI` `GraphQL` |
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/dot-dark.svg?v=d2cd0a46b">
-  <img alt="" src="assets/dot-light.svg?v=4aa80b41b">
-</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tenure-dark.svg?v=5afe24afb">
