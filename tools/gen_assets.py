@@ -86,9 +86,9 @@ def glass_bg(t, ident, w, h):
 
 
 # Largest to smallest, so the row reads downhill instead of zig-zagging.
-RINGS = [(0.86, 86, "PULL REQUESTS MERGED", "1,039 merged of 1,204 opened"),
+RINGS = [(0.86, 86, "PULL REQUESTS MERGED", "1,101 merged of 1,282 opened"),
          (0.88, 88, "TEST COVERAGE", "core service, up from 74.7%"),
-         (0.46, 46, "OF EVERY PR I TOUCHED", "1,010 reviews against 1,204 of my own")]
+         (0.44, 44, "OF EVERY PR I TOUCHED", "1,023 reviews against 1,282 of my own")]
 RR = 46.0
 RC = 2 * math.pi * RR
 # One fill, a hold, then a fade to nothing and round again. The reset happens while the
@@ -117,8 +117,8 @@ def rings(t):
     c = THEMES[t]
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 212" width="1000" height="212" '
          'role="img" aria-label="Three proportions. 86 percent of pull requests opened were '
-         'merged, 1,039 of 1,204. Test coverage 88 percent, up from 74.7. 46 percent of every pull '
-         'request touched belonged to someone else: 1,010 reviews against 1,204 of my own.">']
+         'merged, 1,101 of 1,282. Test coverage 88 percent, up from 74.7. 44 percent of every pull '
+         'request touched belonged to someone else: 1,023 reviews against 1,282 of my own.">']
     p.append('<defs>' + glass_defs(t, "rg", shadow=True) +
              '<clipPath id="rg%s"><rect x="0" y="0" width="1000" height="212" rx="10"/></clipPath>' % t)
     p.append('</defs>')

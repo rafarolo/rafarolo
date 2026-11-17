@@ -1,6 +1,6 @@
 # Where the figures come from
 
-Everything on the page was measured on **7 November 2026**. Nothing is estimated, and
+Everything on the page was measured on **17 November 2026**. Nothing is estimated, and
 nothing should be edited without re-measuring it, because the whole argument of the page is
 that the numbers survive being checked.
 
@@ -12,7 +12,7 @@ Each figure below names the generator that holds it and the command that produce
 
 `gh search prs` returns at most 1000 matches and says nothing when it truncates. The
 reviewed-by query passed that ceiling in 2026: asked flat it answers 793, and asked year by
-year it answers 1,010. **Every total below is a sum of per-year queries for that reason.**
+year it answers 1,023. The authored query reached the ceiling too in November 2026: flat it answers 1000, by year 1,282. **Every total below is a sum of per-year queries for that reason.**
 Check it: if a flat query comes back at exactly 1000, it is not a count, it is a limit.
 
 ## Pull requests, reviews, people — `gen_banner.py`, `gen_prs.py`, `gen_assets.py`
@@ -28,7 +28,7 @@ done
 ```
 
 Reviews must exclude your own pull requests or the figure counts self-reviews. November
-2026: 1,204 authored, 1,010 reviewed for others.
+2026: 1,282 authored, 1,023 reviewed for others.
 
 Distinct people reviewed — still 17, again as a union across the years, not one flat query:
 
@@ -43,19 +43,21 @@ The merged share for the rings, which `gen_assets.py` still draws but the README
 `"MERGED"` and quietly answered zero:
 
 ```bash
-gh search prs --author=rafarolo --owner=virgoinc --limit 1000 --json state \
-  | jq '[.[] | select(.state=="merged")] | length'
+for y in 2023 2024 2025 2026; do
+  gh search prs --author=rafarolo --owner=virgoinc \
+    --created="$y-01-01..$y-12-31" --limit 1000 --json state | jq -r '.[].state'
+done | sort | uniq -c
 ```
 
-1,039 merged of 1,204 opened, which is the 86% on the first ring. The denominator is everything
-opened, so the 52 still open count against it; that is deliberate, and it is the same
+1,101 merged of 1,282 opened, which is the 86% on the first ring. The denominator is everything
+opened, so the 54 still open count against it; that is deliberate, and it is the same
 denominator the figure has always used.
 
 **When 2026 stops being partial**, drop the asterisk, the "10 of 12 months" label and the
 projection from `gen_prs.py`, and set `DAYS_ELAPSED = DAYS_IN_YEAR`. Until then
-`DAYS_ELAPSED` is the day of the year the measurement was taken — 311 for 7 November —
+`DAYS_ELAPSED` is the day of the year the measurement was taken — 321 for 17 November —
 and the projection is every partial figure scaled by `DAYS_IN_YEAR / DAYS_ELAPSED`, which
-at 311 days is +17%. With the lift that small the 2026 values sit inside their bars,
+at 321 days is +14%. With the lift that small the 2026 values sit inside their bars,
 because above them they would collide with the projected figure.
 
 ## Radar: depth against focus — `gen_radar.py`
@@ -67,7 +69,7 @@ The classifier is `RULES` in `gen_radar.py`: the first area whose keywords appea
 lowercased, accent-stripped title, padded with one space at each end, takes it. Observability
 comes first, so a title about logging a denied access counts as logging; backend comes last
 because every service here is a JVM service. A title matching nothing is not counted, and `MATCHED` and `WINDOW` hold how
-many of each — 431 of 686 in the window to 7 November 2026.
+many of each — 482 of 751 in the window to 17 November 2026.
 
 Observability counts the request audit trail (`lib-audit`, `audit-api`) alongside metrics,
 logs and traces: it records every request a service answers, which is what a log is for.
@@ -78,7 +80,7 @@ To re-run it over a fresh window, fetch the titles and apply `RULES` to them:
 
 ```bash
 gh search prs --author=rafarolo --owner=virgoinc \
-  --created="2025-11-07..2026-11-07" --limit 1000 --json title > /tmp/window.json
+  --created="2025-11-17..2026-11-17" --limit 1000 --json title > /tmp/window.json
 ```
 
 Then update `AXES`, `MATCHED`, `WINDOW` and the three `NOTES` together — the notes name
@@ -111,7 +113,7 @@ curl -s --compressed "https://api.stackexchange.com/2.3/users/5626568/answers?si
 November 2026: 174 answers, 5,486 reputation, top tags java, spring-boot, springfox, swagger.
 
 The badge's 6.3M REACHED is the sum of the view counts of the 173 questions those answers
-sit on, 6,360,409 in November 2026, truncated rather than rounded. Collect the question ids
+sit on, 6,361,214 in November 2026, truncated rather than rounded. Collect the question ids
 from both answer pages, then ask for them a hundred at a time:
 
 ```bash

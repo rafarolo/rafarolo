@@ -5,10 +5,10 @@ from gen_assets import glass_bg, glass_defs, glass_style, THEMES, SANS, OUT, NL
 
 # year, authored, reviewed, complete year
 YEARS = [(2023, 158, 201, True), (2024, 173, 221, True),
-         (2025, 217, 278, True), (2026, 656, 310, False)]
+         (2025, 217, 278, True), (2026, 734, 323, False)]
 
-DAYS_ELAPSED, DAYS_IN_YEAR = 311, 365
-CUTOFF = "7 November"
+DAYS_ELAPSED, DAYS_IN_YEAR = 321, 365
+CUTOFF = "17 November"
 
 LEFT, RIGHT, BASE, MAXH = 92, 830, 252, 150
 BW, GAP = 46, 8

@@ -3,8 +3,8 @@ import io, os, sys, random
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_assets import THEMES, SKY, SANS, MONO, OUT, NL
 
-BIG = [("17", "YEARS ON THE JVM"), ("1,204", "PULL REQUESTS"),
-       ("1,010", "CODE REVIEWS"), ("5", "SECTORS SERVED")]
+BIG = [("17", "YEARS ON THE JVM"), ("1,282", "PULL REQUESTS"),
+       ("1,023", "CODE REVIEWS"), ("5", "SECTORS SERVED")]
 
 H = 372
 STEP = 15
@@ -71,7 +71,7 @@ def banner(t):
 
     p = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 %d" width="1000" height="%d" '
          'role="img" aria-label="Rafael Rolo, Specialist and Tech Lead in Capital Markets. '
-         '17 years on the JVM, 1,204 pull requests authored, 1,010 code reviews for others, '
+         '17 years on the JVM, 1,282 pull requests authored, 1,023 code reviews for others, '
          'five sectors served.">' % (H, H)]
 
     p.append('<defs>')
