@@ -1,11 +1,11 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=ec5b9cb5b">
-  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 1,204 pull requests, 1,010 code reviews, 5 sectors served." src="assets/banner-light.svg?v=cb76ee0db">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=4a43eb3eb">
+  <img alt="Rafael Rôlo — Specialist & Tech Lead, Capital Markets. 17 years on the JVM, 1,282 pull requests, 1,023 code reviews, 5 sectors served." src="assets/banner-light.svg?v=6ffedfb6b">
 </picture>
 
 - I build the platform behind **R$130B+ in issued assets** — 40-odd services, Kotlin and Spring on Azure
 - I led its move off Python, JavaScript and TypeScript onto **Kotlin and hexagonal architecture**
-- I review for 17 engineers: **1,010 reviews against 1,204 pull requests of my own**
+- I review for 17 engineers: **1,023 reviews against 1,282 pull requests of my own**
 - Sectors served: **capital markets · banking · insurance · government · e-commerce**
 
 All of it in private corporate repositories, which is why the contribution graph below is
@@ -14,8 +14,8 @@ green and unclickable.
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=9139334eb">
-  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 656 and 310 in 2026 to 7 November." src="assets/prs-light.svg?v=776428cdb">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/prs-dark.svg?v=87918688b">
+  <img alt="Pull requests per year: 158 authored and 201 reviewed in 2023, 173 and 221 in 2024, 217 and 278 in 2025, 734 and 323 in 2026 to 17 November." src="assets/prs-light.svg?v=895521a5b">
 </picture>
 
 <picture>
@@ -64,8 +64,8 @@ Spring Boot 4.1, Kotlin, Java 21. Tests that need Docker skip locally and run in
 ### Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=d2f843e0b">
-  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=d4d4f7b6b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg?v=9a8fd327b">
+  <img alt="Radar comparing depth in years against share of the last twelve months of pull requests, across backend, security, cloud, observability and data." src="assets/radar-light.svg?v=95c892e6b">
 </picture>
 
 | Layer | Technology |

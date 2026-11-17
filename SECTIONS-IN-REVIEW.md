@@ -17,8 +17,8 @@ and before the contact links.*
 Domain at the core, stack as adapters, because the stack is the part that gets replaced.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=8668be82b">
-  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=1ff1c5a4b">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/archetype-dark.svg?v=f214d4d9b">
+  <img alt="A package tree under life, the source root of my.life:rafael.rolo. Under professional: domain, which does not get replaced; practice; and adapters, swappable on purpose. Under person: languages, education, published work." src="assets/archetype-light.svg?v=ffeb7ee9b">
 </picture>
 
 ---
